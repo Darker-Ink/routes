@@ -11,7 +11,7 @@ const progressBar = term.progressBar({
     width: 80,
     title: term.green('Downloading Current.js...'),
     eta: true,
-    percent: true
+    percent: true,
 });
 
 (async () => {
@@ -32,7 +32,6 @@ const progressBar = term.progressBar({
     fs.writeFileSync(path.join(__dirname, '../saves/current.js'), code);
 
     setTimeout(() => {
-        term('\n');
-        term.green('Downloaded current.js successfully!');
+        term.green('\nDownloaded current.js successfully!');
     }, 1000);
 })();

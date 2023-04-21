@@ -1,18 +1,19 @@
 const term = require('terminal-kit').terminal;
 const fs = require('fs');
 const path = require('path');
+const WebhookUtils = require('./WebhookUtils');
 const code = fs.readFileSync(path.join(__dirname, '../saves/current.js'), 'utf8');
 const propertyName = "USER";
 
+const JoinRegex = /([a-zA-Z$_][a-zA-Z0-9$_]*)\s*\.\s*JOIN\s*\)/;
+const DeviceRegex = /([a-zA-Z$_][a-zA-Z0-9$_]*)\s*\.\s*g\b/;
 const regex = new RegExp(`^\\s*${propertyName}:\\s*(.*)`, "m");
+
 const match = code.match(regex);
 
-const JoinRegex = /([a-zA-Z$_][a-zA-Z0-9$_]*)\s*\.\s*JOIN\s*\)/
-const DeviceRegex = /([a-zA-Z$_][a-zA-Z0-9$_]*)\s*\.\s*g\b/
-
 if (!match) {
-  term('\n');
-  term.red('Object definition not found in file');
+  term.red('\nObject definition not found in file');
+  WebhookUtils.stats(`Object definition not found in file`);
   return;
 }
 
@@ -44,8 +45,8 @@ const regexy = new RegExp(`${variableName}\\s*=\\s*Object\\.freeze\\(\\s*\\{[\\s
 const match2 = code.match(regexy);
 
 if (!match2) {
-  term('\n');
-  term.red('Object definition not found in file');
+  term.red('\nObject definition not found in file');
+  WebhookUtils.stats(`Object definition not found in file (2)`);
   return;
 }
 
@@ -67,6 +68,5 @@ try {
 
   fs.writeFileSync(path.join(__dirname, '../saves/Routes.js'), `const m={a:!1},${JoinCode[1]}={JOIN:null},${DeviceCode[0][0]}={${DeviceCode[0][2]}:{DEVICE_CODE:null}};\nconst ${UpdatedCode};\nmodule.exports = routes;`);
 
-  term('\n');
-  term.green("Done!");
+  term.green("\nDone!");
 }

@@ -11,13 +11,15 @@ if (!fs.existsSync(path.join(__dirname, '../saves/Json/Routes.json'))) {
   fs.writeFileSync(path.join(__dirname, '../saves/Json/Routes.json'), JSON.stringify({}));
 }
 
-const knownRoutes = require('../saves/Json/Routes.json');
+const knownRoutes = require('../saves/Json/Routes.json'); // routes we know about already
+const WebhookUtils = require('./WebhookUtils.js');
 
 const routeroutes = { ...knownRoutes };
 const newRoutes = [];
 const changedRoutes = [];
 const allRoutes = [];
 
+// mappings for the different times of paths
 const map = {
   guild: ':guildId',
   channel: ':channelId',
@@ -55,7 +57,9 @@ function newRoute(value, route) {
       const nextvalsplit2 = nextvalsplit[1];
 
       if (nextvalsplit1.includes('ARG') && nextvalsplit2.includes('ARG')) {
+        // assuming the its a hash for the image
         newArgs.push(':hash');
+        // png, jpg, gif, webp (etc)
         newArgs.push(':type');
 
         continue;
@@ -63,6 +67,8 @@ function newRoute(value, route) {
     }
 
     if (nextval.includes('ARG')) {
+      // replace the like S at the end else its just :unknown
+      // soon will improve this
       newArgs.push(map[val.replace(/s$/, '')] || ':unknown');
 
       continue;
@@ -95,11 +101,9 @@ Object.entries(routes).forEach(([key, value]) => {
       routeroutes[key] = setup;
       newRoutes.push(setup);
       allRoutes.push(setup);
-      term('\n');
-      term.blue(`New Route Found: ${key}, ${route}`);
+      term.blue(`\nNew Route Found: ${key}, ${route}`);
     } else if (routeKey.route !== route) {
-      term('\n');
-      term.yellow(`Route Changed: ${key}, ${routeKey.route} -> ${route}`);
+      term.yellow(`\nRoute Changed: ${key}, ${routeKey.route} -> ${route}`);
       routeKey.oldRoutes.push({
         route: routeKey.route,
         args: routeKey.args,
@@ -124,11 +128,9 @@ Object.entries(routes).forEach(([key, value]) => {
       routeroutes[key] = setup;
       newRoutes.push(setup);
       allRoutes.push(setup);
-      term('\n');
-      term.blue(`New Route Found: ${key}, ${value}`);
+      term.blue(`\nNew Route Found: ${key}, ${value}`);
     } else if (route.route !== value) {
-      term('\n');
-      term.yellow(`Route Changed: ${key}, ${route.route} -> ${value}`);
+      term.yellow(`\nRoute Changed: ${key}, ${route.route} -> ${value}`);
       route.oldRoutes.push({
         route: route.route,
         args: route.args,
@@ -145,20 +147,19 @@ Object.entries(routes).forEach(([key, value]) => {
 
 const deletedRoutes = [];
 
-// go through all routes and known routes and see if any where deleted
+// goes through all routes and known routes and see if any where deleted
 Object.entries(routeroutes).forEach(([key, value]) => {
   const route = routes[key];
   if (!route) {
     deletedRoutes.push(value);
     delete routeroutes[key];
-    term('\n');
-    term.red(`Route Deleted: ${key}, ${value.route}`);
+    term.red(`\nRoute Deleted: ${key}, ${value.route}`);
   }
 });
 
-term('\n');
-term.green(`We found ${newRoutes.length} new routes and there were ${changedRoutes.length} changed routes and ${deletedRoutes.length} routes were deleted.`);
-term('\n');
+term.green(`\nWe found ${newRoutes.length} new routes and there were ${changedRoutes.length} changed routes and ${deletedRoutes.length} routes were deleted.\n`);
+
+WebhookUtils.stats(`We found ${newRoutes.length} new routes and there were ${changedRoutes.length} changed routes and ${deletedRoutes.length} routes were deleted.`)
 
 fs.writeFileSync(path.join(__dirname, '../saves/Json/Routes.json'), JSON.stringify(routeroutes, null, 4));
 fs.writeFileSync(path.join(__dirname, '../saves/Json/NewRoutes.json'), JSON.stringify(newRoutes.length ? newRoutes : [], null, 4));

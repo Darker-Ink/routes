@@ -4,6 +4,8 @@ const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const { request } = require('undici');
+const WebhookUtils = require('./utils/WebhookUtils');
+const term = require('terminal-kit').terminal;
 
 process.on('unhandledRejection', async (reason, promise) => {
     await request(process.env.WEBHOOK, {
@@ -125,7 +127,7 @@ const run = async () => {
 const start = async () => {
     const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
-    console.log('[SERVER] Started');
+    term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] Started\n`);
 
     const { data: { object: { sha: FirstSha } } } = await octokit.rest.git.getRef({
         owner: process.env.REPO_OWNER,
@@ -139,13 +141,12 @@ const start = async () => {
         await octokit.rest.repos.createCommitComment({
             owner: process.env.REPO_OWNER,
             repo: process.env.REPO_NAME,
-            commit_sha: sha, // temp
+            commit_sha: sha,
             body: FirstMsg
         });
 
-        console.log(`[SERVER] Comment Created`);
-    } else {
-
+        term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] Comment Created\n`);
+        WebhookUtils.stats(FirstMsg);
     }
 
     let lastCommit = FirstSha;
@@ -158,7 +159,7 @@ const start = async () => {
         });
 
         if (lastCommit === sha) {
-            console.log('[SERVER] No Changes');
+            term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] No Changes\n`);
             return;
         }
 
@@ -170,11 +171,12 @@ const start = async () => {
             await octokit.rest.repos.createCommitComment({
                 owner: process.env.REPO_OWNER,
                 repo: process.env.REPO_NAME,
-                commit_sha: sha, // temp
+                commit_sha: sha,
                 body: msg
             });
 
-            console.log(`[SERVER] Comment Created`);
+            term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] Comment Created\n`);
+            WebhookUtils.stats(msg);
         }
     }, Number(process.env.INTERVAL));
 };
