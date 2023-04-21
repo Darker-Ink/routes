@@ -176,7 +176,7 @@ const start = async () => {
 
             console.log(`[SERVER] Comment Created`);
         }
-    }, 1000 * 60 * 1);
+    }, Number(process.env.INTERVAL));
 };
 
 start();
