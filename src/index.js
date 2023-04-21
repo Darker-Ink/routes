@@ -87,7 +87,7 @@ const run = async () => {
 
         for (const route of changedRoutes) {
             const oldRoute = route.oldRoutes[route.oldRoutes.length - 1];
-            message += `- ${oldRoute.route}\n+ ${route.route}\n`;
+            message += `- ${route.key}: ${oldRoute.route}\n+ ${route.key}: ${route.route}\n`;
         }
 
         message += `\`\`\`\n`;
@@ -97,7 +97,7 @@ const run = async () => {
         message += `## Deleted Routes\n\n\`\`\`diff\n`;
 
         for (const route of deletedRoutes) {
-            message += `- ${route.route}\n`;
+            message += `- ${route.key}: ${route.route}\n`;
         }
 
         message += `\`\`\`\n`;
@@ -107,7 +107,7 @@ const run = async () => {
         message += `## New Routes\n\n\`\`\`diff\n`;
 
         for (const route of newRoutes) {
-            message += `+ ${route.route}\n`;
+            message += `+ ${route.key}: ${route.route}\n`;
         }
 
         message += `\`\`\`\n`;
@@ -139,7 +139,7 @@ const start = async () => {
         await octokit.rest.repos.createCommitComment({
             owner: 'Darker-Ink',
             repo: 'e',
-            commit_sha: FirstSha,
+            commit_sha: '2b393106f80c2b7fda05b8b649a6a1b67361c223', // temp
             body: FirstMsg
         });
 
@@ -170,7 +170,7 @@ const start = async () => {
             await octokit.rest.repos.createCommitComment({
                 owner: 'Darker-Ink',
                 repo: 'e',
-                commit_sha: sha,
+                commit_sha: '2b393106f80c2b7fda05b8b649a6a1b67361c223', // temp
                 body: msg
             });
 
