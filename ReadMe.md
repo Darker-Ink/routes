@@ -1,11 +1,9 @@
-# idk
+# Data-Mining Routes
 
-being bored = me working on stupid project that I probably will never use again
+Just gets the Routes from the Discord Client
 
 ```bash
 npm i
 
 npm start
-
-echo profit
 ```
