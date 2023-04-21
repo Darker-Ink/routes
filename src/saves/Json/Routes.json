@@ -3977,15 +3977,6 @@
         "oldRoutes": [],
         "key": "SOUNDBOARD_SOUND"
     },
-    "SOUNDBOARD_DEFAULT_SOUND": {
-        "route": "/soundboard-default-sounds/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470952,
-        "oldRoutes": [],
-        "key": "SOUNDBOARD_DEFAULT_SOUND"
-    },
     "SOUNDBOARD_DEFAULT_SOUNDS": {
         "route": "/soundboard-default-sounds",
         "args": [],
