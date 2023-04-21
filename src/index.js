@@ -6,7 +6,7 @@ const path = require('path');
 const { request } = require('undici');
 
 process.on('unhandledRejection', async (reason, promise) => {
-   await request(process.env.WEBHOOK, {
+    await request(process.env.WEBHOOK, {
         body: JSON.stringify({
             embeds: [{
                 title: 'Unhandled Rejection',
@@ -137,9 +137,9 @@ const start = async () => {
 
     if (FirstMsg) {
         await octokit.rest.repos.createCommitComment({
-            owner: 'Darker-Ink',
-            repo: 'e',
-            commit_sha: '2b393106f80c2b7fda05b8b649a6a1b67361c223', // temp
+            owner: process.env.REPO_OWNER,
+            repo: process.env.REPO_NAME,
+            commit_sha: sha, // temp
             body: FirstMsg
         });
 
@@ -168,9 +168,9 @@ const start = async () => {
 
         if (msg) {
             await octokit.rest.repos.createCommitComment({
-                owner: 'Darker-Ink',
-                repo: 'e',
-                commit_sha: '2b393106f80c2b7fda05b8b649a6a1b67361c223', // temp
+                owner: process.env.REPO_OWNER,
+                repo: process.env.REPO_NAME,
+                commit_sha: sha, // temp
                 body: msg
             });
 
