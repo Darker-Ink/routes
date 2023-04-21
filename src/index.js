@@ -61,17 +61,7 @@ const runStuff = () => {
         });
 
         npmStart.on('close', () => {
-            if (process.env.ADD_ROUTES === 'true') {
-                const Pushing = spawn('git', ['push'], {
-                    shell: true, stdio: 'inherit'
-                });
-
-                Pushing.on('close', () => {
-                    resolve();
-                });
-            } else {
-                resolve();
-            }
+            resolve();
         });
     });
 };
@@ -187,6 +177,15 @@ const start = async () => {
 
             term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] Comment Created\n`);
             WebhookUtils.stats(msg);
+
+            if (process.env.ADD_ROUTES === 'true') {
+                const Pushing = spawn('git', ['add', '.', '&&', 'git', 'commit', '-m', '"[BOT] Updated Routes"', '&&', 'git', 'push']);
+
+                Pushing.on('close', () => {
+                    term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] Pushed\n`);
+                });
+            }
+
         }
     }, Number(process.env.INTERVAL));
 };
