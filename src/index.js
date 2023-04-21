@@ -61,7 +61,17 @@ const runStuff = () => {
         });
 
         npmStart.on('close', () => {
-            resolve();
+            if (process.env.ADD_ROUTES === 'true') {
+                const Pushing = spawn('git', ['push'], {
+                    shell: true, stdio: 'inherit'
+                });
+
+                Pushing.on('close', () => {
+                    resolve();
+                });
+            } else {
+                resolve();
+            }
         });
     });
 };

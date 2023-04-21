@@ -7,3 +7,5 @@ npm i
 
 npm start
 ```
+
+for the [Data-Mining Repo](https://github.com/Discord-Datamining/Discord-Datamining/)
