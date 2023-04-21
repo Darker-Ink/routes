@@ -89,7 +89,7 @@ const run = async () => {
 
         for (const route of changedRoutes) {
             const oldRoute = route.oldRoutes[route.oldRoutes.length - 1];
-            message += `- ${route.key}: ${oldRoute.route}\n+ ${route.key}: ${route.route}\n`;
+            message += `# ${route.key}\n- ${oldRoute.route}\n+ ${route.route}\n\n`;
         }
 
         message += `\`\`\`\n`;
