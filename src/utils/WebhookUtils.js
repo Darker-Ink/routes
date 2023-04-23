@@ -22,9 +22,9 @@ class WebhookUtils {
         });
     }
 
-    static async stats(msg) {
+    static async stats(msg, title) {
         if (process.env.SEND_STATS === 'true') {
-            await this.send('Stats', msg, 0x00FF00, { text: 'Stats' });
+            await this.send(title ?? 'Stats', msg, 0x00FF00);
         }
     }
 }

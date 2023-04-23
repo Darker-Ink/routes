@@ -4,15 +4,25 @@
         "args": [
             ":userId"
         ],
-        "firstSeen": 1682094470884,
+        "firstSeen": 1682214225048,
         "oldRoutes": [],
         "key": "USER"
     },
     "USER_RELATIONSHIPS": {
         "route": "/users/@me/relationships",
-        "args": [],
-        "firstSeen": 1682094470886,
-        "oldRoutes": [],
+        "args": [
+            ":userId"
+        ],
+        "firstSeen": 1682214225050,
+        "oldRoutes": [
+            {
+                "route": "/users/:userId/relationships",
+                "args": [
+                    ":userId"
+                ],
+                "changedAt": 1682214264522
+            }
+        ],
         "key": "USER_RELATIONSHIPS"
     },
     "USER_RELATIONSHIP": {
@@ -20,51 +30,25 @@
         "args": [
             ":relationshipId"
         ],
-        "firstSeen": 1682094470886,
+        "firstSeen": 1682214225050,
         "oldRoutes": [],
         "key": "USER_RELATIONSHIP"
-    },
-    "USER_BULK_RELATIONSHIPS": {
-        "route": "/users/@me/relationships/bulk",
-        "args": [],
-        "firstSeen": 1682094470886,
-        "oldRoutes": [],
-        "key": "USER_BULK_RELATIONSHIPS"
     },
     "USER_PROFILE": {
         "route": "/users/:userId/profile",
         "args": [
             ":userId"
         ],
-        "firstSeen": 1682094470886,
+        "firstSeen": 1682214225050,
         "oldRoutes": [],
         "key": "USER_PROFILE"
-    },
-    "GUILD_PROFILE": {
-        "route": "/guilds/:guildId/profile/:unknown",
-        "args": [
-            ":guildId",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470887,
-        "oldRoutes": [],
-        "key": "GUILD_PROFILE"
     },
     "USER_CHANNELS": {
         "route": "/users/@me/channels",
         "args": [],
-        "firstSeen": 1682094470887,
+        "firstSeen": 1682214225051,
         "oldRoutes": [],
         "key": "USER_CHANNELS"
-    },
-    "USER_SETTINGS_PROTO": {
-        "route": "/users/@me/settings-proto/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470887,
-        "oldRoutes": [],
-        "key": "USER_SETTINGS_PROTO"
     },
     "USER_ACTIVITY_METADATA": {
         "route": "/users/:userId/sessions/:unknown/activities/:unknown/metadata",
@@ -73,7 +57,7 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470888,
+        "firstSeen": 1682214225051,
         "oldRoutes": [],
         "key": "USER_ACTIVITY_METADATA"
     },
@@ -84,44 +68,37 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470888,
+        "firstSeen": 1682214225051,
         "oldRoutes": [],
         "key": "USER_ACTIVITY_JOIN"
     },
     "USER_ACTIVITY_STATISTICS": {
         "route": "/users/@me/activities/statistics/applications",
         "args": [],
-        "firstSeen": 1682094470888,
+        "firstSeen": 1682214225051,
         "oldRoutes": [],
         "key": "USER_ACTIVITY_STATISTICS"
-    },
-    "USER_CLYDE_CONSENT": {
-        "route": "/users/@me/clyde-consent",
-        "args": [],
-        "firstSeen": 1682094470888,
-        "oldRoutes": [],
-        "key": "USER_CLYDE_CONSENT"
     },
     "APPLICATION_ACTIVITY_STATISTICS": {
         "route": "/activities/statistics/applications/:applicationId",
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470888,
+        "firstSeen": 1682214225051,
         "oldRoutes": [],
         "key": "APPLICATION_ACTIVITY_STATISTICS"
     },
     "ACTIVITIES": {
         "route": "/activities",
         "args": [],
-        "firstSeen": 1682094470889,
+        "firstSeen": 1682214225052,
         "oldRoutes": [],
         "key": "ACTIVITIES"
     },
     "LOBBIES": {
         "route": "/lobbies",
         "args": [],
-        "firstSeen": 1682094470889,
+        "firstSeen": 1682214225052,
         "oldRoutes": [],
         "key": "LOBBIES"
     },
@@ -130,7 +107,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470889,
+        "firstSeen": 1682214225052,
         "oldRoutes": [],
         "key": "LOBBY"
     },
@@ -140,7 +117,7 @@
             ":unknown",
             ":memberId"
         ],
-        "firstSeen": 1682094470889,
+        "firstSeen": 1682214225052,
         "oldRoutes": [],
         "key": "LOBBY_MEMBER"
     },
@@ -149,77 +126,56 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470889,
+        "firstSeen": 1682214225052,
         "oldRoutes": [],
         "key": "LOBBY_SEND"
     },
     "LOBBY_SEARCH": {
         "route": "/lobbies/search",
         "args": [],
-        "firstSeen": 1682094470889,
+        "firstSeen": 1682214225053,
         "oldRoutes": [],
         "key": "LOBBY_SEARCH"
     },
     "NETWORKING_TOKEN": {
         "route": "/networking/token",
         "args": [],
-        "firstSeen": 1682094470889,
+        "firstSeen": 1682214225053,
         "oldRoutes": [],
         "key": "NETWORKING_TOKEN"
     },
     "USER_GAMES_NOTIFICATIONS": {
         "route": "/users/@me/settings/game-notifications",
         "args": [],
-        "firstSeen": 1682094470889,
+        "firstSeen": 1682214225053,
         "oldRoutes": [],
         "key": "USER_GAMES_NOTIFICATIONS"
     },
     "USER_GAMES_NOTIFICATIONS_OVERRIDES": {
         "route": "/users/@me/settings/game-notifications/overrides",
         "args": [],
-        "firstSeen": 1682094470890,
+        "firstSeen": 1682214225053,
         "oldRoutes": [],
         "key": "USER_GAMES_NOTIFICATIONS_OVERRIDES"
     },
     "UNVERIFIED_APPLICATIONS": {
         "route": "/unverified-applications",
         "args": [],
-        "firstSeen": 1682094470890,
+        "firstSeen": 1682214225053,
         "oldRoutes": [],
         "key": "UNVERIFIED_APPLICATIONS"
     },
     "UNVERIFIED_APPLICATIONS_ICONS": {
         "route": "/unverified-applications/icons",
         "args": [],
-        "firstSeen": 1682094470890,
+        "firstSeen": 1682214225053,
         "oldRoutes": [],
         "key": "UNVERIFIED_APPLICATIONS_ICONS"
-    },
-    "GUILD_FEATURE_ACK": {
-        "route": "/guilds/:guildId/ack/:unknown/:unknown",
-        "args": [
-            ":guildId",
-            ":unknown",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470890,
-        "oldRoutes": [],
-        "key": "GUILD_FEATURE_ACK"
-    },
-    "USER_NON_CHANNEL_ACK": {
-        "route": "/users/@me/:unknown/:unknown/ack",
-        "args": [
-            ":unknown",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470890,
-        "oldRoutes": [],
-        "key": "USER_NON_CHANNEL_ACK"
     },
     "BULK_ACK": {
         "route": "/read-states/ack-bulk",
         "args": [],
-        "firstSeen": 1682094470891,
+        "firstSeen": 1682214225054,
         "oldRoutes": [],
         "key": "BULK_ACK"
     },
@@ -228,7 +184,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470891,
+        "firstSeen": 1682214225054,
         "oldRoutes": [],
         "key": "GUILD_CHANNELS"
     },
@@ -237,7 +193,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470891,
+        "firstSeen": 1682214225054,
         "oldRoutes": [],
         "key": "GUILD_MEMBERS"
     },
@@ -247,7 +203,7 @@
             ":guildId",
             ":memberId"
         ],
-        "firstSeen": 1682094470891,
+        "firstSeen": 1682214225054,
         "oldRoutes": [],
         "key": "GUILD_MEMBER"
     },
@@ -257,37 +213,16 @@
             ":guildId",
             ":memberId"
         ],
-        "firstSeen": 1682094470891,
+        "firstSeen": 1682214225055,
         "oldRoutes": [],
         "key": "GUILD_MEMBER_NICK"
-    },
-    "GUILD_MEMBER_AVATAR": {
-        "route": "/guilds/:guildId/users/:userId/avatars/:hash.:type",
-        "args": [
-            ":guildId",
-            ":userId",
-            ":hash",
-            ":type"
-        ],
-        "firstSeen": 1682094470891,
-        "oldRoutes": [],
-        "key": "GUILD_MEMBER_AVATAR"
-    },
-    "SET_GUILD_MEMBER": {
-        "route": "/guilds/:guildId/members/@me",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470892,
-        "oldRoutes": [],
-        "key": "SET_GUILD_MEMBER"
     },
     "GUILD_JOIN": {
         "route": "/guilds/:guildId/members/@me",
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470892,
+        "firstSeen": 1682214225055,
         "oldRoutes": [],
         "key": "GUILD_JOIN"
     },
@@ -296,7 +231,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470892,
+        "firstSeen": 1682214225055,
         "oldRoutes": [],
         "key": "GUILD_LEAVE"
     },
@@ -305,7 +240,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470892,
+        "firstSeen": 1682214225055,
         "oldRoutes": [],
         "key": "GUILD_INTEGRATIONS"
     },
@@ -315,7 +250,7 @@
             ":guildId",
             ":applicationId"
         ],
-        "firstSeen": 1682094470892,
+        "firstSeen": 1682214225055,
         "oldRoutes": [],
         "key": "GUILD_INTEGRATION"
     },
@@ -325,25 +260,16 @@
             ":guildId",
             ":applicationId"
         ],
-        "firstSeen": 1682094470892,
+        "firstSeen": 1682214225055,
         "oldRoutes": [],
         "key": "GUILD_INTEGRATION_SYNC"
-    },
-    "GUILD_MIGRATE_COMMAND_SCOPE": {
-        "route": "/guilds/:guildId/migrate-command-scope",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470892,
-        "oldRoutes": [],
-        "key": "GUILD_MIGRATE_COMMAND_SCOPE"
     },
     "GUILD_BANS": {
         "route": "/guilds/:guildId/bans",
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470893,
+        "firstSeen": 1682214225056,
         "oldRoutes": [],
         "key": "GUILD_BANS"
     },
@@ -353,7 +279,7 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470893,
+        "firstSeen": 1682214225056,
         "oldRoutes": [],
         "key": "GUILD_BAN"
     },
@@ -362,7 +288,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470893,
+        "firstSeen": 1682214225056,
         "oldRoutes": [],
         "key": "GUILD_ROLES"
     },
@@ -371,18 +297,9 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470893,
+        "firstSeen": 1682214225056,
         "oldRoutes": [],
         "key": "GUILD_ROLE_MEMBER_COUNTS"
-    },
-    "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS": {
-        "route": "/guilds/:guildId/roles/connections-configurations",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470893,
-        "oldRoutes": [],
-        "key": "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS"
     },
     "GUILD_ROLE_MEMBER_IDS": {
         "route": "/guilds/:guildId/roles/:roleId/member-ids",
@@ -390,7 +307,7 @@
             ":guildId",
             ":roleId"
         ],
-        "firstSeen": 1682094470893,
+        "firstSeen": 1682214225056,
         "oldRoutes": [],
         "key": "GUILD_ROLE_MEMBER_IDS"
     },
@@ -400,7 +317,7 @@
             ":guildId",
             ":roleId"
         ],
-        "firstSeen": 1682094470894,
+        "firstSeen": 1682214225056,
         "oldRoutes": [],
         "key": "GUILD_ROLE"
     },
@@ -410,84 +327,16 @@
             ":guildId",
             ":roleId"
         ],
-        "firstSeen": 1682094470894,
+        "firstSeen": 1682214225057,
         "oldRoutes": [],
         "key": "GUILD_ROLE_MEMBERS"
-    },
-    "GUILD_ROLE_CONNECTIONS_ELIGIBILITY": {
-        "route": "/guilds/:guildId/roles/:roleId/connections/eligibility",
-        "args": [
-            ":guildId",
-            ":roleId"
-        ],
-        "firstSeen": 1682094470895,
-        "oldRoutes": [],
-        "key": "GUILD_ROLE_CONNECTIONS_ELIGIBILITY"
-    },
-    "GUILD_ROLE_CONNECTIONS_ASSIGN": {
-        "route": "/guilds/:guildId/roles/:roleId/connections/assign",
-        "args": [
-            ":guildId",
-            ":roleId"
-        ],
-        "firstSeen": 1682094470895,
-        "oldRoutes": [],
-        "key": "GUILD_ROLE_CONNECTIONS_ASSIGN"
-    },
-    "GUILD_ROLE_CONNECTIONS_UNASSIGN": {
-        "route": "/guilds/:guildId/roles/:roleId/connections/unassign",
-        "args": [
-            ":guildId",
-            ":roleId"
-        ],
-        "firstSeen": 1682094470895,
-        "oldRoutes": [],
-        "key": "GUILD_ROLE_CONNECTIONS_UNASSIGN"
-    },
-    "GUILD_ONBOARDING": {
-        "route": "/guilds/:guildId/onboarding",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470895,
-        "oldRoutes": [],
-        "key": "GUILD_ONBOARDING"
-    },
-    "GUILD_ONBOARDING_PROMPT": {
-        "route": "/guilds/:guildId/onboarding-prompts/:unknown",
-        "args": [
-            ":guildId",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470895,
-        "oldRoutes": [],
-        "key": "GUILD_ONBOARDING_PROMPT"
-    },
-    "GUILD_ONBOARDING_RESPONSES": {
-        "route": "/guilds/:guildId/onboarding-responses",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470895,
-        "oldRoutes": [],
-        "key": "GUILD_ONBOARDING_RESPONSES"
-    },
-    "ROLE_ICON": {
-        "route": "/roles/:roleId/icons/:unknown.png",
-        "args": [
-            ":roleId",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470896,
-        "oldRoutes": [],
-        "key": "ROLE_ICON"
     },
     "GUILD_INSTANT_INVITES": {
         "route": "/guilds/:guildId/invites",
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470896,
+        "firstSeen": 1682214225057,
         "oldRoutes": [],
         "key": "GUILD_INSTANT_INVITES"
     },
@@ -496,7 +345,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470896,
+        "firstSeen": 1682214225057,
         "oldRoutes": [],
         "key": "GUILD_WIDGET"
     },
@@ -505,7 +354,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470896,
+        "firstSeen": 1682214225057,
         "oldRoutes": [],
         "key": "GUILD_VANITY_URL"
     },
@@ -514,7 +363,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470896,
+        "firstSeen": 1682214225057,
         "oldRoutes": [],
         "key": "GUILD_MFA"
     },
@@ -523,7 +372,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470896,
+        "firstSeen": 1682214225057,
         "oldRoutes": [],
         "key": "GUILD_PRUNE"
     },
@@ -531,20 +380,42 @@
         "route": "/guilds/:guildId/icons/:unknown.jpg",
         "args": [
             ":guildId",
-            ":unknown"
+            ":hash",
+            ":type"
         ],
-        "firstSeen": 1682094470896,
-        "oldRoutes": [],
+        "firstSeen": 1682214225057,
+        "oldRoutes": [
+            {
+                "route": "/guilds/:guildId/icons/:hash.:type",
+                "args": [
+                    ":guildId",
+                    ":hash",
+                    ":type"
+                ],
+                "changedAt": 1682214264527
+            }
+        ],
         "key": "GUILD_ICON"
     },
     "GUILD_TEMPLATE_ICON": {
         "route": "/templates/:unknown/icons/:unknown.jpg",
         "args": [
             ":unknown",
-            ":unknown"
+            ":hash",
+            ":type"
         ],
-        "firstSeen": 1682094470897,
-        "oldRoutes": [],
+        "firstSeen": 1682214225058,
+        "oldRoutes": [
+            {
+                "route": "/templates/:unknown/icons/:hash.:type",
+                "args": [
+                    ":unknown",
+                    ":hash",
+                    ":type"
+                ],
+                "changedAt": 1682214264527
+            }
+        ],
         "key": "GUILD_TEMPLATE_ICON"
     },
     "GUILD_DISCOVERY_CHECKLIST": {
@@ -552,7 +423,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470897,
+        "firstSeen": 1682214225058,
         "oldRoutes": [],
         "key": "GUILD_DISCOVERY_CHECKLIST"
     },
@@ -561,23 +432,16 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470897,
+        "firstSeen": 1682214225058,
         "oldRoutes": [],
         "key": "GUILD_DISCOVERY_REQUIREMENTS"
-    },
-    "GUILD_RECOMMENDATIONS": {
-        "route": "/guild-recommendations",
-        "args": [],
-        "firstSeen": 1682094470897,
-        "oldRoutes": [],
-        "key": "GUILD_RECOMMENDATIONS"
     },
     "GUILD_EMOJIS": {
         "route": "/guilds/:guildId/emojis",
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470897,
+        "firstSeen": 1682214225058,
         "oldRoutes": [],
         "key": "GUILD_EMOJIS"
     },
@@ -587,7 +451,7 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470897,
+        "firstSeen": 1682214225058,
         "oldRoutes": [],
         "key": "GUILD_EMOJI"
     },
@@ -596,7 +460,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470897,
+        "firstSeen": 1682214225058,
         "oldRoutes": [],
         "key": "GUILD_AUDIT_LOG"
     },
@@ -605,7 +469,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470898,
+        "firstSeen": 1682214225058,
         "oldRoutes": [],
         "key": "GUILD_ANALYTICS_OVERVIEW"
     },
@@ -614,25 +478,16 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470898,
+        "firstSeen": 1682214225058,
         "oldRoutes": [],
         "key": "GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW"
-    },
-    "GUILD_ANALYTICS_MEMBER_INSIGHTS": {
-        "route": "/guilds/:guildId/analytics/member-insights",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470898,
-        "oldRoutes": [],
-        "key": "GUILD_ANALYTICS_MEMBER_INSIGHTS"
     },
     "GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW": {
         "route": "/guilds/:guildId/analytics/growth-activation/overview",
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470898,
+        "firstSeen": 1682214225058,
         "oldRoutes": [],
         "key": "GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW"
     },
@@ -641,18 +496,9 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470898,
+        "firstSeen": 1682214225059,
         "oldRoutes": [],
         "key": "GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION"
-    },
-    "GUILD_TOP_READ_CHANNELS": {
-        "route": "/guilds/:guildId/top-read-channels",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470898,
-        "oldRoutes": [],
-        "key": "GUILD_TOP_READ_CHANNELS"
     },
     "EMOJI": {
         "route": "/emojis/:hash.:type",
@@ -660,7 +506,7 @@
             ":hash",
             ":type"
         ],
-        "firstSeen": 1682094470898,
+        "firstSeen": 1682214225059,
         "oldRoutes": [],
         "key": "EMOJI"
     },
@@ -669,18 +515,9 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470899,
+        "firstSeen": 1682214225059,
         "oldRoutes": [],
         "key": "EMOJI_GUILD_DATA"
-    },
-    "TOP_EMOJIS_FOR_GUILD": {
-        "route": "/guilds/:guildId/top-emojis",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470899,
-        "oldRoutes": [],
-        "key": "TOP_EMOJIS_FOR_GUILD"
     },
     "GUILD_SPLASH": {
         "route": "/guilds/:guildId/splashes/:unknown.jpg",
@@ -688,7 +525,7 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470899,
+        "firstSeen": 1682214225059,
         "oldRoutes": [],
         "key": "GUILD_SPLASH"
     },
@@ -698,7 +535,7 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470899,
+        "firstSeen": 1682214225059,
         "oldRoutes": [],
         "key": "GUILD_DISCOVERY_SPLASH"
     },
@@ -706,57 +543,27 @@
         "route": "/guilds/:guildId/banners/:hash.:type",
         "args": [
             ":guildId",
-            ":hash",
-            ":type"
+            ":unknown"
         ],
-        "firstSeen": 1682094470899,
-        "oldRoutes": [],
+        "firstSeen": 1682214225059,
+        "oldRoutes": [
+            {
+                "route": "/guilds/:guildId/banners/:unknown.jpg",
+                "args": [
+                    ":guildId",
+                    ":unknown"
+                ],
+                "changedAt": 1682214264529
+            }
+        ],
         "key": "GUILD_BANNER"
-    },
-    "GUILD_HOME_SETTINGS": {
-        "route": "/guilds/:guildId/new-member-welcome",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470899,
-        "oldRoutes": [],
-        "key": "GUILD_HOME_SETTINGS"
-    },
-    "GUILD_MEMBER_ACTIONS": {
-        "route": "/guilds/:guildId/new-member-actions",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470899,
-        "oldRoutes": [],
-        "key": "GUILD_MEMBER_ACTIONS"
-    },
-    "GUILD_MEMBER_ACTION_UPDATE": {
-        "route": "/guilds/:guildId/new-member-action/:unknown",
-        "args": [
-            ":guildId",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470899,
-        "oldRoutes": [],
-        "key": "GUILD_MEMBER_ACTION_UPDATE"
-    },
-    "GUILD_HOME_HEADER": {
-        "route": "/guilds/:guildId/home-headers/:unknown.jpg",
-        "args": [
-            ":guildId",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470900,
-        "oldRoutes": [],
-        "key": "GUILD_HOME_HEADER"
     },
     "GUILD_WELCOME_SCREEN": {
         "route": "/guilds/:guildId/welcome-screen",
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470900,
+        "firstSeen": 1682214225059,
         "oldRoutes": [],
         "key": "GUILD_WELCOME_SCREEN"
     },
@@ -765,7 +572,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470900,
+        "firstSeen": 1682214225059,
         "oldRoutes": [],
         "key": "GUILD_MEMBER_VERIFICATION"
     },
@@ -774,14 +581,14 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470900,
+        "firstSeen": 1682214225060,
         "oldRoutes": [],
         "key": "GUILD_JOIN_REQUESTS"
     },
     "USER_JOIN_REQUEST_GUILDS": {
         "route": "/users/@me/join-request-guilds",
         "args": [],
-        "firstSeen": 1682094470900,
+        "firstSeen": 1682214225060,
         "oldRoutes": [],
         "key": "USER_JOIN_REQUEST_GUILDS"
     },
@@ -790,7 +597,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470900,
+        "firstSeen": 1682214225060,
         "oldRoutes": [],
         "key": "GUILD_MEMBER_REQUEST_TO_JOIN"
     },
@@ -800,24 +607,14 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470900,
+        "firstSeen": 1682214225060,
         "oldRoutes": [],
         "key": "GUILD_JOIN_REQUEST"
-    },
-    "GUILD_JOIN_REQUEST_ACK": {
-        "route": "/guilds/:guildId/requests/:unknown/ack",
-        "args": [
-            ":guildId",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470900,
-        "oldRoutes": [],
-        "key": "GUILD_JOIN_REQUEST_ACK"
     },
     "GUILDS": {
         "route": "/guilds",
         "args": [],
-        "firstSeen": 1682094470901,
+        "firstSeen": 1682214225060,
         "oldRoutes": [],
         "key": "GUILDS"
     },
@@ -826,32 +623,23 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470901,
+        "firstSeen": 1682214225060,
         "oldRoutes": [],
         "key": "GUILD"
-    },
-    "GUILD_PINCODE": {
-        "route": "/guilds/:guildId/pincode",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470901,
-        "oldRoutes": [],
-        "key": "GUILD_PINCODE"
     },
     "GUILD_DELETE": {
         "route": "/guilds/:guildId/delete",
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470901,
+        "firstSeen": 1682214225060,
         "oldRoutes": [],
         "key": "GUILD_DELETE"
     },
     "CHANNELS": {
         "route": "/channels",
         "args": [],
-        "firstSeen": 1682094470901,
+        "firstSeen": 1682214225060,
         "oldRoutes": [],
         "key": "CHANNELS"
     },
@@ -860,71 +648,25 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470901,
+        "firstSeen": 1682214225060,
         "oldRoutes": [],
         "key": "CHANNEL"
-    },
-    "THREAD_MEMBER": {
-        "route": "/channels/:channelId/thread-members/@me",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1682094470901,
-        "oldRoutes": [],
-        "key": "THREAD_MEMBER"
     },
     "THREAD_MEMBER_SETTINGS": {
         "route": "/channels/:channelId/thread-members/@me/settings",
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470901,
+        "firstSeen": 1682214225061,
         "oldRoutes": [],
         "key": "THREAD_MEMBER_SETTINGS"
-    },
-    "ALL_ARCHIVED_THREADS": {
-        "route": "/channels/:channelId/threads/archived/:unknown",
-        "args": [
-            ":channelId",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470902,
-        "oldRoutes": [],
-        "key": "ALL_ARCHIVED_THREADS"
-    },
-    "MY_ARCHIVED_THREADS": {
-        "route": "/channels/:channelId/users/@me/threads/archived/private",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1682094470902,
-        "oldRoutes": [],
-        "key": "MY_ARCHIVED_THREADS"
-    },
-    "THREAD_SEARCH": {
-        "route": "/channels/:channelId/threads/search",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1682094470902,
-        "oldRoutes": [],
-        "key": "THREAD_SEARCH"
-    },
-    "FORUM_POSTS": {
-        "route": "/channels/:channelId/post-data",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1682094470902,
-        "oldRoutes": [],
-        "key": "FORUM_POSTS"
     },
     "PARTNER_REQUIREMENTS": {
         "route": "/partners/:unknown/requirements",
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470902,
+        "firstSeen": 1682214225061,
         "oldRoutes": [],
         "key": "PARTNER_REQUIREMENTS"
     },
@@ -934,75 +676,18 @@
             ":userId",
             ":unknown"
         ],
-        "firstSeen": 1682094470902,
+        "firstSeen": 1682214225061,
         "oldRoutes": [],
         "key": "AVATAR"
-    },
-    "USER_BANNER": {
-        "route": "/users/:userId/banners/:hash.:type",
-        "args": [
-            ":userId",
-            ":hash",
-            ":type"
-        ],
-        "firstSeen": 1682094470902,
-        "oldRoutes": [],
-        "key": "USER_BANNER"
-    },
-    "AVATAR_DECORATIONS": {
-        "route": "/users/:userId/avatar-decorations/:unknown.png",
-        "args": [
-            ":userId",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470903,
-        "oldRoutes": [],
-        "key": "AVATAR_DECORATIONS"
-    },
-    "AVATAR_DECORATION_PRESETS": {
-        "route": "/avatar-decoration-presets/:unknown.png",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470903,
-        "oldRoutes": [],
-        "key": "AVATAR_DECORATION_PRESETS"
-    },
-    "USER_AVATAR_DECORATIONS": {
-        "route": "/users/@me/avatar-decorations",
-        "args": [],
-        "firstSeen": 1682094470903,
-        "oldRoutes": [],
-        "key": "USER_AVATAR_DECORATIONS"
-    },
-    "GUILD_MEMBER_BANNER": {
-        "route": "/guilds/:guildId/users/:userId/banners/:unknown.png",
-        "args": [
-            ":guildId",
-            ":userId",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470903,
-        "oldRoutes": [],
-        "key": "GUILD_MEMBER_BANNER"
     },
     "MESSAGES": {
         "route": "/channels/:channelId/messages",
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470903,
+        "firstSeen": 1682214225061,
         "oldRoutes": [],
         "key": "MESSAGES"
-    },
-    "MESSAGES_GREET": {
-        "route": "/channels/:channelId/greet",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1682094470904,
-        "oldRoutes": [],
-        "key": "MESSAGES_GREET"
     },
     "MESSAGE": {
         "route": "/channels/:channelId/messages/:messageId",
@@ -1010,7 +695,7 @@
             ":channelId",
             ":messageId"
         ],
-        "firstSeen": 1682094470904,
+        "firstSeen": 1682214225061,
         "oldRoutes": [],
         "key": "MESSAGE"
     },
@@ -1020,27 +705,9 @@
             ":channelId",
             ":messageId"
         ],
-        "firstSeen": 1682094470904,
+        "firstSeen": 1682214225062,
         "oldRoutes": [],
         "key": "MESSAGE_ACK"
-    },
-    "MESSAGE_CREATE_ATTACHMENT_UPLOAD": {
-        "route": "/channels/:channelId/attachments",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1682094470904,
-        "oldRoutes": [],
-        "key": "MESSAGE_CREATE_ATTACHMENT_UPLOAD"
-    },
-    "MESSAGE_DELETE_UPLOAD": {
-        "route": "/attachments/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470904,
-        "oldRoutes": [],
-        "key": "MESSAGE_DELETE_UPLOAD"
     },
     "MESSAGE_CROSSPOST": {
         "route": "/channels/:channelId/messages/:messageId/crosspost",
@@ -1048,83 +715,16 @@
             ":channelId",
             ":messageId"
         ],
-        "firstSeen": 1682094470904,
+        "firstSeen": 1682214225062,
         "oldRoutes": [],
         "key": "MESSAGE_CROSSPOST"
-    },
-    "MESSAGE_LOG_PRIVATE_CHANNELS": {
-        "route": "/messages-log/private-channels/get",
-        "args": [],
-        "firstSeen": 1682094470904,
-        "oldRoutes": [],
-        "key": "MESSAGE_LOG_PRIVATE_CHANNELS"
-    },
-    "BACKGROUND_SYNC": {
-        "route": "/users/@me/background-sync",
-        "args": [],
-        "firstSeen": 1682094470905,
-        "oldRoutes": [],
-        "key": "BACKGROUND_SYNC"
-    },
-    "STAFF_ONLY_PRELOAD_MESSAGES": {
-        "route": "/channels/preload-messages",
-        "args": [],
-        "firstSeen": 1682094470905,
-        "oldRoutes": [],
-        "key": "STAFF_ONLY_PRELOAD_MESSAGES"
-    },
-    "STAFF_ONLY_GUILD_CHANNEL_EMOJIS": {
-        "route": "/guilds/:guildId/get-channel-name-emojis",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470905,
-        "oldRoutes": [],
-        "key": "STAFF_ONLY_GUILD_CHANNEL_EMOJIS"
-    },
-    "GUILD_FEED_MESSAGE_REMOVE": {
-        "route": "/channels/:channelId/messages/:messageId/hide-guild-feed",
-        "args": [
-            ":channelId",
-            ":messageId"
-        ],
-        "firstSeen": 1682094470905,
-        "oldRoutes": [],
-        "key": "GUILD_FEED_MESSAGE_REMOVE"
-    },
-    "GUILD_FEED_MESSAGE_SET_PREFERENCE": {
-        "route": "/guilds/:guildId/guild-feed/preference",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470905,
-        "oldRoutes": [],
-        "key": "GUILD_FEED_MESSAGE_SET_PREFERENCE"
-    },
-    "GUILD_FEED_FEATURE_ITEM": {
-        "route": "/guilds/:guildId/guild-feed/feature",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470905,
-        "oldRoutes": [],
-        "key": "GUILD_FEED_FEATURE_ITEM"
-    },
-    "GUILD_FEED_MARK_SEEN": {
-        "route": "/guilds/:guildId/guild-feed/mark-seen",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470905,
-        "oldRoutes": [],
-        "key": "GUILD_FEED_MARK_SEEN"
     },
     "PINS_ACK": {
         "route": "/channels/:channelId/pins/ack",
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470905,
+        "firstSeen": 1682214225062,
         "oldRoutes": [],
         "key": "PINS_ACK"
     },
@@ -1133,7 +733,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470906,
+        "firstSeen": 1682214225062,
         "oldRoutes": [],
         "key": "PINS"
     },
@@ -1143,7 +743,7 @@
             ":channelId",
             ":unknown"
         ],
-        "firstSeen": 1682094470906,
+        "firstSeen": 1682214225062,
         "oldRoutes": [],
         "key": "PIN"
     },
@@ -1152,7 +752,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470906,
+        "firstSeen": 1682214225062,
         "oldRoutes": [],
         "key": "INSTANT_INVITES"
     },
@@ -1161,7 +761,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470906,
+        "firstSeen": 1682214225062,
         "oldRoutes": [],
         "key": "TYPING"
     },
@@ -1171,7 +771,7 @@
             ":channelId",
             ":unknown"
         ],
-        "firstSeen": 1682094470906,
+        "firstSeen": 1682214225063,
         "oldRoutes": [],
         "key": "CHANNEL_PERMISSIONS_OVERWRITE"
     },
@@ -1180,7 +780,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470907,
+        "firstSeen": 1682214225063,
         "oldRoutes": [],
         "key": "CHANNEL_RECIPIENTS"
     },
@@ -1190,25 +790,9 @@
             ":channelId",
             ":unknown"
         ],
-        "firstSeen": 1682094470907,
+        "firstSeen": 1682214225063,
         "oldRoutes": [],
         "key": "CHANNEL_RECIPIENT"
-    },
-    "CHANNEL_RECIPIENT_CONSENT": {
-        "route": "/channels/:channelId/recipients/@me",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1682094470907,
-        "oldRoutes": [],
-        "key": "CHANNEL_RECIPIENT_CONSENT"
-    },
-    "CHANNEL_RECIPIENT_REJECT_BATCH": {
-        "route": "/channels/recipients/@me/batch-reject",
-        "args": [],
-        "firstSeen": 1682094470907,
-        "oldRoutes": [],
-        "key": "CHANNEL_RECIPIENT_REJECT_BATCH"
     },
     "CHANNEL_ICON": {
         "route": "/channels/:channelId/icons/:unknown.jpg",
@@ -1216,7 +800,7 @@
             ":channelId",
             ":unknown"
         ],
-        "firstSeen": 1682094470907,
+        "firstSeen": 1682214225063,
         "oldRoutes": [],
         "key": "CHANNEL_ICON"
     },
@@ -1225,7 +809,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470908,
+        "firstSeen": 1682214225063,
         "oldRoutes": [],
         "key": "CHANNEL_CONVERT"
     },
@@ -1234,7 +818,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470908,
+        "firstSeen": 1682214225064,
         "oldRoutes": [],
         "key": "CHANNEL_ACK"
     },
@@ -1243,7 +827,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470908,
+        "firstSeen": 1682214225064,
         "oldRoutes": [],
         "key": "CHANNEL_STORE_LISTING"
     },
@@ -1253,7 +837,7 @@
             ":channelId",
             ":unknown"
         ],
-        "firstSeen": 1682094470908,
+        "firstSeen": 1682214225064,
         "oldRoutes": [],
         "key": "CHANNEL_STORE_LISTING_SKU"
     },
@@ -1262,7 +846,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470908,
+        "firstSeen": 1682214225064,
         "oldRoutes": [],
         "key": "CHANNEL_ENTITLEMENT_GRANT"
     },
@@ -1271,7 +855,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470908,
+        "firstSeen": 1682214225064,
         "oldRoutes": [],
         "key": "CHANNEL_FOLLOWERS"
     },
@@ -1280,7 +864,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470909,
+        "firstSeen": 1682214225064,
         "oldRoutes": [],
         "key": "CHANNEL_FOLLOWER_STATS"
     },
@@ -1289,89 +873,21 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470909,
+        "firstSeen": 1682214225065,
         "oldRoutes": [],
         "key": "CHANNEL_FOLLOWER_MESSAGE_STATS"
-    },
-    "CHANNEL_INTEGRATIONS": {
-        "route": "/channels/:channelId/integrations",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1682094470909,
-        "oldRoutes": [],
-        "key": "CHANNEL_INTEGRATIONS"
-    },
-    "CHANNEL_INTEGRATION": {
-        "route": "/channels/:channelId/integrations/:applicationId",
-        "args": [
-            ":channelId",
-            ":applicationId"
-        ],
-        "firstSeen": 1682094470909,
-        "oldRoutes": [],
-        "key": "CHANNEL_INTEGRATION"
-    },
-    "FORUM_TAGS": {
-        "route": "/channels/:channelId/tags",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1682094470909,
-        "oldRoutes": [],
-        "key": "FORUM_TAGS"
-    },
-    "FORUM_TAG": {
-        "route": "/channels/:channelId/tags/:unknown",
-        "args": [
-            ":channelId",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470909,
-        "oldRoutes": [],
-        "key": "FORUM_TAG"
-    },
-    "FRIEND_FINDER": {
-        "route": "/friend-finder/find-friends",
-        "args": [],
-        "firstSeen": 1682094470910,
-        "oldRoutes": [],
-        "key": "FRIEND_FINDER"
-    },
-    "FRIEND_FINDER_HIDE_INVITE_SUGGESTION": {
-        "route": "/friend-finder/hide-invite-suggestion",
-        "args": [],
-        "firstSeen": 1682094470910,
-        "oldRoutes": [],
-        "key": "FRIEND_FINDER_HIDE_INVITE_SUGGESTION"
-    },
-    "FRIEND_SUGGESTIONS": {
-        "route": "/friend-suggestions",
-        "args": [],
-        "firstSeen": 1682094470910,
-        "oldRoutes": [],
-        "key": "FRIEND_SUGGESTIONS"
-    },
-    "FRIEND_SUGGESTION": {
-        "route": "/friend-suggestions/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470910,
-        "oldRoutes": [],
-        "key": "FRIEND_SUGGESTION"
     },
     "TUTORIAL_INDICATORS": {
         "route": "/tutorial/indicators",
         "args": [],
-        "firstSeen": 1682094470910,
+        "firstSeen": 1682214225065,
         "oldRoutes": [],
         "key": "TUTORIAL_INDICATORS"
     },
     "TUTORIAL_INDICATORS_SUPPRESS": {
         "route": "/tutorial/indicators/suppress",
         "args": [],
-        "firstSeen": 1682094470910,
+        "firstSeen": 1682214225065,
         "oldRoutes": [],
         "key": "TUTORIAL_INDICATORS_SUPPRESS"
     },
@@ -1380,126 +896,84 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470910,
+        "firstSeen": 1682214225065,
         "oldRoutes": [],
         "key": "TUTORIAL_INDICATOR"
     },
     "USERS": {
         "route": "/users",
         "args": [],
-        "firstSeen": 1682094470910,
+        "firstSeen": 1682214225065,
         "oldRoutes": [],
         "key": "USERS"
     },
     "ME": {
         "route": "/users/@me",
         "args": [],
-        "firstSeen": 1682094470910,
+        "firstSeen": 1682214225065,
         "oldRoutes": [],
         "key": "ME"
     },
     "DELETE_ACCOUNT": {
         "route": "/users/@me/delete",
         "args": [],
-        "firstSeen": 1682094470911,
+        "firstSeen": 1682214225065,
         "oldRoutes": [],
         "key": "DELETE_ACCOUNT"
     },
     "DISABLE_ACCOUNT": {
         "route": "/users/@me/disable",
         "args": [],
-        "firstSeen": 1682094470911,
+        "firstSeen": 1682214225066,
         "oldRoutes": [],
         "key": "DISABLE_ACCOUNT"
     },
     "DEVICES": {
         "route": "/users/@me/devices",
         "args": [],
-        "firstSeen": 1682094470911,
+        "firstSeen": 1682214225066,
         "oldRoutes": [],
         "key": "DEVICES"
-    },
-    "DEVICES_SYNC_TOKEN": {
-        "route": "/users/@me/devices/sync-token",
-        "args": [],
-        "firstSeen": 1682094470911,
-        "oldRoutes": [],
-        "key": "DEVICES_SYNC_TOKEN"
-    },
-    "DEVICES_SYNC": {
-        "route": "/users/@me/devices/sync",
-        "args": [],
-        "firstSeen": 1682094470911,
-        "oldRoutes": [],
-        "key": "DEVICES_SYNC"
     },
     "SETTINGS": {
         "route": "/users/@me/settings",
         "args": [],
-        "firstSeen": 1682094470912,
+        "firstSeen": 1682214225066,
         "oldRoutes": [],
         "key": "SETTINGS"
     },
     "SETTINGS_CONSENT": {
         "route": "/users/@me/consent",
         "args": [],
-        "firstSeen": 1682094470912,
+        "firstSeen": 1682214225066,
         "oldRoutes": [],
         "key": "SETTINGS_CONSENT"
     },
     "PHONE": {
         "route": "/users/@me/phone",
         "args": [],
-        "firstSeen": 1682094470912,
+        "firstSeen": 1682214225066,
         "oldRoutes": [],
         "key": "PHONE"
-    },
-    "PHONE_VERIFY_NO_PASSWORD": {
-        "route": "/users/@me/phone/verify",
-        "args": [],
-        "firstSeen": 1682094470912,
-        "oldRoutes": [],
-        "key": "PHONE_VERIFY_NO_PASSWORD"
-    },
-    "PHONE_REVERIFY": {
-        "route": "/users/@me/phone/reverify",
-        "args": [],
-        "firstSeen": 1682094470912,
-        "oldRoutes": [],
-        "key": "PHONE_REVERIFY"
-    },
-    "FRIEND_INVITES": {
-        "route": "/users/@me/invites",
-        "args": [],
-        "firstSeen": 1682094470912,
-        "oldRoutes": [],
-        "key": "FRIEND_INVITES"
     },
     "VERIFY_PHONE": {
         "route": "/phone-verifications/verify",
         "args": [],
-        "firstSeen": 1682094470912,
+        "firstSeen": 1682214225066,
         "oldRoutes": [],
         "key": "VERIFY_PHONE"
-    },
-    "VERIFY_PHONE_FOR_TICKET": {
-        "route": "/phone-verifications/validate-support-ticket",
-        "args": [],
-        "firstSeen": 1682094470912,
-        "oldRoutes": [],
-        "key": "VERIFY_PHONE_FOR_TICKET"
     },
     "RESEND_PHONE": {
         "route": "/phone-verifications/resend",
         "args": [],
-        "firstSeen": 1682094470912,
+        "firstSeen": 1682214225066,
         "oldRoutes": [],
         "key": "RESEND_PHONE"
     },
     "CONNECTIONS": {
         "route": "/users/@me/connections",
         "args": [],
-        "firstSeen": 1682094470912,
+        "firstSeen": 1682214225066,
         "oldRoutes": [],
         "key": "CONNECTIONS"
     },
@@ -1508,7 +982,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470913,
+        "firstSeen": 1682214225067,
         "oldRoutes": [],
         "key": "CONNECTIONS_AUTHORIZE"
     },
@@ -1517,36 +991,16 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470913,
+        "firstSeen": 1682214225067,
         "oldRoutes": [],
         "key": "CONNECTIONS_AUTHORIZE_CONTINUATION"
-    },
-    "CONNECTIONS_AUTHORIZE_LINK": {
-        "route": "/connections/:unknown/authorize?two_way_link=true&two_way_link_type=:unknown",
-        "args": [
-            ":unknown",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470913,
-        "oldRoutes": [],
-        "key": "CONNECTIONS_AUTHORIZE_LINK"
-    },
-    "CONNECTIONS_AUTHORIZE_LINK_DEVICE": {
-        "route": "/connections/:unknown/authorize?two_way_link=true&two_way_link_type=null&two_way_user_code=:unknown",
-        "args": [
-            ":unknown",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470913,
-        "oldRoutes": [],
-        "key": "CONNECTIONS_AUTHORIZE_LINK_DEVICE"
     },
     "CONNECTIONS_CALLBACK": {
         "route": "/connections/:unknown/callback",
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470913,
+        "firstSeen": 1682214225067,
         "oldRoutes": [],
         "key": "CONNECTIONS_CALLBACK"
     },
@@ -1556,33 +1010,16 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470914,
+        "firstSeen": 1682214225067,
         "oldRoutes": [],
         "key": "CONNECTION"
-    },
-    "CONNECTION_REFRESH": {
-        "route": "/users/@me/connections/:unknown/:unknown/refresh",
-        "args": [
-            ":unknown",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470914,
-        "oldRoutes": [],
-        "key": "CONNECTION_REFRESH"
     },
     "CONNECTION_SYNC_CONTACTS": {
         "route": "/users/@me/connections/contacts/@me/external-friend-list-entries",
         "args": [],
-        "firstSeen": 1682094470914,
+        "firstSeen": 1682214225067,
         "oldRoutes": [],
         "key": "CONNECTION_SYNC_CONTACTS"
-    },
-    "CONNECTION_SYNC_CONTACTS_SETTINGS": {
-        "route": "/users/@me/connections/contacts/@me/external-friend-list-entries/settings",
-        "args": [],
-        "firstSeen": 1682094470914,
-        "oldRoutes": [],
-        "key": "CONNECTION_SYNC_CONTACTS_SETTINGS"
     },
     "CONNECTION_ACCESS_TOKEN": {
         "route": "/users/@me/connections/:unknown/:unknown/access-token",
@@ -1590,39 +1027,33 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470914,
+        "firstSeen": 1682214225067,
         "oldRoutes": [],
         "key": "CONNECTION_ACCESS_TOKEN"
     },
     "CONNECTIONS_CALLBACK_CONTINUATION": {
         "route": "/connections/:unknown/callback-continuation",
         "args": [
+            ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470914,
-        "oldRoutes": [],
+        "firstSeen": 1682214225068,
+        "oldRoutes": [
+            {
+                "route": "/connections/:unknown/callback-continuation/:unknown",
+                "args": [
+                    ":unknown",
+                    ":unknown"
+                ],
+                "changedAt": 1682214264539
+            }
+        ],
         "key": "CONNECTIONS_CALLBACK_CONTINUATION"
-    },
-    "CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK": {
-        "route": "/connections/:unknown/link-dispatch-auth-callback",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470914,
-        "oldRoutes": [],
-        "key": "CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK"
-    },
-    "XBOX_HANDOFF": {
-        "route": "/consoles/xbox-handoff",
-        "args": [],
-        "firstSeen": 1682094470914,
-        "oldRoutes": [],
-        "key": "XBOX_HANDOFF"
     },
     "NOTES": {
         "route": "/users/@me/notes",
         "args": [],
-        "firstSeen": 1682094470915,
+        "firstSeen": 1682214225068,
         "oldRoutes": [],
         "key": "NOTES"
     },
@@ -1631,14 +1062,14 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470915,
+        "firstSeen": 1682214225068,
         "oldRoutes": [],
         "key": "NOTE"
     },
     "MENTIONS": {
         "route": "/users/@me/mentions",
         "args": [],
-        "firstSeen": 1682094470915,
+        "firstSeen": 1682214225068,
         "oldRoutes": [],
         "key": "MENTIONS"
     },
@@ -1647,130 +1078,100 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470915,
+        "firstSeen": 1682214225068,
         "oldRoutes": [],
         "key": "MENTIONS_MESSAGE_ID"
     },
     "CAPTCHA": {
         "route": "/users/@me/captcha/verify",
         "args": [],
-        "firstSeen": 1682094470915,
+        "firstSeen": 1682214225068,
         "oldRoutes": [],
         "key": "CAPTCHA"
     },
     "EXPERIMENTS": {
         "route": "/experiments",
         "args": [],
-        "firstSeen": 1682094470915,
+        "firstSeen": 1682214225068,
         "oldRoutes": [],
         "key": "EXPERIMENTS"
     },
     "LOGIN": {
         "route": "/auth/login",
         "args": [],
-        "firstSeen": 1682094470915,
+        "firstSeen": 1682214225068,
         "oldRoutes": [],
         "key": "LOGIN"
     },
     "LOGIN_MFA": {
         "route": "/auth/mfa/totp",
         "args": [],
-        "firstSeen": 1682094470915,
+        "firstSeen": 1682214225068,
         "oldRoutes": [],
         "key": "LOGIN_MFA"
     },
     "LOGIN_SMS": {
         "route": "/auth/mfa/sms",
         "args": [],
-        "firstSeen": 1682094470915,
+        "firstSeen": 1682214225069,
         "oldRoutes": [],
         "key": "LOGIN_SMS"
-    },
-    "LOGIN_WEBAUTHN": {
-        "route": "/auth/mfa/webauthn",
-        "args": [],
-        "firstSeen": 1682094470915,
-        "oldRoutes": [],
-        "key": "LOGIN_WEBAUTHN"
     },
     "LOGIN_SMS_SEND": {
         "route": "/auth/mfa/sms/send",
         "args": [],
-        "firstSeen": 1682094470916,
+        "firstSeen": 1682214225069,
         "oldRoutes": [],
         "key": "LOGIN_SMS_SEND"
     },
     "REMOTE_AUTH_INITIALIZE": {
         "route": "/users/@me/remote-auth",
         "args": [],
-        "firstSeen": 1682094470916,
+        "firstSeen": 1682214225069,
         "oldRoutes": [],
         "key": "REMOTE_AUTH_INITIALIZE"
     },
     "REMOTE_AUTH_CANCEL": {
         "route": "/users/@me/remote-auth/cancel",
         "args": [],
-        "firstSeen": 1682094470916,
+        "firstSeen": 1682214225069,
         "oldRoutes": [],
         "key": "REMOTE_AUTH_CANCEL"
-    },
-    "REMOTE_AUTH_LOGIN": {
-        "route": "/users/@me/remote-auth/login",
-        "args": [],
-        "firstSeen": 1682094470916,
-        "oldRoutes": [],
-        "key": "REMOTE_AUTH_LOGIN"
     },
     "REMOTE_AUTH_FINISH": {
         "route": "/users/@me/remote-auth/finish",
         "args": [],
-        "firstSeen": 1682094470916,
+        "firstSeen": 1682214225069,
         "oldRoutes": [],
         "key": "REMOTE_AUTH_FINISH"
     },
     "LOGOUT": {
         "route": "/auth/logout",
         "args": [],
-        "firstSeen": 1682094470916,
+        "firstSeen": 1682214225069,
         "oldRoutes": [],
         "key": "LOGOUT"
     },
     "REGISTER": {
         "route": "/auth/register",
         "args": [],
-        "firstSeen": 1682094470916,
+        "firstSeen": 1682214225069,
         "oldRoutes": [],
         "key": "REGISTER"
     },
     "REGISTER_PHONE": {
         "route": "/auth/register/phone",
         "args": [],
-        "firstSeen": 1682094470916,
+        "firstSeen": 1682214225069,
         "oldRoutes": [],
         "key": "REGISTER_PHONE"
-    },
-    "MFA_WEBAUTHN_CREDENTIALS": {
-        "route": "/users/@me/mfa/webauthn/credentials",
-        "args": [],
-        "firstSeen": 1682094470916,
-        "oldRoutes": [],
-        "key": "MFA_WEBAUTHN_CREDENTIALS"
-    },
-    "MFA_WEBAUTHN_CREDENTIAL": {
-        "route": "/users/@me/mfa/webauthn/credentials/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470916,
-        "oldRoutes": [],
-        "key": "MFA_WEBAUTHN_CREDENTIAL"
     },
     "INVITE": {
         "route": "/invites/:inviteCode",
         "args": [
             ":inviteCode"
         ],
-        "firstSeen": 1682094470917,
+        "firstSeen": 1682214225070,
         "oldRoutes": [],
         "key": "INVITE"
     },
@@ -1779,7 +1180,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470917,
+        "firstSeen": 1682214225070,
         "oldRoutes": [],
         "key": "UNRESOLVED_GUILD_TEMPLATE"
     },
@@ -1788,7 +1189,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470917,
+        "firstSeen": 1682214225070,
         "oldRoutes": [],
         "key": "GUILD_TEMPLATES"
     },
@@ -1798,77 +1199,56 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470917,
+        "firstSeen": 1682214225070,
         "oldRoutes": [],
         "key": "GUILD_TEMPLATE"
     },
     "TRACK": {
         "route": "/science",
         "args": [],
-        "firstSeen": 1682094470917,
+        "firstSeen": 1682214225070,
         "oldRoutes": [],
         "key": "TRACK"
-    },
-    "METRICS": {
-        "route": "/metrics",
-        "args": [],
-        "firstSeen": 1682094470917,
-        "oldRoutes": [],
-        "key": "METRICS"
     },
     "SSO": {
         "route": "/sso",
         "args": [],
-        "firstSeen": 1682094470917,
+        "firstSeen": 1682214225070,
         "oldRoutes": [],
         "key": "SSO"
-    },
-    "SSO_TOKEN": {
-        "route": "/sso-token",
-        "args": [],
-        "firstSeen": 1682094470917,
-        "oldRoutes": [],
-        "key": "SSO_TOKEN"
     },
     "VERIFY": {
         "route": "/auth/verify",
         "args": [],
-        "firstSeen": 1682094470917,
+        "firstSeen": 1682214225070,
         "oldRoutes": [],
         "key": "VERIFY"
     },
     "AUTHORIZE_IP": {
         "route": "/auth/authorize-ip",
         "args": [],
-        "firstSeen": 1682094470918,
+        "firstSeen": 1682214225071,
         "oldRoutes": [],
         "key": "AUTHORIZE_IP"
-    },
-    "AUTHORIZE_PAYMENT": {
-        "route": "/billing/verify-purchase-request",
-        "args": [],
-        "firstSeen": 1682094470918,
-        "oldRoutes": [],
-        "key": "AUTHORIZE_PAYMENT"
     },
     "VERIFY_RESEND": {
         "route": "/auth/verify/resend",
         "args": [],
-        "firstSeen": 1682094470918,
+        "firstSeen": 1682214225071,
         "oldRoutes": [],
         "key": "VERIFY_RESEND"
     },
     "FORGOT_PASSWORD": {
         "route": "/auth/forgot",
         "args": [],
-        "firstSeen": 1682094470918,
+        "firstSeen": 1682214225071,
         "oldRoutes": [],
         "key": "FORGOT_PASSWORD"
     },
     "RESET_PASSWORD": {
         "route": "/auth/reset",
         "args": [],
-        "firstSeen": 1682094470918,
+        "firstSeen": 1682214225071,
         "oldRoutes": [],
         "key": "RESET_PASSWORD"
     },
@@ -1877,7 +1257,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470918,
+        "firstSeen": 1682214225071,
         "oldRoutes": [],
         "key": "REGIONS"
     },
@@ -1887,7 +1267,7 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470918,
+        "firstSeen": 1682214225071,
         "oldRoutes": [],
         "key": "DEBUG_LOG"
     },
@@ -1896,25 +1276,14 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470918,
+        "firstSeen": 1682214225071,
         "oldRoutes": [],
         "key": "DEBUG_LOGS"
-    },
-    "CALLSCOPE_LOGS": {
-        "route": "/callscope/logs/:unknown/user/:userId/%3Aunknown",
-        "args": [
-            ":unknown",
-            ":userId",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470919,
-        "oldRoutes": [],
-        "key": "CALLSCOPE_LOGS"
     },
     "REPORT_V2": {
         "route": "/reports",
         "args": [],
-        "firstSeen": 1682094470919,
+        "firstSeen": 1682214225072,
         "oldRoutes": [],
         "key": "REPORT_V2"
     },
@@ -1924,21 +1293,21 @@
             ":channelId",
             ":messageId"
         ],
-        "firstSeen": 1682094470919,
+        "firstSeen": 1682214225072,
         "oldRoutes": [],
         "key": "STAGE_REPORT"
     },
     "REPORT_OPTIONS": {
         "route": "/report/options",
         "args": [],
-        "firstSeen": 1682094470919,
+        "firstSeen": 1682214225072,
         "oldRoutes": [],
         "key": "REPORT_OPTIONS"
     },
     "INTEGRATIONS": {
         "route": "/integrations",
         "args": [],
-        "firstSeen": 1682094470919,
+        "firstSeen": 1682214225072,
         "oldRoutes": [],
         "key": "INTEGRATIONS"
     },
@@ -1947,7 +1316,7 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470919,
+        "firstSeen": 1682214225072,
         "oldRoutes": [],
         "key": "INTEGRATION_JOIN"
     },
@@ -1956,30 +1325,23 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470919,
+        "firstSeen": 1682214225072,
         "oldRoutes": [],
         "key": "INTEGRATION_SEARCH"
-    },
-    "INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS": {
-        "route": "/users/@me/guilds/integration-application-ids",
-        "args": [],
-        "firstSeen": 1682094470919,
-        "oldRoutes": [],
-        "key": "INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS"
     },
     "USER_GUILD_SETTINGS": {
         "route": "/users/@me/guilds/:guildId/settings",
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470919,
+        "firstSeen": 1682214225072,
         "oldRoutes": [],
         "key": "USER_GUILD_SETTINGS"
     },
     "APPLICATIONS_DETECTABLE": {
         "route": "/applications/detectable",
         "args": [],
-        "firstSeen": 1682094470919,
+        "firstSeen": 1682214225072,
         "oldRoutes": [],
         "key": "APPLICATIONS_DETECTABLE"
     },
@@ -1989,7 +1351,7 @@
             ":applicationId",
             ":unknown"
         ],
-        "firstSeen": 1682094470920,
+        "firstSeen": 1682214225072,
         "oldRoutes": [],
         "key": "APPLICATION_ICON"
     },
@@ -1998,7 +1360,7 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470920,
+        "firstSeen": 1682214225073,
         "oldRoutes": [],
         "key": "APPLICATION_RPC"
     },
@@ -2007,67 +1369,44 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470920,
+        "firstSeen": 1682214225073,
         "oldRoutes": [],
         "key": "APPLICATION_ASSETS"
-    },
-    "APPLICATION_EXTERNAL_ASSETS": {
-        "route": "/applications/:applicationId/external-assets",
-        "args": [
-            ":applicationId"
-        ],
-        "firstSeen": 1682094470920,
-        "oldRoutes": [],
-        "key": "APPLICATION_EXTERNAL_ASSETS"
     },
     "OWNED_APPLICATION_BRANCHES": {
         "route": "/applications/:applicationId/branches",
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470920,
+        "firstSeen": 1682214225073,
         "oldRoutes": [],
         "key": "OWNED_APPLICATION_BRANCHES"
     },
     "OAUTH2_AUTHORIZE": {
         "route": "/oauth2/authorize",
         "args": [],
-        "firstSeen": 1682094470920,
+        "firstSeen": 1682214225073,
         "oldRoutes": [],
         "key": "OAUTH2_AUTHORIZE"
-    },
-    "OAUTH2_AUTHORIZE_SAMSUNG": {
-        "route": "/oauth2/samsung/authorize",
-        "args": [],
-        "firstSeen": 1682094470920,
-        "oldRoutes": [],
-        "key": "OAUTH2_AUTHORIZE_SAMSUNG"
-    },
-    "OAUTH2_AUTHORIZE_SAMSUNG_CALLBACK": {
-        "route": "/oauth2/samsung/authorize/callback",
-        "args": [],
-        "firstSeen": 1682094470920,
-        "oldRoutes": [],
-        "key": "OAUTH2_AUTHORIZE_SAMSUNG_CALLBACK"
     },
     "OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS": {
         "route": "/oauth2/authorize/webhook-channels",
         "args": [],
-        "firstSeen": 1682094470920,
+        "firstSeen": 1682214225073,
         "oldRoutes": [],
         "key": "OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS"
     },
     "OAUTH2_CURRENT_AUTH": {
         "route": "/oauth2/@me",
         "args": [],
-        "firstSeen": 1682094470921,
+        "firstSeen": 1682214225073,
         "oldRoutes": [],
         "key": "OAUTH2_CURRENT_AUTH"
     },
     "OAUTH2_TOKENS": {
         "route": "/oauth2/tokens",
         "args": [],
-        "firstSeen": 1682094470921,
+        "firstSeen": 1682214225073,
         "oldRoutes": [],
         "key": "OAUTH2_TOKENS"
     },
@@ -2076,79 +1415,57 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470921,
+        "firstSeen": 1682214225073,
         "oldRoutes": [],
         "key": "OAUTH2_TOKEN"
     },
     "OAUTH2_WHITELIST_ACCEPT": {
         "route": "/oauth2/allowlist/accept",
         "args": [],
-        "firstSeen": 1682094470921,
-        "oldRoutes": [],
+        "firstSeen": 1682214225073,
+        "oldRoutes": [
+            {
+                "route": "/oauth2/whitelist/accept",
+                "args": [],
+                "changedAt": 1682214264542
+            }
+        ],
         "key": "OAUTH2_WHITELIST_ACCEPT"
-    },
-    "OAUTH2_DEVICE_VERIFY": {
-        "route": "/oauth2/device/verify",
-        "args": [],
-        "firstSeen": 1682094470921,
-        "oldRoutes": [],
-        "key": "OAUTH2_DEVICE_VERIFY"
-    },
-    "OAUTH2_DEVICE_FINISH": {
-        "route": "/oauth2/device/finish",
-        "args": [],
-        "firstSeen": 1682094470921,
-        "oldRoutes": [],
-        "key": "OAUTH2_DEVICE_FINISH"
     },
     "MFA_TOTP_ENABLE": {
         "route": "/users/@me/mfa/totp/enable",
         "args": [],
-        "firstSeen": 1682094470921,
+        "firstSeen": 1682214225073,
         "oldRoutes": [],
         "key": "MFA_TOTP_ENABLE"
     },
     "MFA_TOTP_DISABLE": {
         "route": "/users/@me/mfa/totp/disable",
         "args": [],
-        "firstSeen": 1682094470921,
+        "firstSeen": 1682214225074,
         "oldRoutes": [],
         "key": "MFA_TOTP_DISABLE"
     },
     "MFA_SMS_ENABLE": {
         "route": "/users/@me/mfa/sms/enable",
         "args": [],
-        "firstSeen": 1682094470921,
+        "firstSeen": 1682214225074,
         "oldRoutes": [],
         "key": "MFA_SMS_ENABLE"
     },
     "MFA_SMS_DISABLE": {
         "route": "/users/@me/mfa/sms/disable",
         "args": [],
-        "firstSeen": 1682094470921,
+        "firstSeen": 1682214225074,
         "oldRoutes": [],
         "key": "MFA_SMS_DISABLE"
-    },
-    "MFA_CODES_VERIFICATION": {
-        "route": "/users/@me/mfa/codes-verification",
-        "args": [],
-        "firstSeen": 1682094470922,
-        "oldRoutes": [],
-        "key": "MFA_CODES_VERIFICATION"
-    },
-    "MFA_SEND_VERIFICATION_KEY": {
-        "route": "/auth/verify/view-backup-codes-challenge",
-        "args": [],
-        "firstSeen": 1682094470922,
-        "oldRoutes": [],
-        "key": "MFA_SEND_VERIFICATION_KEY"
     },
     "CALL": {
         "route": "/channels/:channelId/call",
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470922,
+        "firstSeen": 1682214225074,
         "oldRoutes": [],
         "key": "CALL"
     },
@@ -2157,7 +1474,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470922,
+        "firstSeen": 1682214225074,
         "oldRoutes": [],
         "key": "CALL_RING"
     },
@@ -2166,30 +1483,23 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470922,
+        "firstSeen": 1682214225074,
         "oldRoutes": [],
         "key": "CALL_STOP_RINGING"
     },
     "DISABLE_EMAIL_NOTIFICATIONS": {
         "route": "/users/disable-email-notifications",
         "args": [],
-        "firstSeen": 1682094470922,
+        "firstSeen": 1682214225074,
         "oldRoutes": [],
         "key": "DISABLE_EMAIL_NOTIFICATIONS"
-    },
-    "DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS": {
-        "route": "/users/disable-server-highlight-notifications",
-        "args": [],
-        "firstSeen": 1682094470923,
-        "oldRoutes": [],
-        "key": "DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS"
     },
     "CHANNEL_WEBHOOKS": {
         "route": "/channels/:channelId/webhooks",
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470923,
+        "firstSeen": 1682214225074,
         "oldRoutes": [],
         "key": "CHANNEL_WEBHOOKS"
     },
@@ -2198,7 +1508,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470923,
+        "firstSeen": 1682214225075,
         "oldRoutes": [],
         "key": "GUILD_WEBHOOKS"
     },
@@ -2207,7 +1517,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470923,
+        "firstSeen": 1682214225075,
         "oldRoutes": [],
         "key": "WEBHOOK"
     },
@@ -2217,7 +1527,7 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470924,
+        "firstSeen": 1682214225075,
         "oldRoutes": [],
         "key": "WEBHOOK_INTEGRATION"
     },
@@ -2228,7 +1538,7 @@
             ":messageId",
             ":reactionId"
         ],
-        "firstSeen": 1682094470924,
+        "firstSeen": 1682214225075,
         "oldRoutes": [],
         "key": "REACTIONS"
     },
@@ -2238,7 +1548,7 @@
             ":channelId",
             ":messageId"
         ],
-        "firstSeen": 1682094470924,
+        "firstSeen": 1682214225075,
         "oldRoutes": [],
         "key": "REMOVE_REACTIONS"
     },
@@ -2250,341 +1560,112 @@
             ":reactionId",
             ":unknown"
         ],
-        "firstSeen": 1682094470924,
+        "firstSeen": 1682214225075,
         "oldRoutes": [],
         "key": "REACTION"
-    },
-    "REACTION_WITH_TYPE": {
-        "route": "/channels/:channelId/messages/:messageId/reactions/:reactionId/:unknown/:unknown",
-        "args": [
-            ":channelId",
-            ":messageId",
-            ":reactionId",
-            ":unknown",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470925,
-        "oldRoutes": [],
-        "key": "REACTION_WITH_TYPE"
     },
     "SEARCH_GUILD": {
         "route": "/guilds/:guildId/messages/search",
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470925,
+        "firstSeen": 1682214225075,
         "oldRoutes": [],
         "key": "SEARCH_GUILD"
-    },
-    "SEARCH_DMS": {
-        "route": "/users/:userId/messages/search",
-        "args": [
-            ":userId"
-        ],
-        "firstSeen": 1682094470925,
-        "oldRoutes": [],
-        "key": "SEARCH_DMS"
     },
     "GUILD_APPLICATIONS": {
         "route": "/guilds/:guildId/applications",
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470925,
+        "firstSeen": 1682214225075,
         "oldRoutes": [],
         "key": "GUILD_APPLICATIONS"
-    },
-    "APPLIED_GUILD_BOOSTS_FOR_GUILD": {
-        "route": "/guilds/:guildId/premium/subscriptions",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470925,
-        "oldRoutes": [],
-        "key": "APPLIED_GUILD_BOOSTS_FOR_GUILD"
-    },
-    "APPLIED_GUILD_BOOST": {
-        "route": "/guilds/:guildId/premium/subscriptions/:subscriptionId",
-        "args": [
-            ":guildId",
-            ":subscriptionId"
-        ],
-        "firstSeen": 1682094470925,
-        "oldRoutes": [],
-        "key": "APPLIED_GUILD_BOOST"
-    },
-    "APPLIED_GUILD_BOOST_COOLDOWN": {
-        "route": "/users/@me/guilds/premium/subscriptions/cooldown",
-        "args": [],
-        "firstSeen": 1682094470926,
-        "oldRoutes": [],
-        "key": "APPLIED_GUILD_BOOST_COOLDOWN"
-    },
-    "USER_APPLIED_GUILD_BOOSTS": {
-        "route": "/users/@me/guilds/premium/subscriptions",
-        "args": [],
-        "firstSeen": 1682094470926,
-        "oldRoutes": [],
-        "key": "USER_APPLIED_GUILD_BOOSTS"
-    },
-    "USER_GUILD_BOOST_SLOTS": {
-        "route": "/users/@me/guilds/premium/subscription-slots",
-        "args": [],
-        "firstSeen": 1682094470926,
-        "oldRoutes": [],
-        "key": "USER_GUILD_BOOST_SLOTS"
-    },
-    "USER_GUILD_BOOST_SLOT_CANCEL": {
-        "route": "/users/@me/guilds/premium/subscription-slots/:unknown/cancel",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470926,
-        "oldRoutes": [],
-        "key": "USER_GUILD_BOOST_SLOT_CANCEL"
-    },
-    "USER_GUILD_BOOST_SLOT_UNCANCEL": {
-        "route": "/users/@me/guilds/premium/subscription-slots/:unknown/uncancel",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470926,
-        "oldRoutes": [],
-        "key": "USER_GUILD_BOOST_SLOT_UNCANCEL"
     },
     "SEARCH_CHANNEL": {
         "route": "/channels/:channelId/messages/search",
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470926,
+        "firstSeen": 1682214225077,
         "oldRoutes": [],
         "key": "SEARCH_CHANNEL"
     },
     "BILLING_STRIPE_SETUP_INTENT_SECRET": {
         "route": "/users/@me/billing/stripe/setup-intents",
         "args": [],
-        "firstSeen": 1682094470926,
+        "firstSeen": 1682214225077,
         "oldRoutes": [],
         "key": "BILLING_STRIPE_SETUP_INTENT_SECRET"
     },
     "BILLING_PAYMENT_SOURCES": {
         "route": "/users/@me/billing/payment-sources",
         "args": [],
-        "firstSeen": 1682094470927,
+        "firstSeen": 1682214225077,
         "oldRoutes": [],
         "key": "BILLING_PAYMENT_SOURCES"
-    },
-    "BILLING_PAYMENT_SOURCES_VALIDATE_BILLING_ADDRESS": {
-        "route": "/users/@me/billing/payment-sources/validate-billing-address",
-        "args": [],
-        "firstSeen": 1682094470927,
-        "oldRoutes": [],
-        "key": "BILLING_PAYMENT_SOURCES_VALIDATE_BILLING_ADDRESS"
     },
     "BILLING_PAYMENT_SOURCE": {
         "route": "/users/@me/billing/payment-sources/:unknown",
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470927,
+        "firstSeen": 1682214225077,
         "oldRoutes": [],
         "key": "BILLING_PAYMENT_SOURCE"
     },
     "BILLING_PAYMENTS": {
         "route": "/users/@me/billing/payments",
         "args": [],
-        "firstSeen": 1682094470927,
+        "firstSeen": 1682214225077,
         "oldRoutes": [],
         "key": "BILLING_PAYMENTS"
-    },
-    "BILLING_PAYMENT": {
-        "route": "/users/@me/billing/payments/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470927,
-        "oldRoutes": [],
-        "key": "BILLING_PAYMENT"
     },
     "BILLING_PAYMENTS_VOID": {
         "route": "/users/@me/billing/payments/:unknown/void",
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470927,
+        "firstSeen": 1682214225077,
         "oldRoutes": [],
         "key": "BILLING_PAYMENTS_VOID"
-    },
-    "BILLING_PAYMENTS_REFUND": {
-        "route": "/users/@me/billing/payments/:unknown/refund",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470927,
-        "oldRoutes": [],
-        "key": "BILLING_PAYMENTS_REFUND"
     },
     "BILLING_STRIPE_PAYMENT_INTENTS": {
         "route": "/users/@me/billing/stripe/payment-intents/payments/:unknown",
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470928,
+        "firstSeen": 1682214225077,
         "oldRoutes": [],
         "key": "BILLING_STRIPE_PAYMENT_INTENTS"
-    },
-    "BILLING_STRIPE_PAYMENT_INTENTS_VIA_ID": {
-        "route": "/users/@me/billing/stripe/payment-intents/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470928,
-        "oldRoutes": [],
-        "key": "BILLING_STRIPE_PAYMENT_INTENTS_VIA_ID"
-    },
-    "BILLING_PAYPAL_BILLING_AGREEMENT_TOKENS": {
-        "route": "/users/@me/billing/paypal/billing-agreement-tokens",
-        "args": [],
-        "firstSeen": 1682094470928,
-        "oldRoutes": [],
-        "key": "BILLING_PAYPAL_BILLING_AGREEMENT_TOKENS"
-    },
-    "BILLING_POPUP_BRIDGE": {
-        "route": "/billing/popup-bridge/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470928,
-        "oldRoutes": [],
-        "key": "BILLING_POPUP_BRIDGE"
-    },
-    "BILLING_POPUP_BRIDGE_CALLBACK": {
-        "route": "/billing/popup-bridge/:unknown/callback",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470928,
-        "oldRoutes": [],
-        "key": "BILLING_POPUP_BRIDGE_CALLBACK"
-    },
-    "BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX": {
-        "route": "/billing/popup-bridge/:unknown/callback/:unknown/:unknown",
-        "args": [
-            ":unknown",
-            ":unknown",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470928,
-        "oldRoutes": [],
-        "key": "BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX"
     },
     "BILLING_SUBSCRIPTIONS": {
         "route": "/users/@me/billing/subscriptions",
         "args": [],
-        "firstSeen": 1682094470928,
+        "firstSeen": 1682214225078,
         "oldRoutes": [],
         "key": "BILLING_SUBSCRIPTIONS"
-    },
-    "BILLING_SUBSCRIPTIONS_PREVIEW": {
-        "route": "/users/@me/billing/subscriptions/preview",
-        "args": [],
-        "firstSeen": 1682094470928,
-        "oldRoutes": [],
-        "key": "BILLING_SUBSCRIPTIONS_PREVIEW"
     },
     "BILLING_APPLY_APPLE_RECEIPT": {
         "route": "/billing/apple/apply-receipt",
         "args": [],
-        "firstSeen": 1682094470928,
+        "firstSeen": 1682214225078,
         "oldRoutes": [],
         "key": "BILLING_APPLY_APPLE_RECEIPT"
-    },
-    "BILLING_APPLE_SUBSCRIPTION": {
-        "route": "/billing/apple/subscriptions/:subscriptionId",
-        "args": [
-            ":subscriptionId"
-        ],
-        "firstSeen": 1682094470929,
-        "oldRoutes": [],
-        "key": "BILLING_APPLE_SUBSCRIPTION"
-    },
-    "BILLING_CREATE_APPLE_IAP_JWT_TOKEN": {
-        "route": "/billing/apple/jwt-token",
-        "args": [],
-        "firstSeen": 1682094470929,
-        "oldRoutes": [],
-        "key": "BILLING_CREATE_APPLE_IAP_JWT_TOKEN"
     },
     "BILLING_SUBSCRIPTION": {
         "route": "/users/@me/billing/subscriptions/:subscriptionId",
         "args": [
             ":subscriptionId"
         ],
-        "firstSeen": 1682094470929,
+        "firstSeen": 1682214225078,
         "oldRoutes": [],
         "key": "BILLING_SUBSCRIPTION"
-    },
-    "BILLING_SUBSCRIPTION_PREVIEW": {
-        "route": "/users/@me/billing/subscriptions/:subscriptionId/preview",
-        "args": [
-            ":subscriptionId"
-        ],
-        "firstSeen": 1682094470929,
-        "oldRoutes": [],
-        "key": "BILLING_SUBSCRIPTION_PREVIEW"
-    },
-    "BILLING_SUBSCRIPTION_INVOICE": {
-        "route": "/users/@me/billing/subscriptions/:subscriptionId/invoices",
-        "args": [
-            ":subscriptionId"
-        ],
-        "firstSeen": 1682094470929,
-        "oldRoutes": [],
-        "key": "BILLING_SUBSCRIPTION_INVOICE"
-    },
-    "BILLING_INVOICE_MANUAL_PAYMENT": {
-        "route": "/users/@me/billing/subscriptions/:subscriptionId/invoices/:unknown/pay",
-        "args": [
-            ":subscriptionId",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470929,
-        "oldRoutes": [],
-        "key": "BILLING_INVOICE_MANUAL_PAYMENT"
-    },
-    "BILLING_COUNTRY_CODE": {
-        "route": "/users/@me/billing/country-code",
-        "args": [],
-        "firstSeen": 1682094470929,
-        "oldRoutes": [],
-        "key": "BILLING_COUNTRY_CODE"
-    },
-    "BILLING_LOCALIZED_PROMO": {
-        "route": "/users/@me/billing/localized-pricing-promo",
-        "args": [],
-        "firstSeen": 1682094470930,
-        "oldRoutes": [],
-        "key": "BILLING_LOCALIZED_PROMO"
-    },
-    "VERIFY_PURCHASE": {
-        "route": "/google-play/verify-purchase-token",
-        "args": [],
-        "firstSeen": 1682094470930,
-        "oldRoutes": [],
-        "key": "VERIFY_PURCHASE"
-    },
-    "DOWNGRADE_SUBSCRIPTION": {
-        "route": "/google-play/downgrade-subscription",
-        "args": [],
-        "firstSeen": 1682094470930,
-        "oldRoutes": [],
-        "key": "DOWNGRADE_SUBSCRIPTION"
     },
     "USER_AGREEMENTS": {
         "route": "/users/@me/agreements",
         "args": [],
-        "firstSeen": 1682094470930,
+        "firstSeen": 1682214225079,
         "oldRoutes": [],
         "key": "USER_AGREEMENTS"
     },
@@ -2593,7 +1674,7 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470930,
+        "firstSeen": 1682214225079,
         "oldRoutes": [],
         "key": "USER_ACHIEVEMENTS"
     },
@@ -2604,28 +1685,28 @@
             ":applicationId",
             ":unknown"
         ],
-        "firstSeen": 1682094470930,
+        "firstSeen": 1682214225079,
         "oldRoutes": [],
         "key": "USER_ACHIEVEMENTS_FOR_USER"
     },
     "HANDOFF": {
         "route": "/auth/handoff",
         "args": [],
-        "firstSeen": 1682094470930,
+        "firstSeen": 1682214225079,
         "oldRoutes": [],
         "key": "HANDOFF"
     },
     "HANDOFF_EXCHANGE": {
         "route": "/auth/handoff/exchange",
         "args": [],
-        "firstSeen": 1682094470930,
+        "firstSeen": 1682214225079,
         "oldRoutes": [],
         "key": "HANDOFF_EXCHANGE"
     },
     "LIBRARY": {
         "route": "/users/@me/library",
         "args": [],
-        "firstSeen": 1682094470930,
+        "firstSeen": 1682214225079,
         "oldRoutes": [],
         "key": "LIBRARY"
     },
@@ -2635,7 +1716,7 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470930,
+        "firstSeen": 1682214225080,
         "oldRoutes": [],
         "key": "LIBRARY_APPLICATION_BRANCH"
     },
@@ -2644,21 +1725,21 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470931,
+        "firstSeen": 1682214225080,
         "oldRoutes": [],
         "key": "LIBRARY_APPLICATION_DELETE"
     },
     "AUTH_LOCATION_METADATA": {
         "route": "/auth/location-metadata",
         "args": [],
-        "firstSeen": 1682094470931,
+        "firstSeen": 1682214225080,
         "oldRoutes": [],
         "key": "AUTH_LOCATION_METADATA"
     },
     "USER_HARVEST": {
         "route": "/users/@me/harvest",
         "args": [],
-        "firstSeen": 1682094470931,
+        "firstSeen": 1682214225080,
         "oldRoutes": [],
         "key": "USER_HARVEST"
     },
@@ -2668,7 +1749,7 @@
             ":applicationId",
             ":unknown"
         ],
-        "firstSeen": 1682094470931,
+        "firstSeen": 1682214225080,
         "oldRoutes": [],
         "key": "APPLICATION_LIVE_BUILD"
     },
@@ -2679,14 +1760,14 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470931,
+        "firstSeen": 1682214225080,
         "oldRoutes": [],
         "key": "APPLICATION_BUILD_SIZE"
     },
     "APPLICATION_BRANCHES": {
         "route": "/branches",
         "args": [],
-        "firstSeen": 1682094470931,
+        "firstSeen": 1682214225081,
         "oldRoutes": [],
         "key": "APPLICATION_BRANCHES"
     },
@@ -2695,21 +1776,21 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470931,
+        "firstSeen": 1682214225081,
         "oldRoutes": [],
         "key": "APPLICATION_PUBLIC"
     },
     "APPLICATIONS_PUBLIC": {
         "route": "/applications/public",
         "args": [],
-        "firstSeen": 1682094470931,
+        "firstSeen": 1682214225081,
         "oldRoutes": [],
         "key": "APPLICATIONS_PUBLIC"
     },
     "APPLICATIONS_TRENDING": {
         "route": "/applications/trending/global",
         "args": [],
-        "firstSeen": 1682094470931,
+        "firstSeen": 1682214225081,
         "oldRoutes": [],
         "key": "APPLICATIONS_TRENDING"
     },
@@ -2718,7 +1799,7 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470932,
+        "firstSeen": 1682214225081,
         "oldRoutes": [],
         "key": "APPLICATION_BRANCH_LIST"
     },
@@ -2728,7 +1809,7 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470932,
+        "firstSeen": 1682214225081,
         "oldRoutes": [],
         "key": "LIBRARY_APPLICATION_INSTALLED"
     },
@@ -2737,7 +1818,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470932,
+        "firstSeen": 1682214225082,
         "oldRoutes": [],
         "key": "STORE_DIRECTORY_LAYOUT"
     },
@@ -2746,21 +1827,14 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470932,
+        "firstSeen": 1682214225082,
         "oldRoutes": [],
         "key": "STORE_DIRECTORY"
-    },
-    "STORE_EMAIL_RESEND_PAYMENT_VERIFICATION": {
-        "route": "/store/email/resend-payment-verification",
-        "args": [],
-        "firstSeen": 1682094470932,
-        "oldRoutes": [],
-        "key": "STORE_EMAIL_RESEND_PAYMENT_VERIFICATION"
     },
     "STORE_PUBLISHED_LISTINGS_APPLICATIONS": {
         "route": "/store/published-listings/applications",
         "args": [],
-        "firstSeen": 1682094470932,
+        "firstSeen": 1682214225082,
         "oldRoutes": [],
         "key": "STORE_PUBLISHED_LISTINGS_APPLICATIONS"
     },
@@ -2769,14 +1843,14 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470932,
+        "firstSeen": 1682214225082,
         "oldRoutes": [],
         "key": "STORE_PUBLISHED_LISTINGS_APPLICATION"
     },
     "STORE_PUBLISHED_LISTINGS_SKUS": {
         "route": "/store/published-listings/skus",
         "args": [],
-        "firstSeen": 1682094470932,
+        "firstSeen": 1682214225082,
         "oldRoutes": [],
         "key": "STORE_PUBLISHED_LISTINGS_SKUS"
     },
@@ -2785,7 +1859,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470933,
+        "firstSeen": 1682214225082,
         "oldRoutes": [],
         "key": "STORE_PUBLISHED_LISTINGS_SKU"
     },
@@ -2794,7 +1868,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470933,
+        "firstSeen": 1682214225083,
         "oldRoutes": [],
         "key": "STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD"
     },
@@ -2803,7 +1877,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470933,
+        "firstSeen": 1682214225083,
         "oldRoutes": [],
         "key": "STORE_PUBLISHED_LISTINGS_SUBSCRIPTION_PLANS"
     },
@@ -2812,7 +1886,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470933,
+        "firstSeen": 1682214225083,
         "oldRoutes": [],
         "key": "STORE_SKU"
     },
@@ -2821,7 +1895,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470933,
+        "firstSeen": 1682214225083,
         "oldRoutes": [],
         "key": "STORE_SKU_PURCHASE"
     },
@@ -2830,7 +1904,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470933,
+        "firstSeen": 1682214225083,
         "oldRoutes": [],
         "key": "STORE_LISTING"
     },
@@ -2839,7 +1913,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470933,
+        "firstSeen": 1682214225083,
         "oldRoutes": [],
         "key": "STORE_LISTINGS_SKU"
     },
@@ -2848,7 +1922,7 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470934,
+        "firstSeen": 1682214225084,
         "oldRoutes": [],
         "key": "APPLICATION_SKUS"
     },
@@ -2857,7 +1931,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470934,
+        "firstSeen": 1682214225084,
         "oldRoutes": [],
         "key": "STORE_EULA"
     },
@@ -2866,23 +1940,16 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470934,
+        "firstSeen": 1682214225084,
         "oldRoutes": [],
         "key": "ENTITLEMENTS_FOR_APPLICATION"
-    },
-    "ENTITLEMENTS_FOR_USER": {
-        "route": "/users/@me/entitlements",
-        "args": [],
-        "firstSeen": 1682094470934,
-        "oldRoutes": [],
-        "key": "ENTITLEMENTS_FOR_USER"
     },
     "ENTITLEMENT_TICKET": {
         "route": "/users/@me/applications/:applicationId/entitlement-ticket",
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470934,
+        "firstSeen": 1682214225084,
         "oldRoutes": [],
         "key": "ENTITLEMENT_TICKET"
     },
@@ -2891,14 +1958,14 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470934,
+        "firstSeen": 1682214225084,
         "oldRoutes": [],
         "key": "APPLICATION_TICKET"
     },
     "ENTITLEMENTS_GIFTABLE": {
         "route": "/users/@me/entitlements/gifts",
         "args": [],
-        "firstSeen": 1682094470934,
+        "firstSeen": 1682214225084,
         "oldRoutes": [],
         "key": "ENTITLEMENTS_GIFTABLE"
     },
@@ -2909,14 +1976,14 @@
             ":hash",
             ":type"
         ],
-        "firstSeen": 1682094470934,
+        "firstSeen": 1682214225084,
         "oldRoutes": [],
         "key": "STORE_ASSET"
     },
     "HYPESQUAD_ONLINE": {
         "route": "/hypesquad/online",
         "args": [],
-        "firstSeen": 1682094470935,
+        "firstSeen": 1682214225085,
         "oldRoutes": [],
         "key": "HYPESQUAD_ONLINE"
     },
@@ -2926,49 +1993,49 @@
             ":applicationId",
             ":unknown"
         ],
-        "firstSeen": 1682094470936,
+        "firstSeen": 1682214225085,
         "oldRoutes": [],
         "key": "APPLICATION_STORAGE"
     },
     "GIFS_SEARCH": {
         "route": "/gifs/search",
         "args": [],
-        "firstSeen": 1682094470936,
+        "firstSeen": 1682214225085,
         "oldRoutes": [],
         "key": "GIFS_SEARCH"
     },
     "GIFS_TRENDING": {
         "route": "/gifs/trending",
         "args": [],
-        "firstSeen": 1682094470936,
+        "firstSeen": 1682214225085,
         "oldRoutes": [],
         "key": "GIFS_TRENDING"
     },
     "GIFS_TRENDING_GIFS": {
         "route": "/gifs/trending-gifs",
         "args": [],
-        "firstSeen": 1682094470936,
+        "firstSeen": 1682214225085,
         "oldRoutes": [],
         "key": "GIFS_TRENDING_GIFS"
     },
     "GIFS_SELECT": {
         "route": "/gifs/select",
         "args": [],
-        "firstSeen": 1682094470936,
+        "firstSeen": 1682214225085,
         "oldRoutes": [],
         "key": "GIFS_SELECT"
     },
     "GIFS_SUGGEST": {
         "route": "/gifs/suggest",
         "args": [],
-        "firstSeen": 1682094470936,
+        "firstSeen": 1682214225085,
         "oldRoutes": [],
         "key": "GIFS_SUGGEST"
     },
     "GIFS_TRENDING_SEARCH": {
         "route": "/gifs/trending-search",
         "args": [],
-        "firstSeen": 1682094470937,
+        "firstSeen": 1682214225086,
         "oldRoutes": [],
         "key": "GIFS_TRENDING_SEARCH"
     },
@@ -2977,7 +2044,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470937,
+        "firstSeen": 1682214225086,
         "oldRoutes": [],
         "key": "GIFT_CODE_RESOLVE"
     },
@@ -2986,14 +2053,14 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470937,
+        "firstSeen": 1682214225086,
         "oldRoutes": [],
         "key": "GIFT_CODE_REDEEM"
     },
     "USER_GIFT_CODE_CREATE": {
         "route": "/users/@me/entitlements/gift-codes",
         "args": [],
-        "firstSeen": 1682094470937,
+        "firstSeen": 1682214225086,
         "oldRoutes": [],
         "key": "USER_GIFT_CODE_CREATE"
     },
@@ -3002,22 +2069,32 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470937,
+        "firstSeen": 1682214225086,
         "oldRoutes": [],
         "key": "USER_GIFT_CODE_REVOKE"
     },
     "USER_GIFT_CODES": {
         "route": "/users/@me/entitlements/gift-codes",
         "args": [],
-        "firstSeen": 1682094470937,
+        "firstSeen": 1682214225086,
         "oldRoutes": [],
         "key": "USER_GIFT_CODES"
     },
     "USER_TRIAL_OFFER": {
         "route": "/users/@me/billing/user-trial-offer",
-        "args": [],
-        "firstSeen": 1682094470937,
-        "oldRoutes": [],
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214225087,
+        "oldRoutes": [
+            {
+                "route": "/users/@me/billing/user-trial-offer/:unknown",
+                "args": [
+                    ":unknown"
+                ],
+                "changedAt": 1682214264551
+            }
+        ],
         "key": "USER_TRIAL_OFFER"
     },
     "USER_TRIAL_OFFER_ACKNOWLEDGED": {
@@ -3025,46 +2102,37 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470938,
+        "firstSeen": 1682214225087,
         "oldRoutes": [],
         "key": "USER_TRIAL_OFFER_ACKNOWLEDGED"
     },
     "GUILD_DISCOVERY": {
         "route": "/discoverable-guilds",
         "args": [],
-        "firstSeen": 1682094470938,
+        "firstSeen": 1682214225087,
         "oldRoutes": [],
         "key": "GUILD_DISCOVERY"
     },
     "GUILD_DISCOVERY_CATEGORIES": {
         "route": "/discovery/categories",
         "args": [],
-        "firstSeen": 1682094470938,
+        "firstSeen": 1682214225087,
         "oldRoutes": [],
         "key": "GUILD_DISCOVERY_CATEGORIES"
     },
     "GUILD_DISCOVERY_VALID_TERM": {
         "route": "/discovery/valid-term",
         "args": [],
-        "firstSeen": 1682094470938,
+        "firstSeen": 1682214225087,
         "oldRoutes": [],
         "key": "GUILD_DISCOVERY_VALID_TERM"
-    },
-    "GUILD_DISCOVERY_SLUG": {
-        "route": "/discovery/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470938,
-        "oldRoutes": [],
-        "key": "GUILD_DISCOVERY_SLUG"
     },
     "GUILD_DISCOVERY_METADATA": {
         "route": "/guilds/:guildId/discovery-metadata",
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470938,
+        "firstSeen": 1682214225087,
         "oldRoutes": [],
         "key": "GUILD_DISCOVERY_METADATA"
     },
@@ -3074,7 +2142,7 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470938,
+        "firstSeen": 1682214225087,
         "oldRoutes": [],
         "key": "GUILD_DISCOVERY_UPDATE_CATEGORY"
     },
@@ -3083,7 +2151,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470938,
+        "firstSeen": 1682214225087,
         "oldRoutes": [],
         "key": "STREAM_PREVIEW"
     },
@@ -3092,60 +2160,51 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470939,
+        "firstSeen": 1682214225088,
         "oldRoutes": [],
         "key": "STREAM_NOTIFY"
-    },
-    "STREAM": {
-        "route": "/streams/:unknown/stream",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470939,
-        "oldRoutes": [],
-        "key": "STREAM"
     },
     "GUILD_PREVIEW": {
         "route": "/guilds/:guildId/preview",
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470939,
+        "firstSeen": 1682214225088,
         "oldRoutes": [],
         "key": "GUILD_PREVIEW"
     },
     "USER_AFFINITIES": {
         "route": "/users/@me/affinities/users",
         "args": [],
-        "firstSeen": 1682094470939,
+        "firstSeen": 1682214225088,
         "oldRoutes": [],
         "key": "USER_AFFINITIES"
     },
     "GUILD_AFFINITIES": {
         "route": "/users/@me/affinities/guilds",
         "args": [],
-        "firstSeen": 1682094470939,
+        "firstSeen": 1682214225088,
         "oldRoutes": [],
         "key": "GUILD_AFFINITIES"
     },
     "FUNIMATION_PROMOTION": {
         "route": "/promotions/funimation",
         "args": [],
-        "firstSeen": 1682094470939,
+        "firstSeen": 1682214225088,
         "oldRoutes": [],
         "key": "FUNIMATION_PROMOTION"
     },
     "PARTNERS_CONNECTIONS": {
         "route": "/partners/connections",
         "args": [],
-        "firstSeen": 1682094470939,
+        "firstSeen": 1682214225088,
         "oldRoutes": [],
         "key": "PARTNERS_CONNECTIONS"
     },
     "PARTNERS_APPLY": {
         "route": "/partners/apply",
         "args": [],
-        "firstSeen": 1682094470939,
+        "firstSeen": 1682214225088,
         "oldRoutes": [],
         "key": "PARTNERS_APPLY"
     },
@@ -3154,7 +2213,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470940,
+        "firstSeen": 1682214225088,
         "oldRoutes": [],
         "key": "STICKER_PACK"
     },
@@ -3163,120 +2222,51 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470940,
+        "firstSeen": 1682214225088,
         "oldRoutes": [],
         "key": "STORE_DIRECTORY_LAYOUT_STICKER_PACKS"
     },
     "USER_STICKER_PACKS": {
         "route": "/users/@me/sticker-packs",
         "args": [],
-        "firstSeen": 1682094470940,
+        "firstSeen": 1682214225089,
         "oldRoutes": [],
         "key": "USER_STICKER_PACKS"
     },
     "STICKER_ASSET": {
         "route": "/stickers/:hash.:type",
         "args": [
+            ":unknown",
             ":hash",
             ":type"
         ],
-        "firstSeen": 1682094470940,
-        "oldRoutes": [],
+        "firstSeen": 1682214225089,
+        "oldRoutes": [
+            {
+                "route": "/stickers/:unknown/:hash.:type",
+                "args": [
+                    ":unknown",
+                    ":hash",
+                    ":type"
+                ],
+                "changedAt": 1682214264552
+            }
+        ],
         "key": "STICKER_ASSET"
-    },
-    "STICKER": {
-        "route": "/stickers/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470940,
-        "oldRoutes": [],
-        "key": "STICKER"
-    },
-    "STICKER_PACKS": {
-        "route": "/sticker-packs",
-        "args": [],
-        "firstSeen": 1682094470940,
-        "oldRoutes": [],
-        "key": "STICKER_PACKS"
-    },
-    "GUILD_STICKER_PACKS": {
-        "route": "/guilds/:guildId/stickers",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682094470940,
-        "oldRoutes": [],
-        "key": "GUILD_STICKER_PACKS"
-    },
-    "GUILD_STICKER": {
-        "route": "/guilds/:guildId/stickers/:unknown",
-        "args": [
-            ":guildId",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470940,
-        "oldRoutes": [],
-        "key": "GUILD_STICKER"
-    },
-    "STICKER_GUILD_DATA": {
-        "route": "/stickers/:unknown/guild",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470941,
-        "oldRoutes": [],
-        "key": "STICKER_GUILD_DATA"
     },
     "INTERACTIONS": {
         "route": "/interactions",
         "args": [],
-        "firstSeen": 1682094470941,
+        "firstSeen": 1682214225089,
         "oldRoutes": [],
         "key": "INTERACTIONS"
-    },
-    "MESSAGE_INTERACTION_DATA": {
-        "route": "/channels/:channelId/messages/:messageId/interaction-data",
-        "args": [
-            ":channelId",
-            ":messageId"
-        ],
-        "firstSeen": 1682094470941,
-        "oldRoutes": [],
-        "key": "MESSAGE_INTERACTION_DATA"
-    },
-    "ACTIVITY_SHELF": {
-        "route": "/activities/shelf",
-        "args": [],
-        "firstSeen": 1682094470941,
-        "oldRoutes": [],
-        "key": "ACTIVITY_SHELF"
-    },
-    "ACTIVITY_CHANNEL_LAUNCH": {
-        "route": "/activities/:unknown/:unknown",
-        "args": [
-            ":unknown",
-            ":unknown"
-        ],
-        "firstSeen": 1682094470941,
-        "oldRoutes": [],
-        "key": "ACTIVITY_CHANNEL_LAUNCH"
-    },
-    "ACTIVITY_TEST_MODE": {
-        "route": "/activities/:unknown/test-mode",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094470941,
-        "oldRoutes": [],
-        "key": "ACTIVITY_TEST_MODE"
     },
     "CHANNEL_THREADS": {
         "route": "/channels/:channelId/threads",
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470941,
+        "firstSeen": 1682214225089,
         "oldRoutes": [],
         "key": "CHANNEL_THREADS"
     },
@@ -3286,9 +2276,1119 @@
             ":channelId",
             ":messageId"
         ],
-        "firstSeen": 1682094470942,
+        "firstSeen": 1682214225089,
         "oldRoutes": [],
         "key": "CHANNEL_MESSAGE_THREADS"
+    },
+    "USER_BULK_RELATIONSHIPS": {
+        "route": "/users/@me/relationships/bulk",
+        "args": [],
+        "firstSeen": 1682214264522,
+        "oldRoutes": [],
+        "key": "USER_BULK_RELATIONSHIPS"
+    },
+    "GUILD_PROFILE": {
+        "route": "/guilds/:guildId/profile/:unknown",
+        "args": [
+            ":guildId",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264522,
+        "oldRoutes": [],
+        "key": "GUILD_PROFILE"
+    },
+    "DM_CHANNEL": {
+        "route": "/users/@me/dms/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264523,
+        "oldRoutes": [],
+        "key": "DM_CHANNEL"
+    },
+    "USER_SETTINGS_PROTO": {
+        "route": "/users/@me/settings-proto/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264523,
+        "oldRoutes": [],
+        "key": "USER_SETTINGS_PROTO"
+    },
+    "USER_CLYDE_CONSENT": {
+        "route": "/users/@me/clyde-consent",
+        "args": [],
+        "firstSeen": 1682214264523,
+        "oldRoutes": [],
+        "key": "USER_CLYDE_CONSENT"
+    },
+    "GUILD_FEATURE_ACK": {
+        "route": "/guilds/:guildId/ack/:unknown/:unknown",
+        "args": [
+            ":guildId",
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264523,
+        "oldRoutes": [],
+        "key": "GUILD_FEATURE_ACK"
+    },
+    "USER_NON_CHANNEL_ACK": {
+        "route": "/users/@me/:unknown/:unknown/ack",
+        "args": [
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264524,
+        "oldRoutes": [],
+        "key": "USER_NON_CHANNEL_ACK"
+    },
+    "GUILD_MEMBER_AVATAR": {
+        "route": "/guilds/:guildId/users/:userId/avatars/:hash.:type",
+        "args": [
+            ":guildId",
+            ":userId",
+            ":hash",
+            ":type"
+        ],
+        "firstSeen": 1682214264524,
+        "oldRoutes": [],
+        "key": "GUILD_MEMBER_AVATAR"
+    },
+    "SET_GUILD_MEMBER": {
+        "route": "/guilds/:guildId/members/@me",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264524,
+        "oldRoutes": [],
+        "key": "SET_GUILD_MEMBER"
+    },
+    "GUILD_MIGRATE_COMMAND_SCOPE": {
+        "route": "/guilds/:guildId/migrate-command-scope",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264525,
+        "oldRoutes": [],
+        "key": "GUILD_MIGRATE_COMMAND_SCOPE"
+    },
+    "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS": {
+        "route": "/guilds/:guildId/roles/connections-configurations",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264525,
+        "oldRoutes": [],
+        "key": "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS"
+    },
+    "GUILD_ROLE_CONNECTIONS_ELIGIBILITY": {
+        "route": "/guilds/:guildId/roles/:roleId/connections/eligibility",
+        "args": [
+            ":guildId",
+            ":roleId"
+        ],
+        "firstSeen": 1682214264525,
+        "oldRoutes": [],
+        "key": "GUILD_ROLE_CONNECTIONS_ELIGIBILITY"
+    },
+    "GUILD_ROLE_CONNECTIONS_ASSIGN": {
+        "route": "/guilds/:guildId/roles/:roleId/connections/assign",
+        "args": [
+            ":guildId",
+            ":roleId"
+        ],
+        "firstSeen": 1682214264525,
+        "oldRoutes": [],
+        "key": "GUILD_ROLE_CONNECTIONS_ASSIGN"
+    },
+    "GUILD_ROLE_CONNECTIONS_UNASSIGN": {
+        "route": "/guilds/:guildId/roles/:roleId/connections/unassign",
+        "args": [
+            ":guildId",
+            ":roleId"
+        ],
+        "firstSeen": 1682214264526,
+        "oldRoutes": [],
+        "key": "GUILD_ROLE_CONNECTIONS_UNASSIGN"
+    },
+    "GUILD_ONBOARDING": {
+        "route": "/guilds/:guildId/onboarding",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264526,
+        "oldRoutes": [],
+        "key": "GUILD_ONBOARDING"
+    },
+    "GUILD_ONBOARDING_PROMPT": {
+        "route": "/guilds/:guildId/onboarding-prompts/:unknown",
+        "args": [
+            ":guildId",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264526,
+        "oldRoutes": [],
+        "key": "GUILD_ONBOARDING_PROMPT"
+    },
+    "GUILD_ONBOARDING_RESPONSES": {
+        "route": "/guilds/:guildId/onboarding-responses",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264526,
+        "oldRoutes": [],
+        "key": "GUILD_ONBOARDING_RESPONSES"
+    },
+    "ROLE_ICON": {
+        "route": "/roles/:roleId/icons/:unknown.png",
+        "args": [
+            ":roleId",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264526,
+        "oldRoutes": [],
+        "key": "ROLE_ICON"
+    },
+    "GUILD_RECOMMENDATIONS": {
+        "route": "/guild-recommendations",
+        "args": [],
+        "firstSeen": 1682214264527,
+        "oldRoutes": [],
+        "key": "GUILD_RECOMMENDATIONS"
+    },
+    "GUILD_ANALYTICS_MEMBER_INSIGHTS": {
+        "route": "/guilds/:guildId/analytics/member-insights",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264527,
+        "oldRoutes": [],
+        "key": "GUILD_ANALYTICS_MEMBER_INSIGHTS"
+    },
+    "GUILD_TOP_READ_CHANNELS": {
+        "route": "/guilds/:guildId/top-read-channels",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264528,
+        "oldRoutes": [],
+        "key": "GUILD_TOP_READ_CHANNELS"
+    },
+    "TOP_EMOJIS_FOR_GUILD": {
+        "route": "/guilds/:guildId/top-emojis",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264528,
+        "oldRoutes": [],
+        "key": "TOP_EMOJIS_FOR_GUILD"
+    },
+    "GUILD_HOME_SETTINGS": {
+        "route": "/guilds/:guildId/new-member-welcome",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264529,
+        "oldRoutes": [],
+        "key": "GUILD_HOME_SETTINGS"
+    },
+    "GUILD_MEMBER_ACTIONS": {
+        "route": "/guilds/:guildId/new-member-actions",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264529,
+        "oldRoutes": [],
+        "key": "GUILD_MEMBER_ACTIONS"
+    },
+    "GUILD_MEMBER_ACTION_UPDATE": {
+        "route": "/guilds/:guildId/new-member-action/:unknown",
+        "args": [
+            ":guildId",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264529,
+        "oldRoutes": [],
+        "key": "GUILD_MEMBER_ACTION_UPDATE"
+    },
+    "GUILD_HOME_HEADER": {
+        "route": "/guilds/:guildId/home-headers/:unknown.jpg",
+        "args": [
+            ":guildId",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264529,
+        "oldRoutes": [],
+        "key": "GUILD_HOME_HEADER"
+    },
+    "GUILD_JOIN_REQUEST_ACK": {
+        "route": "/guilds/:guildId/requests/:unknown/ack",
+        "args": [
+            ":guildId",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264530,
+        "oldRoutes": [],
+        "key": "GUILD_JOIN_REQUEST_ACK"
+    },
+    "GUILD_PINCODE": {
+        "route": "/guilds/:guildId/pincode",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264530,
+        "oldRoutes": [],
+        "key": "GUILD_PINCODE"
+    },
+    "THREAD_MEMBER": {
+        "route": "/channels/:channelId/thread-members/@me",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1682214264530,
+        "oldRoutes": [],
+        "key": "THREAD_MEMBER"
+    },
+    "ALL_ARCHIVED_THREADS": {
+        "route": "/channels/:channelId/threads/archived/:unknown",
+        "args": [
+            ":channelId",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264530,
+        "oldRoutes": [],
+        "key": "ALL_ARCHIVED_THREADS"
+    },
+    "MY_ARCHIVED_THREADS": {
+        "route": "/channels/:channelId/users/@me/threads/archived/private",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1682214264531,
+        "oldRoutes": [],
+        "key": "MY_ARCHIVED_THREADS"
+    },
+    "THREAD_SEARCH": {
+        "route": "/channels/:channelId/threads/search",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1682214264531,
+        "oldRoutes": [],
+        "key": "THREAD_SEARCH"
+    },
+    "FORUM_POSTS": {
+        "route": "/channels/:channelId/post-data",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1682214264531,
+        "oldRoutes": [],
+        "key": "FORUM_POSTS"
+    },
+    "USER_BANNER": {
+        "route": "/users/:userId/banners/:hash.:type",
+        "args": [
+            ":userId",
+            ":hash",
+            ":type"
+        ],
+        "firstSeen": 1682214264531,
+        "oldRoutes": [],
+        "key": "USER_BANNER"
+    },
+    "AVATAR_DECORATIONS": {
+        "route": "/users/:userId/avatar-decorations/:unknown.png",
+        "args": [
+            ":userId",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264532,
+        "oldRoutes": [],
+        "key": "AVATAR_DECORATIONS"
+    },
+    "AVATAR_DECORATION_PRESETS": {
+        "route": "/avatar-decoration-presets/:unknown.png",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264532,
+        "oldRoutes": [],
+        "key": "AVATAR_DECORATION_PRESETS"
+    },
+    "USER_AVATAR_DECORATIONS": {
+        "route": "/users/@me/avatar-decorations",
+        "args": [],
+        "firstSeen": 1682214264532,
+        "oldRoutes": [],
+        "key": "USER_AVATAR_DECORATIONS"
+    },
+    "GUILD_MEMBER_BANNER": {
+        "route": "/guilds/:guildId/users/:userId/banners/:unknown.png",
+        "args": [
+            ":guildId",
+            ":userId",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264532,
+        "oldRoutes": [],
+        "key": "GUILD_MEMBER_BANNER"
+    },
+    "MESSAGES_GREET": {
+        "route": "/channels/:channelId/greet",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1682214264532,
+        "oldRoutes": [],
+        "key": "MESSAGES_GREET"
+    },
+    "MESSAGE_CREATE_ATTACHMENT_UPLOAD": {
+        "route": "/channels/:channelId/attachments",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1682214264533,
+        "oldRoutes": [],
+        "key": "MESSAGE_CREATE_ATTACHMENT_UPLOAD"
+    },
+    "MESSAGE_DELETE_UPLOAD": {
+        "route": "/attachments/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264533,
+        "oldRoutes": [],
+        "key": "MESSAGE_DELETE_UPLOAD"
+    },
+    "MESSAGE_LOG_PRIVATE_CHANNELS": {
+        "route": "/messages-log/private-channels/get",
+        "args": [],
+        "firstSeen": 1682214264533,
+        "oldRoutes": [],
+        "key": "MESSAGE_LOG_PRIVATE_CHANNELS"
+    },
+    "BACKGROUND_SYNC": {
+        "route": "/users/@me/background-sync",
+        "args": [],
+        "firstSeen": 1682214264533,
+        "oldRoutes": [],
+        "key": "BACKGROUND_SYNC"
+    },
+    "STAFF_ONLY_PRELOAD_MESSAGES": {
+        "route": "/channels/preload-messages",
+        "args": [],
+        "firstSeen": 1682214264533,
+        "oldRoutes": [],
+        "key": "STAFF_ONLY_PRELOAD_MESSAGES"
+    },
+    "STAFF_ONLY_GUILD_CHANNEL_EMOJIS": {
+        "route": "/guilds/:guildId/get-channel-name-emojis",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264533,
+        "oldRoutes": [],
+        "key": "STAFF_ONLY_GUILD_CHANNEL_EMOJIS"
+    },
+    "GUILD_FEED_MESSAGE_REMOVE": {
+        "route": "/channels/:channelId/messages/:messageId/hide-guild-feed",
+        "args": [
+            ":channelId",
+            ":messageId"
+        ],
+        "firstSeen": 1682214264534,
+        "oldRoutes": [],
+        "key": "GUILD_FEED_MESSAGE_REMOVE"
+    },
+    "GUILD_FEED_MESSAGE_SET_PREFERENCE": {
+        "route": "/guilds/:guildId/guild-feed/preference",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264534,
+        "oldRoutes": [],
+        "key": "GUILD_FEED_MESSAGE_SET_PREFERENCE"
+    },
+    "GUILD_FEED_FEATURE_ITEM": {
+        "route": "/guilds/:guildId/guild-feed/feature",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264534,
+        "oldRoutes": [],
+        "key": "GUILD_FEED_FEATURE_ITEM"
+    },
+    "GUILD_FEED_MARK_SEEN": {
+        "route": "/guilds/:guildId/guild-feed/mark-seen",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264535,
+        "oldRoutes": [],
+        "key": "GUILD_FEED_MARK_SEEN"
+    },
+    "CHANNEL_RECIPIENT_CONSENT": {
+        "route": "/channels/:channelId/recipients/@me",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1682214264535,
+        "oldRoutes": [],
+        "key": "CHANNEL_RECIPIENT_CONSENT"
+    },
+    "CHANNEL_RECIPIENT_REJECT_BATCH": {
+        "route": "/channels/recipients/@me/batch-reject",
+        "args": [],
+        "firstSeen": 1682214264535,
+        "oldRoutes": [],
+        "key": "CHANNEL_RECIPIENT_REJECT_BATCH"
+    },
+    "CHANNEL_INTEGRATIONS": {
+        "route": "/channels/:channelId/integrations",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1682214264536,
+        "oldRoutes": [],
+        "key": "CHANNEL_INTEGRATIONS"
+    },
+    "CHANNEL_INTEGRATION": {
+        "route": "/channels/:channelId/integrations/:applicationId",
+        "args": [
+            ":channelId",
+            ":applicationId"
+        ],
+        "firstSeen": 1682214264536,
+        "oldRoutes": [],
+        "key": "CHANNEL_INTEGRATION"
+    },
+    "FORUM_TAGS": {
+        "route": "/channels/:channelId/tags",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1682214264536,
+        "oldRoutes": [],
+        "key": "FORUM_TAGS"
+    },
+    "FORUM_TAG": {
+        "route": "/channels/:channelId/tags/:unknown",
+        "args": [
+            ":channelId",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264537,
+        "oldRoutes": [],
+        "key": "FORUM_TAG"
+    },
+    "FRIEND_FINDER": {
+        "route": "/friend-finder/find-friends",
+        "args": [],
+        "firstSeen": 1682214264537,
+        "oldRoutes": [],
+        "key": "FRIEND_FINDER"
+    },
+    "FRIEND_FINDER_HIDE_INVITE_SUGGESTION": {
+        "route": "/friend-finder/hide-invite-suggestion",
+        "args": [],
+        "firstSeen": 1682214264537,
+        "oldRoutes": [],
+        "key": "FRIEND_FINDER_HIDE_INVITE_SUGGESTION"
+    },
+    "FRIEND_SUGGESTIONS": {
+        "route": "/friend-suggestions",
+        "args": [],
+        "firstSeen": 1682214264537,
+        "oldRoutes": [],
+        "key": "FRIEND_SUGGESTIONS"
+    },
+    "FRIEND_SUGGESTION": {
+        "route": "/friend-suggestions/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264537,
+        "oldRoutes": [],
+        "key": "FRIEND_SUGGESTION"
+    },
+    "POMELO_ATTEMPT": {
+        "route": "/users/@me/pomelo-attempt",
+        "args": [],
+        "firstSeen": 1682214264537,
+        "oldRoutes": [],
+        "key": "POMELO_ATTEMPT"
+    },
+    "POMELO_CREATE": {
+        "route": "/users/@me/pomelo",
+        "args": [],
+        "firstSeen": 1682214264537,
+        "oldRoutes": [],
+        "key": "POMELO_CREATE"
+    },
+    "DEVICES_SYNC_TOKEN": {
+        "route": "/users/@me/devices/sync-token",
+        "args": [],
+        "firstSeen": 1682214264538,
+        "oldRoutes": [],
+        "key": "DEVICES_SYNC_TOKEN"
+    },
+    "DEVICES_SYNC": {
+        "route": "/users/@me/devices/sync",
+        "args": [],
+        "firstSeen": 1682214264538,
+        "oldRoutes": [],
+        "key": "DEVICES_SYNC"
+    },
+    "PHONE_VERIFY_NO_PASSWORD": {
+        "route": "/users/@me/phone/verify",
+        "args": [],
+        "firstSeen": 1682214264538,
+        "oldRoutes": [],
+        "key": "PHONE_VERIFY_NO_PASSWORD"
+    },
+    "PHONE_REVERIFY": {
+        "route": "/users/@me/phone/reverify",
+        "args": [],
+        "firstSeen": 1682214264538,
+        "oldRoutes": [],
+        "key": "PHONE_REVERIFY"
+    },
+    "FRIEND_INVITES": {
+        "route": "/users/@me/invites",
+        "args": [],
+        "firstSeen": 1682214264538,
+        "oldRoutes": [],
+        "key": "FRIEND_INVITES"
+    },
+    "VERIFY_PHONE_FOR_TICKET": {
+        "route": "/phone-verifications/validate-support-ticket",
+        "args": [],
+        "firstSeen": 1682214264538,
+        "oldRoutes": [],
+        "key": "VERIFY_PHONE_FOR_TICKET"
+    },
+    "CONNECTIONS_AUTHORIZE_LINK": {
+        "route": "/connections/:unknown/authorize?two_way_link=true&two_way_link_type=:unknown",
+        "args": [
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264538,
+        "oldRoutes": [],
+        "key": "CONNECTIONS_AUTHORIZE_LINK"
+    },
+    "CONNECTIONS_AUTHORIZE_LINK_DEVICE": {
+        "route": "/connections/:unknown/authorize?two_way_link=true&two_way_link_type=null&two_way_user_code=:unknown",
+        "args": [
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264538,
+        "oldRoutes": [],
+        "key": "CONNECTIONS_AUTHORIZE_LINK_DEVICE"
+    },
+    "CONNECTION_REFRESH": {
+        "route": "/users/@me/connections/:unknown/:unknown/refresh",
+        "args": [
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264539,
+        "oldRoutes": [],
+        "key": "CONNECTION_REFRESH"
+    },
+    "CONNECTION_SYNC_CONTACTS_SETTINGS": {
+        "route": "/users/@me/connections/contacts/@me/external-friend-list-entries/settings",
+        "args": [],
+        "firstSeen": 1682214264539,
+        "oldRoutes": [],
+        "key": "CONNECTION_SYNC_CONTACTS_SETTINGS"
+    },
+    "CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK": {
+        "route": "/connections/:unknown/link-dispatch-auth-callback",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264539,
+        "oldRoutes": [],
+        "key": "CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK"
+    },
+    "XBOX_HANDOFF": {
+        "route": "/consoles/xbox-handoff",
+        "args": [],
+        "firstSeen": 1682214264539,
+        "oldRoutes": [],
+        "key": "XBOX_HANDOFF"
+    },
+    "LOGIN_WEBAUTHN": {
+        "route": "/auth/mfa/webauthn",
+        "args": [],
+        "firstSeen": 1682214264540,
+        "oldRoutes": [],
+        "key": "LOGIN_WEBAUTHN"
+    },
+    "REMOTE_AUTH_LOGIN": {
+        "route": "/users/@me/remote-auth/login",
+        "args": [],
+        "firstSeen": 1682214264540,
+        "oldRoutes": [],
+        "key": "REMOTE_AUTH_LOGIN"
+    },
+    "MFA_WEBAUTHN_CREDENTIALS": {
+        "route": "/users/@me/mfa/webauthn/credentials",
+        "args": [],
+        "firstSeen": 1682214264540,
+        "oldRoutes": [],
+        "key": "MFA_WEBAUTHN_CREDENTIALS"
+    },
+    "MFA_WEBAUTHN_CREDENTIAL": {
+        "route": "/users/@me/mfa/webauthn/credentials/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264540,
+        "oldRoutes": [],
+        "key": "MFA_WEBAUTHN_CREDENTIAL"
+    },
+    "METRICS": {
+        "route": "/metrics",
+        "args": [],
+        "firstSeen": 1682214264540,
+        "oldRoutes": [],
+        "key": "METRICS"
+    },
+    "SSO_TOKEN": {
+        "route": "/sso-token",
+        "args": [],
+        "firstSeen": 1682214264541,
+        "oldRoutes": [],
+        "key": "SSO_TOKEN"
+    },
+    "AUTHORIZE_PAYMENT": {
+        "route": "/billing/verify-purchase-request",
+        "args": [],
+        "firstSeen": 1682214264541,
+        "oldRoutes": [],
+        "key": "AUTHORIZE_PAYMENT"
+    },
+    "CALLSCOPE_LOGS": {
+        "route": "/callscope/logs/:unknown/user/:userId/%3Aunknown",
+        "args": [
+            ":unknown",
+            ":userId",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264541,
+        "oldRoutes": [],
+        "key": "CALLSCOPE_LOGS"
+    },
+    "INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS": {
+        "route": "/users/@me/guilds/integration-application-ids",
+        "args": [],
+        "firstSeen": 1682214264541,
+        "oldRoutes": [],
+        "key": "INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS"
+    },
+    "APPLICATION_EXTERNAL_ASSETS": {
+        "route": "/applications/:applicationId/external-assets",
+        "args": [
+            ":applicationId"
+        ],
+        "firstSeen": 1682214264542,
+        "oldRoutes": [],
+        "key": "APPLICATION_EXTERNAL_ASSETS"
+    },
+    "OAUTH2_AUTHORIZE_SAMSUNG": {
+        "route": "/oauth2/samsung/authorize",
+        "args": [],
+        "firstSeen": 1682214264542,
+        "oldRoutes": [],
+        "key": "OAUTH2_AUTHORIZE_SAMSUNG"
+    },
+    "OAUTH2_AUTHORIZE_SAMSUNG_CALLBACK": {
+        "route": "/oauth2/samsung/authorize/callback",
+        "args": [],
+        "firstSeen": 1682214264542,
+        "oldRoutes": [],
+        "key": "OAUTH2_AUTHORIZE_SAMSUNG_CALLBACK"
+    },
+    "OAUTH2_DEVICE_VERIFY": {
+        "route": "/oauth2/device/verify",
+        "args": [],
+        "firstSeen": 1682214264542,
+        "oldRoutes": [],
+        "key": "OAUTH2_DEVICE_VERIFY"
+    },
+    "OAUTH2_DEVICE_FINISH": {
+        "route": "/oauth2/device/finish",
+        "args": [],
+        "firstSeen": 1682214264543,
+        "oldRoutes": [],
+        "key": "OAUTH2_DEVICE_FINISH"
+    },
+    "MFA_CODES_VERIFICATION": {
+        "route": "/users/@me/mfa/codes-verification",
+        "args": [],
+        "firstSeen": 1682214264543,
+        "oldRoutes": [],
+        "key": "MFA_CODES_VERIFICATION"
+    },
+    "MFA_SEND_VERIFICATION_KEY": {
+        "route": "/auth/verify/view-backup-codes-challenge",
+        "args": [],
+        "firstSeen": 1682214264543,
+        "oldRoutes": [],
+        "key": "MFA_SEND_VERIFICATION_KEY"
+    },
+    "DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS": {
+        "route": "/users/disable-server-highlight-notifications",
+        "args": [],
+        "firstSeen": 1682214264543,
+        "oldRoutes": [],
+        "key": "DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS"
+    },
+    "REACTION_WITH_TYPE": {
+        "route": "/channels/:channelId/messages/:messageId/reactions/:reactionId/:unknown/:unknown",
+        "args": [
+            ":channelId",
+            ":messageId",
+            ":reactionId",
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264544,
+        "oldRoutes": [],
+        "key": "REACTION_WITH_TYPE"
+    },
+    "SEARCH_DMS": {
+        "route": "/users/:userId/messages/search",
+        "args": [
+            ":userId"
+        ],
+        "firstSeen": 1682214264544,
+        "oldRoutes": [],
+        "key": "SEARCH_DMS"
+    },
+    "APPLIED_GUILD_BOOSTS_FOR_GUILD": {
+        "route": "/guilds/:guildId/premium/subscriptions",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264544,
+        "oldRoutes": [],
+        "key": "APPLIED_GUILD_BOOSTS_FOR_GUILD"
+    },
+    "APPLIED_GUILD_BOOST": {
+        "route": "/guilds/:guildId/premium/subscriptions/:subscriptionId",
+        "args": [
+            ":guildId",
+            ":subscriptionId"
+        ],
+        "firstSeen": 1682214264544,
+        "oldRoutes": [],
+        "key": "APPLIED_GUILD_BOOST"
+    },
+    "APPLIED_GUILD_BOOST_COOLDOWN": {
+        "route": "/users/@me/guilds/premium/subscriptions/cooldown",
+        "args": [],
+        "firstSeen": 1682214264544,
+        "oldRoutes": [],
+        "key": "APPLIED_GUILD_BOOST_COOLDOWN"
+    },
+    "USER_APPLIED_GUILD_BOOSTS": {
+        "route": "/users/@me/guilds/premium/subscriptions",
+        "args": [],
+        "firstSeen": 1682214264544,
+        "oldRoutes": [],
+        "key": "USER_APPLIED_GUILD_BOOSTS"
+    },
+    "USER_GUILD_BOOST_SLOTS": {
+        "route": "/users/@me/guilds/premium/subscription-slots",
+        "args": [],
+        "firstSeen": 1682214264545,
+        "oldRoutes": [],
+        "key": "USER_GUILD_BOOST_SLOTS"
+    },
+    "USER_GUILD_BOOST_SLOT_CANCEL": {
+        "route": "/users/@me/guilds/premium/subscription-slots/:unknown/cancel",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264545,
+        "oldRoutes": [],
+        "key": "USER_GUILD_BOOST_SLOT_CANCEL"
+    },
+    "USER_GUILD_BOOST_SLOT_UNCANCEL": {
+        "route": "/users/@me/guilds/premium/subscription-slots/:unknown/uncancel",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264545,
+        "oldRoutes": [],
+        "key": "USER_GUILD_BOOST_SLOT_UNCANCEL"
+    },
+    "BILLING_PAYMENT_SOURCES_VALIDATE_BILLING_ADDRESS": {
+        "route": "/users/@me/billing/payment-sources/validate-billing-address",
+        "args": [],
+        "firstSeen": 1682214264545,
+        "oldRoutes": [],
+        "key": "BILLING_PAYMENT_SOURCES_VALIDATE_BILLING_ADDRESS"
+    },
+    "BILLING_PAYMENT": {
+        "route": "/users/@me/billing/payments/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264545,
+        "oldRoutes": [],
+        "key": "BILLING_PAYMENT"
+    },
+    "BILLING_PAYMENTS_REFUND": {
+        "route": "/users/@me/billing/payments/:unknown/refund",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264546,
+        "oldRoutes": [],
+        "key": "BILLING_PAYMENTS_REFUND"
+    },
+    "BILLING_STRIPE_PAYMENT_INTENTS_VIA_ID": {
+        "route": "/users/@me/billing/stripe/payment-intents/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264546,
+        "oldRoutes": [],
+        "key": "BILLING_STRIPE_PAYMENT_INTENTS_VIA_ID"
+    },
+    "BILLING_PAYPAL_BILLING_AGREEMENT_TOKENS": {
+        "route": "/users/@me/billing/paypal/billing-agreement-tokens",
+        "args": [],
+        "firstSeen": 1682214264546,
+        "oldRoutes": [],
+        "key": "BILLING_PAYPAL_BILLING_AGREEMENT_TOKENS"
+    },
+    "BILLING_POPUP_BRIDGE": {
+        "route": "/billing/popup-bridge/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264546,
+        "oldRoutes": [],
+        "key": "BILLING_POPUP_BRIDGE"
+    },
+    "BILLING_POPUP_BRIDGE_CALLBACK": {
+        "route": "/billing/popup-bridge/:unknown/callback",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264546,
+        "oldRoutes": [],
+        "key": "BILLING_POPUP_BRIDGE_CALLBACK"
+    },
+    "BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX": {
+        "route": "/billing/popup-bridge/:unknown/callback/:unknown/:unknown",
+        "args": [
+            ":unknown",
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264546,
+        "oldRoutes": [],
+        "key": "BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX"
+    },
+    "BILLING_SUBSCRIPTIONS_PREVIEW": {
+        "route": "/users/@me/billing/subscriptions/preview",
+        "args": [],
+        "firstSeen": 1682214264546,
+        "oldRoutes": [],
+        "key": "BILLING_SUBSCRIPTIONS_PREVIEW"
+    },
+    "BILLING_APPLE_SUBSCRIPTION": {
+        "route": "/billing/apple/subscriptions/:subscriptionId",
+        "args": [
+            ":subscriptionId"
+        ],
+        "firstSeen": 1682214264547,
+        "oldRoutes": [],
+        "key": "BILLING_APPLE_SUBSCRIPTION"
+    },
+    "BILLING_CREATE_APPLE_IAP_JWT_TOKEN": {
+        "route": "/billing/apple/jwt-token",
+        "args": [],
+        "firstSeen": 1682214264547,
+        "oldRoutes": [],
+        "key": "BILLING_CREATE_APPLE_IAP_JWT_TOKEN"
+    },
+    "BILLING_SUBSCRIPTION_PREVIEW": {
+        "route": "/users/@me/billing/subscriptions/:subscriptionId/preview",
+        "args": [
+            ":subscriptionId"
+        ],
+        "firstSeen": 1682214264547,
+        "oldRoutes": [],
+        "key": "BILLING_SUBSCRIPTION_PREVIEW"
+    },
+    "BILLING_SUBSCRIPTION_INVOICE": {
+        "route": "/users/@me/billing/subscriptions/:subscriptionId/invoices",
+        "args": [
+            ":subscriptionId"
+        ],
+        "firstSeen": 1682214264547,
+        "oldRoutes": [],
+        "key": "BILLING_SUBSCRIPTION_INVOICE"
+    },
+    "BILLING_INVOICE_MANUAL_PAYMENT": {
+        "route": "/users/@me/billing/subscriptions/:subscriptionId/invoices/:unknown/pay",
+        "args": [
+            ":subscriptionId",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264547,
+        "oldRoutes": [],
+        "key": "BILLING_INVOICE_MANUAL_PAYMENT"
+    },
+    "BILLING_COUNTRY_CODE": {
+        "route": "/users/@me/billing/country-code",
+        "args": [],
+        "firstSeen": 1682214264547,
+        "oldRoutes": [],
+        "key": "BILLING_COUNTRY_CODE"
+    },
+    "BILLING_LOCALIZED_PROMO": {
+        "route": "/users/@me/billing/localized-pricing-promo",
+        "args": [],
+        "firstSeen": 1682214264548,
+        "oldRoutes": [],
+        "key": "BILLING_LOCALIZED_PROMO"
+    },
+    "VERIFY_PURCHASE": {
+        "route": "/google-play/verify-purchase-token",
+        "args": [],
+        "firstSeen": 1682214264548,
+        "oldRoutes": [],
+        "key": "VERIFY_PURCHASE"
+    },
+    "DOWNGRADE_SUBSCRIPTION": {
+        "route": "/google-play/downgrade-subscription",
+        "args": [],
+        "firstSeen": 1682214264548,
+        "oldRoutes": [],
+        "key": "DOWNGRADE_SUBSCRIPTION"
+    },
+    "STORE_EMAIL_RESEND_PAYMENT_VERIFICATION": {
+        "route": "/store/email/resend-payment-verification",
+        "args": [],
+        "firstSeen": 1682214264548,
+        "oldRoutes": [],
+        "key": "STORE_EMAIL_RESEND_PAYMENT_VERIFICATION"
+    },
+    "ENTITLEMENTS_FOR_USER": {
+        "route": "/users/@me/entitlements",
+        "args": [],
+        "firstSeen": 1682214264549,
+        "oldRoutes": [],
+        "key": "ENTITLEMENTS_FOR_USER"
+    },
+    "GUILD_DISCOVERY_SLUG": {
+        "route": "/discovery/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264551,
+        "oldRoutes": [],
+        "key": "GUILD_DISCOVERY_SLUG"
+    },
+    "STREAM": {
+        "route": "/streams/:unknown/stream",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264552,
+        "oldRoutes": [],
+        "key": "STREAM"
+    },
+    "STICKER": {
+        "route": "/stickers/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264552,
+        "oldRoutes": [],
+        "key": "STICKER"
+    },
+    "STICKER_PACKS": {
+        "route": "/sticker-packs",
+        "args": [],
+        "firstSeen": 1682214264552,
+        "oldRoutes": [],
+        "key": "STICKER_PACKS"
+    },
+    "GUILD_STICKER_PACKS": {
+        "route": "/guilds/:guildId/stickers",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1682214264552,
+        "oldRoutes": [],
+        "key": "GUILD_STICKER_PACKS"
+    },
+    "GUILD_STICKER": {
+        "route": "/guilds/:guildId/stickers/:unknown",
+        "args": [
+            ":guildId",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264553,
+        "oldRoutes": [],
+        "key": "GUILD_STICKER"
+    },
+    "STICKER_GUILD_DATA": {
+        "route": "/stickers/:unknown/guild",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264553,
+        "oldRoutes": [],
+        "key": "STICKER_GUILD_DATA"
+    },
+    "MESSAGE_INTERACTION_DATA": {
+        "route": "/channels/:channelId/messages/:messageId/interaction-data",
+        "args": [
+            ":channelId",
+            ":messageId"
+        ],
+        "firstSeen": 1682214264553,
+        "oldRoutes": [],
+        "key": "MESSAGE_INTERACTION_DATA"
+    },
+    "ACTIVITY_SHELF": {
+        "route": "/activities/shelf",
+        "args": [],
+        "firstSeen": 1682214264553,
+        "oldRoutes": [],
+        "key": "ACTIVITY_SHELF"
+    },
+    "ACTIVITY_CHANNEL_LAUNCH": {
+        "route": "/activities/:unknown/:unknown",
+        "args": [
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264553,
+        "oldRoutes": [],
+        "key": "ACTIVITY_CHANNEL_LAUNCH"
+    },
+    "ACTIVITY_TEST_MODE": {
+        "route": "/activities/:unknown/test-mode",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264553,
+        "oldRoutes": [],
+        "key": "ACTIVITY_TEST_MODE"
     },
     "APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS": {
         "route": "/applications/:applicationId/guilds/:guildId/commands/:unknown/permissions",
@@ -3297,7 +3397,7 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470942,
+        "firstSeen": 1682214264554,
         "oldRoutes": [],
         "key": "APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS"
     },
@@ -3306,7 +3406,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470942,
+        "firstSeen": 1682214264554,
         "oldRoutes": [],
         "key": "UPDATE_VOICE_STATE"
     },
@@ -3315,7 +3415,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470942,
+        "firstSeen": 1682214264554,
         "oldRoutes": [],
         "key": "GET_REPORT_MENU"
     },
@@ -3324,21 +3424,21 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470942,
+        "firstSeen": 1682214264554,
         "oldRoutes": [],
         "key": "SUBMIT_REPORT_MENU"
     },
     "STAGE_INSTANCES": {
         "route": "/stage-instances",
         "args": [],
-        "firstSeen": 1682094470942,
+        "firstSeen": 1682214264554,
         "oldRoutes": [],
         "key": "STAGE_INSTANCES"
     },
     "STAGE_INSTANCES_EXTRA": {
         "route": "/stage-instances/extra",
         "args": [],
-        "firstSeen": 1682094470942,
+        "firstSeen": 1682214264554,
         "oldRoutes": [],
         "key": "STAGE_INSTANCES_EXTRA"
     },
@@ -3347,21 +3447,21 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470943,
+        "firstSeen": 1682214264555,
         "oldRoutes": [],
         "key": "STAGE_INSTANCE"
     },
     "USER_SURVEY": {
         "route": "/users/@me/survey",
         "args": [],
-        "firstSeen": 1682094470943,
+        "firstSeen": 1682214264555,
         "oldRoutes": [],
         "key": "USER_SURVEY"
     },
     "GUILD_EVENTS": {
         "route": "/guild-events",
         "args": [],
-        "firstSeen": 1682094470943,
+        "firstSeen": 1682214264555,
         "oldRoutes": [],
         "key": "GUILD_EVENTS"
     },
@@ -3371,7 +3471,7 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470943,
+        "firstSeen": 1682214264555,
         "oldRoutes": [],
         "key": "GUILD_EVENT"
     },
@@ -3382,7 +3482,7 @@
             ":hash",
             ":type"
         ],
-        "firstSeen": 1682094470943,
+        "firstSeen": 1682214264555,
         "oldRoutes": [],
         "key": "GUILD_EVENT_IMAGE"
     },
@@ -3391,7 +3491,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470943,
+        "firstSeen": 1682214264555,
         "oldRoutes": [],
         "key": "GUILD_EVENTS_FOR_GUILD"
     },
@@ -3401,7 +3501,7 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470943,
+        "firstSeen": 1682214264556,
         "oldRoutes": [],
         "key": "GUILD_EVENT_USERS"
     },
@@ -3411,14 +3511,14 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470944,
+        "firstSeen": 1682214264556,
         "oldRoutes": [],
         "key": "USER_GUILD_EVENT"
     },
     "USER_GUILD_EVENTS": {
         "route": "/users/@me/scheduled-events",
         "args": [],
-        "firstSeen": 1682094470944,
+        "firstSeen": 1682214264556,
         "oldRoutes": [],
         "key": "USER_GUILD_EVENTS"
     },
@@ -3427,7 +3527,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470944,
+        "firstSeen": 1682214264556,
         "oldRoutes": [],
         "key": "GUILD_AUTOMOD_RULES"
     },
@@ -3437,7 +3537,7 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470944,
+        "firstSeen": 1682214264556,
         "oldRoutes": [],
         "key": "GUILD_AUTOMOD_RULE"
     },
@@ -3446,7 +3546,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470944,
+        "firstSeen": 1682214264556,
         "oldRoutes": [],
         "key": "GUILD_AUTOMOD_VALIDATE_RULE"
     },
@@ -3455,7 +3555,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470944,
+        "firstSeen": 1682214264557,
         "oldRoutes": [],
         "key": "GUILD_AUTOMOD_CLEAR_MENTION_RAID"
     },
@@ -3464,7 +3564,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470945,
+        "firstSeen": 1682214264557,
         "oldRoutes": [],
         "key": "GUILD_AUTOMOD_ALERT_ACTION"
     },
@@ -3473,7 +3573,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470945,
+        "firstSeen": 1682214264557,
         "oldRoutes": [],
         "key": "DIRECTORY_CHANNEL_ENTRIES"
     },
@@ -3483,7 +3583,7 @@
             ":channelId",
             ":unknown"
         ],
-        "firstSeen": 1682094470945,
+        "firstSeen": 1682214264557,
         "oldRoutes": [],
         "key": "DIRECTORY_CHANNEL_ENTRY"
     },
@@ -3492,7 +3592,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470945,
+        "firstSeen": 1682214264557,
         "oldRoutes": [],
         "key": "DIRECTORY_ENTRIES_SEARCH"
     },
@@ -3501,7 +3601,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470945,
+        "firstSeen": 1682214264557,
         "oldRoutes": [],
         "key": "DIRECTORY_CHANNEL_CATEGORY_COUNTS"
     },
@@ -3510,7 +3610,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470945,
+        "firstSeen": 1682214264558,
         "oldRoutes": [],
         "key": "DIRECTORY_CHANNEL_LIST_BY_ID"
     },
@@ -3519,28 +3619,28 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470946,
+        "firstSeen": 1682214264558,
         "oldRoutes": [],
         "key": "DIRECTORY_ENTRIES_BROADCAST_INFO"
     },
     "PRICE_TIERS": {
         "route": "/store/price-tiers",
         "args": [],
-        "firstSeen": 1682094470946,
+        "firstSeen": 1682214264558,
         "oldRoutes": [],
         "key": "PRICE_TIERS"
     },
     "TEAMS": {
         "route": "/teams",
         "args": [],
-        "firstSeen": 1682094470946,
+        "firstSeen": 1682214264558,
         "oldRoutes": [],
         "key": "TEAMS"
     },
     "APPLICATIONS": {
         "route": "/applications",
         "args": [],
-        "firstSeen": 1682094470946,
+        "firstSeen": 1682214264558,
         "oldRoutes": [],
         "key": "APPLICATIONS"
     },
@@ -3549,70 +3649,70 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470946,
+        "firstSeen": 1682214264558,
         "oldRoutes": [],
         "key": "APPLICATION_OWNER_TRANSFER"
     },
     "HUB_WAITLIST_SIGNUP": {
         "route": "/hub-waitlist/signup",
         "args": [],
-        "firstSeen": 1682094470946,
+        "firstSeen": 1682214264558,
         "oldRoutes": [],
         "key": "HUB_WAITLIST_SIGNUP"
     },
     "HUB_EMAIL_VERIFY": {
         "route": "/guilds/automations/email-domain-lookup/verify",
         "args": [],
-        "firstSeen": 1682094470946,
+        "firstSeen": 1682214264558,
         "oldRoutes": [],
         "key": "HUB_EMAIL_VERIFY"
     },
     "HUB_EMAIL_VERIFY_CODE": {
         "route": "/guilds/automations/email-domain-lookup/verify-code",
         "args": [],
-        "firstSeen": 1682094470946,
+        "firstSeen": 1682214264559,
         "oldRoutes": [],
         "key": "HUB_EMAIL_VERIFY_CODE"
     },
     "DROPS_ELIGIBILITY": {
         "route": "/drops/eligibility",
         "args": [],
-        "firstSeen": 1682094470946,
+        "firstSeen": 1682214264559,
         "oldRoutes": [],
         "key": "DROPS_ELIGIBILITY"
     },
     "DROPS_REWARD_CODE": {
         "route": "/drops/reward-code",
         "args": [],
-        "firstSeen": 1682094470947,
+        "firstSeen": 1682214264559,
         "oldRoutes": [],
         "key": "DROPS_REWARD_CODE"
     },
     "DROPS_CLAIM_REWARD_CODE": {
         "route": "/drops/reward-code/claim",
         "args": [],
-        "firstSeen": 1682094470947,
+        "firstSeen": 1682214264559,
         "oldRoutes": [],
         "key": "DROPS_CLAIM_REWARD_CODE"
     },
     "DROPS_USER_STATUS": {
         "route": "/drops/@me",
         "args": [],
-        "firstSeen": 1682094470947,
+        "firstSeen": 1682214264559,
         "oldRoutes": [],
         "key": "DROPS_USER_STATUS"
     },
     "DROPS_ENROLL_USER": {
         "route": "/drops/enrolled-user",
         "args": [],
-        "firstSeen": 1682094470947,
+        "firstSeen": 1682214264559,
         "oldRoutes": [],
         "key": "DROPS_ENROLL_USER"
     },
     "DROPS_PLATFORM_AVAILABILITY": {
         "route": "/drops/reward-code/availability",
         "args": [],
-        "firstSeen": 1682094470947,
+        "firstSeen": 1682214264559,
         "oldRoutes": [],
         "key": "DROPS_PLATFORM_AVAILABILITY"
     },
@@ -3621,7 +3721,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470947,
+        "firstSeen": 1682214264559,
         "oldRoutes": [],
         "key": "DROPS_HEARTBEAT"
     },
@@ -3630,28 +3730,28 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470947,
+        "firstSeen": 1682214264560,
         "oldRoutes": [],
         "key": "DROPS_PROGRESS"
     },
     "OUTBOUND_PROMOTIONS": {
         "route": "/outbound-promotions",
         "args": [],
-        "firstSeen": 1682094470947,
+        "firstSeen": 1682214264560,
         "oldRoutes": [],
         "key": "OUTBOUND_PROMOTIONS"
     },
     "OUTBOUND_PROMOTIONS_PREVIEW": {
         "route": "/outbound-promotions/preview",
         "args": [],
-        "firstSeen": 1682094470947,
+        "firstSeen": 1682214264560,
         "oldRoutes": [],
         "key": "OUTBOUND_PROMOTIONS_PREVIEW"
     },
     "CLAIMED_OUTBOUND_PROMOTION_CODES": {
         "route": "/users/@me/outbound-promotions/codes",
         "args": [],
-        "firstSeen": 1682094470947,
+        "firstSeen": 1682214264560,
         "oldRoutes": [],
         "key": "CLAIMED_OUTBOUND_PROMOTION_CODES"
     },
@@ -3660,14 +3760,14 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470947,
+        "firstSeen": 1682214264560,
         "oldRoutes": [],
         "key": "CLAIM_OUTBOUND_PROMOTION_CODE"
     },
     "HUB_EMAIL_VERIFY_SEND": {
         "route": "/guilds/automations/email-domain-lookup",
         "args": [],
-        "firstSeen": 1682094470947,
+        "firstSeen": 1682214264560,
         "oldRoutes": [],
         "key": "HUB_EMAIL_VERIFY_SEND"
     },
@@ -3676,7 +3776,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470948,
+        "firstSeen": 1682214264560,
         "oldRoutes": [],
         "key": "GUILD_ROLE_SUBSCRIPTIONS_SETTINGS"
     },
@@ -3686,7 +3786,7 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470948,
+        "firstSeen": 1682214264561,
         "oldRoutes": [],
         "key": "GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS"
     },
@@ -3697,7 +3797,7 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470948,
+        "firstSeen": 1682214264561,
         "oldRoutes": [],
         "key": "GUILD_ROLE_SUBSCRIPTION_LISTINGS"
     },
@@ -3708,7 +3808,7 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470948,
+        "firstSeen": 1682214264561,
         "oldRoutes": [],
         "key": "GUILD_ROLE_SUBSCRIPTION_GROUP_LISTING_ARCHIVE"
     },
@@ -3717,7 +3817,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470948,
+        "firstSeen": 1682214264561,
         "oldRoutes": [],
         "key": "GUILD_ROLE_SUBSCRIPTION_TRIALS"
     },
@@ -3727,7 +3827,7 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470948,
+        "firstSeen": 1682214264561,
         "oldRoutes": [],
         "key": "GUILD_ROLE_SUBSCRIPTION_LISTING_TRIAL"
     },
@@ -3736,7 +3836,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470949,
+        "firstSeen": 1682214264561,
         "oldRoutes": [],
         "key": "GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES"
     },
@@ -3745,7 +3845,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470949,
+        "firstSeen": 1682214264562,
         "oldRoutes": [],
         "key": "CREATOR_MONETIZATION_ENABLE_REQUESTS"
     },
@@ -3754,7 +3854,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470949,
+        "firstSeen": 1682214264562,
         "oldRoutes": [],
         "key": "CREATOR_MONETIZATION_ELIGIBILITY"
     },
@@ -3764,7 +3864,7 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470949,
+        "firstSeen": 1682214264562,
         "oldRoutes": [],
         "key": "CREATOR_MONETIZATION_ACCEPT_TERMS"
     },
@@ -3773,7 +3873,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470949,
+        "firstSeen": 1682214264562,
         "oldRoutes": [],
         "key": "CREATOR_MONETIZATION_ACCEPT_TERMS_V2"
     },
@@ -3782,7 +3882,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470949,
+        "firstSeen": 1682214264562,
         "oldRoutes": [],
         "key": "CREATOR_MONETIZATION_RESTRICTIONS"
     },
@@ -3793,7 +3893,7 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470949,
+        "firstSeen": 1682214264563,
         "oldRoutes": [],
         "key": "GUILD_ROLE_SUBSCRIPTION_TRIAL_ELIGIBILITY"
     },
@@ -3802,14 +3902,14 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470949,
+        "firstSeen": 1682214264563,
         "oldRoutes": [],
         "key": "CREATOR_MONETIZATION_MARKETING_ONBOARDING"
     },
     "CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY": {
         "route": "/creator-monetization/marketing/nag-activate/eligibility",
         "args": [],
-        "firstSeen": 1682094470949,
+        "firstSeen": 1682214264563,
         "oldRoutes": [],
         "key": "CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY"
     },
@@ -3818,7 +3918,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470950,
+        "firstSeen": 1682214264563,
         "oldRoutes": [],
         "key": "CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD"
     },
@@ -3827,7 +3927,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470950,
+        "firstSeen": 1682214264563,
         "oldRoutes": [],
         "key": "CREATOR_MONETIZATION_ACCEPT_NEW_TERMS"
     },
@@ -3836,7 +3936,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470950,
+        "firstSeen": 1682214264563,
         "oldRoutes": [],
         "key": "CREATOR_MONETIZATION_REMOVE_MONETIZATION"
     },
@@ -3845,7 +3945,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470950,
+        "firstSeen": 1682214264564,
         "oldRoutes": [],
         "key": "SUBSCRIPTION_PLAN_GROUP_LISTING"
     },
@@ -3854,7 +3954,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470950,
+        "firstSeen": 1682214264564,
         "oldRoutes": [],
         "key": "SUBSCRIPTION_PLAN_GUILD_ROLE_GROUP_LISTING"
     },
@@ -3863,29 +3963,21 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470950,
-        "oldRoutes": [
-            {
-                "route": "/channels/:channelId/media-post-preview",
-                "args": [
-                    ":channelId"
-                ],
-                "changedAt": 1682094529353
-            },
-            {
-                "route": "/channels/:channelId/messages/:messageId/preview",
-                "args": [
-                    ":channelId"
-                ],
-                "changedAt": 1682094606905
-            }
-        ],
+        "firstSeen": 1682214264564,
+        "oldRoutes": [],
         "key": "MEDIA_POST_RESHARE_GET_PREVIEW"
+    },
+    "UNFURL_EMBED_URLS": {
+        "route": "/unfurler/embed-urls",
+        "args": [],
+        "firstSeen": 1682214264564,
+        "oldRoutes": [],
+        "key": "UNFURL_EMBED_URLS"
     },
     "BUG_REPORTS": {
         "route": "/private/bug-reports",
         "args": [],
-        "firstSeen": 1682094470950,
+        "firstSeen": 1682214264564,
         "oldRoutes": [],
         "key": "BUG_REPORTS"
     },
@@ -3894,28 +3986,28 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470951,
+        "firstSeen": 1682214264564,
         "oldRoutes": [],
         "key": "PAYMENT_PAYOUT_GROUPS"
     },
     "TENOR_ASSET_PATH": {
         "route": "/tenor",
         "args": [],
-        "firstSeen": 1682094470951,
+        "firstSeen": 1682214264564,
         "oldRoutes": [],
         "key": "TENOR_ASSET_PATH"
     },
     "EMAIL_SETTINGS": {
         "route": "/users/@me/email-settings",
         "args": [],
-        "firstSeen": 1682094470951,
+        "firstSeen": 1682214264565,
         "oldRoutes": [],
         "key": "EMAIL_SETTINGS"
     },
     "VIDEO_FILTER_ASSETS": {
         "route": "/users/@me/video-filters/assets",
         "args": [],
-        "firstSeen": 1682094470951,
+        "firstSeen": 1682214264565,
         "oldRoutes": [],
         "key": "VIDEO_FILTER_ASSETS"
     },
@@ -3924,7 +4016,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470951,
+        "firstSeen": 1682214264565,
         "oldRoutes": [],
         "key": "VIDEO_FILTER_ASSET"
     },
@@ -3933,7 +4025,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470951,
+        "firstSeen": 1682214264565,
         "oldRoutes": [],
         "key": "VIDEO_FILTER_ASSET_LAST_USED"
     },
@@ -3945,7 +4037,7 @@
             ":hash",
             ":type"
         ],
-        "firstSeen": 1682094470951,
+        "firstSeen": 1682214264565,
         "oldRoutes": [],
         "key": "VIDEO_FILTER_ASSET_STORAGE"
     },
@@ -3954,7 +4046,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470951,
+        "firstSeen": 1682214264565,
         "oldRoutes": [],
         "key": "GUILD_SOUNDBOARD_SOUNDS"
     },
@@ -3964,7 +4056,7 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470952,
+        "firstSeen": 1682214264566,
         "oldRoutes": [],
         "key": "GUILD_SOUNDBOARD_SOUND"
     },
@@ -3973,14 +4065,14 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470952,
+        "firstSeen": 1682214264566,
         "oldRoutes": [],
         "key": "SOUNDBOARD_SOUND"
     },
     "SOUNDBOARD_DEFAULT_SOUNDS": {
         "route": "/soundboard-default-sounds",
         "args": [],
-        "firstSeen": 1682094470952,
+        "firstSeen": 1682214264566,
         "oldRoutes": [],
         "key": "SOUNDBOARD_DEFAULT_SOUNDS"
     },
@@ -3989,7 +4081,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470952,
+        "firstSeen": 1682214264566,
         "oldRoutes": [],
         "key": "APPLICATION_COMMANDS_SEARCH"
     },
@@ -3999,7 +4091,7 @@
             ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1682094470952,
+        "firstSeen": 1682214264566,
         "oldRoutes": [],
         "key": "GUILD_COMMANDS_FOR_APPLICATION"
     },
@@ -4008,7 +4100,7 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470952,
+        "firstSeen": 1682214264567,
         "oldRoutes": [],
         "key": "APPLICATION_DIRECTORY_APPLICATION"
     },
@@ -4017,14 +4109,14 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470952,
+        "firstSeen": 1682214264567,
         "oldRoutes": [],
         "key": "APPLICATION_DIRECTORY_EMBED_APPLICATION"
     },
     "APPLICATION_DIRECTORY_CATEGORIES": {
         "route": "/application-directory/categories",
         "args": [],
-        "firstSeen": 1682094470953,
+        "firstSeen": 1682214264568,
         "oldRoutes": [],
         "key": "APPLICATION_DIRECTORY_CATEGORIES"
     },
@@ -4033,21 +4125,21 @@
         "args": [
             ":applicationId"
         ],
-        "firstSeen": 1682094470953,
+        "firstSeen": 1682214264569,
         "oldRoutes": [],
         "key": "APPLICATION_DIRECTORY_SIMILAR"
     },
     "APPLICATION_DIRECTORY_SEARCH": {
         "route": "/application-directory/search",
         "args": [],
-        "firstSeen": 1682094470953,
+        "firstSeen": 1682214264569,
         "oldRoutes": [],
         "key": "APPLICATION_DIRECTORY_SEARCH"
     },
     "APPLICATION_DIRECTORY_COLLECTIONS": {
         "route": "/application-directory/collections",
         "args": [],
-        "firstSeen": 1682094470953,
+        "firstSeen": 1682214264569,
         "oldRoutes": [],
         "key": "APPLICATION_DIRECTORY_COLLECTIONS"
     },
@@ -4058,7 +4150,7 @@
             ":hash",
             ":type"
         ],
-        "firstSeen": 1682094470953,
+        "firstSeen": 1682214264569,
         "oldRoutes": [],
         "key": "APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE"
     },
@@ -4067,7 +4159,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470953,
+        "firstSeen": 1682214264569,
         "oldRoutes": [],
         "key": "GUILD_FEED"
     },
@@ -4076,28 +4168,28 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470953,
+        "firstSeen": 1682214264570,
         "oldRoutes": [],
         "key": "CHANNEL_HIGHLIGHTS"
     },
     "USER_EMAIL": {
         "route": "/users/@me/email",
         "args": [],
-        "firstSeen": 1682094470954,
+        "firstSeen": 1682214264570,
         "oldRoutes": [],
         "key": "USER_EMAIL"
     },
     "USER_EMAIL_VERIFY_CODE": {
         "route": "/users/@me/email/verify-code",
         "args": [],
-        "firstSeen": 1682094470954,
+        "firstSeen": 1682214264570,
         "oldRoutes": [],
         "key": "USER_EMAIL_VERIFY_CODE"
     },
     "PREMIUM_USAGE": {
         "route": "/users/@me/premium-usage",
         "args": [],
-        "firstSeen": 1682094470954,
+        "firstSeen": 1682214264570,
         "oldRoutes": [],
         "key": "PREMIUM_USAGE"
     },
@@ -4106,7 +4198,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470954,
+        "firstSeen": 1682214264570,
         "oldRoutes": [],
         "key": "ACTIVE_CHANNELS"
     },
@@ -4115,7 +4207,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470954,
+        "firstSeen": 1682214264570,
         "oldRoutes": [],
         "key": "NOTIF_CENTER_ITEMS"
     },
@@ -4124,7 +4216,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470954,
+        "firstSeen": 1682214264571,
         "oldRoutes": [],
         "key": "NOTIF_CENTER_ITEMS_ACK"
     },
@@ -4133,7 +4225,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470955,
+        "firstSeen": 1682214264571,
         "oldRoutes": [],
         "key": "GUILD_ADMIN_SERVER_ELIGIBILITY"
     },
@@ -4142,28 +4234,28 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470955,
+        "firstSeen": 1682214264571,
         "oldRoutes": [],
         "key": "JOIN_ADMIN_SERVER"
     },
     "AUTH_SESSIONS": {
         "route": "/auth/sessions",
         "args": [],
-        "firstSeen": 1682094470955,
+        "firstSeen": 1682214264571,
         "oldRoutes": [],
         "key": "AUTH_SESSIONS"
     },
     "AUTH_SESSION_NOTIFICATIONS_DEBUG": {
         "route": "/auth/sessions/debug/notifications",
         "args": [],
-        "firstSeen": 1682094470955,
+        "firstSeen": 1682214264571,
         "oldRoutes": [],
         "key": "AUTH_SESSION_NOTIFICATIONS_DEBUG"
     },
     "AUTH_SESSIONS_LOGOUT": {
         "route": "/auth/sessions/logout",
         "args": [],
-        "firstSeen": 1682094470955,
+        "firstSeen": 1682214264571,
         "oldRoutes": [],
         "key": "AUTH_SESSIONS_LOGOUT"
     },
@@ -4172,7 +4264,7 @@
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094470955,
+        "firstSeen": 1682214264571,
         "oldRoutes": [],
         "key": "VOICE_CHANNEL_EFFECTS"
     },
@@ -4182,7 +4274,7 @@
             ":applicationId",
             ":unknown"
         ],
-        "firstSeen": 1682094470955,
+        "firstSeen": 1682214264571,
         "oldRoutes": [],
         "key": "APPLICATION_SUBSCRIPTION_GROUP_LISTING"
     },
@@ -4191,7 +4283,7 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1682094470955,
+        "firstSeen": 1682214264572,
         "oldRoutes": [],
         "key": "GUILD_ENTITLEMENTS"
     },
@@ -4201,21 +4293,21 @@
             ":guildId",
             ":roleId"
         ],
-        "firstSeen": 1682094470956,
+        "firstSeen": 1682214264572,
         "oldRoutes": [],
         "key": "GUILD_ROLE_CONNECTIONS_CONFIGURATION"
     },
     "MESSAGE_REQUESTS_SUPPLEMENTAL_DATA": {
         "route": "/users/@me/message-requests/supplemental-data",
         "args": [],
-        "firstSeen": 1682094470956,
+        "firstSeen": 1682214264572,
         "oldRoutes": [],
         "key": "MESSAGE_REQUESTS_SUPPLEMENTAL_DATA"
     },
     "CONNECT_REQUEST_CREATE": {
         "route": "/consoles/connect-request",
         "args": [],
-        "firstSeen": 1682094470956,
+        "firstSeen": 1682214264572,
         "oldRoutes": [],
         "key": "CONNECT_REQUEST_CREATE"
     },
@@ -4224,7 +4316,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470956,
+        "firstSeen": 1682214264572,
         "oldRoutes": [],
         "key": "CONNECT_REQUEST"
     },
@@ -4233,7 +4325,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470956,
+        "firstSeen": 1682214264572,
         "oldRoutes": [],
         "key": "CONSOLES_DEVICES"
     },
@@ -4243,7 +4335,7 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470956,
+        "firstSeen": 1682214264572,
         "oldRoutes": [],
         "key": "CONSOLES_DEVICES_COMMANDS"
     },
@@ -4254,21 +4346,21 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470956,
+        "firstSeen": 1682214264573,
         "oldRoutes": [],
         "key": "CONSOLES_DEVICES_COMMAND"
     },
     "ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS": {
         "route": "/users/@me/billing/eligible-application-subscription-guilds",
         "args": [],
-        "firstSeen": 1682094470957,
+        "firstSeen": 1682214264573,
         "oldRoutes": [],
         "key": "ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS"
     },
     "APPLICATION_USER_ROLE_CONNECTIONS": {
         "route": "/users/@me/applications/role-connections",
         "args": [],
-        "firstSeen": 1682094470957,
+        "firstSeen": 1682214264573,
         "oldRoutes": [],
         "key": "APPLICATION_USER_ROLE_CONNECTIONS"
     },
@@ -4278,7 +4370,7 @@
             ":channelId",
             ":unknown"
         ],
-        "firstSeen": 1682094470957,
+        "firstSeen": 1682214264573,
         "oldRoutes": [],
         "key": "SHARED_CANVAS_LINES"
     },
@@ -4288,7 +4380,7 @@
             ":channelId",
             ":unknown"
         ],
-        "firstSeen": 1682094470957,
+        "firstSeen": 1682214264573,
         "oldRoutes": [],
         "key": "SHARED_CANVAS_EMOJI_HOSES"
     },
@@ -4299,35 +4391,35 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470957,
+        "firstSeen": 1682214264573,
         "oldRoutes": [],
         "key": "SHARED_CANVAS_EMOJI_HOSE"
     },
     "USER_PREMIUM_LIKELIHOOD": {
         "route": "/users/@me/billing/premium-likelihood",
         "args": [],
-        "firstSeen": 1682094470957,
+        "firstSeen": 1682214264574,
         "oldRoutes": [],
         "key": "USER_PREMIUM_LIKELIHOOD"
     },
     "BURST_CREDIT_BALANCE": {
         "route": "/users/@me/burst-credits",
         "args": [],
-        "firstSeen": 1682094470957,
+        "firstSeen": 1682214264574,
         "oldRoutes": [],
         "key": "BURST_CREDIT_BALANCE"
     },
     "SAVED_MESSAGES": {
         "route": "/saved-messages",
         "args": [],
-        "firstSeen": 1682094470957,
+        "firstSeen": 1682214264574,
         "oldRoutes": [],
         "key": "SAVED_MESSAGES"
     },
     "GET_REFERRALS_REMAINING": {
         "route": "/users/@me/referrals/eligibility",
         "args": [],
-        "firstSeen": 1682094470957,
+        "firstSeen": 1682214264574,
         "oldRoutes": [],
         "key": "GET_REFERRALS_REMAINING"
     },
@@ -4336,7 +4428,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470958,
+        "firstSeen": 1682214264574,
         "oldRoutes": [],
         "key": "CREATE_REFERRAL_PREVIEW"
     },
@@ -4345,7 +4437,7 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470958,
+        "firstSeen": 1682214264574,
         "oldRoutes": [],
         "key": "CREATE_REFERRAL"
     },
@@ -4354,14 +4446,14 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470958,
+        "firstSeen": 1682214264574,
         "oldRoutes": [],
         "key": "FAMILY_CENTER_TEEN_ACTIVITY"
     },
     "FAMILY_CENTER_TEEN_ACTIVITY_ME": {
         "route": "/family-center/@me",
         "args": [],
-        "firstSeen": 1682094470958,
+        "firstSeen": 1682214264574,
         "oldRoutes": [],
         "key": "FAMILY_CENTER_TEEN_ACTIVITY_ME"
     },
@@ -4373,65 +4465,53 @@
             ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1682094470958,
-        "oldRoutes": [
-            {
-                "route": "/family-center/more-activity/:unknown/:unknown/:unknown/:unknown",
-                "args": [
-                    ":unknown",
-                    ":unknown",
-                    ":unknown",
-                    ":unknown"
-                ],
-                "changedAt": 1682094529355
-            },
-            {
-                "route": "/parent-tools/:unknown/:unknown/:unknown",
-                "args": [
-                    ":unknown",
-                    ":unknown",
-                    ":unknown",
-                    ":unknown"
-                ],
-                "changedAt": 1682094606906
-            }
-        ],
+        "firstSeen": 1682214264575,
+        "oldRoutes": [],
         "key": "FAMILY_CENTER_TEEN_ACTIVITY_MORE"
     },
     "FAMILY_CENTER_LINKED_USERS": {
         "route": "/users/@me/linked-users",
         "args": [],
-        "firstSeen": 1682094470958,
+        "firstSeen": 1682214264575,
         "oldRoutes": [],
         "key": "FAMILY_CENTER_LINKED_USERS"
     },
     "FAMILY_CENTER_LINK_CODE": {
         "route": "/family-center/@me/link-code",
         "args": [],
-        "firstSeen": 1682094470959,
+        "firstSeen": 1682214264575,
         "oldRoutes": [],
         "key": "FAMILY_CENTER_LINK_CODE"
+    },
+    "FAMILY_CENTER_FETCH_TEEN_USER": {
+        "route": "/family-center/teen-user/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1682214264575,
+        "oldRoutes": [],
+        "key": "FAMILY_CENTER_FETCH_TEEN_USER"
     },
     "REFERRAL_OFFER_ID_RESOLVE": {
         "route": "/referrals/:unknown",
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470959,
+        "firstSeen": 1682214264575,
         "oldRoutes": [],
         "key": "REFERRAL_OFFER_ID_RESOLVE"
     },
     "APPLICATIONS_SHELF": {
         "route": "/applications/shelf",
         "args": [],
-        "firstSeen": 1682094470959,
+        "firstSeen": 1682214264575,
         "oldRoutes": [],
         "key": "APPLICATIONS_SHELF"
     },
     "DISCORDIFY_ME": {
         "route": "/users/@me/avatars/discordify",
         "args": [],
-        "firstSeen": 1682094470959,
+        "firstSeen": 1682214264575,
         "oldRoutes": [],
         "key": "DISCORDIFY_ME"
     },
@@ -4440,55 +4520,16 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1682094470959,
+        "firstSeen": 1682214264576,
         "oldRoutes": [],
         "key": "BADGE_ICON"
-    },
-    "DM_CHANNEL": {
-        "route": "/users/@me/dms/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094606892,
-        "oldRoutes": [],
-        "key": "DM_CHANNEL"
-    },
-    "POMELO_ATTEMPT": {
-        "route": "/users/@me/pomelo-attempt",
-        "args": [],
-        "firstSeen": 1682094606898,
-        "oldRoutes": [],
-        "key": "POMELO_ATTEMPT"
-    },
-    "POMELO_CREATE": {
-        "route": "/users/@me/pomelo",
-        "args": [],
-        "firstSeen": 1682094606898,
-        "oldRoutes": [],
-        "key": "POMELO_CREATE"
-    },
-    "UNFURL_EMBED_URLS": {
-        "route": "/unfurler/embed-urls",
-        "args": [],
-        "firstSeen": 1682094606905,
-        "oldRoutes": [],
-        "key": "UNFURL_EMBED_URLS"
-    },
-    "FAMILY_CENTER_FETCH_TEEN_USER": {
-        "route": "/family-center/teen-user/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682094606906,
-        "oldRoutes": [],
-        "key": "FAMILY_CENTER_FETCH_TEEN_USER"
     },
     "PRIVATE_CHANNEL_INTEGRATION_CONSENT": {
         "route": "/channels/:channelId/integrations/consent",
         "args": [
             ":channelId"
         ],
-        "firstSeen": 1682094606907,
+        "firstSeen": 1682214264576,
         "oldRoutes": [],
         "key": "PRIVATE_CHANNEL_INTEGRATION_CONSENT"
     }

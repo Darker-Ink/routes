@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@octokit/types": "^9.1.1",
+    "acorn": "^8.8.2",
+    "dash-ast": "^2.0.1",
     "dotenv": "^16.0.3",
     "github-api": "^3.4.0",
     "octokit": "^2.0.14",
@@ -10,7 +12,7 @@
   "scripts": {
     "download": "node src/utils/RouteDownloader.js",
     "cleaner": "node src/utils/RouteCleaner.js",
-    "finder": "node src/utils/RouteFinder.js",
+    "finder": "node src/utils/RouteFinderFirst.js && node src/utils/RouteFinderSecond.js",
     "start": "npm run download && npm run cleaner && npm run finder"
   },
   "main": "src/index.js"

@@ -4,3 +4,8 @@ Routes.js
 node_modules
 
 .env
+
+storage.js
+RouteTest.js
+test.js
+test2.js

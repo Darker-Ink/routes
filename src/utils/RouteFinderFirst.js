@@ -1,17 +1,17 @@
 const term = require('terminal-kit').terminal;
-const routes = require('../saves/Routes.js');
+const { FirstRoutes: routes } = require('../saves/Routes.js');
 const fs = require('fs');
 const path = require('path');
 
-if (!fs.existsSync(path.join(__dirname, '../saves/Json'))) {
-  fs.mkdirSync(path.join(__dirname, '../saves/Json'));
+if (!fs.existsSync(path.join(__dirname, '../saves/Json/First'))) {
+  fs.mkdirSync(path.join(__dirname, '../saves/Json/First'));
 }
 
-if (!fs.existsSync(path.join(__dirname, '../saves/Json/Routes.json'))) {
-  fs.writeFileSync(path.join(__dirname, '../saves/Json/Routes.json'), JSON.stringify({}));
+if (!fs.existsSync(path.join(__dirname, '../saves/Json/First/Routes.json'))) {
+  fs.writeFileSync(path.join(__dirname, '../saves/Json/First/Routes.json'), JSON.stringify({}));
 }
 
-const knownRoutes = require('../saves/Json/Routes.json'); // routes we know about already
+const knownRoutes = require('../saves/Json/First/Routes.json'); // routes we know about already
 const WebhookUtils = require('./WebhookUtils.js');
 
 const routeroutes = { ...knownRoutes };
@@ -159,9 +159,9 @@ Object.entries(routeroutes).forEach(([key, value]) => {
 
 term.green(`\nWe found ${newRoutes.length} new routes and there were ${changedRoutes.length} changed routes and ${deletedRoutes.length} routes were deleted.\n`);
 
-WebhookUtils.stats(`We found ${newRoutes.length} new routes and there were ${changedRoutes.length} changed routes and ${deletedRoutes.length} routes were deleted.`)
+WebhookUtils.stats(`We found ${newRoutes.length} new routes and there were ${changedRoutes.length} changed routes and ${deletedRoutes.length} routes were deleted.`, 'First Check')
 
-fs.writeFileSync(path.join(__dirname, '../saves/Json/Routes.json'), JSON.stringify(routeroutes, null, 4));
-fs.writeFileSync(path.join(__dirname, '../saves/Json/NewRoutes.json'), JSON.stringify(newRoutes.length ? newRoutes : [], null, 4));
-fs.writeFileSync(path.join(__dirname, '../saves/Json/ChangedRoutes.json'), JSON.stringify(changedRoutes.length ? changedRoutes : [], null, 4));
-fs.writeFileSync(path.join(__dirname, '../saves/Json/DeletedRoutes.json'), JSON.stringify(deletedRoutes.length ? deletedRoutes : [], null, 4));
+fs.writeFileSync(path.join(__dirname, '../saves/Json/First/Routes.json'), JSON.stringify(routeroutes, null, 4));
+fs.writeFileSync(path.join(__dirname, '../saves/Json/First/NewRoutes.json'), JSON.stringify(newRoutes.length ? newRoutes : [], null, 4));
+fs.writeFileSync(path.join(__dirname, '../saves/Json/First/ChangedRoutes.json'), JSON.stringify(changedRoutes.length ? changedRoutes : [], null, 4));
+fs.writeFileSync(path.join(__dirname, '../saves/Json/First/DeletedRoutes.json'), JSON.stringify(deletedRoutes.length ? deletedRoutes : [], null, 4));
