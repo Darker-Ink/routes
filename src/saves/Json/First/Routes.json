@@ -4532,5 +4532,12 @@
         "firstSeen": 1682214264576,
         "oldRoutes": [],
         "key": "PRIVATE_CHANNEL_INTEGRATION_CONSENT"
+    },
+    "POMELO_SUGGESTIONS": {
+        "route": "/users/@me/pomelo-suggestions",
+        "args": [],
+        "firstSeen": 1682548068640,
+        "oldRoutes": [],
+        "key": "POMELO_SUGGESTIONS"
     }
 }
