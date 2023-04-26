@@ -212,15 +212,17 @@ const start = async () => {
     const FirstMsg = await run();
 
     if (FirstMsg) {
+        
+        WebhookUtils.stats(FirstMsg);
+        
         await octokit.rest.repos.createCommitComment({
             owner: process.env.REPO_OWNER,
             repo: process.env.REPO_NAME,
             commit_sha: FirstSha,
             body: FirstMsg
-        });
+        }).catch((er) => console.error(er))
 
         term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] Comment Created\n`);
-        WebhookUtils.stats(FirstMsg);
     }
 
     let lastCommit = FirstSha;
@@ -242,15 +244,16 @@ const start = async () => {
         const msg = await run();
 
         if (msg) {
+            WebhookUtils.stats(msg);
+            
             await octokit.rest.repos.createCommitComment({
                 owner: process.env.REPO_OWNER,
                 repo: process.env.REPO_NAME,
                 commit_sha: sha,
                 body: msg
-            });
+            }).catch((er) => console.error(er))
 
             term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] Comment Created\n`);
-            WebhookUtils.stats(msg);
 
             if (process.env.ADD_ROUTES === 'true') {
                 const Pushing = spawn('git', ['add', '.', '&&', 'git', 'commit', '-m', '"[BOT] Updated Routes"', '&&', 'git', 'push']);
