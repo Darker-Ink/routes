@@ -3,7 +3,7 @@ require('dotenv').config(); // JIC
 const { request } = require('undici');
 
 class WebhookUtils {
-    static async send(title, description, color, footer) {
+    static async send(title, description, color, footer, msg) {
         await request(process.env.WEBHOOK, {
             body: JSON.stringify({
                 embeds: [{
@@ -12,7 +12,8 @@ class WebhookUtils {
                     color,
                     footer,
                     timestamp: new Date().toISOString(),
-                }]
+                }],
+                content: msg
             }),
             method: 'POST',
             headers: {
@@ -22,9 +23,9 @@ class WebhookUtils {
         });
     }
 
-    static async stats(msg, title) {
+    static async stats(msg, title, message) {
         if (process.env.SEND_STATS === 'true') {
-            await this.send(title ?? 'Stats', msg, 0x00FF00);
+            await this.send(title ?? 'Stats', msg, 0x00FF00, {}, message);
         }
     }
 }
