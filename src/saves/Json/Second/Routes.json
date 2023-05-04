@@ -474,14 +474,24 @@
         "key": "MESSAGE_REQUESTS"
     },
     "CHANNEL_THREAD_VIEW": {
-        "route": "/channels/:channelId/:unknown/threads/:unknown",
+        "route": "/channels/:channelId/:unknown/threads/:unknown/:unknown",
         "args": [
             ":channelId",
             ":unknown",
             ":unknown"
         ],
         "firstSeen": 1682214265862,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/channels/:channelId/:unknown/threads/:unknown",
+                "args": [
+                    ":channelId",
+                    ":unknown",
+                    ":unknown"
+                ],
+                "changedAt": 1682715133479
+            }
+        ],
         "key": "CHANNEL_THREAD_VIEW"
     },
     "VOICE_CHAT_CHANNEL_PARTIAL": {
