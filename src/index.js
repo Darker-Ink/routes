@@ -213,7 +213,7 @@ const start = async () => {
 
     if (FirstMsg) {
         
-            WebhookUtils.stats(`${FirstMsg}\n\n[Relating Commit](https://github.com/Discord-Datamining/Discord-Datamining/commit/${FirstSha})`);
+            WebhookUtils.stats(`${FirstMsg}\n\n[Relating Commit](https://github.com/Discord-Datamining/Discord-Datamining/commit/${FirstSha})`, "New Routse", "<@&1103522959022366832>");
         
         await octokit.rest.repos.createCommitComment({
             owner: process.env.REPO_OWNER,
@@ -244,7 +244,7 @@ const start = async () => {
         const msg = await run();
 
         if (msg) {
-            WebhookUtils.stats(`${msg}\n\n[Relating Commit](https://github.com/Discord-Datamining/Discord-Datamining/commit/${sha})`);
+            WebhookUtils.stats(`${msg}\n\n[Relating Commit](https://github.com/Discord-Datamining/Discord-Datamining/commit/${sha})`, "New Routse", "<@&1103522959022366832>");
             
             await octokit.rest.repos.createCommitComment({
                 owner: process.env.REPO_OWNER,
