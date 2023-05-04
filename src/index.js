@@ -213,7 +213,7 @@ const start = async () => {
 
     if (FirstMsg) {
         
-        WebhookUtils.stats(FirstMsg);
+            WebhookUtils.stats(`${FirstMsg}\n\n[Relating Commit](https://github.com/Discord-Datamining/Discord-Datamining/commit/${FirstSha})`);
         
         await octokit.rest.repos.createCommitComment({
             owner: process.env.REPO_OWNER,
@@ -244,7 +244,7 @@ const start = async () => {
         const msg = await run();
 
         if (msg) {
-            WebhookUtils.stats(msg);
+            WebhookUtils.stats(`${msg}\n\n[Relating Commit](https://github.com/Discord-Datamining/Discord-Datamining/commit/${sha})`);
             
             await octokit.rest.repos.createCommitComment({
                 owner: process.env.REPO_OWNER,
