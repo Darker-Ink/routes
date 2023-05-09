@@ -1,50 +1,74 @@
-require('dotenv').config();
 const { Octokit } = require("octokit");
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const { request } = require('undici');
-const WebhookUtils = require('./utils/WebhookUtils');
 const term = require('terminal-kit').terminal;
 
+const config = require('./utils/ConfigManager').getConfig();
+
+const ErrorHooks = config.Webhooks.filter((hook) => hook.send.errors);
+const SendHooks = config.Webhooks.filter((hook) => hook.send.enabled);
+
+let errorsSent = 0;
+
 process.on('unhandledRejection', async (reason, promise) => {
-    await request(process.env.WEBHOOK, {
-        body: JSON.stringify({
-            embeds: [{
-                title: 'Unhandled Rejection',
-                description: `\`\`\`\n${reason.stack}\n\`\`\``,
-                color: 0xFF0000, // red
-                timestamp: new Date().toISOString(),
-            }]
-        }),
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    });
+
+    if (errorsSent >= 10) {
+        process.exit(1);
+    }
+
+    // fuck rate limits (I honestly doubt we'll send enough)
+    for (const hook of ErrorHooks) {
+        await request(hook.url, {
+            body: JSON.stringify({
+                embeds: [{
+                    title: 'Unhandled Rejection',
+                    description: `\`\`\`\n${reason.stack}\n\`\`\``,
+                    color: 0xFF0000, // red
+                    timestamp: new Date().toISOString(),
+                }]
+            }),
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        });
+    }
 
     console.error(reason);
+
+    errorsSent++;
 });
 
 process.on('uncaughtException', async (error) => {
-    await request(process.env.WEBHOOK, {
-        body: JSON.stringify({
-            embeds: [{
-                title: 'Uncaught Exception',
-                description: `\`\`\`\n${error.stack}\n\`\`\``,
-                color: 0xFF0000, // red
-                timestamp: new Date().toISOString(),
-            }]
-        }),
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    });
+
+    if (errorsSent >= 10) {
+        process.exit(0);
+    }
+
+    for (const hook of ErrorHooks) {
+        await request(hook.url, {
+            body: JSON.stringify({
+                embeds: [{
+                    title: 'Uncaught Exception',
+                    description: `\`\`\`\n${error.stack}\n\`\`\``,
+                    color: 0xFF0000, // red
+                    timestamp: new Date().toISOString(),
+                }]
+            }),
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        });
+    }
 
     console.error(error);
+
+    errorsSent++;
 });
 
 const paths = {
@@ -84,49 +108,14 @@ const run = async () => {
         SecondDeletedRoutes: JSON.parse(fs.readFileSync(paths.SecondDeletedRoutes)),
         SecondNewRoutes: JSON.parse(fs.readFileSync(paths.SecondNewRoutes)),
         SecondRoutes: JSON.parse(fs.readFileSync(paths.SecondRoutes)),
-    }
+    };
 
     let message = `# Modified Routes\n`;
 
-    // if (changedRoutes.length > 0) {
-    //     message += `## Changed Routes\n\n\`\`\`diff\n`;
-
-    //     for (const route of changedRoutes) {
-    //         const oldRoute = route.oldRoutes[route.oldRoutes.length - 1];
-    //         message += `# ${route.key}\n- ${oldRoute.route}\n+ ${route.route}\n\n`;
-    //     }
-
-    //     message += `\`\`\`\n`;
-    // }
-
-    // if (deletedRoutes.length > 0) {
-    //     message += `## Deleted Routes\n\n\`\`\`diff\n`;
-
-    //     for (const route of deletedRoutes) {
-    //         message += `- ${route.key}: ${route.route}\n`;
-    //     }
-
-    //     message += `\`\`\`\n`;
-    // }
-
-    // if (newRoutes.length > 0) {
-    //     message += `## New Routes\n\n\`\`\`diff\n`;
-
-    //     for (const route of newRoutes) {
-    //         message += `+ ${route.key}: ${route.route}\n`;
-    //     }
-
-    //     message += `\`\`\`\n`;
-    // }
-
-    // if (changedRoutes.length === 0 && deletedRoutes.length === 0 && newRoutes.length === 0) {
-    //     return;
-    // }
-
-    message+= `## First Object\n\n`;
 
     if (RouteStuff.FirstChangedRoutes.length > 0) {
-        message += `## Changed Routes\n\n\`\`\`diff\n`;
+        message += `## First Object\n\n`;
+        message += `## Changed Endpoints\n\n\`\`\`diff\n`;
 
         for (const route of RouteStuff.FirstChangedRoutes) {
             const oldRoute = route.oldRoutes[route.oldRoutes.length - 1];
@@ -137,7 +126,7 @@ const run = async () => {
     }
 
     if (RouteStuff.FirstDeletedRoutes.length > 0) {
-        message += `## Deleted Routes\n\n\`\`\`diff\n`;
+        message += `## Deleted Endpoints\n\n\`\`\`diff\n`;
 
         for (const route of RouteStuff.FirstDeletedRoutes) {
             message += `- ${route.key}: ${route.route}\n`;
@@ -147,7 +136,7 @@ const run = async () => {
     }
 
     if (RouteStuff.FirstNewRoutes.length > 0) {
-        message += `## New Routes\n\n\`\`\`diff\n`;
+        message += `## New Endpoints\n\n\`\`\`diff\n`;
 
         for (const route of RouteStuff.FirstNewRoutes) {
             message += `+ ${route.key}: ${route.route}\n`;
@@ -156,10 +145,10 @@ const run = async () => {
         message += `\`\`\`\n`;
     }
 
-    message+= `## Second Object\n\n`;
 
     if (RouteStuff.SecondChangedRoutes.length > 0) {
-        message += `## Changed Routes\n\n\`\`\`diff\n`;
+        message += `## Second Object\n\n`;
+        message += `## Changed Endpoints\n\n\`\`\`diff\n`;
 
         for (const route of RouteStuff.SecondChangedRoutes) {
             const oldRoute = route.oldRoutes[route.oldRoutes.length - 1];
@@ -170,8 +159,8 @@ const run = async () => {
     }
 
     if (RouteStuff.SecondDeletedRoutes.length > 0) {
-        message += `## Deleted Routes\n\n\`\`\`diff\n`;
-        
+        message += `## Deleted Endpoints\n\n\`\`\`diff\n`;
+
         for (const route of RouteStuff.SecondDeletedRoutes) {
             message += `- ${route.key}: ${route.route}\n`;
         }
@@ -180,7 +169,7 @@ const run = async () => {
     }
 
     if (RouteStuff.SecondNewRoutes.length > 0) {
-        message += `## New Routes\n\n\`\`\`diff\n`;
+        message += `## New Endpoints\n\n\`\`\`diff\n`;
 
         for (const route of RouteStuff.SecondNewRoutes) {
             message += `+ ${route.key}: ${route.route}\n`;
@@ -199,28 +188,44 @@ const run = async () => {
 };
 
 const start = async () => {
-    const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+    const octokit = new Octokit({ auth: config.GithubToken });
 
     term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] Started\n`);
 
     const { data: { object: { sha: FirstSha } } } = await octokit.rest.git.getRef({
-        owner: process.env.REPO_OWNER,
-        repo: process.env.REPO_NAME,
-        ref: process.env.BRANCH
+        owner: config.RepoOwner,
+        repo: config.RepoName,
+        ref: config.RepoBranch
     });
 
     const FirstMsg = await run();
 
     if (FirstMsg) {
-        
-            WebhookUtils.stats(`${FirstMsg}\n\n[Relating Commit](https://github.com/Discord-Datamining/Discord-Datamining/commit/${FirstSha})`, "New Routse", "<@&1103522959022366832>");
-        
+        for (const hook of SendHooks) {
+            await request(hook.url, {
+                body: JSON.stringify({
+                    embeds: [{
+                        title: 'New Endpoints',
+                        description: `${FirstMsg}\n\n[Relating Commit](https://github.com/Discord-Datamining/Discord-Datamining/commit/${FirstSha})`,
+                        color: 0x00FF00, // green
+                        timestamp: new Date().toISOString(),
+                    }],
+                    ...(hook.send.ping ? { content: hook.pingMsg } : {})
+                }),
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            });
+        }
+
         await octokit.rest.repos.createCommitComment({
-            owner: process.env.REPO_OWNER,
-            repo: process.env.REPO_NAME,
+            owner: config.RepoOwner,
+            repo: config.RepoName,
             commit_sha: FirstSha,
             body: FirstMsg
-        }).catch((er) => console.error(er))
+        }).catch((er) => console.error(er));
 
         term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] Comment Created\n`);
     }
@@ -229,9 +234,9 @@ const start = async () => {
 
     setInterval(async () => {
         const { data: { object: { sha } } } = await octokit.rest.git.getRef({
-            owner: process.env.REPO_OWNER,
-            repo: process.env.REPO_NAME,
-            ref: process.env.BRANCH
+            owner: config.RepoOwner,
+            repo: config.RepoName,
+            ref: config.RepoBranch
         });
 
         if (lastCommit === sha) {
@@ -244,27 +249,43 @@ const start = async () => {
         const msg = await run();
 
         if (msg) {
-            WebhookUtils.stats(`${msg}\n\n[Relating Commit](https://github.com/Discord-Datamining/Discord-Datamining/commit/${sha})`, "New Routse", "<@&1103522959022366832>");
-            
+            for (const hook of SendHooks) {
+                await request(hook.url, {
+                    body: JSON.stringify({
+                        embeds: [{
+                            title: 'New Endpoints',
+                            description: `${msg}\n\n[Relating Commit](https://github.com/Discord-Datamining/Discord-Datamining/commit/${sha})`,
+                            color: 0x00FF00, // green
+                            timestamp: new Date().toISOString(),
+                        }],
+                        ...(hook.send.ping ? { content: hook.pingMsg } : {})
+                    }),
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                });
+            }
+
             await octokit.rest.repos.createCommitComment({
-                owner: process.env.REPO_OWNER,
-                repo: process.env.REPO_NAME,
+                owner: config.RepoOwner,
+                repo: config.RepoName,
                 commit_sha: sha,
                 body: msg
-            }).catch((er) => console.error(er))
+            }).catch((er) => console.error(er));
 
             term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] Comment Created\n`);
 
-            if (process.env.ADD_ROUTES === 'true') {
-                const Pushing = spawn('git', ['add', '.', '&&', 'git', 'commit', '-m', '"[BOT] Updated Routes"', '&&', 'git', 'push']);
+            if (config.commitNewEndpoints) {
+                const Pushing = spawn('git', ['add', '.', '&&', 'git', 'commit', '-m', `"${config.commitNewEndpointsMsg}"`, '&&', 'git', 'push']);
 
                 Pushing.on('close', () => {
                     term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] Pushed\n`);
                 });
             }
-
         }
-    }, Number(process.env.INTERVAL));
+    }, Number(config.Interval));
 };
 
 start();

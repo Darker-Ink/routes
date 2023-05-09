@@ -159,7 +159,7 @@ Object.entries(routeroutes).forEach(([key, value]) => {
 
 term.green(`\nWe found ${newRoutes.length} new routes and there were ${changedRoutes.length} changed routes and ${deletedRoutes.length} routes were deleted.\n`);
 
-WebhookUtils.stats(`We found ${newRoutes.length} new routes and there were ${changedRoutes.length} changed routes and ${deletedRoutes.length} routes were deleted.`, 'First Check')
+WebhookUtils.stats(`We found ${newRoutes.length} new routes and there were ${changedRoutes.length} changed routes and ${deletedRoutes.length} routes were deleted.`, 'First Check');
 
 fs.writeFileSync(path.join(__dirname, '../saves/Json/First/Routes.json'), JSON.stringify(routeroutes, null, 4));
 fs.writeFileSync(path.join(__dirname, '../saves/Json/First/NewRoutes.json'), JSON.stringify(newRoutes.length ? newRoutes : [], null, 4));

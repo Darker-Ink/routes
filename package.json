@@ -2,9 +2,8 @@
   "dependencies": {
     "@octokit/types": "^9.1.1",
     "acorn": "^8.8.2",
+    "comment-json": "^4.2.3",
     "dash-ast": "^2.0.1",
-    "dotenv": "^16.0.3",
-    "github-api": "^3.4.0",
     "octokit": "^2.0.14",
     "terminal-kit": "^3.0.0",
     "undici": "^5.22.0"

@@ -48,7 +48,7 @@ for (const frozenn in freezeCalls) {
             beforeCode.push(`const ${proptery.value.test.object.name} = { ${proptery.value.test.property.name}: null }`);
         }
 
-        const args = proptery?.value?.body?.body?.[0]?.argument//?.arguments?.[0];
+        const args = proptery?.value?.body?.body?.[0]?.argument;//?.arguments?.[0];
         const args2 = proptery?.value?.body?.body?.[0]?.argument?.callee?.object?.arguments;
 
         if (args?.arguments?.[0].type === "MemberExpression" || args?.right && args.right.type === "MemberExpression") {
@@ -65,7 +65,7 @@ for (const frozenn in freezeCalls) {
 
         }
 
-        
+
         if (args2) {
             const first = args2[0];
 
