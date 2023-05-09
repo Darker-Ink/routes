@@ -278,7 +278,9 @@ const start = async () => {
             term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] Comment Created\n`);
 
             if (config.commitNewEndpoints) {
-                const Pushing = spawn('git', ['add', '.', '&&', 'git', 'commit', '-m', `"${config.commitNewEndpointsMsg}"`, '&&', 'git', 'push']);
+                const Pushing = spawn('git', ['add', '.', '&&', 'git', 'commit', '-m', `"${config.commitNewEndpointsMsg}"`, '&&', 'git', 'push'], {
+                    shell: true, stdio: 'inherit'
+                });
 
                 Pushing.on('close', () => {
                     term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] Pushed\n`);
