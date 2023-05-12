@@ -3,6 +3,7 @@
     "RepoOwner": "Discord-Datamining",
     "RepoName": "Discord-Datamining",
     "RepoBranch": "heads/master",
+    "ErrorMsg": "ono error",
     "Webhooks": [
         {
             "url": "",

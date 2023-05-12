@@ -27,7 +27,8 @@ process.on('unhandledRejection', async (reason, promise) => {
                     description: `\`\`\`\n${reason.stack}\n\`\`\``,
                     color: 0xFF0000, // red
                     timestamp: new Date().toISOString(),
-                }]
+                }],
+		content: config.ErrorMsg
             }),
             method: 'POST',
             headers: {
@@ -56,7 +57,8 @@ process.on('uncaughtException', async (error) => {
                     description: `\`\`\`\n${error.stack}\n\`\`\``,
                     color: 0xFF0000, // red
                     timestamp: new Date().toISOString(),
-                }]
+                }],
+		content: config.ErrorMsg
             }),
             method: 'POST',
             headers: {
