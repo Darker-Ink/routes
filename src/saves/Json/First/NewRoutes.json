@@ -1,1 +1,16 @@
-[]
+[
+    {
+        "route": "/collectibles",
+        "args": [],
+        "firstSeen": 1684186685280,
+        "oldRoutes": [],
+        "key": "COLLECTIBLES"
+    },
+    {
+        "route": "/users/@me/collectibles",
+        "args": [],
+        "firstSeen": 1684186685281,
+        "oldRoutes": [],
+        "key": "USER_COLLECTIBLES"
+    }
+]

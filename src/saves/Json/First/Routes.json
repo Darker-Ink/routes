@@ -4582,5 +4582,19 @@
         "firstSeen": 1683591023595,
         "oldRoutes": [],
         "key": "GUILD_INCIDENT_ACTIONS"
+    },
+    "COLLECTIBLES": {
+        "route": "/collectibles",
+        "args": [],
+        "firstSeen": 1684186685280,
+        "oldRoutes": [],
+        "key": "COLLECTIBLES"
+    },
+    "USER_COLLECTIBLES": {
+        "route": "/users/@me/collectibles",
+        "args": [],
+        "firstSeen": 1684186685281,
+        "oldRoutes": [],
+        "key": "USER_COLLECTIBLES"
     }
 }
