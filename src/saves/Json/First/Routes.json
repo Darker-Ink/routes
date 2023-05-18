@@ -4596,5 +4596,12 @@
         "firstSeen": 1684186685281,
         "oldRoutes": [],
         "key": "USER_COLLECTIBLES"
+    },
+    "MESSAGE_LOG_GUILD_CHANNELS": {
+        "route": "/messages-log/guild-channels/get",
+        "args": [],
+        "firstSeen": 1684442461864,
+        "oldRoutes": [],
+        "key": "MESSAGE_LOG_GUILD_CHANNELS"
     }
 }

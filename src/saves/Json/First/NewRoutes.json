@@ -1,16 +1,9 @@
 [
     {
-        "route": "/collectibles",
+        "route": "/messages-log/guild-channels/get",
         "args": [],
-        "firstSeen": 1684186685280,
+        "firstSeen": 1684442461864,
         "oldRoutes": [],
-        "key": "COLLECTIBLES"
-    },
-    {
-        "route": "/users/@me/collectibles",
-        "args": [],
-        "firstSeen": 1684186685281,
-        "oldRoutes": [],
-        "key": "USER_COLLECTIBLES"
+        "key": "MESSAGE_LOG_GUILD_CHANNELS"
     }
 ]
