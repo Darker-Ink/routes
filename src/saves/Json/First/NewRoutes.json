@@ -1,9 +1,11 @@
 [
     {
-        "route": "/messages-log/guild-channels/get",
-        "args": [],
-        "firstSeen": 1684442461864,
+        "route": "/guilds/:guildId/populate-channel-emojis",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1684459807813,
         "oldRoutes": [],
-        "key": "MESSAGE_LOG_GUILD_CHANNELS"
+        "key": "POPULATE_CHANNEL_EMOJIS"
     }
 ]
