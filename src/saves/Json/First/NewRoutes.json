@@ -1,11 +1,11 @@
 [
     {
-        "route": "/guilds/:guildId/populate-channel-emojis",
+        "route": "/guilds/:guildId/products/attachments",
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1684459807813,
+        "firstSeen": 1685459767008,
         "oldRoutes": [],
-        "key": "POPULATE_CHANNEL_EMOJIS"
+        "key": "GUILD_PRODUCT_CREATE_ATTACHMENT_UPLOAD"
     }
 ]
