@@ -1,11 +1,11 @@
 [
     {
-        "route": "/guilds/:guildId/products/attachments",
+        "route": "/guilds/:guildId/creator-monetization/accept-new-terms-demonetized",
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1685459767008,
+        "firstSeen": 1685491424006,
         "oldRoutes": [],
-        "key": "GUILD_PRODUCT_CREATE_ATTACHMENT_UPLOAD"
+        "key": "CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED"
     }
 ]
