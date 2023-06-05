@@ -1,9 +1,11 @@
 [
     {
-        "route": "/users/@me/channels/broadcast",
-        "args": [],
-        "firstSeen": 1685987071052,
+        "route": "/guilds/:guildId/clyde-settings",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1686005990478,
         "oldRoutes": [],
-        "key": "BROADCAST_PRIVATE_CHANNEL"
+        "key": "GUILD_CLYDE_SETTINGS"
     }
 ]

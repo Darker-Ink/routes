@@ -4670,5 +4670,14 @@
         "firstSeen": 1685987071052,
         "oldRoutes": [],
         "key": "BROADCAST_PRIVATE_CHANNEL"
+    },
+    "GUILD_CLYDE_SETTINGS": {
+        "route": "/guilds/:guildId/clyde-settings",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1686005990478,
+        "oldRoutes": [],
+        "key": "GUILD_CLYDE_SETTINGS"
     }
 }
