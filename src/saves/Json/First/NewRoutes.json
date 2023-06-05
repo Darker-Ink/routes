@@ -1,11 +1,9 @@
 [
     {
-        "route": "/guilds/:guildId/creator-monetization/accept-new-terms-demonetized",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1685491424006,
+        "route": "/users/@me/channels/broadcast",
+        "args": [],
+        "firstSeen": 1685987071052,
         "oldRoutes": [],
-        "key": "CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED"
+        "key": "BROADCAST_PRIVATE_CHANNEL"
     }
 ]

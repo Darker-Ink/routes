@@ -4630,5 +4630,45 @@
         "firstSeen": 1685491424006,
         "oldRoutes": [],
         "key": "CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED"
+    },
+    "GUILD_PRODUCTS": {
+        "route": "/guilds/:guildId/products",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1685662808833,
+        "oldRoutes": [],
+        "key": "GUILD_PRODUCTS"
+    },
+    "GUILD_PRODUCT_LISTINGS": {
+        "route": "/guilds/:guildId/products/listings/:unknown",
+        "args": [
+            ":guildId",
+            ":unknown"
+        ],
+        "firstSeen": 1685662808835,
+        "oldRoutes": [],
+        "key": "GUILD_PRODUCT_LISTINGS"
+    },
+    "NOTIF_CENTER_ITEMS_BULK_ACK": {
+        "route": "/users/@me/notification-center/items/bulk-ack",
+        "args": [],
+        "firstSeen": 1685662808836,
+        "oldRoutes": [],
+        "key": "NOTIF_CENTER_ITEMS_BULK_ACK"
+    },
+    "FINISH_MFA_CHECK": {
+        "route": "/mfa/finish",
+        "args": [],
+        "firstSeen": 1685662808837,
+        "oldRoutes": [],
+        "key": "FINISH_MFA_CHECK"
+    },
+    "BROADCAST_PRIVATE_CHANNEL": {
+        "route": "/users/@me/channels/broadcast",
+        "args": [],
+        "firstSeen": 1685987071052,
+        "oldRoutes": [],
+        "key": "BROADCAST_PRIVATE_CHANNEL"
     }
 }

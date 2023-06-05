@@ -15,7 +15,7 @@ const freezeCalls = {};
 
 dashAst(parsed, function (node, parent) {
     if (node.type === "CallExpression" && node.callee.type === "MemberExpression" && node.callee.property.name === "freeze") {
-        if (node.arguments[0].type === "ObjectExpression") {
+        if (node.arguments[0]?.type === "ObjectExpression") {
             const args = node.arguments[0];
 
             const isCorrectObject = args.properties.some(prop => checkRoutes.some(stuff => stuff[0] === prop.key.name && stuff[1] === prop.value.value));
