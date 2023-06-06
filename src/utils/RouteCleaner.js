@@ -2,12 +2,10 @@ const dashAst = require("dash-ast");
 const acorn = require("acorn");
 const fs = require("fs");
 const path = require("path");
-const request = require("undici");
+const { request } = require("undici");
 const config = require('./ConfigManager').getConfig();
 
 const ErrorHooks = config.Webhooks.filter((hook) => hook.send.errors);
-const SendHooks = config.Webhooks.filter((hook) => hook.send.enabled);
-
 let errorsSent = 0;
 
 process.on('unhandledRejection', async (reason, promise) => {
