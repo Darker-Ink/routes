@@ -2,6 +2,74 @@ const dashAst = require("dash-ast");
 const acorn = require("acorn");
 const fs = require("fs");
 const path = require("path");
+const request = require("undici");
+const config = require('./ConfigManager').getConfig();
+
+const ErrorHooks = config.Webhooks.filter((hook) => hook.send.errors);
+const SendHooks = config.Webhooks.filter((hook) => hook.send.enabled);
+
+let errorsSent = 0;
+
+process.on('unhandledRejection', async (reason, promise) => {
+
+    if (errorsSent >= 10) {
+        process.exit(1);
+    }
+
+    // fuck rate limits (I honestly doubt we'll send enough)
+    for (const hook of ErrorHooks) {
+        await request(hook.url, {
+            body: JSON.stringify({
+                embeds: [{
+                    title: 'Unhandled Rejection',
+                    description: `\`\`\`\n${reason.stack}\n\`\`\``,
+                    color: 0xFF0000, // red
+                    timestamp: new Date().toISOString(),
+                }],
+                content: config.ErrorMsg
+            }),
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        });
+    }
+
+    console.error(reason);
+
+    errorsSent++;
+});
+
+process.on('uncaughtException', async (error) => {
+
+    if (errorsSent >= 10) {
+        process.exit(0);
+    }
+
+    for (const hook of ErrorHooks) {
+        await request(hook.url, {
+            body: JSON.stringify({
+                embeds: [{
+                    title: 'Uncaught Exception',
+                    description: `\`\`\`\n${error.stack}\n\`\`\``,
+                    color: 0xFF0000, // red
+                    timestamp: new Date().toISOString(),
+                }],
+                content: config.ErrorMsg
+            }),
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        });
+    }
+
+    console.error(error);
+
+    errorsSent++;
+});
 
 const currentJs = fs.readFileSync(path.join(__dirname, "../saves/current.js"), "utf8");
 
