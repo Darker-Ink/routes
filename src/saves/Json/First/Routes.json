@@ -3047,12 +3047,20 @@
         "key": "REACTION_WITH_TYPE"
     },
     "SEARCH_DMS": {
-        "route": "/users/:userId/messages/search",
+        "route": "/users/@me/messages/search",
         "args": [
             ":userId"
         ],
         "firstSeen": 1682214264544,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/users/:userId/messages/search",
+                "args": [
+                    ":userId"
+                ],
+                "changedAt": 1686079857637
+            }
+        ],
         "key": "SEARCH_DMS"
     },
     "APPLIED_GUILD_BOOSTS_FOR_GUILD": {
