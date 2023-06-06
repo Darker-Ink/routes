@@ -2,6 +2,7 @@ const fs = require('fs');
 const { request } = require('undici');
 const term = require('terminal-kit').terminal;
 const path = require('path');
+const config = require('./ConfigManager').getConfig();
 
 const ErrorHooks = config.Webhooks.filter((hook) => hook.send.errors);
 let errorsSent = 0;

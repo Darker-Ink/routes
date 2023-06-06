@@ -3,6 +3,7 @@ const { FirstRoutes: routes } = require('../saves/Routes.js');
 const fs = require('fs');
 const path = require('path');
 const { request } = require('undici');
+const config = require('./ConfigManager').getConfig();
 
 const ErrorHooks = config.Webhooks.filter((hook) => hook.send.errors);
 let errorsSent = 0;
