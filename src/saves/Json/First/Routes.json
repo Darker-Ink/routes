@@ -4701,5 +4701,12 @@
         "firstSeen": 1686164996971,
         "oldRoutes": [],
         "key": "INVENTORY_UNCOLLECT"
+    },
+    "EMIT_GOOGLE_PLAY_METRICS": {
+        "route": "/google-play/emit-google-play-metrics",
+        "args": [],
+        "firstSeen": 1686177049692,
+        "oldRoutes": [],
+        "key": "EMIT_GOOGLE_PLAY_METRICS"
     }
 }
