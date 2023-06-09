@@ -4715,5 +4715,12 @@
         "firstSeen": 1686331431644,
         "oldRoutes": [],
         "key": "CHANNEL_AFFINITIES"
+    },
+    "INVENTORY_GET": {
+        "route": "/users/@me/inventory",
+        "args": [],
+        "firstSeen": 1686337662039,
+        "oldRoutes": [],
+        "key": "INVENTORY_GET"
     }
 }
