@@ -4708,5 +4708,12 @@
         "firstSeen": 1686177049692,
         "oldRoutes": [],
         "key": "EMIT_GOOGLE_PLAY_METRICS"
+    },
+    "CHANNEL_AFFINITIES": {
+        "route": "/users/@me/affinities/channels",
+        "args": [],
+        "firstSeen": 1686331431644,
+        "oldRoutes": [],
+        "key": "CHANNEL_AFFINITIES"
     }
 }

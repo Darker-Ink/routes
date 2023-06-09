@@ -1,9 +1,9 @@
 [
     {
-        "route": "/google-play/emit-google-play-metrics",
+        "route": "/users/@me/affinities/channels",
         "args": [],
-        "firstSeen": 1686177049692,
+        "firstSeen": 1686331431644,
         "oldRoutes": [],
-        "key": "EMIT_GOOGLE_PLAY_METRICS"
+        "key": "CHANNEL_AFFINITIES"
     }
 ]
