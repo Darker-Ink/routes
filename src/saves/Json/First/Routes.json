@@ -4731,5 +4731,16 @@
         "firstSeen": 1686596517763,
         "oldRoutes": [],
         "key": "COLLECTIBLE_STORE_LISTING"
+    },
+    "REMOVE_EMOJI_REACTIONS": {
+        "route": "/channels/:channelId/messages/:messageId/reactions/:reactionId",
+        "args": [
+            ":channelId",
+            ":messageId",
+            ":reactionId"
+        ],
+        "firstSeen": 1686608918400,
+        "oldRoutes": [],
+        "key": "REMOVE_EMOJI_REACTIONS"
     }
 }

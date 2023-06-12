@@ -1,11 +1,13 @@
 [
     {
-        "route": "/collectibles/:unknown",
+        "route": "/channels/:channelId/messages/:messageId/reactions/:reactionId",
         "args": [
-            ":unknown"
+            ":channelId",
+            ":messageId",
+            ":reactionId"
         ],
-        "firstSeen": 1686596517763,
+        "firstSeen": 1686608918400,
         "oldRoutes": [],
-        "key": "COLLECTIBLE_STORE_LISTING"
+        "key": "REMOVE_EMOJI_REACTIONS"
     }
 ]
