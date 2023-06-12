@@ -1,9 +1,1 @@
-[
-    {
-        "route": "/users/@me/inventory",
-        "args": [],
-        "firstSeen": 1686337662039,
-        "oldRoutes": [],
-        "key": "INVENTORY_GET"
-    }
-]
+[]

@@ -1,1 +1,19 @@
-[]
+[
+    {
+        "route": "/application-directory/:unknown/:unknown",
+        "args": [
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1686594790399,
+        "oldRoutes": [],
+        "key": "APPLICATION_DIRECTORY_PROFILE"
+    },
+    {
+        "route": "/application-directory/search",
+        "args": [],
+        "firstSeen": 1686594790399,
+        "oldRoutes": [],
+        "key": "APPLICATION_DIRECTORY_SEARCH"
+    }
+]
