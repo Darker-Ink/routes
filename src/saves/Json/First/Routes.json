@@ -4722,5 +4722,14 @@
         "firstSeen": 1686337662039,
         "oldRoutes": [],
         "key": "INVENTORY_GET"
+    },
+    "COLLECTIBLE_STORE_LISTING": {
+        "route": "/collectibles/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1686596517763,
+        "oldRoutes": [],
+        "key": "COLLECTIBLE_STORE_LISTING"
     }
 }
