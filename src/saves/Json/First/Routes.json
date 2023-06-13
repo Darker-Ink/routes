@@ -4742,5 +4742,14 @@
         "firstSeen": 1686608918400,
         "oldRoutes": [],
         "key": "REMOVE_EMOJI_REACTIONS"
+    },
+    "GUILD_MEMBERS_UNUSUAL_DM_ACTIVITY": {
+        "route": "/guilds/:guildId/members/unusual-dm-activity",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1686615196440,
+        "oldRoutes": [],
+        "key": "GUILD_MEMBERS_UNUSUAL_DM_ACTIVITY"
     }
 }
