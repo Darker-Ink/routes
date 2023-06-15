@@ -10,6 +10,8 @@ let errorsSent = 0;
 
 process.on('unhandledRejection', async (reason, promise) => {
 
+    console.error(reason);
+
     if (errorsSent >= 10) {
         process.exit(1);
     }
@@ -34,12 +36,12 @@ process.on('unhandledRejection', async (reason, promise) => {
         });
     }
 
-    console.error(reason);
-
     errorsSent++;
 });
 
 process.on('uncaughtException', async (error) => {
+
+    console.error(error);
 
     if (errorsSent >= 10) {
         process.exit(0);
@@ -63,8 +65,6 @@ process.on('uncaughtException', async (error) => {
             }
         });
     }
-
-    console.error(error);
 
     errorsSent++;
 });
@@ -153,7 +153,7 @@ for (const frozenn in freezeCalls) {
 
 const code = currentJs.slice(start, end);
 const keys = Object.keys(freezeCalls);
-const newCode = code.replace(keys[0], "FirstRoutes").replace(keys[1], "SecondRoutes");
+const newCode = code.replace(keys[0] + " = Object.fre", "FirstRoutes = Object.fre").replace(keys[1] + " = Object.fre", "SecondRoutes = Object.fre");
 
 // just some fake location code in case it gets used
 const fakeLocationCode = `const location = { protocol: "https", host: "discord.com", pathname: "/api/v9" };`;
