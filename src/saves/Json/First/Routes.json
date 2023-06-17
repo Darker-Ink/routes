@@ -4751,5 +4751,30 @@
         "firstSeen": 1686615196440,
         "oldRoutes": [],
         "key": "GUILD_MEMBERS_UNUSUAL_DM_ACTIVITY"
+    },
+    "MEMBER_SAFETY_SUPPLEMENTAL": {
+        "route": "/guilds/:guildId/members/supplemental",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1687032639372,
+        "oldRoutes": [],
+        "key": "MEMBER_SAFETY_SUPPLEMENTAL"
+    },
+    "BOGO_PROMOTIONS": {
+        "route": "/bogo-promotions",
+        "args": [],
+        "firstSeen": 1687032639373,
+        "oldRoutes": [],
+        "key": "BOGO_PROMOTIONS"
+    },
+    "COLLECTIBLE_ASSET": {
+        "route": "/applications/1096190356233670716/app-assets/:unknown.png",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1687032639374,
+        "oldRoutes": [],
+        "key": "COLLECTIBLE_ASSET"
     }
 }

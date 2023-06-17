@@ -768,5 +768,15 @@
         "firstSeen": 1686594790399,
         "oldRoutes": [],
         "key": "APPLICATION_DIRECTORY_SEARCH"
+    },
+    "GUILD_PRODUCT": {
+        "route": "/channels/:channelId/shop/:unknown",
+        "args": [
+            ":channelId",
+            ":unknown"
+        ],
+        "firstSeen": 1687032639628,
+        "oldRoutes": [],
+        "key": "GUILD_PRODUCT"
     }
 }

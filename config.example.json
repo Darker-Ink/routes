@@ -17,5 +17,8 @@
     ],
     "Interval": 12000,
     "commitNewEndpoints": true, // if we should push the new json to the repo
-    "commitNewEndpointsMsg": "[BOT] Updated endpoints" // commit message
+    "commitNewEndpointsMsg": "[BOT] Updated endpoints", // commit message
+    "Misc": {
+        "id": "1096190356233670716"
+    }
 }

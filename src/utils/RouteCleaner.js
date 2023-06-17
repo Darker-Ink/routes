@@ -4,9 +4,11 @@ const fs = require("fs");
 const path = require("path");
 const { request } = require("undici");
 const config = require('./ConfigManager').getConfig();
+const { inspect } = require('node:util');
 
 const ErrorHooks = config.Webhooks.filter((hook) => hook.send.errors);
 let errorsSent = 0;
+const regex = new RegExp(`\\b\\w+\\b(?=\\s*=\\s*"${config.Misc.id}")`);
 
 process.on('unhandledRejection', async (reason, promise) => {
 
@@ -128,7 +130,6 @@ for (const frozenn in freezeCalls) {
             } else {
                 beforeCode.push(`const ${prop.object.name} = { ${prop.property.name}: null }`);
             }
-
         }
 
 
@@ -146,10 +147,16 @@ for (const frozenn in freezeCalls) {
                 }
             }
         }
-
     }
 }
 
+const MatchedCode = currentJs.match(regex);
+
+if (!MatchedCode) {
+    console.error("Couldn't find the code to replace");
+} else {
+    beforeCode.push(`const ${MatchedCode[0]} = "${config.Misc.id}"`);
+}
 
 const code = currentJs.slice(start, end);
 const keys = Object.keys(freezeCalls);

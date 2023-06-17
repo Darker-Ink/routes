@@ -8,6 +8,7 @@
  * @property {number} Interval
  * @property {boolean} commitNewEndpoints
  * @property {string} commitNewEndpointsMsg
+ * @property {{ id: string }} Misc
  */
 
 
