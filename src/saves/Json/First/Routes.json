@@ -4757,14 +4757,14 @@
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1687032639372,
+        "firstSeen": 1687032976568,
         "oldRoutes": [],
         "key": "MEMBER_SAFETY_SUPPLEMENTAL"
     },
     "BOGO_PROMOTIONS": {
         "route": "/bogo-promotions",
         "args": [],
-        "firstSeen": 1687032639373,
+        "firstSeen": 1687032976569,
         "oldRoutes": [],
         "key": "BOGO_PROMOTIONS"
     },
@@ -4773,8 +4773,15 @@
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1687032639374,
+        "firstSeen": 1687032976572,
         "oldRoutes": [],
         "key": "COLLECTIBLE_ASSET"
+    },
+    "USER_BROADCASTS": {
+        "route": "/users/broadcasts/bucket",
+        "args": [],
+        "firstSeen": 1687144982221,
+        "oldRoutes": [],
+        "key": "USER_BROADCASTS"
     }
 }

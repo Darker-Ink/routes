@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "route": "/users/broadcasts/bucket",
+        "args": [],
+        "firstSeen": 1687144982221,
+        "oldRoutes": [],
+        "key": "USER_BROADCASTS"
+    }
+]
