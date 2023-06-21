@@ -4783,5 +4783,14 @@
         "firstSeen": 1687144982221,
         "oldRoutes": [],
         "key": "USER_BROADCASTS"
+    },
+    "ACTIVITY_UPLOAD_ATTACHMENT": {
+        "route": "/activities/:unknown/attachment",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1687327023728,
+        "oldRoutes": [],
+        "key": "ACTIVITY_UPLOAD_ATTACHMENT"
     }
 }

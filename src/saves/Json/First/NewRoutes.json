@@ -1,9 +1,11 @@
 [
     {
-        "route": "/users/broadcasts/bucket",
-        "args": [],
-        "firstSeen": 1687144982221,
+        "route": "/activities/:unknown/attachment",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1687327023728,
         "oldRoutes": [],
-        "key": "USER_BROADCASTS"
+        "key": "ACTIVITY_UPLOAD_ATTACHMENT"
     }
 ]
