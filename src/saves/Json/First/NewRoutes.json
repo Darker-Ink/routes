@@ -1,20 +1,13 @@
 [
     {
-        "route": "/guilds/:guildId/auto-moderation/false-alarm",
+        "route": "/guilds/:guildId/products/listings/:unknown/attachments/:unknown/download",
         "args": [
-            ":guildId"
+            ":guildId",
+            ":unknown",
+            ":unknown"
         ],
-        "firstSeen": 1687360877019,
+        "firstSeen": 1687384885883,
         "oldRoutes": [],
-        "key": "GUILD_INCIDENT_REPORT_FALSE_ALARM"
-    },
-    {
-        "route": "/guilds/:guildId/auto-moderation/report-raid",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1687360877020,
-        "oldRoutes": [],
-        "key": "GUILD_INCIDENT_REPORT_RAID"
+        "key": "GUILD_PRODUCT_ATTACHMENT_DOWNLOAD"
     }
 ]

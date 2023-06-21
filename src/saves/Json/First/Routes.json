@@ -4810,5 +4810,16 @@
         "firstSeen": 1687360877020,
         "oldRoutes": [],
         "key": "GUILD_INCIDENT_REPORT_RAID"
+    },
+    "GUILD_PRODUCT_ATTACHMENT_DOWNLOAD": {
+        "route": "/guilds/:guildId/products/listings/:unknown/attachments/:unknown/download",
+        "args": [
+            ":guildId",
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1687384885883,
+        "oldRoutes": [],
+        "key": "GUILD_PRODUCT_ATTACHMENT_DOWNLOAD"
     }
 }
