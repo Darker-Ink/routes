@@ -4792,5 +4792,23 @@
         "firstSeen": 1687327023728,
         "oldRoutes": [],
         "key": "ACTIVITY_UPLOAD_ATTACHMENT"
+    },
+    "GUILD_INCIDENT_REPORT_FALSE_ALARM": {
+        "route": "/guilds/:guildId/auto-moderation/false-alarm",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1687360877019,
+        "oldRoutes": [],
+        "key": "GUILD_INCIDENT_REPORT_FALSE_ALARM"
+    },
+    "GUILD_INCIDENT_REPORT_RAID": {
+        "route": "/guilds/:guildId/auto-moderation/report-raid",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1687360877020,
+        "oldRoutes": [],
+        "key": "GUILD_INCIDENT_REPORT_RAID"
     }
 }
