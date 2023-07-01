@@ -4821,5 +4821,21 @@
         "firstSeen": 1687384885883,
         "oldRoutes": [],
         "key": "GUILD_PRODUCT_ATTACHMENT_DOWNLOAD"
+    },
+    "INVENTORY_UPDATE_SETTINGS": {
+        "route": "/guilds/:guildId/inventory/settings",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1687986123185,
+        "oldRoutes": [],
+        "key": "INVENTORY_UPDATE_SETTINGS"
+    },
+    "BROADCAST_CHANNELS": {
+        "route": "/channels/broadcast-channels",
+        "args": [],
+        "firstSeen": 1688170491719,
+        "oldRoutes": [],
+        "key": "BROADCAST_CHANNELS"
     }
 }
