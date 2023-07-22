@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "route": "/reject-ip",
+        "args": [],
+        "firstSeen": 1690016314802,
+        "oldRoutes": [],
+        "key": "REJECT_IP"
+    }
+]

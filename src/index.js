@@ -14,6 +14,8 @@ let errorsSent = 0;
 
 process.on('unhandledRejection', async (reason, promise) => {
 
+    console.error(reason);
+
     if (errorsSent >= 10) {
         process.exit(1);
     }
@@ -38,12 +40,14 @@ process.on('unhandledRejection', async (reason, promise) => {
         });
     }
 
-    console.error(reason);
+    // console.error(reason);
 
     errorsSent++;
 });
 
 process.on('uncaughtException', async (error) => {
+
+    console.error(error);
 
     if (errorsSent >= 10) {
         process.exit(0);
@@ -67,8 +71,6 @@ process.on('uncaughtException', async (error) => {
             }
         });
     }
-
-    console.error(error);
 
     errorsSent++;
 });
@@ -219,12 +221,12 @@ const start = async () => {
             });
         }
 
-        await octokit.rest.repos.createCommitComment({
-            owner: config.RepoOwner,
-            repo: config.RepoName,
-            commit_sha: FirstSha,
-            body: FirstMsg
-        }).catch((er) => console.error(er));
+        // await octokit.rest.repos.createCommitComment({
+        //     owner: config.RepoOwner,
+        //     repo: config.RepoName,
+        //     commit_sha: FirstSha,
+        //     body: FirstMsg
+        // }).catch((er) => console.error(er));
 
         term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] Comment Created\n`);
     }
@@ -269,12 +271,12 @@ const start = async () => {
                 });
             }
 
-            await octokit.rest.repos.createCommitComment({
-                owner: config.RepoOwner,
-                repo: config.RepoName,
-                commit_sha: sha,
-                body: msg
-            }).catch((er) => console.error(er));
+            // await octokit.rest.repos.createCommitComment({
+            //     owner: config.RepoOwner,
+            //     repo: config.RepoName,
+            //     commit_sha: sha,
+            //     body: msg
+            // }).catch((er) => console.error(er));
 
             term.cyan(`[${new Date().toLocaleString('Us', { hour12: false })} Server] Comment Created\n`);
 

@@ -4088,12 +4088,20 @@
         "key": "GUILD_COMMANDS_FOR_APPLICATION"
     },
     "APPLICATION_DIRECTORY_APPLICATION": {
-        "route": "/application-directory/applications/:applicationId",
+        "route": "/application-directory-static/applications/:applicationId",
         "args": [
             ":applicationId"
         ],
         "firstSeen": 1682214264567,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/application-directory/applications/:applicationId",
+                "args": [
+                    ":applicationId"
+                ],
+                "changedAt": 1690016314082
+            }
+        ],
         "key": "APPLICATION_DIRECTORY_APPLICATION"
     },
     "APPLICATION_DIRECTORY_EMBED_APPLICATION": {
@@ -4106,33 +4114,59 @@
         "key": "APPLICATION_DIRECTORY_EMBED_APPLICATION"
     },
     "APPLICATION_DIRECTORY_CATEGORIES": {
-        "route": "/application-directory/categories",
+        "route": "/application-directory-static/categories",
         "args": [],
         "firstSeen": 1682214264568,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/application-directory/categories",
+                "args": [],
+                "changedAt": 1690016314082
+            }
+        ],
         "key": "APPLICATION_DIRECTORY_CATEGORIES"
     },
     "APPLICATION_DIRECTORY_SIMILAR": {
-        "route": "/application-directory/applications/:applicationId/similar",
+        "route": "/application-directory-static/applications/:applicationId/similar",
         "args": [
             ":applicationId"
         ],
         "firstSeen": 1682214264569,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/application-directory/applications/:applicationId/similar",
+                "args": [
+                    ":applicationId"
+                ],
+                "changedAt": 1690016314082
+            }
+        ],
         "key": "APPLICATION_DIRECTORY_SIMILAR"
     },
     "APPLICATION_DIRECTORY_SEARCH": {
-        "route": "/application-directory/search",
+        "route": "/application-directory-static/search",
         "args": [],
         "firstSeen": 1682214264569,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/application-directory/search",
+                "args": [],
+                "changedAt": 1690016314083
+            }
+        ],
         "key": "APPLICATION_DIRECTORY_SEARCH"
     },
     "APPLICATION_DIRECTORY_COLLECTIONS": {
-        "route": "/application-directory/collections",
+        "route": "/application-directory-static/collections",
         "args": [],
         "firstSeen": 1682214264569,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/application-directory/collections",
+                "args": [],
+                "changedAt": 1690016314083
+            }
+        ],
         "key": "APPLICATION_DIRECTORY_COLLECTIONS"
     },
     "APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE": {
@@ -4837,5 +4871,87 @@
         "firstSeen": 1688170491719,
         "oldRoutes": [],
         "key": "BROADCAST_CHANNELS"
+    },
+    "RESOURCE_CHANNEL": {
+        "route": "/guilds/:guildId/resource-channels/:unknown",
+        "args": [
+            ":guildId",
+            ":unknown"
+        ],
+        "firstSeen": 1690016314077,
+        "oldRoutes": [],
+        "key": "RESOURCE_CHANNEL"
+    },
+    "GUILD_RESOURCE_CHANNELS_ICON": {
+        "route": "/guilds/:guildId/avatars/:unknown.jpg",
+        "args": [
+            ":guildId",
+            ":unknown"
+        ],
+        "firstSeen": 1690016314078,
+        "oldRoutes": [],
+        "key": "GUILD_RESOURCE_CHANNELS_ICON"
+    },
+    "UPDATE_VOICE_CHANNEL_TOPIC": {
+        "route": "/channels/:channelId/topic",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1690016314079,
+        "oldRoutes": [],
+        "key": "UPDATE_VOICE_CHANNEL_TOPIC"
+    },
+    "POMELO_SUGGESTIONS_UNAUTHED": {
+        "route": "/unique-username/username-suggestions-unauthed",
+        "args": [],
+        "firstSeen": 1690016314079,
+        "oldRoutes": [],
+        "key": "POMELO_SUGGESTIONS_UNAUTHED"
+    },
+    "POMELO_ATTEMPT_UNAUTHED": {
+        "route": "/unique-username/username-attempt-unauthed",
+        "args": [],
+        "firstSeen": 1690016314079,
+        "oldRoutes": [],
+        "key": "POMELO_ATTEMPT_UNAUTHED"
+    },
+    "MFA_TOTP_ENABLE_VERIFY": {
+        "route": "users/@me/mfa/totp/enable/verify",
+        "args": [],
+        "firstSeen": 1690016314080,
+        "oldRoutes": [],
+        "key": "MFA_TOTP_ENABLE_VERIFY"
+    },
+    "GOOGLE_PLAY_VALIDATE_PURCHASE": {
+        "route": "/google-play/validate-purchase",
+        "args": [],
+        "firstSeen": 1690016314080,
+        "oldRoutes": [],
+        "key": "GOOGLE_PLAY_VALIDATE_PURCHASE"
+    },
+    "CHANNEL_BASED_CLYDE_PERSONALITY": {
+        "route": "/channels/:channelId/channel-based-clyde-personality",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1690016314082,
+        "oldRoutes": [],
+        "key": "CHANNEL_BASED_CLYDE_PERSONALITY"
+    },
+    "CUSTOM_CALL_SOUNDS": {
+        "route": "/channels/:channelId/custom-call-sounds",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1690016314083,
+        "oldRoutes": [],
+        "key": "CUSTOM_CALL_SOUNDS"
+    },
+    "SAFETY_HUB": {
+        "route": "/safety-hub",
+        "args": [],
+        "firstSeen": 1690016314083,
+        "oldRoutes": [],
+        "key": "SAFETY_HUB"
     }
 }

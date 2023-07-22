@@ -74,11 +74,11 @@ if (!fs.existsSync(path.join(__dirname, '../saves/Json/Endpoints'))) {
   fs.mkdirSync(path.join(__dirname, '../saves/Json/Endpoints'));
 }
 
-if (!fs.existsSync(path.join(__dirname, '../saves/Json/Endpoints/Routes.json'))) {
-  fs.writeFileSync(path.join(__dirname, '../saves/Json/Endpoints/Routes.json'), JSON.stringify({}));
+if (!fs.existsSync(path.join(__dirname, '../saves/Json/Endpoints/Endpoints.json'))) {
+  fs.writeFileSync(path.join(__dirname, '../saves/Json/Endpoints/Endpoints.json'), JSON.stringify({}));
 }
 
-const knownRoutes = require('../saves/Json/Endpoints/Routes.json'); // routes we know about already
+const knownRoutes = require('../saves/Json/Endpoints/Endpoints.json'); // routes we know about already
 const WebhookUtils = require('./WebhookUtils.js');
 
 const routeroutes = { ...knownRoutes };

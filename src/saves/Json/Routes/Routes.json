@@ -778,5 +778,12 @@
         "firstSeen": 1687032639628,
         "oldRoutes": [],
         "key": "GUILD_PRODUCT"
+    },
+    "REJECT_IP": {
+        "route": "/reject-ip",
+        "args": [],
+        "firstSeen": 1690016314802,
+        "oldRoutes": [],
+        "key": "REJECT_IP"
     }
 }

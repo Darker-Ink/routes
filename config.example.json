@@ -10,7 +10,8 @@
             "send": {
                 "plain": true, // plain is just sending new endpoints and nothing else
                 "ping": true, // ping is sending a ping message when there is a new endpoint
-                "errors": false // If we want to log errors, rate limits etc
+                "errors": false, // If we want to log errors, rate limits etc
+                "enabled": true // If we want to send anything at all
             },
             "pingMsg": "New Endpoint <@&1103522959022366832>" // Message to send when there is a new endpoint (linked to send.ping)
         }
