@@ -3,7 +3,7 @@ const { SecondRoutes: routes } = require('../saves/Routes.js');
 const fs = require('fs');
 const path = require('path');
 const { request } = require('undici');
-const config = require('./ConfigManager').getConfig();
+const config = require('./ConfigManager.js').getConfig();
 
 const ErrorHooks = config.Webhooks.filter((hook) => hook.send.errors);
 let errorsSent = 0;
@@ -69,12 +69,12 @@ process.on('uncaughtException', async (error) => {
   errorsSent++;
 });
 
-if (!fs.existsSync(path.join(__dirname, '../saves/Json/Second'))) {
-  fs.mkdirSync(path.join(__dirname, '../saves/Json/Second'));
+if (!fs.existsSync(path.join(__dirname, '../saves/Json/Routes'))) {
+  fs.mkdirSync(path.join(__dirname, '../saves/Json/Routes'));
 }
 
-if (!fs.existsSync(path.join(__dirname, '../saves/Json/Second/Routes.json'))) {
-  fs.writeFileSync(path.join(__dirname, '../saves/Json/Second/Routes.json'), JSON.stringify({}));
+if (!fs.existsSync(path.join(__dirname, '../saves/Json/Routes/Routes.json'))) {
+  fs.writeFileSync(path.join(__dirname, '../saves/Json/Routes/Routes.json'), JSON.stringify({}));
 }
 
 if (!routes) {
@@ -83,7 +83,7 @@ if (!routes) {
   process.exit();
 }
 
-const knownRoutes = require('../saves/Json/Second/Routes.json'); // routes we know about already
+const knownRoutes = require('../saves/Json/Routes/Routes.json'); // routes we know about already
 const WebhookUtils = require('./WebhookUtils.js');
 
 const routeroutes = { ...knownRoutes };
@@ -229,11 +229,11 @@ Object.entries(routeroutes).forEach(([key, value]) => {
   }
 });
 
-term.green(`\nWe found ${newRoutes.length} new endpoints and there were ${changedRoutes.length} changed endpoints and ${deletedRoutes.length} endpoints were deleted.\n`);
+term.green(`\nWe found ${newRoutes.length} new routes and there were ${changedRoutes.length} changed routes and ${deletedRoutes.length} routes were deleted.\n`);
 
-WebhookUtils.stats(`We found **${newRoutes.length}** new endpoints and there were **${changedRoutes.length}** changed endpoints and **${deletedRoutes.length}** endpoints were deleted.`, 'Second Check');
+WebhookUtils.stats(`We found **${newRoutes.length}** new routes and there were **${changedRoutes.length}** changed routes and **${deletedRoutes.length}** routes were deleted.`, 'Routes Check');
 
-fs.writeFileSync(path.join(__dirname, '../saves/Json/Second/Routes.json'), JSON.stringify(routeroutes, null, 4));
-fs.writeFileSync(path.join(__dirname, '../saves/Json/Second/NewRoutes.json'), JSON.stringify(newRoutes.length ? newRoutes : [], null, 4));
-fs.writeFileSync(path.join(__dirname, '../saves/Json/Second/ChangedRoutes.json'), JSON.stringify(changedRoutes.length ? changedRoutes : [], null, 4));
-fs.writeFileSync(path.join(__dirname, '../saves/Json/Second/DeletedRoutes.json'), JSON.stringify(deletedRoutes.length ? deletedRoutes : [], null, 4));
+fs.writeFileSync(path.join(__dirname, '../saves/Json/Routes/Routes.json'), JSON.stringify(routeroutes, null, 4));
+fs.writeFileSync(path.join(__dirname, '../saves/Json/Routes/New.json'), JSON.stringify(newRoutes.length ? newRoutes : [], null, 4));
+fs.writeFileSync(path.join(__dirname, '../saves/Json/Routes/Changed.json'), JSON.stringify(changedRoutes.length ? changedRoutes : [], null, 4));
+fs.writeFileSync(path.join(__dirname, '../saves/Json/Routes/Deleted.json'), JSON.stringify(deletedRoutes.length ? deletedRoutes : [], null, 4));

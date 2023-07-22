@@ -12,3 +12,7 @@ for the [Data-Mining Repo](https://github.com/Discord-Datamining/Discord-Datamin
 
 
 *pst don't forget to fill out config.json*
+
+## todo
+
+fix old json layout

@@ -28,7 +28,7 @@ process.on('unhandledRejection', async (reason, promise) => {
                     color: 0xFF0000, // red
                     timestamp: new Date().toISOString(),
                 }],
-		content: config.ErrorMsg
+                content: config.ErrorMsg
             }),
             method: 'POST',
             headers: {
@@ -58,7 +58,7 @@ process.on('uncaughtException', async (error) => {
                     color: 0xFF0000, // red
                     timestamp: new Date().toISOString(),
                 }],
-		content: config.ErrorMsg
+                content: config.ErrorMsg
             }),
             method: 'POST',
             headers: {
@@ -74,14 +74,14 @@ process.on('uncaughtException', async (error) => {
 });
 
 const paths = {
-    FirstChangedRoutes: path.join(__dirname, './saves/Json/First/ChangedRoutes.json'),
-    FirstDeletedRoutes: path.join(__dirname, './saves/Json/First/DeletedRoutes.json'),
-    FirstNewRoutes: path.join(__dirname, './saves/Json/First/NewRoutes.json'),
-    FirstRoutes: path.join(__dirname, './saves/Json/First/Routes.json'),
-    SecondChangedRoutes: path.join(__dirname, './saves/Json/Second/ChangedRoutes.json'),
-    SecondDeletedRoutes: path.join(__dirname, './saves/Json/Second/DeletedRoutes.json'),
-    SecondNewRoutes: path.join(__dirname, './saves/Json/Second/NewRoutes.json'),
-    SecondRoutes: path.join(__dirname, './saves/Json/Second/Routes.json'),
+    ChangedEndpoints: path.join(__dirname, './saves/Json/Endpoints/Changed.json'),
+    DeletedEndpoints: path.join(__dirname, './saves/Json/Endpoints/Deleted.json'),
+    NewEndpoints: path.join(__dirname, './saves/Json/Endpoints/New.json'),
+    Endpoints: path.join(__dirname, './saves/Json/Endpoints/Endpoints.json'),
+    ChangedRoutes: path.join(__dirname, './saves/Json/Routes/Changed.json'),
+    DeletedRoutes: path.join(__dirname, './saves/Json/Routes/Deleted.json'),
+    NewRoutes: path.join(__dirname, './saves/Json/Routes/New.json'),
+    Routes: path.join(__dirname, './saves/Json/Routes/Routes.json'),
 };
 
 const runStuff = () => {
@@ -99,27 +99,25 @@ const runStuff = () => {
 const run = async () => {
     await runStuff();
     /**
-     * @type {{ FirstChangedRoutes: import('../index').Routes, FirstDeletedRoutes: import('../index').Routes, FirstNewRoutes: import('../index').Routes, FirstRoutes: import('../index').Routes, SecondChangedRoutes: import('../index').Routes, SecondDeletedRoutes: import('../index').Routes, SecondNewRoutes: import('../index').Routes, SecondRoutes: import('../index').Routes }}}
+     * @type {{ ChangedEndpoints: import('../index').Routes, DeletedEndpoints: import('../index').Routes, NewEndpoints: import('../index').Routes, Endpoints: import('../index').Routes, ChangedRoutes: import('../index').Routes, DeletedRoutes: import('../index').Routes, NewRoutes: import('../index').Routes, Routes: import('../index').Routes }}}
      */
     const RouteStuff = {
-        FirstChangedRoutes: JSON.parse(fs.readFileSync(paths.FirstChangedRoutes)),
-        FirstDeletedRoutes: JSON.parse(fs.readFileSync(paths.FirstDeletedRoutes)),
-        FirstNewRoutes: JSON.parse(fs.readFileSync(paths.FirstNewRoutes)),
-        FirstRoutes: JSON.parse(fs.readFileSync(paths.FirstRoutes)),
-        SecondChangedRoutes: JSON.parse(fs.readFileSync(paths.SecondChangedRoutes)),
-        SecondDeletedRoutes: JSON.parse(fs.readFileSync(paths.SecondDeletedRoutes)),
-        SecondNewRoutes: JSON.parse(fs.readFileSync(paths.SecondNewRoutes)),
-        SecondRoutes: JSON.parse(fs.readFileSync(paths.SecondRoutes)),
+        ChangedEndpoints: JSON.parse(fs.readFileSync(paths.ChangedEndpoints)),
+        DeletedEndpoints: JSON.parse(fs.readFileSync(paths.DeletedEndpoints)),
+        NewEndpoints: JSON.parse(fs.readFileSync(paths.NewEndpoints)),
+        Endpoints: JSON.parse(fs.readFileSync(paths.Endpoints)),
+        ChangedRoutes: JSON.parse(fs.readFileSync(paths.ChangedRoutes)),
+        DeletedRoutes: JSON.parse(fs.readFileSync(paths.DeletedRoutes)),
+        NewRoutes: JSON.parse(fs.readFileSync(paths.NewRoutes)),
+        Routes: JSON.parse(fs.readFileSync(paths.Routes)),
     };
 
-    let message = `# Modified Routes\n`;
+    let message = "";
 
-
-    if (RouteStuff.FirstChangedRoutes.length > 0) {
-        message += `## First Object\n\n`;
+    if (RouteStuff.ChangedEndpoints.length > 0) {
         message += `## Changed Endpoints\n\n\`\`\`diff\n`;
 
-        for (const route of RouteStuff.FirstChangedRoutes) {
+        for (const route of RouteStuff.ChangedEndpoints) {
             const oldRoute = route.oldRoutes[route.oldRoutes.length - 1];
             message += `# ${route.key}\n- ${oldRoute.route}\n+ ${route.route}\n\n`;
         }
@@ -127,32 +125,30 @@ const run = async () => {
         message += `\`\`\`\n`;
     }
 
-    if (RouteStuff.FirstDeletedRoutes.length > 0) {
+    if (RouteStuff.DeletedEndpoints.length > 0) {
         message += `## Deleted Endpoints\n\n\`\`\`diff\n`;
 
-        for (const route of RouteStuff.FirstDeletedRoutes) {
+        for (const route of RouteStuff.DeletedEndpoints) {
             message += `- ${route.key}: ${route.route}\n`;
         }
 
         message += `\`\`\`\n`;
     }
 
-    if (RouteStuff.FirstNewRoutes.length > 0) {
+    if (RouteStuff.NewEndpoints.length > 0) {
         message += `## New Endpoints\n\n\`\`\`diff\n`;
 
-        for (const route of RouteStuff.FirstNewRoutes) {
+        for (const route of RouteStuff.NewEndpoints) {
             message += `+ ${route.key}: ${route.route}\n`;
         }
 
         message += `\`\`\`\n`;
     }
 
+    if (RouteStuff.ChangedRoutes.length > 0) {
+        message += `## Changed Routes\n\n\`\`\`diff\n`;
 
-    if (RouteStuff.SecondChangedRoutes.length > 0) {
-        message += `## Second Object\n\n`;
-        message += `## Changed Endpoints\n\n\`\`\`diff\n`;
-
-        for (const route of RouteStuff.SecondChangedRoutes) {
+        for (const route of RouteStuff.ChangedRoutes) {
             const oldRoute = route.oldRoutes[route.oldRoutes.length - 1];
             message += `# ${route.key}\n- ${oldRoute.route}\n+ ${route.route}\n\n`;
         }
@@ -160,29 +156,30 @@ const run = async () => {
         message += `\`\`\`\n`;
     }
 
-    if (RouteStuff.SecondDeletedRoutes.length > 0) {
-        message += `## Deleted Endpoints\n\n\`\`\`diff\n`;
+    if (RouteStuff.DeletedRoutes.length > 0) {
+        message += `## Deleted Routes\n\n\`\`\`diff\n`;
 
-        for (const route of RouteStuff.SecondDeletedRoutes) {
+        for (const route of RouteStuff.DeletedRoutes) {
             message += `- ${route.key}: ${route.route}\n`;
         }
 
         message += `\`\`\`\n`;
     }
 
-    if (RouteStuff.SecondNewRoutes.length > 0) {
-        message += `## New Endpoints\n\n\`\`\`diff\n`;
+    if (RouteStuff.NewRoutes.length > 0) {
+        message += `## New Routes\n\n\`\`\`diff\n`;
 
-        for (const route of RouteStuff.SecondNewRoutes) {
+        for (const route of RouteStuff.NewRoutes) {
             message += `+ ${route.key}: ${route.route}\n`;
         }
 
         message += `\`\`\`\n`;
     }
 
-    if (RouteStuff.FirstChangedRoutes.length === 0 && RouteStuff.FirstDeletedRoutes.length === 0 && RouteStuff.FirstNewRoutes.length === 0 && RouteStuff.SecondChangedRoutes.length === 0 && RouteStuff.SecondDeletedRoutes.length === 0 && RouteStuff.SecondNewRoutes.length === 0) {
+    if (RouteStuff.ChangedEndpoints.length === 0 && RouteStuff.DeletedEndpoints.length === 0 && RouteStuff.NewEndpoints.length === 0 && RouteStuff.ChangedRoutes.length === 0 && RouteStuff.DeletedRoutes.length === 0 && RouteStuff.NewRoutes.length === 0) {
         return;
     }
+
 
     message += `\n(Any thing marked as :unknown is an unknown parameter)\n`;
 
@@ -207,7 +204,7 @@ const start = async () => {
             await request(hook.url, {
                 body: JSON.stringify({
                     embeds: [{
-                        title: 'New Endpoints',
+                        title: 'New Routes & (or) Endpoints',
                         description: `${FirstMsg}\n\n[Relating Commit](https://github.com/Discord-Datamining/Discord-Datamining/commit/${FirstSha})`,
                         color: 0x00FF00, // green
                         timestamp: new Date().toISOString(),
@@ -248,6 +245,8 @@ const start = async () => {
 
         lastCommit = sha;
 
+        await new Promise((resolve) => setTimeout(resolve, 1000)); // just for github sometimes being dumb and providing the wrong file
+
         const msg = await run();
 
         if (msg) {
@@ -255,7 +254,7 @@ const start = async () => {
                 await request(hook.url, {
                     body: JSON.stringify({
                         embeds: [{
-                            title: 'New Endpoints',
+                            title: 'New Routes & (or) Endpoints',
                             description: `${msg}\n\n[Relating Commit](https://github.com/Discord-Datamining/Discord-Datamining/commit/${sha})`,
                             color: 0x00FF00, // green
                             timestamp: new Date().toISOString(),
