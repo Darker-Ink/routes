@@ -785,5 +785,12 @@
         "firstSeen": 1690016314802,
         "oldRoutes": [],
         "key": "REJECT_IP"
+    },
+    "REJECT_MFA": {
+        "route": "/reject-mfa",
+        "args": [],
+        "firstSeen": 1690937723290,
+        "oldRoutes": [],
+        "key": "REJECT_MFA"
     }
 }

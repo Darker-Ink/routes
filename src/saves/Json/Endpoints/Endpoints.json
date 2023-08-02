@@ -4916,10 +4916,16 @@
         "key": "POMELO_ATTEMPT_UNAUTHED"
     },
     "MFA_TOTP_ENABLE_VERIFY": {
-        "route": "users/@me/mfa/totp/enable/verify",
+        "route": "/users/@me/mfa/totp/enable/verify",
         "args": [],
         "firstSeen": 1690016314080,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "users/@me/mfa/totp/enable/verify",
+                "args": [],
+                "changedAt": 1690407367255
+            }
+        ],
         "key": "MFA_TOTP_ENABLE_VERIFY"
     },
     "GOOGLE_PLAY_VALIDATE_PURCHASE": {
@@ -4953,5 +4959,100 @@
         "firstSeen": 1690016314083,
         "oldRoutes": [],
         "key": "SAFETY_HUB"
+    },
+    "SEARCH_TABS_GUILD": {
+        "route": "/guilds/:guildId/messages/search/tabs",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1690218016037,
+        "oldRoutes": [],
+        "key": "SEARCH_TABS_GUILD"
+    },
+    "SEARCH_TABS_DMS": {
+        "route": "/users/@me/messages/search/tabs",
+        "args": [],
+        "firstSeen": 1690218016038,
+        "oldRoutes": [],
+        "key": "SEARCH_TABS_DMS"
+    },
+    "SEARCH_TABS_CHANNEL": {
+        "route": "/channels/:channelId/messages/search/tabs",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1690218016038,
+        "oldRoutes": [],
+        "key": "SEARCH_TABS_CHANNEL"
+    },
+    "NEW_MEMBER_ACTION": {
+        "route": "/guilds/:guildId/new-member-actions/:unknown",
+        "args": [
+            ":guildId",
+            ":unknown"
+        ],
+        "firstSeen": 1690331200678,
+        "oldRoutes": [],
+        "key": "NEW_MEMBER_ACTION"
+    },
+    "GUILD_NEW_MEMBER_ACTIONS_ICON": {
+        "route": "/guilds/:guildId/avatars/:unknown.jpg",
+        "args": [
+            ":guildId",
+            ":unknown"
+        ],
+        "firstSeen": 1690331200679,
+        "oldRoutes": [],
+        "key": "GUILD_NEW_MEMBER_ACTIONS_ICON"
+    },
+    "MFA_TOTP_ENABLE_RESEND": {
+        "route": "/users/@me/mfa/totp/enable/resend",
+        "args": [],
+        "firstSeen": 1690407367255,
+        "oldRoutes": [],
+        "key": "MFA_TOTP_ENABLE_RESEND"
+    },
+    "INVENTORY_PACK_METADATA": {
+        "route": "/inventory/packs/:unknown/metadata",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1690484832288,
+        "oldRoutes": [],
+        "key": "INVENTORY_PACK_METADATA"
+    },
+    "BILLING_STANDALONE_CHECKOUT_PAGE": {
+        "route": "/billing/premium/subscribe?plan_id=:unknown&gift=undefined&load_id=undefined",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1690936965245,
+        "oldRoutes": [],
+        "key": "BILLING_STANDALONE_CHECKOUT_PAGE"
+    },
+    "BILLING_STANDALONE_CHECKOUT_LOGIN_HANDOFF": {
+        "route": "//discord.com/billing/premium/subscribe/login-handoff?handoff_key=:unknown&handoff_token=undefined&destination=undefined",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1690936965248,
+        "oldRoutes": [],
+        "key": "BILLING_STANDALONE_CHECKOUT_LOGIN_HANDOFF"
+    },
+    "BILLING_GENERATE_APPLE_TRIAL_OFFER_SIGNATURE": {
+        "route": "/users/@me/billing/apple/trial-offer-signature",
+        "args": [],
+        "firstSeen": 1690936965249,
+        "oldRoutes": [],
+        "key": "BILLING_GENERATE_APPLE_TRIAL_OFFER_SIGNATURE"
+    },
+    "EMOJI_SOURCE_DATA": {
+        "route": "/emojis/:unknown/source",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1690993960868,
+        "oldRoutes": [],
+        "key": "EMOJI_SOURCE_DATA"
     }
 }

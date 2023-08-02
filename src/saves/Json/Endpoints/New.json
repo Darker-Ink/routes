@@ -1,84 +1,11 @@
 [
     {
-        "route": "/guilds/:guildId/resource-channels/:unknown",
+        "route": "/emojis/:unknown/source",
         "args": [
-            ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1690016314077,
+        "firstSeen": 1690993960868,
         "oldRoutes": [],
-        "key": "RESOURCE_CHANNEL"
-    },
-    {
-        "route": "/guilds/:guildId/avatars/:unknown.jpg",
-        "args": [
-            ":guildId",
-            ":unknown"
-        ],
-        "firstSeen": 1690016314078,
-        "oldRoutes": [],
-        "key": "GUILD_RESOURCE_CHANNELS_ICON"
-    },
-    {
-        "route": "/channels/:channelId/topic",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1690016314079,
-        "oldRoutes": [],
-        "key": "UPDATE_VOICE_CHANNEL_TOPIC"
-    },
-    {
-        "route": "/unique-username/username-suggestions-unauthed",
-        "args": [],
-        "firstSeen": 1690016314079,
-        "oldRoutes": [],
-        "key": "POMELO_SUGGESTIONS_UNAUTHED"
-    },
-    {
-        "route": "/unique-username/username-attempt-unauthed",
-        "args": [],
-        "firstSeen": 1690016314079,
-        "oldRoutes": [],
-        "key": "POMELO_ATTEMPT_UNAUTHED"
-    },
-    {
-        "route": "users/@me/mfa/totp/enable/verify",
-        "args": [],
-        "firstSeen": 1690016314080,
-        "oldRoutes": [],
-        "key": "MFA_TOTP_ENABLE_VERIFY"
-    },
-    {
-        "route": "/google-play/validate-purchase",
-        "args": [],
-        "firstSeen": 1690016314080,
-        "oldRoutes": [],
-        "key": "GOOGLE_PLAY_VALIDATE_PURCHASE"
-    },
-    {
-        "route": "/channels/:channelId/channel-based-clyde-personality",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1690016314082,
-        "oldRoutes": [],
-        "key": "CHANNEL_BASED_CLYDE_PERSONALITY"
-    },
-    {
-        "route": "/channels/:channelId/custom-call-sounds",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1690016314083,
-        "oldRoutes": [],
-        "key": "CUSTOM_CALL_SOUNDS"
-    },
-    {
-        "route": "/safety-hub",
-        "args": [],
-        "firstSeen": 1690016314083,
-        "oldRoutes": [],
-        "key": "SAFETY_HUB"
+        "key": "EMOJI_SOURCE_DATA"
     }
 ]
