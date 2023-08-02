@@ -2,6 +2,7 @@
   "dependencies": {
     "@octokit/types": "^9.1.1",
     "acorn": "^8.8.2",
+    "cheerio": "^1.0.0-rc.12",
     "comment-json": "^4.2.3",
     "dash-ast": "^2.0.1",
     "octokit": "^2.0.14",
