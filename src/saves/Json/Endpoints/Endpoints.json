@@ -4722,20 +4722,6 @@
         "oldRoutes": [],
         "key": "GUILD_CLYDE_SETTINGS"
     },
-    "INVENTORY_COLLECT": {
-        "route": "/users/@me/inventory/packs/collect",
-        "args": [],
-        "firstSeen": 1686164996969,
-        "oldRoutes": [],
-        "key": "INVENTORY_COLLECT"
-    },
-    "INVENTORY_UNCOLLECT": {
-        "route": "/users/@me/inventory/packs/uncollect",
-        "args": [],
-        "firstSeen": 1686164996971,
-        "oldRoutes": [],
-        "key": "INVENTORY_UNCOLLECT"
-    },
     "EMIT_GOOGLE_PLAY_METRICS": {
         "route": "/google-play/emit-google-play-metrics",
         "args": [],
@@ -5054,5 +5040,19 @@
         "firstSeen": 1690993960868,
         "oldRoutes": [],
         "key": "EMOJI_SOURCE_DATA"
+    },
+    "INVENTORY_ADD_PACK": {
+        "route": "/users/@me/inventory/packs/add",
+        "args": [],
+        "firstSeen": 1691167793036,
+        "oldRoutes": [],
+        "key": "INVENTORY_ADD_PACK"
+    },
+    "INVENTORY_REMOVE_PACK": {
+        "route": "/users/@me/inventory/packs/remove",
+        "args": [],
+        "firstSeen": 1691167793038,
+        "oldRoutes": [],
+        "key": "INVENTORY_REMOVE_PACK"
     }
 }

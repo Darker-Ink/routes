@@ -1,11 +1,16 @@
 [
     {
-        "route": "/emojis/:unknown/source",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1690993960868,
+        "route": "/users/@me/inventory/packs/add",
+        "args": [],
+        "firstSeen": 1691167793036,
         "oldRoutes": [],
-        "key": "EMOJI_SOURCE_DATA"
+        "key": "INVENTORY_ADD_PACK"
+    },
+    {
+        "route": "/users/@me/inventory/packs/remove",
+        "args": [],
+        "firstSeen": 1691167793038,
+        "oldRoutes": [],
+        "key": "INVENTORY_REMOVE_PACK"
     }
 ]
