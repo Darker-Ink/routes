@@ -5054,5 +5054,14 @@
         "firstSeen": 1691167793038,
         "oldRoutes": [],
         "key": "INVENTORY_REMOVE_PACK"
+    },
+    "GUILD_BANS_SEARCH": {
+        "route": "/guilds/:guildId/bans/search",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1692025600553,
+        "oldRoutes": [],
+        "key": "GUILD_BANS_SEARCH"
     }
 }

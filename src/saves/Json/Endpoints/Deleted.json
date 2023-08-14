@@ -1,16 +1,1 @@
-[
-    {
-        "route": "/users/@me/inventory/packs/collect",
-        "args": [],
-        "firstSeen": 1686164996969,
-        "oldRoutes": [],
-        "key": "INVENTORY_COLLECT"
-    },
-    {
-        "route": "/users/@me/inventory/packs/uncollect",
-        "args": [],
-        "firstSeen": 1686164996971,
-        "oldRoutes": [],
-        "key": "INVENTORY_UNCOLLECT"
-    }
-]
+[]
