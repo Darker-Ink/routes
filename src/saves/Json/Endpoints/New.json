@@ -1,11 +1,9 @@
 [
     {
-        "route": "/guilds/:guildId/bans/search",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1692025600553,
+        "route": "/users/@me/billing/perks-relevance",
+        "args": [],
+        "firstSeen": 1692227794843,
         "oldRoutes": [],
-        "key": "GUILD_BANS_SEARCH"
+        "key": "BILLING_PERKS_RELEVANCE"
     }
 ]

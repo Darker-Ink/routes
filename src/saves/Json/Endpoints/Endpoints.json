@@ -5063,5 +5063,12 @@
         "firstSeen": 1692025600553,
         "oldRoutes": [],
         "key": "GUILD_BANS_SEARCH"
+    },
+    "BILLING_PERKS_RELEVANCE": {
+        "route": "/users/@me/billing/perks-relevance",
+        "args": [],
+        "firstSeen": 1692227794843,
+        "oldRoutes": [],
+        "key": "BILLING_PERKS_RELEVANCE"
     }
 }
