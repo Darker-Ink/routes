@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "route": "/channels/:channelId/topic",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1690016314079,
+        "oldRoutes": [],
+        "key": "UPDATE_VOICE_CHANNEL_TOPIC"
+    }
+]

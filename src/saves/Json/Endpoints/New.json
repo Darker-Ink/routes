@@ -1,9 +1,11 @@
 [
     {
-        "route": "/users/@me/billing/perks-relevance",
-        "args": [],
-        "firstSeen": 1692227794843,
+        "route": "/channels/:channelId/voice-status",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1692310276500,
         "oldRoutes": [],
-        "key": "BILLING_PERKS_RELEVANCE"
+        "key": "UPDATE_VOICE_CHANNEL_STATUS"
     }
 ]

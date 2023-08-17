@@ -4878,15 +4878,6 @@
         "oldRoutes": [],
         "key": "GUILD_RESOURCE_CHANNELS_ICON"
     },
-    "UPDATE_VOICE_CHANNEL_TOPIC": {
-        "route": "/channels/:channelId/topic",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1690016314079,
-        "oldRoutes": [],
-        "key": "UPDATE_VOICE_CHANNEL_TOPIC"
-    },
     "POMELO_SUGGESTIONS_UNAUTHED": {
         "route": "/unique-username/username-suggestions-unauthed",
         "args": [],
@@ -5070,5 +5061,14 @@
         "firstSeen": 1692227794843,
         "oldRoutes": [],
         "key": "BILLING_PERKS_RELEVANCE"
+    },
+    "UPDATE_VOICE_CHANNEL_STATUS": {
+        "route": "/channels/:channelId/voice-status",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1692310276500,
+        "oldRoutes": [],
+        "key": "UPDATE_VOICE_CHANNEL_STATUS"
     }
 }
