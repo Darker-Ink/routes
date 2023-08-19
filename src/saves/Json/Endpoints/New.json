@@ -1,11 +1,16 @@
 [
     {
-        "route": "/channels/:channelId/voice-status",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1692310276500,
+        "route": "/collectibles/categories",
+        "args": [],
+        "firstSeen": 1692471136519,
         "oldRoutes": [],
-        "key": "UPDATE_VOICE_CHANNEL_STATUS"
+        "key": "COLLECTIBLES_CATEGORES"
+    },
+    {
+        "route": "/users/@me/collectibles/purchases",
+        "args": [],
+        "firstSeen": 1692471136520,
+        "oldRoutes": [],
+        "key": "COLLECTIBLES_PURCHASES"
     }
 ]

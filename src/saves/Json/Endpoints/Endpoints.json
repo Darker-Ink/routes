@@ -5070,5 +5070,19 @@
         "firstSeen": 1692310276500,
         "oldRoutes": [],
         "key": "UPDATE_VOICE_CHANNEL_STATUS"
+    },
+    "COLLECTIBLES_CATEGORES": {
+        "route": "/collectibles/categories",
+        "args": [],
+        "firstSeen": 1692471136519,
+        "oldRoutes": [],
+        "key": "COLLECTIBLES_CATEGORES"
+    },
+    "COLLECTIBLES_PURCHASES": {
+        "route": "/users/@me/collectibles/purchases",
+        "args": [],
+        "firstSeen": 1692471136520,
+        "oldRoutes": [],
+        "key": "COLLECTIBLES_PURCHASES"
     }
 }
