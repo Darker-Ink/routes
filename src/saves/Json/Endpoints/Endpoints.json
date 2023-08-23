@@ -5084,5 +5084,12 @@
         "firstSeen": 1692471136520,
         "oldRoutes": [],
         "key": "COLLECTIBLES_PURCHASES"
+    },
+    "COLLECTIBLES_CLAIM": {
+        "route": "/users/@me/collectibles/claim",
+        "args": [],
+        "firstSeen": 1692834121123,
+        "oldRoutes": [],
+        "key": "COLLECTIBLES_CLAIM"
     }
 }
