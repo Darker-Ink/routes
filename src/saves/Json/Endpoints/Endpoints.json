@@ -5091,5 +5091,21 @@
         "firstSeen": 1692834121123,
         "oldRoutes": [],
         "key": "COLLECTIBLES_CLAIM"
+    },
+    "INITIATE_CHANNEL_PROMPTS": {
+        "route": "/initiate-prompts",
+        "args": [],
+        "firstSeen": 1692919122095,
+        "oldRoutes": [],
+        "key": "INITIATE_CHANNEL_PROMPTS"
+    },
+    "FORCE_SEND_PROMPT": {
+        "route": "/:unknown/force-send-prompt",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1692919122105,
+        "oldRoutes": [],
+        "key": "FORCE_SEND_PROMPT"
     }
 }
