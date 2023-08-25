@@ -1,18 +1,9 @@
 [
     {
-        "route": "/initiate-prompts",
+        "route": "/collectibles/categories",
         "args": [],
-        "firstSeen": 1692919122095,
+        "firstSeen": 1692990355796,
         "oldRoutes": [],
-        "key": "INITIATE_CHANNEL_PROMPTS"
-    },
-    {
-        "route": "/:unknown/force-send-prompt",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1692919122105,
-        "oldRoutes": [],
-        "key": "FORCE_SEND_PROMPT"
+        "key": "COLLECTIBLES_CATEGORIES"
     }
 ]
