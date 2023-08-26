@@ -1,9 +1,9 @@
 [
     {
-        "route": "/collectibles/categories",
+        "route": "/users/@me/billing/invoice",
         "args": [],
-        "firstSeen": 1692990355796,
+        "firstSeen": 1693008624130,
         "oldRoutes": [],
-        "key": "COLLECTIBLES_CATEGORIES"
+        "key": "BILLING_INVOICE_PDF"
     }
 ]
