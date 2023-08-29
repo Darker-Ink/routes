@@ -1,9 +1,1 @@
-[
-    {
-        "route": "/users/@me/billing/invoice",
-        "args": [],
-        "firstSeen": 1693008624130,
-        "oldRoutes": [],
-        "key": "BILLING_INVOICE_PDF"
-    }
-]
+[]

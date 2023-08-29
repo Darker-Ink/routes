@@ -2598,16 +2598,6 @@
         "oldRoutes": [],
         "key": "USER_BANNER"
     },
-    "AVATAR_DECORATIONS": {
-        "route": "/users/:userId/avatar-decorations/:unknown.png",
-        "args": [
-            ":userId",
-            ":unknown"
-        ],
-        "firstSeen": 1682214264532,
-        "oldRoutes": [],
-        "key": "AVATAR_DECORATIONS"
-    },
     "AVATAR_DECORATION_PRESETS": {
         "route": "/avatar-decoration-presets/:unknown.png",
         "args": [
@@ -2616,13 +2606,6 @@
         "firstSeen": 1682214264532,
         "oldRoutes": [],
         "key": "AVATAR_DECORATION_PRESETS"
-    },
-    "USER_AVATAR_DECORATIONS": {
-        "route": "/users/@me/avatar-decorations",
-        "args": [],
-        "firstSeen": 1682214264532,
-        "oldRoutes": [],
-        "key": "USER_AVATAR_DECORATIONS"
     },
     "GUILD_MEMBER_BANNER": {
         "route": "/guilds/:guildId/users/:userId/banners/:unknown.png",

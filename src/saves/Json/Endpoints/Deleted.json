@@ -1,1 +1,19 @@
-[]
+[
+    {
+        "route": "/users/:userId/avatar-decorations/:unknown.png",
+        "args": [
+            ":userId",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264532,
+        "oldRoutes": [],
+        "key": "AVATAR_DECORATIONS"
+    },
+    {
+        "route": "/users/@me/avatar-decorations",
+        "args": [],
+        "firstSeen": 1682214264532,
+        "oldRoutes": [],
+        "key": "USER_AVATAR_DECORATIONS"
+    }
+]
