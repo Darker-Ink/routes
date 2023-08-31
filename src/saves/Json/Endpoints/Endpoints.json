@@ -5092,5 +5092,12 @@
         "firstSeen": 1693440279248,
         "oldRoutes": [],
         "key": "COLLECTIBLES_ASSET"
+    },
+    "USER_PROFILE_EFFECTS": {
+        "route": "/user-profile-effects",
+        "args": [],
+        "firstSeen": 1693461849219,
+        "oldRoutes": [],
+        "key": "USER_PROFILE_EFFECTS"
     }
 }
