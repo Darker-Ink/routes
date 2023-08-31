@@ -1,1 +1,41 @@
-[]
+[
+    {
+        "route": "/collectibles-categories",
+        "args": [],
+        "firstSeen": 1692990355796,
+        "oldRoutes": [
+            {
+                "route": "/collectibles/categories",
+                "args": [],
+                "changedAt": 1693455031433
+            }
+        ],
+        "key": "COLLECTIBLES_CATEGORIES"
+    },
+    {
+        "route": "/users/@me/claim-premium-collectibles-product",
+        "args": [],
+        "firstSeen": 1692834121123,
+        "oldRoutes": [
+            {
+                "route": "/users/@me/collectibles/claim",
+                "args": [],
+                "changedAt": 1693455031434
+            }
+        ],
+        "key": "COLLECTIBLES_CLAIM"
+    },
+    {
+        "route": "/users/@me/collectibles-purchases",
+        "args": [],
+        "firstSeen": 1692471136520,
+        "oldRoutes": [
+            {
+                "route": "/users/@me/collectibles/purchases",
+                "args": [],
+                "changedAt": 1693455031434
+            }
+        ],
+        "key": "COLLECTIBLES_PURCHASES"
+    }
+]

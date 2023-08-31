@@ -5023,17 +5023,29 @@
         "key": "UPDATE_VOICE_CHANNEL_STATUS"
     },
     "COLLECTIBLES_PURCHASES": {
-        "route": "/users/@me/collectibles/purchases",
+        "route": "/users/@me/collectibles-purchases",
         "args": [],
         "firstSeen": 1692471136520,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/users/@me/collectibles/purchases",
+                "args": [],
+                "changedAt": 1693455031434
+            }
+        ],
         "key": "COLLECTIBLES_PURCHASES"
     },
     "COLLECTIBLES_CLAIM": {
-        "route": "/users/@me/collectibles/claim",
+        "route": "/users/@me/claim-premium-collectibles-product",
         "args": [],
         "firstSeen": 1692834121123,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/users/@me/collectibles/claim",
+                "args": [],
+                "changedAt": 1693455031434
+            }
+        ],
         "key": "COLLECTIBLES_CLAIM"
     },
     "INITIATE_CHANNEL_PROMPTS": {
@@ -5053,10 +5065,16 @@
         "key": "FORCE_SEND_PROMPT"
     },
     "COLLECTIBLES_CATEGORIES": {
-        "route": "/collectibles/categories",
+        "route": "/collectibles-categories",
         "args": [],
         "firstSeen": 1692990355796,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/collectibles/categories",
+                "args": [],
+                "changedAt": 1693455031433
+            }
+        ],
         "key": "COLLECTIBLES_CATEGORIES"
     },
     "BILLING_INVOICE_PDF": {
