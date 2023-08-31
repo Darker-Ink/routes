@@ -1,19 +1,34 @@
 [
     {
-        "route": "/users/:userId/avatar-decorations/:unknown.png",
-        "args": [
-            ":userId",
-            ":unknown"
-        ],
-        "firstSeen": 1682214264532,
+        "route": "/collectibles",
+        "args": [],
+        "firstSeen": 1684186685280,
         "oldRoutes": [],
-        "key": "AVATAR_DECORATIONS"
+        "key": "COLLECTIBLES"
     },
     {
-        "route": "/users/@me/avatar-decorations",
+        "route": "/users/@me/collectibles",
         "args": [],
-        "firstSeen": 1682214264532,
+        "firstSeen": 1684186685281,
         "oldRoutes": [],
-        "key": "USER_AVATAR_DECORATIONS"
+        "key": "USER_COLLECTIBLES"
+    },
+    {
+        "route": "/collectibles/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1686596517763,
+        "oldRoutes": [],
+        "key": "COLLECTIBLE_STORE_LISTING"
+    },
+    {
+        "route": "/applications/1096190356233670716/app-assets/:unknown.png",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1687032976572,
+        "oldRoutes": [],
+        "key": "COLLECTIBLE_ASSET"
     }
 ]

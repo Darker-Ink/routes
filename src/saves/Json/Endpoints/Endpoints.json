@@ -4608,20 +4608,6 @@
         "oldRoutes": [],
         "key": "GUILD_INCIDENT_ACTIONS"
     },
-    "COLLECTIBLES": {
-        "route": "/collectibles",
-        "args": [],
-        "firstSeen": 1684186685280,
-        "oldRoutes": [],
-        "key": "COLLECTIBLES"
-    },
-    "USER_COLLECTIBLES": {
-        "route": "/users/@me/collectibles",
-        "args": [],
-        "firstSeen": 1684186685281,
-        "oldRoutes": [],
-        "key": "USER_COLLECTIBLES"
-    },
     "MESSAGE_LOG_GUILD_CHANNELS": {
         "route": "/messages-log/guild-channels/get",
         "args": [],
@@ -4726,15 +4712,6 @@
         "oldRoutes": [],
         "key": "INVENTORY_GET"
     },
-    "COLLECTIBLE_STORE_LISTING": {
-        "route": "/collectibles/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1686596517763,
-        "oldRoutes": [],
-        "key": "COLLECTIBLE_STORE_LISTING"
-    },
     "REMOVE_EMOJI_REACTIONS": {
         "route": "/channels/:channelId/messages/:messageId/reactions/:reactionId",
         "args": [
@@ -4770,15 +4747,6 @@
         "firstSeen": 1687032976569,
         "oldRoutes": [],
         "key": "BOGO_PROMOTIONS"
-    },
-    "COLLECTIBLE_ASSET": {
-        "route": "/applications/1096190356233670716/app-assets/:unknown.png",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1687032976572,
-        "oldRoutes": [],
-        "key": "COLLECTIBLE_ASSET"
     },
     "USER_BROADCASTS": {
         "route": "/users/broadcasts/bucket",
@@ -5097,5 +5065,14 @@
         "firstSeen": 1693008624130,
         "oldRoutes": [],
         "key": "BILLING_INVOICE_PDF"
+    },
+    "COLLECTIBLES_ASSET": {
+        "route": "/applications/1096190356233670716/app-assets/:unknown.png",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1693440279248,
+        "oldRoutes": [],
+        "key": "COLLECTIBLES_ASSET"
     }
 }
