@@ -1,11 +1,9 @@
 [
     {
-        "route": "/:unknown/gaming-stats",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1694188928682,
+        "route": "/attachments/report-false-positive",
+        "args": [],
+        "firstSeen": 1694196780901,
         "oldRoutes": [],
-        "key": "SEND_GAMING_STATS"
+        "key": "EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE"
     }
 ]
