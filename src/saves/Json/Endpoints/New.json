@@ -1,9 +1,11 @@
 [
     {
-        "route": "/user-profile-effects",
-        "args": [],
-        "firstSeen": 1693461849219,
+        "route": "/:unknown/gaming-stats",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1694188928682,
         "oldRoutes": [],
-        "key": "USER_PROFILE_EFFECTS"
+        "key": "SEND_GAMING_STATS"
     }
 ]

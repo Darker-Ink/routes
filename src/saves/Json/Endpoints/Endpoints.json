@@ -5099,5 +5099,14 @@
         "firstSeen": 1693461849219,
         "oldRoutes": [],
         "key": "USER_PROFILE_EFFECTS"
+    },
+    "SEND_GAMING_STATS": {
+        "route": "/:unknown/gaming-stats",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1694188928682,
+        "oldRoutes": [],
+        "key": "SEND_GAMING_STATS"
     }
 }
