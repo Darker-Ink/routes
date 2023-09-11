@@ -1,1 +1,15 @@
-[]
+[
+    {
+        "route": "/safety-hub/@me",
+        "args": [],
+        "firstSeen": 1690016314083,
+        "oldRoutes": [
+            {
+                "route": "/safety-hub",
+                "args": [],
+                "changedAt": 1694454050945
+            }
+        ],
+        "key": "SAFETY_HUB"
+    }
+]

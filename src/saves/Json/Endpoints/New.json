@@ -1,9 +1,1 @@
-[
-    {
-        "route": "/attachments/report-false-positive",
-        "args": [],
-        "firstSeen": 1694196780901,
-        "oldRoutes": [],
-        "key": "EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE"
-    }
-]
+[]
