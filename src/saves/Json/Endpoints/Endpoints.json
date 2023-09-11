@@ -5146,5 +5146,14 @@
         "firstSeen": 1694465301557,
         "oldRoutes": [],
         "key": "APPLICATION_COMMAND_INDEX_USER"
+    },
+    "BULK_GUILD_BAN": {
+        "route": "/guilds/:guildId/bulk-ban",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1694474449297,
+        "oldRoutes": [],
+        "key": "BULK_GUILD_BAN"
     }
 }
