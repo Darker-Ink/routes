@@ -1,1 +1,27 @@
-[]
+[
+    {
+        "route": "/channels/:channelId/application-command-index",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1694465301548,
+        "oldRoutes": [],
+        "key": "APPLICATION_COMMAND_INDEX_CHANNEL"
+    },
+    {
+        "route": "/guilds/:guildId/application-command-index",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1694465301557,
+        "oldRoutes": [],
+        "key": "APPLICATION_COMMAND_INDEX_GUILD"
+    },
+    {
+        "route": "/users/@me/application-command-index",
+        "args": [],
+        "firstSeen": 1694465301557,
+        "oldRoutes": [],
+        "key": "APPLICATION_COMMAND_INDEX_USER"
+    }
+]

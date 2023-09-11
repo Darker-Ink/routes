@@ -5121,5 +5121,30 @@
         "firstSeen": 1694196780901,
         "oldRoutes": [],
         "key": "EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE"
+    },
+    "APPLICATION_COMMAND_INDEX_CHANNEL": {
+        "route": "/channels/:channelId/application-command-index",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1694465301548,
+        "oldRoutes": [],
+        "key": "APPLICATION_COMMAND_INDEX_CHANNEL"
+    },
+    "APPLICATION_COMMAND_INDEX_GUILD": {
+        "route": "/guilds/:guildId/application-command-index",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1694465301557,
+        "oldRoutes": [],
+        "key": "APPLICATION_COMMAND_INDEX_GUILD"
+    },
+    "APPLICATION_COMMAND_INDEX_USER": {
+        "route": "/users/@me/application-command-index",
+        "args": [],
+        "firstSeen": 1694465301557,
+        "oldRoutes": [],
+        "key": "APPLICATION_COMMAND_INDEX_USER"
     }
 }
