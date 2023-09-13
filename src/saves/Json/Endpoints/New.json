@@ -1,11 +1,13 @@
 [
     {
-        "route": "/guilds/:guildId/bulk-ban",
+        "route": "/applications/:applicationId/app-assets/:hash.:type",
         "args": [
-            ":guildId"
+            ":applicationId",
+            ":hash",
+            ":type"
         ],
-        "firstSeen": 1694474449297,
+        "firstSeen": 1694638591456,
         "oldRoutes": [],
-        "key": "BULK_GUILD_BAN"
+        "key": "APPLICATION_ASSET"
     }
 ]

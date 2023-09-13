@@ -5090,15 +5090,6 @@
         "oldRoutes": [],
         "key": "BILLING_INVOICE_PDF"
     },
-    "COLLECTIBLES_ASSET": {
-        "route": "/applications/1096190356233670716/app-assets/:unknown.png",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1693440279248,
-        "oldRoutes": [],
-        "key": "COLLECTIBLES_ASSET"
-    },
     "USER_PROFILE_EFFECTS": {
         "route": "/user-profile-effects",
         "args": [],
@@ -5155,5 +5146,26 @@
         "firstSeen": 1694474449297,
         "oldRoutes": [],
         "key": "BULK_GUILD_BAN"
+    },
+    "UPDATE_GAMING_STATS": {
+        "route": "/:unknown/:unknown/update-gaming-stats",
+        "args": [
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1694597287735,
+        "oldRoutes": [],
+        "key": "UPDATE_GAMING_STATS"
+    },
+    "APPLICATION_ASSET": {
+        "route": "/applications/:applicationId/app-assets/:hash.:type",
+        "args": [
+            ":applicationId",
+            ":hash",
+            ":type"
+        ],
+        "firstSeen": 1694638591456,
+        "oldRoutes": [],
+        "key": "APPLICATION_ASSET"
     }
 }
