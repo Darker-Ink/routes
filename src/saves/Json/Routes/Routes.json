@@ -792,5 +792,15 @@
         "firstSeen": 1690937723290,
         "oldRoutes": [],
         "key": "REJECT_MFA"
+    },
+    "BILLING_PROMOTION_DIRECT_FULFILLMENT_REDEMPTION": {
+        "route": "/billing/partner-promotions/:unknown/:unknown",
+        "args": [
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1695048899237,
+        "oldRoutes": [],
+        "key": "BILLING_PROMOTION_DIRECT_FULFILLMENT_REDEMPTION"
     }
 }

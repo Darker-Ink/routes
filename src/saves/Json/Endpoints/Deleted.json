@@ -1,11 +1,1 @@
-[
-    {
-        "route": "/applications/1096190356233670716/app-assets/:unknown.png",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1693440279248,
-        "oldRoutes": [],
-        "key": "COLLECTIBLES_ASSET"
-    }
-]
+[]

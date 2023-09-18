@@ -1,13 +1,11 @@
 [
     {
-        "route": "/applications/:applicationId/app-assets/:hash.:type",
+        "route": "/entitlements/partner-promotions/:unknown",
         "args": [
-            ":applicationId",
-            ":hash",
-            ":type"
+            ":unknown"
         ],
-        "firstSeen": 1694638591456,
+        "firstSeen": 1695048898341,
         "oldRoutes": [],
-        "key": "APPLICATION_ASSET"
+        "key": "PARTNER_PROMOTIONS"
     }
 ]

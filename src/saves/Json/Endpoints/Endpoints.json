@@ -5167,5 +5167,14 @@
         "firstSeen": 1694638591456,
         "oldRoutes": [],
         "key": "APPLICATION_ASSET"
+    },
+    "PARTNER_PROMOTIONS": {
+        "route": "/entitlements/partner-promotions/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1695048898341,
+        "oldRoutes": [],
+        "key": "PARTNER_PROMOTIONS"
     }
 }
