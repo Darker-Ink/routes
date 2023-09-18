@@ -5176,5 +5176,19 @@
         "firstSeen": 1695048898341,
         "oldRoutes": [],
         "key": "PARTNER_PROMOTIONS"
+    },
+    "USER_OFFER": {
+        "route": "/users/@me/billing/user-offer",
+        "args": [],
+        "firstSeen": 1695055332610,
+        "oldRoutes": [],
+        "key": "USER_OFFER"
+    },
+    "USER_OFFER_ACKNOWLEDGED": {
+        "route": "/users/@me/billing/user-offer/ack",
+        "args": [],
+        "firstSeen": 1695055332611,
+        "oldRoutes": [],
+        "key": "USER_OFFER_ACKNOWLEDGED"
     }
 }
