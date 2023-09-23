@@ -2866,13 +2866,6 @@
         "oldRoutes": [],
         "key": "CONNECTION_REFRESH"
     },
-    "CONNECTION_SYNC_CONTACTS_SETTINGS": {
-        "route": "/users/@me/connections/contacts/@me/external-friend-list-entries/settings",
-        "args": [],
-        "firstSeen": 1682214264539,
-        "oldRoutes": [],
-        "key": "CONNECTION_SYNC_CONTACTS_SETTINGS"
-    },
     "CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK": {
         "route": "/connections/:unknown/link-dispatch-auth-callback",
         "args": [

@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "route": "/users/@me/connections/contacts/@me/external-friend-list-entries/settings",
+        "args": [],
+        "firstSeen": 1682214264539,
+        "oldRoutes": [],
+        "key": "CONNECTION_SYNC_CONTACTS_SETTINGS"
+    }
+]

@@ -1,16 +1,1 @@
-[
-    {
-        "route": "/users/@me/billing/user-offer",
-        "args": [],
-        "firstSeen": 1695055332610,
-        "oldRoutes": [],
-        "key": "USER_OFFER"
-    },
-    {
-        "route": "/users/@me/billing/user-offer/ack",
-        "args": [],
-        "firstSeen": 1695055332611,
-        "oldRoutes": [],
-        "key": "USER_OFFER_ACKNOWLEDGED"
-    }
-]
+[]
