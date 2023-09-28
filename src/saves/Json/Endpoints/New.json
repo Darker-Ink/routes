@@ -1,11 +1,1 @@
-[
-    {
-        "route": "/guilds/:guildId/members-search",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1695923808025,
-        "oldRoutes": [],
-        "key": "GUILD_MEMBER_SEARCH"
-    }
-]
+[]

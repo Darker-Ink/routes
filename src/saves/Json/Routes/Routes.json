@@ -802,5 +802,14 @@
         "firstSeen": 1695048899237,
         "oldRoutes": [],
         "key": "BILLING_PROMOTION_DIRECT_FULFILLMENT_REDEMPTION"
+    },
+    "SERVER_SHOP": {
+        "route": "/channels/:channelId/shop",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1695924661593,
+        "oldRoutes": [],
+        "key": "SERVER_SHOP"
     }
 }
