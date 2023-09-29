@@ -1,11 +1,1 @@
-[
-    {
-        "route": "/channels/:channelId/shop",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1695924661593,
-        "oldRoutes": [],
-        "key": "SERVER_SHOP"
-    }
-]
+[]
