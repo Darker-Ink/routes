@@ -5231,5 +5231,14 @@
         "firstSeen": 1695950325492,
         "oldRoutes": [],
         "key": "CLYDE_PROFILES_CREATE"
+    },
+    "GUILD_CLYDE_ADD_MEMBER": {
+        "route": "/guilds/:guildId/members/clyde",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1696013957653,
+        "oldRoutes": [],
+        "key": "GUILD_CLYDE_ADD_MEMBER"
     }
 }

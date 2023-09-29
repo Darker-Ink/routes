@@ -1,41 +1,11 @@
 [
     {
-        "route": "/clyde-profiles/:unknown/avatars/:hash.:type",
-        "args": [
-            ":unknown",
-            ":hash",
-            ":type"
-        ],
-        "firstSeen": 1695950325435,
-        "oldRoutes": [],
-        "key": "CLYDE_PROFILES_AVATAR"
-    },
-    {
-        "route": "/clyde-profiles/:unknown/banners/:unknown.png",
-        "args": [
-            ":unknown",
-            ":unknown"
-        ],
-        "firstSeen": 1695950325458,
-        "oldRoutes": [],
-        "key": "CLYDE_PROFILES_BANNER"
-    },
-    {
-        "route": "/clyde-profiles/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1695950325487,
-        "oldRoutes": [],
-        "key": "CLYDE_PROFILES"
-    },
-    {
-        "route": "/guilds/:guildId/clyde-profiles",
+        "route": "/guilds/:guildId/members/clyde",
         "args": [
             ":guildId"
         ],
-        "firstSeen": 1695950325492,
+        "firstSeen": 1696013957653,
         "oldRoutes": [],
-        "key": "CLYDE_PROFILES_CREATE"
+        "key": "GUILD_CLYDE_ADD_MEMBER"
     }
 ]
