@@ -1,11 +1,12 @@
 [
     {
-        "route": "/guilds/:guildId/members/clyde",
+        "route": "/channels/:channelId/polls/:unknown/answers",
         "args": [
-            ":guildId"
+            ":channelId",
+            ":unknown"
         ],
-        "firstSeen": 1696013957653,
+        "firstSeen": 1696261135832,
         "oldRoutes": [],
-        "key": "GUILD_CLYDE_ADD_MEMBER"
+        "key": "POLL_ANSWERS"
     }
 ]

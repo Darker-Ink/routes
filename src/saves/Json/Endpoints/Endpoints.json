@@ -5240,5 +5240,15 @@
         "firstSeen": 1696013957653,
         "oldRoutes": [],
         "key": "GUILD_CLYDE_ADD_MEMBER"
+    },
+    "POLL_ANSWERS": {
+        "route": "/channels/:channelId/polls/:unknown/answers",
+        "args": [
+            ":channelId",
+            ":unknown"
+        ],
+        "firstSeen": 1696261135832,
+        "oldRoutes": [],
+        "key": "POLL_ANSWERS"
     }
 }
