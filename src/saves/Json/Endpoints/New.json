@@ -1,12 +1,11 @@
 [
     {
-        "route": "/channels/:channelId/polls/:unknown/answers",
+        "route": "/channels/:channelId/explicit-media",
         "args": [
-            ":channelId",
-            ":unknown"
+            ":channelId"
         ],
-        "firstSeen": 1696261135832,
+        "firstSeen": 1696365647949,
         "oldRoutes": [],
-        "key": "POLL_ANSWERS"
+        "key": "EXPLICIT_MEDIA_SCAN_MESSAGES"
     }
 ]

@@ -5250,5 +5250,14 @@
         "firstSeen": 1696261135832,
         "oldRoutes": [],
         "key": "POLL_ANSWERS"
+    },
+    "EXPLICIT_MEDIA_SCAN_MESSAGES": {
+        "route": "/channels/:channelId/explicit-media",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1696365647949,
+        "oldRoutes": [],
+        "key": "EXPLICIT_MEDIA_SCAN_MESSAGES"
     }
 }
