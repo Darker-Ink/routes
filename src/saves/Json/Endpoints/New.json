@@ -1,11 +1,1 @@
-[
-    {
-        "route": "/channels/:channelId/explicit-media",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1696365647949,
-        "oldRoutes": [],
-        "key": "EXPLICIT_MEDIA_SCAN_MESSAGES"
-    }
-]
+[]

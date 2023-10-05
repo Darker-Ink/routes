@@ -811,5 +811,12 @@
         "firstSeen": 1695924661593,
         "oldRoutes": [],
         "key": "SERVER_SHOP"
+    },
+    "COLLECTIBLES_SHOP": {
+        "route": "/shop",
+        "args": [],
+        "firstSeen": 1696466880577,
+        "oldRoutes": [],
+        "key": "COLLECTIBLES_SHOP"
     }
 }
