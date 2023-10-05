@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "route": "/users/@me/billing/adyen/payment-methods",
+        "args": [],
+        "firstSeen": 1696544992489,
+        "oldRoutes": [],
+        "key": "BILLING_ADYEN_PAYMENT_METHODS"
+    }
+]
