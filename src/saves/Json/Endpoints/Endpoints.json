@@ -5266,5 +5266,14 @@
         "firstSeen": 1696544992489,
         "oldRoutes": [],
         "key": "BILLING_ADYEN_PAYMENT_METHODS"
+    },
+    "CHANNEL_SAFETY_WARNINGS_ACK": {
+        "route": "/channels/:channelId/safety-warnings/ack",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1696617533571,
+        "oldRoutes": [],
+        "key": "CHANNEL_SAFETY_WARNINGS_ACK"
     }
 }

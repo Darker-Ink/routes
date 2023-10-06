@@ -1,9 +1,11 @@
 [
     {
-        "route": "/users/@me/billing/adyen/payment-methods",
-        "args": [],
-        "firstSeen": 1696544992489,
+        "route": "/channels/:channelId/safety-warnings/ack",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1696617533571,
         "oldRoutes": [],
-        "key": "BILLING_ADYEN_PAYMENT_METHODS"
+        "key": "CHANNEL_SAFETY_WARNINGS_ACK"
     }
 ]
