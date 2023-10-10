@@ -1,11 +1,20 @@
 [
     {
-        "route": "/channels/:channelId/safety-warnings/ack",
+        "route": "/reporting/unauthenticated/menu/:unknown",
         "args": [
-            ":channelId"
+            ":unknown"
         ],
-        "firstSeen": 1696617533571,
+        "firstSeen": 1696960022967,
         "oldRoutes": [],
-        "key": "CHANNEL_SAFETY_WARNINGS_ACK"
+        "key": "GET_UNAUTHENTICATED_REPORT_MENU"
+    },
+    {
+        "route": "/reporting/unauthenticated/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1696960022981,
+        "oldRoutes": [],
+        "key": "SUBMIT_UNAUTHENTICATED_REPORT_MENU"
     }
 ]

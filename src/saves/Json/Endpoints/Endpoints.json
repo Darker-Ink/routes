@@ -5275,5 +5275,23 @@
         "firstSeen": 1696617533571,
         "oldRoutes": [],
         "key": "CHANNEL_SAFETY_WARNINGS_ACK"
+    },
+    "GET_UNAUTHENTICATED_REPORT_MENU": {
+        "route": "/reporting/unauthenticated/menu/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1696960022967,
+        "oldRoutes": [],
+        "key": "GET_UNAUTHENTICATED_REPORT_MENU"
+    },
+    "SUBMIT_UNAUTHENTICATED_REPORT_MENU": {
+        "route": "/reporting/unauthenticated/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1696960022981,
+        "oldRoutes": [],
+        "key": "SUBMIT_UNAUTHENTICATED_REPORT_MENU"
     }
 }
