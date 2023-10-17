@@ -5293,5 +5293,26 @@
         "firstSeen": 1696960022981,
         "oldRoutes": [],
         "key": "SUBMIT_UNAUTHENTICATED_REPORT_MENU"
+    },
+    "GUILD_EVENT_EXCEPTIONS": {
+        "route": "/guilds/:guildId/scheduled-events/:unknown/exceptions",
+        "args": [
+            ":guildId",
+            ":unknown"
+        ],
+        "firstSeen": 1697502775209,
+        "oldRoutes": [],
+        "key": "GUILD_EVENT_EXCEPTIONS"
+    },
+    "GUILD_EVENT_EXCEPTION": {
+        "route": "/guilds/:guildId/scheduled-events/:unknown/exceptions/:unknown",
+        "args": [
+            ":guildId",
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1697502775225,
+        "oldRoutes": [],
+        "key": "GUILD_EVENT_EXCEPTION"
     }
 }

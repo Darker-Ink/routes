@@ -1,20 +1,23 @@
 [
     {
-        "route": "/reporting/unauthenticated/menu/:unknown",
+        "route": "/guilds/:guildId/scheduled-events/:unknown/exceptions",
         "args": [
+            ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1696960022967,
+        "firstSeen": 1697502775209,
         "oldRoutes": [],
-        "key": "GET_UNAUTHENTICATED_REPORT_MENU"
+        "key": "GUILD_EVENT_EXCEPTIONS"
     },
     {
-        "route": "/reporting/unauthenticated/:unknown",
+        "route": "/guilds/:guildId/scheduled-events/:unknown/exceptions/:unknown",
         "args": [
+            ":guildId",
+            ":unknown",
             ":unknown"
         ],
-        "firstSeen": 1696960022981,
+        "firstSeen": 1697502775225,
         "oldRoutes": [],
-        "key": "SUBMIT_UNAUTHENTICATED_REPORT_MENU"
+        "key": "GUILD_EVENT_EXCEPTION"
     }
 ]
