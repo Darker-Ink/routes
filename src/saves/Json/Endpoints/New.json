@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "route": "/channels/:channelId/send-soundboard-sound",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1697572344484,
+        "oldRoutes": [],
+        "key": "SEND_SOUNDBOARD_SOUND"
+    }
+]
