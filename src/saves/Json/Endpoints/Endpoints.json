@@ -4856,15 +4856,6 @@
         "oldRoutes": [],
         "key": "GOOGLE_PLAY_VALIDATE_PURCHASE"
     },
-    "CHANNEL_BASED_CLYDE_PERSONALITY": {
-        "route": "/channels/:channelId/channel-based-clyde-personality",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1690016314082,
-        "oldRoutes": [],
-        "key": "CHANNEL_BASED_CLYDE_PERSONALITY"
-    },
     "CUSTOM_CALL_SOUNDS": {
         "route": "/channels/:channelId/custom-call-sounds",
         "args": [
@@ -5323,5 +5314,12 @@
         "firstSeen": 1697572344484,
         "oldRoutes": [],
         "key": "SEND_SOUNDBOARD_SOUND"
+    },
+    "CLYDE_PROFILES_GENERATE_PERSONALITY": {
+        "route": "/clyde-profiles/generate-personality",
+        "args": [],
+        "firstSeen": 1697583960508,
+        "oldRoutes": [],
+        "key": "CLYDE_PROFILES_GENERATE_PERSONALITY"
     }
 }

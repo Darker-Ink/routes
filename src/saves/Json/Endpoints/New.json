@@ -1,11 +1,9 @@
 [
     {
-        "route": "/channels/:channelId/send-soundboard-sound",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1697572344484,
+        "route": "/clyde-profiles/generate-personality",
+        "args": [],
+        "firstSeen": 1697583960508,
         "oldRoutes": [],
-        "key": "SEND_SOUNDBOARD_SOUND"
+        "key": "CLYDE_PROFILES_GENERATE_PERSONALITY"
     }
 ]
