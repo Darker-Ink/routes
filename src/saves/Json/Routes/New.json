@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "route": "/report",
+        "args": [],
+        "firstSeen": 1697563881504,
+        "oldRoutes": [],
+        "key": "REPORT"
+    }
+]
