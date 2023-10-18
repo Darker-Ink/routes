@@ -1,9 +1,1 @@
-[
-    {
-        "route": "/clyde-profiles/generate-personality",
-        "args": [],
-        "firstSeen": 1697583960508,
-        "oldRoutes": [],
-        "key": "CLYDE_PROFILES_GENERATE_PERSONALITY"
-    }
-]
+[]

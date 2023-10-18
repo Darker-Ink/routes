@@ -1,11 +1,1 @@
-[
-    {
-        "route": "/channels/:channelId/channel-based-clyde-personality",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1690016314082,
-        "oldRoutes": [],
-        "key": "CHANNEL_BASED_CLYDE_PERSONALITY"
-    }
-]
+[]

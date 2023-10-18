@@ -825,5 +825,21 @@
         "firstSeen": 1697563881504,
         "oldRoutes": [],
         "key": "REPORT"
+    },
+    "COLLECTIBLES_SHOP_FULLSCREEN": {
+        "route": "/shop/fullscreen",
+        "args": [],
+        "firstSeen": 1697673173479,
+        "oldRoutes": [],
+        "key": "COLLECTIBLES_SHOP_FULLSCREEN"
+    },
+    "COLLECTIBLES_SHOP_PRODUCT_DETAIL": {
+        "route": "/shop/product/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1697673173497,
+        "oldRoutes": [],
+        "key": "COLLECTIBLES_SHOP_PRODUCT_DETAIL"
     }
 }

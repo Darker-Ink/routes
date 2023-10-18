@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "route": "/shop/fullscreen",
+        "args": [],
+        "firstSeen": 1697673173479,
+        "oldRoutes": [],
+        "key": "COLLECTIBLES_SHOP_FULLSCREEN"
+    },
+    {
+        "route": "/shop/product/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1697673173497,
+        "oldRoutes": [],
+        "key": "COLLECTIBLES_SHOP_PRODUCT_DETAIL"
+    }
+]
