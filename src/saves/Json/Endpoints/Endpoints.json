@@ -5321,5 +5321,12 @@
         "firstSeen": 1697583960508,
         "oldRoutes": [],
         "key": "CLYDE_PROFILES_GENERATE_PERSONALITY"
+    },
+    "EMOJI_CAPTIONS_GET": {
+        "route": "/users/@me/emoji-captions",
+        "args": [],
+        "firstSeen": 1697843615403,
+        "oldRoutes": [],
+        "key": "EMOJI_CAPTIONS_GET"
     }
 }
