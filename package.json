@@ -8,7 +8,7 @@
     "js-beautify": "^1.14.9",
     "octokit": "^2.0.14",
     "terminal-kit": "^3.0.0",
-    "undici": "^5.22.0"
+    "undici": "^5.26.2"
   },
   "scripts": {
     "download": "node src/utils/Downloader.js",
