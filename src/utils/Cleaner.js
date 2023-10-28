@@ -1,3 +1,23 @@
+const options = {
+    "indent_size": "4",
+    "indent_char": " ",
+    "max_preserve_newlines": "5",
+    "preserve_newlines": true,
+    "keep_array_indentation": false,
+    "break_chained_methods": false,
+    "indent_scripts": "normal",
+    "brace_style": "collapse",
+    "space_before_conditional": true,
+    "unescape_strings": false,
+    "jslint_happy": false,
+    "end_with_newline": false,
+    "wrap_line_length": "0",
+    "indent_inner_html": false,
+    "comma_first": false,
+    "e4x": false,
+    "indent_empty_lines": false
+};
+const js_beautify = require("js-beautify").js_beautify;
 const dashAst = require("dash-ast");
 const acorn = require("acorn");
 const fs = require("fs");
@@ -74,7 +94,10 @@ process.on('uncaughtException', async (error) => {
 
 (async () => {
     const currentJs = fs.readFileSync(path.join(__dirname, "../saves/current.js"), "utf8");
-    const parsed = acorn.parse(currentJs, {
+
+    const beautified = js_beautify(currentJs, options);
+
+    const parsed = acorn.parse(beautified, {
         ecmaVersion: 2020,
     });
     const checkRoutes = [["BILLING_PREFIX", "/billing"], ["FRIENDS", "/channels/@me"], ["LOGIN", "/login"], ["ACTIVITIES", "/activities"], ["USERS", "/users"], ["ME", "/users/@me"]];
@@ -149,7 +172,7 @@ process.on('uncaughtException', async (error) => {
         }
     }
 
-    const MatchedCode = currentJs.match(regex);
+    const MatchedCode = beautified.match(regex);
 
     if (!MatchedCode) {
         console.error("Couldn't find the code to replace");
@@ -162,7 +185,7 @@ process.on('uncaughtException', async (error) => {
     beforeCode.push(`window = {}`);
     beforeCode.push(GlobalEnv);
 
-    const code = currentJs.slice(start, end);
+    const code = beautified.slice(start, end);
     const keys = Object.keys(freezeCalls);
     const newCode = code.replace(keys[0] + " = Object.fre", "FirstRoutes = Object.fre").replace(keys[1] + " = Object.fre", "SecondRoutes = Object.fre");
 
