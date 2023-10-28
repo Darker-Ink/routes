@@ -31,6 +31,30 @@ const ErrorHooks = config.Webhooks.filter((hook) => hook.send.errors);
 let errorsSent = 0;
 const regex = new RegExp(`\\b\\w+\\b(?=\\s*=\\s*"${config.Misc.id}")`);
 
+const TwoWayLinkStuff = {
+    TwoWayLinkType: {
+        MOBILE: "mobile",
+        DESKTOP: "desktop",
+        WEB: "web",
+        DEVICE_CODE: "device_code"
+    }
+};
+
+const MiscJoinStuff = {
+    JOIN: 1,
+    LISTEN: 3,
+    WATCH: 4,
+    JOIN_REQUEST: 5,
+    RTC: 1,
+    IOS_APP: 2,
+    WEB_APP: 3,
+    ANDROID_APP: 4,
+    SPEED_TEST: 5,
+    DEFAULT: 0,
+    HIGH_SCHOOL: 1,
+    COLLEGE: 2
+};
+
 process.on('unhandledRejection', async (reason, promise) => {
 
     console.error(reason);
@@ -131,8 +155,25 @@ process.on('uncaughtException', async (error) => {
 
         end = frozen.end;
 
+
         for (const proptery of frozen.arguments[0].properties) {
             const value = proptery.value.type;
+
+            let i = proptery?.value?.body?.callee?.object?.arguments?.find(x => x?.type === "MemberExpression")?.object ?? proptery?.value?.body?.arguments?.find(arg => arg?.type === "MemberExpression")
+
+            if (i) {
+                const name = i.object.name;
+                const property = i.property.name;
+
+                const MiscStuff = MiscJoinStuff[property]
+                const TwoWayStuff = TwoWayLinkStuff[property];
+
+                if (MiscStuff) {
+                    beforeCode.push(`const ${name} = ${JSON.stringify(MiscJoinStuff)}`);
+                } else if (TwoWayStuff) {
+                    beforeCode.push(`const ${name} = ${JSON.stringify(TwoWayLinkStuff)}`);
+                }
+            }
 
             if (value === "ConditionalExpression") {
                 beforeCode.push(`const ${proptery.value.test.object.name} = { ${proptery.value.test.property.name}: null }`);
