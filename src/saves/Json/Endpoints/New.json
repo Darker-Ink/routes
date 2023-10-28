@@ -1,9 +1,1 @@
-[
-    {
-        "route": "/users/@me/emoji-captions",
-        "args": [],
-        "firstSeen": 1697843615403,
-        "oldRoutes": [],
-        "key": "EMOJI_CAPTIONS_GET"
-    }
-]
+[]

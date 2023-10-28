@@ -62,14 +62,24 @@
         "key": "USER_ACTIVITY_METADATA"
     },
     "USER_ACTIVITY_JOIN": {
-        "route": "/users/:userId/sessions/:unknown/activities/:unknown/null",
+        "route": "/users/:userId/sessions/:unknown/activities/:unknown/1",
         "args": [
             ":userId",
             ":unknown",
             ":unknown"
         ],
         "firstSeen": 1682214225051,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/users/:userId/sessions/:unknown/activities/:unknown/null",
+                "args": [
+                    ":userId",
+                    ":unknown",
+                    ":unknown"
+                ],
+                "changedAt": 1698526290377
+            }
+        ],
         "key": "USER_ACTIVITY_JOIN"
     },
     "USER_ACTIVITY_STATISTICS": {
@@ -2847,13 +2857,22 @@
         "key": "CONNECTIONS_AUTHORIZE_LINK"
     },
     "CONNECTIONS_AUTHORIZE_LINK_DEVICE": {
-        "route": "/connections/:unknown/authorize?two_way_link=true&two_way_link_type=null&two_way_user_code=:unknown",
+        "route": "/connections/:unknown/authorize?two_way_link=true&two_way_link_type=device_code&two_way_user_code=:unknown",
         "args": [
             ":unknown",
             ":unknown"
         ],
         "firstSeen": 1682214264538,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/connections/:unknown/authorize?two_way_link=true&two_way_link_type=null&two_way_user_code=:unknown",
+                "args": [
+                    ":unknown",
+                    ":unknown"
+                ],
+                "changedAt": 1698526290383
+            }
+        ],
         "key": "CONNECTIONS_AUTHORIZE_LINK_DEVICE"
     },
     "CONNECTION_REFRESH": {

@@ -682,13 +682,22 @@
         "key": "PICK_GUILD_SETTINGS"
     },
     "GUILD_EVENT_DETAILS": {
-        "route": "/events/:unknown/:unknown",
+        "route": "/events/:unknown/:unknown/:unknown",
         "args": [
             ":unknown",
             ":unknown"
         ],
         "firstSeen": 1683171333368,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/events/:unknown/:unknown",
+                "args": [
+                    ":unknown",
+                    ":unknown"
+                ],
+                "changedAt": 1698522985619
+            }
+        ],
         "key": "GUILD_EVENT_DETAILS"
     },
     "FEATURE": {
