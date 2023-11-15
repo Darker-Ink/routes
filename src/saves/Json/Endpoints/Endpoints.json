@@ -3483,23 +3483,41 @@
         "key": "GUILD_EVENTS_FOR_GUILD"
     },
     "GUILD_EVENT_USERS": {
-        "route": "/guilds/:guildId/scheduled-events/:unknown/users",
+        "route": "/guilds/:guildId/scheduled-events/:unknown/:unknown/users",
         "args": [
             ":guildId",
             ":unknown"
         ],
         "firstSeen": 1682214264556,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/guilds/:guildId/scheduled-events/:unknown/users",
+                "args": [
+                    ":guildId",
+                    ":unknown"
+                ],
+                "changedAt": 1700030071854
+            }
+        ],
         "key": "GUILD_EVENT_USERS"
     },
     "USER_GUILD_EVENT": {
-        "route": "/guilds/:guildId/scheduled-events/:unknown/users/@me",
+        "route": "/guilds/:guildId/scheduled-events/:unknown/:unknown/users/@me",
         "args": [
             ":guildId",
             ":unknown"
         ],
         "firstSeen": 1682214264556,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/guilds/:guildId/scheduled-events/:unknown/users/@me",
+                "args": [
+                    ":guildId",
+                    ":unknown"
+                ],
+                "changedAt": 1700030071854
+            }
+        ],
         "key": "USER_GUILD_EVENT"
     },
     "USER_GUILD_EVENTS": {
@@ -4568,15 +4586,6 @@
         "oldRoutes": [],
         "key": "MESSAGE_PREVIEWS"
     },
-    "GUILD_CHANNEL_EMOJIS": {
-        "route": "/guilds/:guildId/get-channel-emojis",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1683591023591,
-        "oldRoutes": [],
-        "key": "GUILD_CHANNEL_EMOJIS"
-    },
     "GUILD_INCIDENT_ACTIONS": {
         "route": "/guilds/:guildId/incident-actions",
         "args": [
@@ -5400,5 +5409,15 @@
         "firstSeen": 1698940485923,
         "oldRoutes": [],
         "key": "EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES"
+    },
+    "GUILD_EVENT_USER_COUNTS": {
+        "route": "/guilds/:guildId/scheduled-events/:unknown/users/counts",
+        "args": [
+            ":guildId",
+            ":unknown"
+        ],
+        "firstSeen": 1700030071852,
+        "oldRoutes": [],
+        "key": "GUILD_EVENT_USER_COUNTS"
     }
 }

@@ -1,89 +1,12 @@
 [
     {
-        "route": "/collectibles-products/:unknown",
+        "route": "/guilds/:guildId/scheduled-events/:unknown/users/counts",
         "args": [
+            ":guildId",
             ":unknown"
         ],
-        "firstSeen": 1698940485908,
+        "firstSeen": 1700030071852,
         "oldRoutes": [],
-        "key": "COLLECTIBLES_PRODUCTS"
-    },
-    {
-        "route": "/users/username/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1698940485913,
-        "oldRoutes": [],
-        "key": "USERNAME_LOOKUP"
-    },
-    {
-        "route": "/reporting/unauthenticated/:unknown/code",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1698940485918,
-        "oldRoutes": [],
-        "key": "SEND_UNAUTHENTICATED_REPORT_PINCODE"
-    },
-    {
-        "route": "/reporting/unauthenticated/:unknown/verify",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1698940485918,
-        "oldRoutes": [],
-        "key": "VERIFY_UNAUTHENTICATED_REPORT"
-    },
-    {
-        "route": "/user-offers/create/:unknown/:unknown",
-        "args": [
-            ":unknown",
-            ":unknown"
-        ],
-        "firstSeen": 1698940485922,
-        "oldRoutes": [],
-        "key": "CREATE_USER_OFFER"
-    },
-    {
-        "route": "/user-offers/:unknown/:unknown",
-        "args": [
-            ":unknown",
-            ":unknown"
-        ],
-        "firstSeen": 1698940485922,
-        "oldRoutes": [],
-        "key": "DELETE_USER_OFFER"
-    },
-    {
-        "route": "/user-offers/:unknown/:unknown/unack",
-        "args": [
-            ":unknown",
-            ":unknown"
-        ],
-        "firstSeen": 1698940485922,
-        "oldRoutes": [],
-        "key": "UNACK_USER_OFFER"
-    },
-    {
-        "route": "/user-offers",
-        "args": [],
-        "firstSeen": 1698940485922,
-        "oldRoutes": [],
-        "key": "USER_OFFERS"
-    },
-    {
-        "route": "/user-offer-ids",
-        "args": [],
-        "firstSeen": 1698940485923,
-        "oldRoutes": [],
-        "key": "USER_OFFER_IDS"
-    },
-    {
-        "route": "/messages/explicit-media",
-        "args": [],
-        "firstSeen": 1698940485923,
-        "oldRoutes": [],
-        "key": "EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES"
+        "key": "GUILD_EVENT_USER_COUNTS"
     }
 ]
