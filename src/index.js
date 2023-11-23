@@ -115,7 +115,7 @@ const run = async () => {
     };
 
     if (!fs.existsSync(path.join(__dirname, './metadata.json'))) {
-        fs.writeFileSync(path.join(__dirname, './metadata.json'), JSON.stringify({}));
+        fs.writeFileSync(path.join(__dirname, './metadata.json'), JSON.stringify({lastCheckDate: 0}));
     }
 
     const metadata = JSON.parse(fs.readFileSync(path.join(__dirname, './metadata.json')));
