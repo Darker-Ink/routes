@@ -5419,5 +5419,12 @@
         "firstSeen": 1700030071852,
         "oldRoutes": [],
         "key": "GUILD_EVENT_USER_COUNTS"
+    },
+    "ACCOUNT_NOTIFICATION_SETTINGS": {
+        "route": "/users/@me/notification-settings",
+        "args": [],
+        "firstSeen": 1700775670660,
+        "oldRoutes": [],
+        "key": "ACCOUNT_NOTIFICATION_SETTINGS"
     }
 }
