@@ -8,6 +8,8 @@ const config = require('./ConfigManager.js').getConfig();
 const ErrorHooks = config.Webhooks.filter((hook) => hook.send.errors);
 let errorsSent = 0;
 
+term.yellow('Starting route finder...\n');
+
 process.on('unhandledRejection', async (reason, promise) => {
 
   if (errorsSent >= 10) {
@@ -147,7 +149,9 @@ function newRoute(value, route) {
     }
   }
 
+  term.yellow(`\nArgs: ${newArgs.join(', ')}`)
   const uppped = value(...newArgs);
+  term.yellow(`\nRoute: ${uppped}`);
 
   return {
     route: uppped,

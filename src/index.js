@@ -114,6 +114,12 @@ const run = async () => {
         Routes: JSON.parse(fs.readFileSync(paths.Routes)),
     };
 
+    if (!fs.existsSync(path.join(__dirname, './metadata.json'))) {
+        fs.writeFileSync(path.join(__dirname, './metadata.json'), JSON.stringify({}));
+    }
+
+    const metadata = JSON.parse(fs.readFileSync(path.join(__dirname, './metadata.json')));
+
     let message = "";
 
     if (RouteStuff.ChangedEndpoints.length > 0) {
@@ -182,8 +188,16 @@ const run = async () => {
         return;
     }
 
+    // if last check date is more then 1 day ago then add an extra message saying sorry for the delay
+    if (metadata.lastCheckDate && Date.now() - metadata.lastCheckDate > 86400000) {
+        message += `\nSorry for the delay!`;
+    }
 
     message += `\n(Any thing marked as :unknown is an unknown parameter)\n`;
+
+    metadata.lastCheckDate = Date.now();
+
+    fs.writeFileSync(path.join(__dirname, './metadata.json'), JSON.stringify(metadata));
 
     return message;
 };

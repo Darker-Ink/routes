@@ -71,8 +71,6 @@ process.on('uncaughtException', async (error) => {
 
 const downloadUrl = "https://raw.githubusercontent.com/Darker-Ink/endpoint-downloader/master/currentRoutes.js";
 
-console.clear();
-
 const progressBar = term.progressBar({
     width: 80,
     title: term.green('Downloading Current.js...'),

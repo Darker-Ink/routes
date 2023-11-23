@@ -86,6 +86,8 @@ const newRoutes = [];
 const changedRoutes = [];
 const allRoutes = [];
 
+term.yellow('Starting Endpoint Finder...\n');
+
 // mappings for the different times of paths
 const map = {
   guild: ':guildId',
@@ -142,7 +144,9 @@ function newRoute(value, route) {
     }
   }
 
+  term.yellow(`\nArgs: ${newArgs.join(', ')}`);
   const uppped = value(...newArgs);
+  term.yellow(`\nEndpoint: ${uppped}`);
 
   return {
     route: uppped,

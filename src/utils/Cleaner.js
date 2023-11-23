@@ -17,6 +17,7 @@ const options = {
     "e4x": false,
     "indent_empty_lines": false
 };
+const term = require('terminal-kit').terminal;
 const js_beautify = require("js-beautify").js_beautify;
 const dashAst = require("dash-ast");
 const acorn = require("acorn");
@@ -30,6 +31,8 @@ const GetGlobalEnv = require("./GlobalEnv");
 const ErrorHooks = config.Webhooks.filter((hook) => hook.send.errors);
 let errorsSent = 0;
 const regex = new RegExp(`\\b\\w+\\b(?=\\s*=\\s*"${config.Misc.id}")`);
+
+term.yellow("Cleaning...\n");
 
 const TwoWayLinkStuff = {
     TwoWayLinkType: {
@@ -124,6 +127,9 @@ process.on('uncaughtException', async (error) => {
     const parsed = acorn.parse(beautified, {
         ecmaVersion: 2020,
     });
+
+    term.yellow("\nBeautified");
+
     const checkRoutes = [["BILLING_PREFIX", "/billing"], ["FRIENDS", "/channels/@me"], ["LOGIN", "/login"], ["ACTIVITIES", "/activities"], ["USERS", "/users"], ["ME", "/users/@me"]];
     const freezeCalls = {};
 
@@ -229,6 +235,9 @@ process.on('uncaughtException', async (error) => {
     const code = beautified.slice(start, end);
     const keys = Object.keys(freezeCalls);
     const newCode = code.replace(keys[0] + " = Object.fre", "FirstRoutes = Object.fre").replace(keys[1] + " = Object.fre", "SecondRoutes = Object.fre");
+
+    term.yellow("\nReplaced");
+    console.log(newCode);
 
     // just some fake location code in case it gets used
     const fakeLocationCode = `const location = { protocol: "https", host: "discord.com", pathname: "/api/v9" };`;
