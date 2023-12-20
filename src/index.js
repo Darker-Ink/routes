@@ -95,6 +95,12 @@ const runStuff = () => {
         npmStart.on('close', () => {
             resolve();
         });
+
+        setTimeout(() => {
+            console.warn("Had to kill after 8 seconds")
+            npmStart.kill('SIGKILL');
+            resolve();
+        }, 8000);
     });
 };
 
