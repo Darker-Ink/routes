@@ -5426,5 +5426,95 @@
         "firstSeen": 1700775670660,
         "oldRoutes": [],
         "key": "ACCOUNT_NOTIFICATION_SETTINGS"
+    },
+    "VOICE_CHANNEL_NOTIFICATIONS": {
+        "route": "/channels/:channelId/voice-push",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1703085409628,
+        "oldRoutes": [],
+        "key": "VOICE_CHANNEL_NOTIFICATIONS"
+    },
+    "COLLECTIBLES_VALID_GIFT_RECIPIENT": {
+        "route": "/users/@me/valid-collectibles-gift-recipient",
+        "args": [],
+        "firstSeen": 1703085409628,
+        "oldRoutes": [],
+        "key": "COLLECTIBLES_VALID_GIFT_RECIPIENT"
+    },
+    "FRIEND_FINDER_VIEWED_SUGGESTIONS": {
+        "route": "/friend-finder/viewed-suggestions",
+        "args": [],
+        "firstSeen": 1703085409630,
+        "oldRoutes": [],
+        "key": "FRIEND_FINDER_VIEWED_SUGGESTIONS"
+    },
+    "USER_GUILD_SETTINGS_BULK": {
+        "route": "/users/@me/guilds/settings",
+        "args": [],
+        "firstSeen": 1703085409631,
+        "oldRoutes": [],
+        "key": "USER_GUILD_SETTINGS_BULK"
+    },
+    "BILLING_NITRO_AFFINITY": {
+        "route": "/users/@me/billing/nitro-affinity",
+        "args": [],
+        "firstSeen": 1703085409632,
+        "oldRoutes": [],
+        "key": "BILLING_NITRO_AFFINITY"
+    },
+    "SUBMIT_REPORT_SECOND_LOOK": {
+        "route": "/reporting/review",
+        "args": [],
+        "firstSeen": 1703085409635,
+        "oldRoutes": [],
+        "key": "SUBMIT_REPORT_SECOND_LOOK"
+    },
+    "NOTIFICATION_SNAPSHOTS": {
+        "route": "/users/@me/notification-settings/snapshots",
+        "args": [],
+        "firstSeen": 1703085409638,
+        "oldRoutes": [],
+        "key": "NOTIFICATION_SNAPSHOTS"
+    },
+    "NOTIFICATION_SNAPSHOT": {
+        "route": "/users/@me/notification-settings/snapshots/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1703085409638,
+        "oldRoutes": [],
+        "key": "NOTIFICATION_SNAPSHOT"
+    },
+    "RESTORE_NOTIFICATION_SNAPSHOT": {
+        "route": "/users/@me/notification-settings/snapshots/:unknown/restore-guilds",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1703085409638,
+        "oldRoutes": [],
+        "key": "RESTORE_NOTIFICATION_SNAPSHOT"
+    },
+    "PREMIUM_MARKETING": {
+        "route": "/premium-marketing",
+        "args": [],
+        "firstSeen": 1703085409639,
+        "oldRoutes": [],
+        "key": "PREMIUM_MARKETING"
+    },
+    "QUESTS_CURRENT_QUESTS": {
+        "route": "/quests/@me",
+        "args": [],
+        "firstSeen": 1703085409639,
+        "oldRoutes": [],
+        "key": "QUESTS_CURRENT_QUESTS"
+    },
+    "ATTACHMENTS_REFRESH_URLS": {
+        "route": "/attachments/refresh-urls",
+        "args": [],
+        "firstSeen": 1703085409639,
+        "oldRoutes": [],
+        "key": "ATTACHMENTS_REFRESH_URLS"
     }
 }
