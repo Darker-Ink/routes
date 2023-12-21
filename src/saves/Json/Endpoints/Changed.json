@@ -1,1 +1,29 @@
-[]
+[
+    {
+        "route": "/connections/:unknown/authorize?two_way_link=true&two_way_link_type=null&two_way_user_code=:unknown",
+        "args": [
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1682214264538,
+        "oldRoutes": [
+            {
+                "route": "/connections/:unknown/authorize?two_way_link=true&two_way_link_type=null&two_way_user_code=:unknown",
+                "args": [
+                    ":unknown",
+                    ":unknown"
+                ],
+                "changedAt": 1698526290383
+            },
+            {
+                "route": "/connections/:unknown/authorize?two_way_link=true&two_way_link_type=device_code&two_way_user_code=:unknown",
+                "args": [
+                    ":unknown",
+                    ":unknown"
+                ],
+                "changedAt": 1703183993450
+            }
+        ],
+        "key": "CONNECTIONS_AUTHORIZE_LINK_DEVICE"
+    }
+]
