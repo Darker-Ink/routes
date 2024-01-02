@@ -2857,7 +2857,7 @@
         "key": "CONNECTIONS_AUTHORIZE_LINK"
     },
     "CONNECTIONS_AUTHORIZE_LINK_DEVICE": {
-        "route": "/connections/:unknown/authorize?two_way_link=true&two_way_link_type=null&two_way_user_code=:unknown",
+        "route": "/connections/:unknown/authorize?two_way_link=true&two_way_link_type=device_code&two_way_user_code=:unknown",
         "args": [
             ":unknown",
             ":unknown"
@@ -2895,6 +2895,30 @@
                     ":unknown"
                 ],
                 "changedAt": 1703185279350
+            },
+            {
+                "route": "/connections/:unknown/authorize?two_way_link=true&two_way_link_type=null&two_way_user_code=:unknown",
+                "args": [
+                    ":unknown",
+                    ":unknown"
+                ],
+                "changedAt": 1703191225243
+            },
+            {
+                "route": "/connections/:unknown/authorize?two_way_link=true&two_way_link_type=device_code&two_way_user_code=:unknown",
+                "args": [
+                    ":unknown",
+                    ":unknown"
+                ],
+                "changedAt": 1703194454551
+            },
+            {
+                "route": "/connections/:unknown/authorize?two_way_link=true&two_way_link_type=null&two_way_user_code=:unknown",
+                "args": [
+                    ":unknown",
+                    ":unknown"
+                ],
+                "changedAt": 1703204996533
             }
         ],
         "key": "CONNECTIONS_AUTHORIZE_LINK_DEVICE"
@@ -5540,5 +5564,14 @@
         "firstSeen": 1703085409639,
         "oldRoutes": [],
         "key": "ATTACHMENTS_REFRESH_URLS"
+    },
+    "QUESTS_HEARTBEAT": {
+        "route": "/quests/:unknown/heartbeat",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1704231534749,
+        "oldRoutes": [],
+        "key": "QUESTS_HEARTBEAT"
     }
 }

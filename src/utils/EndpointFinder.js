@@ -144,9 +144,9 @@ function newRoute(value, route) {
     }
   }
 
-  term.yellow(`\nArgs: ${newArgs.join(', ')}`);
+  // term.yellow(`\nArgs: ${newArgs.join(', ')}`);
   const uppped = value(...newArgs);
-  term.yellow(`\nEndpoint: ${uppped}`);
+  // term.yellow(`\nEndpoint: ${uppped}`);
 
   return {
     route: uppped,
@@ -181,7 +181,7 @@ Object.entries(routes).forEach(([key, value]) => {
         changedAt: Date.now(),
       });
       routeKey.route = route;
-      changedRoutes.push(routeKey);
+      if (routeKey.key != "CONNECTIONS_AUTHORIZE_LINK_DEVICE") changedRoutes.push(routeKey);
       allRoutes.push(routeKey);
     } else {
       allRoutes.push(routeKey);

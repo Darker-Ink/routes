@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "route": "/quests/:unknown/heartbeat",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1704231534749,
+        "oldRoutes": [],
+        "key": "QUESTS_HEARTBEAT"
+    }
+]
