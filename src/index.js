@@ -88,21 +88,12 @@ const paths = {
 
 const runStuff = () => {
     return new Promise((resolve) => {
-        let npmStart
-        
-        let int = setTimeout(() => {
-            console.warn("Had to kill after 12 seconds")
-            npmStart.kill('SIGKILL');
-            resolve();
-        }, 12000);
-
-        npmStart = spawn('npm', ['start'], {
+        let npmStart = spawn('npm', ['start'], {
             shell: true, stdio: 'inherit'
         });
 
         npmStart.on('close', () => {
             resolve();
-            clearTimeout(int);
         });
     });
 };

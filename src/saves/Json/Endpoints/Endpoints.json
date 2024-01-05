@@ -5573,5 +5573,39 @@
         "firstSeen": 1704231534749,
         "oldRoutes": [],
         "key": "QUESTS_HEARTBEAT"
+    },
+    "QUESTS_REWARD_CODE": {
+        "route": "/quests/:unknown/reward-code",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1704425629944,
+        "oldRoutes": [],
+        "key": "QUESTS_REWARD_CODE"
+    },
+    "QUESTS_ENROLL": {
+        "route": "/quests/:unknown/enroll",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1704425629944,
+        "oldRoutes": [],
+        "key": "QUESTS_ENROLL"
+    },
+    "GAME_INVITE": {
+        "route": "/game-invite/@me/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1704473867943,
+        "oldRoutes": [],
+        "key": "GAME_INVITE"
+    },
+    "GAME_INVITES": {
+        "route": "/game-invite/@me",
+        "args": [],
+        "firstSeen": 1704473867943,
+        "oldRoutes": [],
+        "key": "GAME_INVITES"
     }
 }
