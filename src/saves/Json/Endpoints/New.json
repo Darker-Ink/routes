@@ -1,18 +1,11 @@
 [
     {
-        "route": "/game-invite/@me/:unknown",
+        "route": "/safety-hub/request-review/:unknown",
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1704473867943,
+        "firstSeen": 1704833985944,
         "oldRoutes": [],
-        "key": "GAME_INVITE"
-    },
-    {
-        "route": "/game-invite/@me",
-        "args": [],
-        "firstSeen": 1704473867943,
-        "oldRoutes": [],
-        "key": "GAME_INVITES"
+        "key": "SAFETY_HUB_REQUEST_REVIEW"
     }
 ]

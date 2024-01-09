@@ -5607,5 +5607,14 @@
         "firstSeen": 1704473867943,
         "oldRoutes": [],
         "key": "GAME_INVITES"
+    },
+    "SAFETY_HUB_REQUEST_REVIEW": {
+        "route": "/safety-hub/request-review/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1704833985944,
+        "oldRoutes": [],
+        "key": "SAFETY_HUB_REQUEST_REVIEW"
     }
 }
