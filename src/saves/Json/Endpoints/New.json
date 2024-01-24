@@ -1,11 +1,11 @@
 [
     {
-        "route": "/safety-hub/request-review/:unknown",
+        "route": "/safety-hub/suspended/request-review/:unknown",
         "args": [
             ":unknown"
         ],
-        "firstSeen": 1704833985944,
+        "firstSeen": 1706121186033,
         "oldRoutes": [],
-        "key": "SAFETY_HUB_REQUEST_REVIEW"
+        "key": "SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW"
     }
 ]

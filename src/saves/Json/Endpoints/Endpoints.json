@@ -5616,5 +5616,31 @@
         "firstSeen": 1704833985944,
         "oldRoutes": [],
         "key": "SAFETY_HUB_REQUEST_REVIEW"
+    },
+    "SAFETY_HUB_SUSPENDED": {
+        "route": "/safety-hub/suspended/@me",
+        "args": [],
+        "firstSeen": 1706087885354,
+        "oldRoutes": [],
+        "key": "SAFETY_HUB_SUSPENDED"
+    },
+    "POLL_EXPIRE": {
+        "route": "/channels/:channelId/messages/:messageId/expire",
+        "args": [
+            ":channelId",
+            ":messageId"
+        ],
+        "firstSeen": 1706087885355,
+        "oldRoutes": [],
+        "key": "POLL_EXPIRE"
+    },
+    "SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW": {
+        "route": "/safety-hub/suspended/request-review/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1706121186033,
+        "oldRoutes": [],
+        "key": "SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW"
     }
 }
