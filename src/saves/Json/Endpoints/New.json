@@ -1,9 +1,9 @@
 [
     {
-        "route": "/search/favorites",
+        "route": "/attachments/sender-report-false-positive",
         "args": [],
-        "firstSeen": 1706203900449,
+        "firstSeen": 1706223189536,
         "oldRoutes": [],
-        "key": "SEARCH_FAVORITES"
+        "key": "EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE"
     }
 ]
