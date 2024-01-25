@@ -5642,5 +5642,12 @@
         "firstSeen": 1706121186033,
         "oldRoutes": [],
         "key": "SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW"
+    },
+    "SEARCH_FAVORITES": {
+        "route": "/search/favorites",
+        "args": [],
+        "firstSeen": 1706203900449,
+        "oldRoutes": [],
+        "key": "SEARCH_FAVORITES"
     }
 }
