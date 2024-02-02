@@ -5275,13 +5275,22 @@
         "key": "GUILD_CLYDE_ADD_MEMBER"
     },
     "POLL_ANSWERS": {
-        "route": "/channels/:channelId/polls/:unknown/answers",
+        "route": "/channels/:channelId/polls/:unknown/answers/@me",
         "args": [
             ":channelId",
             ":unknown"
         ],
         "firstSeen": 1696261135832,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/channels/:channelId/polls/:unknown/answers",
+                "args": [
+                    ":channelId",
+                    ":unknown"
+                ],
+                "changedAt": 1706839251153
+            }
+        ],
         "key": "POLL_ANSWERS"
     },
     "EXPLICIT_MEDIA_SCAN_MESSAGES": {
@@ -5656,5 +5665,14 @@
         "firstSeen": 1706223189536,
         "oldRoutes": [],
         "key": "EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE"
+    },
+    "USER_SURVEY_SEEN": {
+        "route": "/users/@me/survey/:unknown/seen",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1706910520248,
+        "oldRoutes": [],
+        "key": "USER_SURVEY_SEEN"
     }
 }

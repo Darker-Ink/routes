@@ -1,9 +1,11 @@
 [
     {
-        "route": "/attachments/sender-report-false-positive",
-        "args": [],
-        "firstSeen": 1706223189536,
+        "route": "/users/@me/survey/:unknown/seen",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1706910520248,
         "oldRoutes": [],
-        "key": "EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE"
+        "key": "USER_SURVEY_SEEN"
     }
 ]
