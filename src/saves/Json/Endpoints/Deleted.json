@@ -1,1 +1,41 @@
-[]
+[
+    {
+        "route": "/users/@me/inventory",
+        "args": [],
+        "firstSeen": 1686337662039,
+        "oldRoutes": [],
+        "key": "INVENTORY_GET"
+    },
+    {
+        "route": "/guilds/:guildId/inventory/settings",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1687986123185,
+        "oldRoutes": [],
+        "key": "INVENTORY_UPDATE_SETTINGS"
+    },
+    {
+        "route": "/inventory/packs/:unknown/metadata",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1690484832288,
+        "oldRoutes": [],
+        "key": "INVENTORY_PACK_METADATA"
+    },
+    {
+        "route": "/users/@me/inventory/packs/add",
+        "args": [],
+        "firstSeen": 1691167793036,
+        "oldRoutes": [],
+        "key": "INVENTORY_ADD_PACK"
+    },
+    {
+        "route": "/users/@me/inventory/packs/remove",
+        "args": [],
+        "firstSeen": 1691167793038,
+        "oldRoutes": [],
+        "key": "INVENTORY_REMOVE_PACK"
+    }
+]

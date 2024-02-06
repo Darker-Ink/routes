@@ -1,11 +1,1 @@
-[
-    {
-        "route": "/users/@me/survey/:unknown/seen",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1706910520248,
-        "oldRoutes": [],
-        "key": "USER_SURVEY_SEEN"
-    }
-]
+[]
