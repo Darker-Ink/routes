@@ -5617,5 +5617,16 @@
         "firstSeen": 1706223189536,
         "oldRoutes": [],
         "key": "EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE"
+    },
+    "POLL_ANSWER_VOTERS": {
+        "route": "/channels/:channelId/polls/:unknown/answers/:unknown",
+        "args": [
+            ":channelId",
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1707424887436,
+        "oldRoutes": [],
+        "key": "POLL_ANSWER_VOTERS"
     }
 }
