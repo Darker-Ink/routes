@@ -4650,15 +4650,6 @@
         "oldRoutes": [],
         "key": "MESSAGE_LOG_GUILD_CHANNELS"
     },
-    "POPULATE_CHANNEL_EMOJIS": {
-        "route": "/guilds/:guildId/populate-channel-emojis",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1684459807813,
-        "oldRoutes": [],
-        "key": "POPULATE_CHANNEL_EMOJIS"
-    },
     "GUILD_PRODUCT_CREATE_ATTACHMENT_UPLOAD": {
         "route": "/guilds/:guildId/products/attachments",
         "args": [
