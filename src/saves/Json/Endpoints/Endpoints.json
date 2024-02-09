@@ -5557,5 +5557,14 @@
         "firstSeen": 1707449929839,
         "oldRoutes": [],
         "key": "POLL_ANSWER_VOTERS"
+    },
+    "USER_SURVEY_SEEN": {
+        "route": "/users/@me/survey/:unknown/seen",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1707512973132,
+        "oldRoutes": [],
+        "key": "USER_SURVEY_SEEN"
     }
 }
