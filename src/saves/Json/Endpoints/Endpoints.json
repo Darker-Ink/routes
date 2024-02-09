@@ -2325,13 +2325,6 @@
         "oldRoutes": [],
         "key": "USER_SETTINGS_PROTO"
     },
-    "USER_CLYDE_CONSENT": {
-        "route": "/users/@me/clyde-consent",
-        "args": [],
-        "firstSeen": 1682214264523,
-        "oldRoutes": [],
-        "key": "USER_CLYDE_CONSENT"
-    },
     "GUILD_FEATURE_ACK": {
         "route": "/guilds/:guildId/ack/:unknown/:unknown",
         "args": [
@@ -4708,15 +4701,6 @@
         "oldRoutes": [],
         "key": "BROADCAST_PRIVATE_CHANNEL"
     },
-    "GUILD_CLYDE_SETTINGS": {
-        "route": "/guilds/:guildId/clyde-settings",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1686005990478,
-        "oldRoutes": [],
-        "key": "GUILD_CLYDE_SETTINGS"
-    },
     "EMIT_GOOGLE_PLAY_METRICS": {
         "route": "/google-play/emit-google-play-metrics",
         "args": [],
@@ -5178,54 +5162,6 @@
         "oldRoutes": [],
         "key": "GUILD_MEMBER_SEARCH"
     },
-    "CLYDE_PROFILES_AVATAR": {
-        "route": "/clyde-profiles/:unknown/avatars/:hash.:type",
-        "args": [
-            ":unknown",
-            ":hash",
-            ":type"
-        ],
-        "firstSeen": 1695950325435,
-        "oldRoutes": [],
-        "key": "CLYDE_PROFILES_AVATAR"
-    },
-    "CLYDE_PROFILES_BANNER": {
-        "route": "/clyde-profiles/:unknown/banners/:unknown.png",
-        "args": [
-            ":unknown",
-            ":unknown"
-        ],
-        "firstSeen": 1695950325458,
-        "oldRoutes": [],
-        "key": "CLYDE_PROFILES_BANNER"
-    },
-    "CLYDE_PROFILES": {
-        "route": "/clyde-profiles/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1695950325487,
-        "oldRoutes": [],
-        "key": "CLYDE_PROFILES"
-    },
-    "CLYDE_PROFILES_CREATE": {
-        "route": "/guilds/:guildId/clyde-profiles",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1695950325492,
-        "oldRoutes": [],
-        "key": "CLYDE_PROFILES_CREATE"
-    },
-    "GUILD_CLYDE_ADD_MEMBER": {
-        "route": "/guilds/:guildId/members/clyde",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1696013957653,
-        "oldRoutes": [],
-        "key": "GUILD_CLYDE_ADD_MEMBER"
-    },
     "POLL_ANSWERS": {
         "route": "/channels/:channelId/polls/:unknown/answers/@me",
         "args": [
@@ -5317,13 +5253,6 @@
         "firstSeen": 1697572344484,
         "oldRoutes": [],
         "key": "SEND_SOUNDBOARD_SOUND"
-    },
-    "CLYDE_PROFILES_GENERATE_PERSONALITY": {
-        "route": "/clyde-profiles/generate-personality",
-        "args": [],
-        "firstSeen": 1697583960508,
-        "oldRoutes": [],
-        "key": "CLYDE_PROFILES_GENERATE_PERSONALITY"
     },
     "EMOJI_CAPTIONS_GET": {
         "route": "/users/@me/emoji-captions",

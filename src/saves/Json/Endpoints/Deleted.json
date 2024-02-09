@@ -1,1 +1,73 @@
-[]
+[
+    {
+        "route": "/users/@me/clyde-consent",
+        "args": [],
+        "firstSeen": 1682214264523,
+        "oldRoutes": [],
+        "key": "USER_CLYDE_CONSENT"
+    },
+    {
+        "route": "/guilds/:guildId/clyde-settings",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1686005990478,
+        "oldRoutes": [],
+        "key": "GUILD_CLYDE_SETTINGS"
+    },
+    {
+        "route": "/clyde-profiles/:unknown/avatars/:hash.:type",
+        "args": [
+            ":unknown",
+            ":hash",
+            ":type"
+        ],
+        "firstSeen": 1695950325435,
+        "oldRoutes": [],
+        "key": "CLYDE_PROFILES_AVATAR"
+    },
+    {
+        "route": "/clyde-profiles/:unknown/banners/:unknown.png",
+        "args": [
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1695950325458,
+        "oldRoutes": [],
+        "key": "CLYDE_PROFILES_BANNER"
+    },
+    {
+        "route": "/clyde-profiles/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1695950325487,
+        "oldRoutes": [],
+        "key": "CLYDE_PROFILES"
+    },
+    {
+        "route": "/guilds/:guildId/clyde-profiles",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1695950325492,
+        "oldRoutes": [],
+        "key": "CLYDE_PROFILES_CREATE"
+    },
+    {
+        "route": "/guilds/:guildId/members/clyde",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1696013957653,
+        "oldRoutes": [],
+        "key": "GUILD_CLYDE_ADD_MEMBER"
+    },
+    {
+        "route": "/clyde-profiles/generate-personality",
+        "args": [],
+        "firstSeen": 1697583960508,
+        "oldRoutes": [],
+        "key": "CLYDE_PROFILES_GENERATE_PERSONALITY"
+    }
+]
