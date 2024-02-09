@@ -1,1 +1,13 @@
-[]
+[
+    {
+        "route": "/channels/:channelId/polls/:unknown/answers/:unknown",
+        "args": [
+            ":channelId",
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1707449929839,
+        "oldRoutes": [],
+        "key": "POLL_ANSWER_VOTERS"
+    }
+]
