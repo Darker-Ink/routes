@@ -1,11 +1,11 @@
 [
     {
-        "route": "/users/@me/survey/:unknown/seen",
+        "route": "/channels/:channelId/voice-background",
         "args": [
-            ":unknown"
+            ":channelId"
         ],
-        "firstSeen": 1707512973132,
+        "firstSeen": 1707843172044,
         "oldRoutes": [],
-        "key": "USER_SURVEY_SEEN"
+        "key": "UPDATE_VOICE_CHANNEL_BACKGROUND"
     }
 ]

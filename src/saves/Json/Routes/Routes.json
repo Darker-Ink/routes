@@ -864,5 +864,14 @@
         "firstSeen": 1703092284497,
         "oldRoutes": [],
         "key": "ACCOUNT_STANDING"
+    },
+    "QUESTS": {
+        "route": "/quests/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1707760856648,
+        "oldRoutes": [],
+        "key": "QUESTS"
     }
 }

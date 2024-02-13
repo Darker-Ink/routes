@@ -5566,5 +5566,14 @@
         "firstSeen": 1707512973132,
         "oldRoutes": [],
         "key": "USER_SURVEY_SEEN"
+    },
+    "UPDATE_VOICE_CHANNEL_BACKGROUND": {
+        "route": "/channels/:channelId/voice-background",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1707843172044,
+        "oldRoutes": [],
+        "key": "UPDATE_VOICE_CHANNEL_BACKGROUND"
     }
 }
