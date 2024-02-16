@@ -5591,5 +5591,15 @@
         "firstSeen": 1708103755360,
         "oldRoutes": [],
         "key": "MY_CONTENT_INVENTORY"
+    },
+    "QUESTS_DISMISS_CONTENT": {
+        "route": "/quests/:unknown/dismissible-content/:unknown/dismiss",
+        "args": [
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1708116456642,
+        "oldRoutes": [],
+        "key": "QUESTS_DISMISS_CONTENT"
     }
 }

@@ -1,9 +1,12 @@
 [
     {
-        "route": "/content-inventory/users/@me",
-        "args": [],
-        "firstSeen": 1708103755360,
+        "route": "/quests/:unknown/dismissible-content/:unknown/dismiss",
+        "args": [
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1708116456642,
         "oldRoutes": [],
-        "key": "MY_CONTENT_INVENTORY"
+        "key": "QUESTS_DISMISS_CONTENT"
     }
 ]
