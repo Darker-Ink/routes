@@ -5575,5 +5575,21 @@
         "firstSeen": 1707843172044,
         "oldRoutes": [],
         "key": "UPDATE_VOICE_CHANNEL_BACKGROUND"
+    },
+    "ADD_SAFETY_WARNING": {
+        "route": "/channels/:channelId/add-safety-warning",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1707930062055,
+        "oldRoutes": [],
+        "key": "ADD_SAFETY_WARNING"
+    },
+    "MY_CONTENT_INVENTORY": {
+        "route": "/content-inventory/users/@me",
+        "args": [],
+        "firstSeen": 1708103755360,
+        "oldRoutes": [],
+        "key": "MY_CONTENT_INVENTORY"
     }
 }

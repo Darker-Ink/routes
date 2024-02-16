@@ -1,11 +1,9 @@
 [
     {
-        "route": "/channels/:channelId/voice-background",
-        "args": [
-            ":channelId"
-        ],
-        "firstSeen": 1707843172044,
+        "route": "/content-inventory/users/@me",
+        "args": [],
+        "firstSeen": 1708103755360,
         "oldRoutes": [],
-        "key": "UPDATE_VOICE_CHANNEL_BACKGROUND"
+        "key": "MY_CONTENT_INVENTORY"
     }
 ]
