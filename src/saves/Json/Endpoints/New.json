@@ -1,9 +1,1 @@
-[
-    {
-        "route": "/users/@me/billing/churn-user-offer",
-        "args": [],
-        "firstSeen": 1708120589539,
-        "oldRoutes": [],
-        "key": "CHURN_USER_OFFER"
-    }
-]
+[]
