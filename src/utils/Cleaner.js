@@ -31,6 +31,8 @@ const GetGlobalEnv = require("./GlobalEnv");
 const ErrorHooks = config.Webhooks.filter((hook) => hook.send.errors);
 let errorsSent = 0;
 const regex = new RegExp(`\\b\\w+\\b(?=\\s*=\\s*"${config.Misc.id}")`);
+const favoritesAndAtMe = /(\w+) = "(@\w+)"/g;
+
 
 term.yellow("Cleaning...\n");
 
@@ -227,6 +229,12 @@ process.on('uncaughtException', async (error) => {
         beforeCode.push(`const ${MatchedCode[0]} = "${config.Misc.id}"`);
     }
 
+    const moreMatchedCode = beautified.match(favoritesAndAtMe);
+
+    for (const match of moreMatchedCode) {
+        beforeCode.push(`let ${match}`);
+    }
+
     const GlobalEnv = await GetGlobalEnv();
 
     beforeCode.push(`window = {}`);
@@ -237,7 +245,7 @@ process.on('uncaughtException', async (error) => {
     const newCode = code.replace(keys[0] + " = Object.fre", "FirstRoutes = Object.fre").replace(keys[1] + " = Object.fre", "SecondRoutes = Object.fre");
 
     term.yellow("\nReplaced");
-    console.log(newCode);
+    // console.log(newCode);
 
     // just some fake location code in case it gets used
     const fakeLocationCode = `const location = { protocol: "https", host: "discord.com", pathname: "/api/v9" };`;
