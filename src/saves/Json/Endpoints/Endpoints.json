@@ -2993,17 +2993,6 @@
         "oldRoutes": [],
         "key": "AUTHORIZE_PAYMENT"
     },
-    "CALLSCOPE_LOGS": {
-        "route": "/callscope/logs/:unknown/user/:userId/%3Aunknown",
-        "args": [
-            ":unknown",
-            ":userId",
-            ":unknown"
-        ],
-        "firstSeen": 1682214264541,
-        "oldRoutes": [],
-        "key": "CALLSCOPE_LOGS"
-    },
     "INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS": {
         "route": "/users/@me/guilds/integration-application-ids",
         "args": [],
@@ -5515,13 +5504,22 @@
         "key": "SAFETY_HUB_SUSPENDED"
     },
     "POLL_EXPIRE": {
-        "route": "/channels/:channelId/messages/:messageId/expire",
+        "route": "/channels/:channelId/polls/:unknown/expire",
         "args": [
             ":channelId",
             ":messageId"
         ],
         "firstSeen": 1706087885355,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/channels/:channelId/messages/:messageId/expire",
+                "args": [
+                    ":channelId",
+                    ":messageId"
+                ],
+                "changedAt": 1711155631755
+            }
+        ],
         "key": "POLL_EXPIRE"
     },
     "SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW": {
@@ -5608,5 +5606,122 @@
         "firstSeen": 1708120589539,
         "oldRoutes": [],
         "key": "CHURN_USER_OFFER"
+    },
+    "WEBAUTHN_CONDITIONAL_UI_CHALLENGE": {
+        "route": "/auth/conditional/start",
+        "args": [],
+        "firstSeen": 1711155631751,
+        "oldRoutes": [],
+        "key": "WEBAUTHN_CONDITIONAL_UI_CHALLENGE"
+    },
+    "WEBAUTHN_CONDITIONAL_UI_LOGIN": {
+        "route": "/auth/conditional/finish",
+        "args": [],
+        "firstSeen": 1711155631751,
+        "oldRoutes": [],
+        "key": "WEBAUTHN_CONDITIONAL_UI_LOGIN"
+    },
+    "METRICS_V2": {
+        "route": "/metrics/v2",
+        "args": [],
+        "firstSeen": 1711155631752,
+        "oldRoutes": [],
+        "key": "METRICS_V2"
+    },
+    "USER_OFFER_REDEEM": {
+        "route": "/users/@me/billing/user-offer/redeem",
+        "args": [],
+        "firstSeen": 1711155631753,
+        "oldRoutes": [],
+        "key": "USER_OFFER_REDEEM"
+    },
+    "QUESTS_PREVIEW_STATUS": {
+        "route": "/quests/:unknown/preview/status",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1711155631755,
+        "oldRoutes": [],
+        "key": "QUESTS_PREVIEW_STATUS"
+    },
+    "QUESTS_PREVIEW_DISMISSIBILITY": {
+        "route": "/quests/:unknown/preview/dismissibility",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1711155631755,
+        "oldRoutes": [],
+        "key": "QUESTS_PREVIEW_DISMISSIBILITY"
+    },
+    "QUESTS_PREVIEW_COMPLETE": {
+        "route": "/quests/:unknown/preview/complete",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1711155631755,
+        "oldRoutes": [],
+        "key": "QUESTS_PREVIEW_COMPLETE"
+    },
+    "DELETE_SAFETY_WARNINGS": {
+        "route": "/channels/:channelId/safety-warnings",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1711155631755,
+        "oldRoutes": [],
+        "key": "DELETE_SAFETY_WARNINGS"
+    },
+    "SAFETY_WARNING_FALSE_POSITIVE": {
+        "route": "/channels/:channelId/safety-warning/report-false-positive",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1711155631755,
+        "oldRoutes": [],
+        "key": "SAFETY_WARNING_FALSE_POSITIVE"
+    },
+    "USER_LOOTBOX_DATA": {
+        "route": "/users/@me/lootboxes",
+        "args": [],
+        "firstSeen": 1711155631755,
+        "oldRoutes": [],
+        "key": "USER_LOOTBOX_DATA"
+    },
+    "USER_LOOTBOX_OPEN_ITEM": {
+        "route": "/users/@me/lootboxes/open",
+        "args": [],
+        "firstSeen": 1711155631755,
+        "oldRoutes": [],
+        "key": "USER_LOOTBOX_OPEN_ITEM"
+    },
+    "USER_LOOTBOX_REDEEM_PRIZE": {
+        "route": "/users/@me/lootboxes/redeem-prize",
+        "args": [],
+        "firstSeen": 1711155631755,
+        "oldRoutes": [],
+        "key": "USER_LOOTBOX_REDEEM_PRIZE"
+    },
+    "LOOTBOX_COUNT": {
+        "route": "/lootboxes/count",
+        "args": [],
+        "firstSeen": 1711155631755,
+        "oldRoutes": [],
+        "key": "LOOTBOX_COUNT"
+    },
+    "TENURE_REWARD_SYNC": {
+        "route": "/users/@me/tenure-reward/sync",
+        "args": [],
+        "firstSeen": 1711155631755,
+        "oldRoutes": [],
+        "key": "TENURE_REWARD_SYNC"
+    },
+    "USER_RECENT_GAMES": {
+        "route": "/users/:userId/profile/recent-games",
+        "args": [
+            ":userId"
+        ],
+        "firstSeen": 1711155631755,
+        "oldRoutes": [],
+        "key": "USER_RECENT_GAMES"
     }
 }
