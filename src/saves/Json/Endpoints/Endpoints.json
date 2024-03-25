@@ -5723,5 +5723,12 @@
         "firstSeen": 1711155631755,
         "oldRoutes": [],
         "key": "USER_RECENT_GAMES"
+    },
+    "EXPLICIT_MEDIA_GET_VALID_CONTENT_SCAN_VERSION": {
+        "route": "/explicit-media/current-version",
+        "args": [],
+        "firstSeen": 1711404327383,
+        "oldRoutes": [],
+        "key": "EXPLICIT_MEDIA_GET_VALID_CONTENT_SCAN_VERSION"
     }
 }
