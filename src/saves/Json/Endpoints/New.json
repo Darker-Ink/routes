@@ -1,9 +1,1 @@
-[
-    {
-        "route": "/auth/passwordless/start",
-        "args": [],
-        "firstSeen": 1711476981956,
-        "oldRoutes": [],
-        "key": "WEBAUTHN_PASSWORDLESS_CHALLENGE"
-    }
-]
+[]
