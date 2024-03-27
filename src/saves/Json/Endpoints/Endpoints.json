@@ -5737,5 +5737,14 @@
         "firstSeen": 1711476981956,
         "oldRoutes": [],
         "key": "WEBAUTHN_PASSWORDLESS_CHALLENGE"
+    },
+    "GUILD_JOIN_REQUEST_INTERVIEW": {
+        "route": "/join-requests/:unknown/interview",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1711561293140,
+        "oldRoutes": [],
+        "key": "GUILD_JOIN_REQUEST_INTERVIEW"
     }
 }
