@@ -5755,5 +5755,14 @@
         "firstSeen": 1711571833457,
         "oldRoutes": [],
         "key": "GUILD_CONVERT_TO_CLAN"
+    },
+    "GUILD_JOIN_REQUEST_BY_ID": {
+        "route": "/join-requests/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1711640611546,
+        "oldRoutes": [],
+        "key": "GUILD_JOIN_REQUEST_BY_ID"
     }
 }
