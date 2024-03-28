@@ -5764,5 +5764,12 @@
         "firstSeen": 1711640611546,
         "oldRoutes": [],
         "key": "GUILD_JOIN_REQUEST_BY_ID"
+    },
+    "GET_REFERRAL_ELIGIBLE_USERS": {
+        "route": "/users/@me/referrals/eligible-users",
+        "args": [],
+        "firstSeen": 1711668380573,
+        "oldRoutes": [],
+        "key": "GET_REFERRAL_ELIGIBLE_USERS"
     }
 }
