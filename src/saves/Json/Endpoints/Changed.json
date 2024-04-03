@@ -1,1 +1,15 @@
-[]
+[
+    {
+        "route": "/auth/mfa/:unknown",
+        "args": [],
+        "firstSeen": 1682214225068,
+        "oldRoutes": [
+            {
+                "route": "/auth/mfa/totp",
+                "args": [],
+                "changedAt": 1712186311038
+            }
+        ],
+        "key": "LOGIN_MFA"
+    }
+]
