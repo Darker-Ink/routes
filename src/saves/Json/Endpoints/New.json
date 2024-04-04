@@ -1,11 +1,1 @@
-[
-    {
-        "route": "/discovery/games/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1712263604942,
-        "oldRoutes": [],
-        "key": "DISCOVERY_GAME"
-    }
-]
+[]
