@@ -1,16 +1,1 @@
-[
-    {
-        "route": "/auth/mfa/sms",
-        "args": [],
-        "firstSeen": 1682214225069,
-        "oldRoutes": [],
-        "key": "LOGIN_SMS"
-    },
-    {
-        "route": "/auth/mfa/webauthn",
-        "args": [],
-        "firstSeen": 1682214264540,
-        "oldRoutes": [],
-        "key": "LOGIN_WEBAUTHN"
-    }
-]
+[]
