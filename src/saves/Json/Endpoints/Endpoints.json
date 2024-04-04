@@ -5763,5 +5763,14 @@
         "firstSeen": 1711668380573,
         "oldRoutes": [],
         "key": "GET_REFERRAL_ELIGIBLE_USERS"
+    },
+    "DISCOVERY_GAME": {
+        "route": "/discovery/games/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1712263604942,
+        "oldRoutes": [],
+        "key": "DISCOVERY_GAME"
     }
 }
