@@ -5772,5 +5772,14 @@
         "firstSeen": 1712263604942,
         "oldRoutes": [],
         "key": "DISCOVERY_GAME"
+    },
+    "QUESTS_CLAIM_REWARD": {
+        "route": "/quests/:unknown/claim-reward",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1712271883877,
+        "oldRoutes": [],
+        "key": "QUESTS_CLAIM_REWARD"
     }
 }
