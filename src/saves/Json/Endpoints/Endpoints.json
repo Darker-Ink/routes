@@ -5781,5 +5781,14 @@
         "firstSeen": 1712271883877,
         "oldRoutes": [],
         "key": "QUESTS_CLAIM_REWARD"
+    },
+    "APPLICATION_COMMAND_INDEX_APPLICATION": {
+        "route": "/applications/:applicationId/application-command-index",
+        "args": [
+            ":applicationId"
+        ],
+        "firstSeen": 1712332887750,
+        "oldRoutes": [],
+        "key": "APPLICATION_COMMAND_INDEX_APPLICATION"
     }
 }
