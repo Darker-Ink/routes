@@ -1,11 +1,1 @@
-[
-    {
-        "route": "/quests/:unknown/claim-reward",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1712271883877,
-        "oldRoutes": [],
-        "key": "QUESTS_CLAIM_REWARD"
-    }
-]
+[]
