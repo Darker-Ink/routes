@@ -5762,5 +5762,21 @@
         "firstSeen": 1712692888052,
         "oldRoutes": [],
         "key": "APPLICATION_UPLOAD_ATTACHMENT"
+    },
+    "USER_PERKS_DEMOS": {
+        "route": "/users/@me/perks-demos",
+        "args": [],
+        "firstSeen": 1712702419964,
+        "oldRoutes": [],
+        "key": "USER_PERKS_DEMOS"
+    },
+    "USER_PERKS_DEMOS_ACTIVATE": {
+        "route": "/users/@me/activate-perk-demo/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1712702419964,
+        "oldRoutes": [],
+        "key": "USER_PERKS_DEMOS_ACTIVATE"
     }
 }
