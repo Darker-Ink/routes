@@ -4739,15 +4739,6 @@
         "oldRoutes": [],
         "key": "USER_BROADCASTS"
     },
-    "ACTIVITY_UPLOAD_ATTACHMENT": {
-        "route": "/activities/:unknown/attachment",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1687327023728,
-        "oldRoutes": [],
-        "key": "ACTIVITY_UPLOAD_ATTACHMENT"
-    },
     "GUILD_INCIDENT_REPORT_FALSE_ALARM": {
         "route": "/guilds/:guildId/auto-moderation/false-alarm",
         "args": [
@@ -5672,34 +5663,6 @@
         "oldRoutes": [],
         "key": "SAFETY_WARNING_FALSE_POSITIVE"
     },
-    "USER_LOOTBOX_DATA": {
-        "route": "/users/@me/lootboxes",
-        "args": [],
-        "firstSeen": 1711155631755,
-        "oldRoutes": [],
-        "key": "USER_LOOTBOX_DATA"
-    },
-    "USER_LOOTBOX_OPEN_ITEM": {
-        "route": "/users/@me/lootboxes/open",
-        "args": [],
-        "firstSeen": 1711155631755,
-        "oldRoutes": [],
-        "key": "USER_LOOTBOX_OPEN_ITEM"
-    },
-    "USER_LOOTBOX_REDEEM_PRIZE": {
-        "route": "/users/@me/lootboxes/redeem-prize",
-        "args": [],
-        "firstSeen": 1711155631755,
-        "oldRoutes": [],
-        "key": "USER_LOOTBOX_REDEEM_PRIZE"
-    },
-    "LOOTBOX_COUNT": {
-        "route": "/lootboxes/count",
-        "args": [],
-        "firstSeen": 1711155631755,
-        "oldRoutes": [],
-        "key": "LOOTBOX_COUNT"
-    },
     "TENURE_REWARD_SYNC": {
         "route": "/users/@me/tenure-reward/sync",
         "args": [],
@@ -5790,5 +5753,14 @@
         "firstSeen": 1712332887750,
         "oldRoutes": [],
         "key": "APPLICATION_COMMAND_INDEX_APPLICATION"
+    },
+    "APPLICATION_UPLOAD_ATTACHMENT": {
+        "route": "/applications/:applicationId/attachment",
+        "args": [
+            ":applicationId"
+        ],
+        "firstSeen": 1712692888052,
+        "oldRoutes": [],
+        "key": "APPLICATION_UPLOAD_ATTACHMENT"
     }
 }
