@@ -1,9 +1,1 @@
-[
-    {
-        "route": "/reporting/unauthenticated/experiment",
-        "args": [],
-        "firstSeen": 1712725286275,
-        "oldRoutes": [],
-        "key": "DSA_EXPERIMENT_UNAUTHENTICATED"
-    }
-]
+[]
