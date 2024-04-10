@@ -105,48 +105,6 @@
         "oldRoutes": [],
         "key": "ACTIVITIES"
     },
-    "LOBBIES": {
-        "route": "/lobbies",
-        "args": [],
-        "firstSeen": 1682214225052,
-        "oldRoutes": [],
-        "key": "LOBBIES"
-    },
-    "LOBBY": {
-        "route": "/lobbies/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682214225052,
-        "oldRoutes": [],
-        "key": "LOBBY"
-    },
-    "LOBBY_MEMBER": {
-        "route": "/lobbies/:unknown/members/:memberId",
-        "args": [
-            ":unknown",
-            ":memberId"
-        ],
-        "firstSeen": 1682214225052,
-        "oldRoutes": [],
-        "key": "LOBBY_MEMBER"
-    },
-    "LOBBY_SEND": {
-        "route": "/lobbies/:unknown/send",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682214225052,
-        "oldRoutes": [],
-        "key": "LOBBY_SEND"
-    },
-    "LOBBY_SEARCH": {
-        "route": "/lobbies/search",
-        "args": [],
-        "firstSeen": 1682214225053,
-        "oldRoutes": [],
-        "key": "LOBBY_SEARCH"
-    },
     "NETWORKING_TOKEN": {
         "route": "/networking/token",
         "args": [],
