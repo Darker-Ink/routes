@@ -5750,5 +5750,12 @@
         "firstSeen": 1712845955955,
         "oldRoutes": [],
         "key": "APPLICATIONS_GAMES_SUPPLEMENTAL"
+    },
+    "ANNUAL_USER_OFFER": {
+        "route": "/users/@me/billing/annual-user-offer",
+        "args": [],
+        "firstSeen": 1712940504846,
+        "oldRoutes": [],
+        "key": "ANNUAL_USER_OFFER"
     }
 }
