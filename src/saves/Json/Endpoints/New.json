@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "route": "/clan/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1712947868750,
+        "oldRoutes": [],
+        "key": "GUILD_CLAN_INFO"
+    },
+    {
+        "route": "/users/@me/clan",
+        "args": [],
+        "firstSeen": 1712947868750,
+        "oldRoutes": [],
+        "key": "USER_SET_CLAN_IDENTITY"
+    }
+]
