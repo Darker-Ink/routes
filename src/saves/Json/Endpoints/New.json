@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "route": "/users/@me/guilds/:guildId/member/ack-dm-upsell-settings",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1713295197070,
+        "oldRoutes": [],
+        "key": "DM_SETTINGS_UPSELL_ACK"
+    }
+]
