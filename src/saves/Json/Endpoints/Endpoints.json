@@ -954,15 +954,6 @@
         "oldRoutes": [],
         "key": "CONNECTIONS_AUTHORIZE"
     },
-    "CONNECTIONS_AUTHORIZE_CONTINUATION": {
-        "route": "/connections/:unknown/authorize?continuation=true",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1682214225067,
-        "oldRoutes": [],
-        "key": "CONNECTIONS_AUTHORIZE_CONTINUATION"
-    },
     "CONNECTIONS_CALLBACK": {
         "route": "/connections/:unknown/callback",
         "args": [
@@ -998,25 +989,6 @@
         "firstSeen": 1682214225067,
         "oldRoutes": [],
         "key": "CONNECTION_ACCESS_TOKEN"
-    },
-    "CONNECTIONS_CALLBACK_CONTINUATION": {
-        "route": "/connections/:unknown/callback-continuation",
-        "args": [
-            ":unknown",
-            ":unknown"
-        ],
-        "firstSeen": 1682214225068,
-        "oldRoutes": [
-            {
-                "route": "/connections/:unknown/callback-continuation/:unknown",
-                "args": [
-                    ":unknown",
-                    ":unknown"
-                ],
-                "changedAt": 1682214264539
-            }
-        ],
-        "key": "CONNECTIONS_CALLBACK_CONTINUATION"
     },
     "NOTES": {
         "route": "/users/@me/notes",
