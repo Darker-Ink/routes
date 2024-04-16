@@ -5773,5 +5773,16 @@
         "firstSeen": 1712947868750,
         "oldRoutes": [],
         "key": "USER_SET_CLAN_IDENTITY"
+    },
+    "ACTIVITY_LEAVE": {
+        "route": "/applications/:applicationId/activities/:unknown/instances/:unknown/leave",
+        "args": [
+            ":applicationId",
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1713292653872,
+        "oldRoutes": [],
+        "key": "ACTIVITY_LEAVE"
     }
 }
