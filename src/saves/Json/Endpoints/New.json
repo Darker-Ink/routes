@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "route": "/clan/:unknown/settings",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1713358886172,
+        "oldRoutes": [],
+        "key": "CLAN_SETTINGS"
+    }
+]
