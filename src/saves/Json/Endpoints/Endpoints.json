@@ -4154,15 +4154,6 @@
         "oldRoutes": [],
         "key": "GUILD_FEED"
     },
-    "CHANNEL_HIGHLIGHTS": {
-        "route": "/guilds/:guildId/channel-highlights",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682214264570,
-        "oldRoutes": [],
-        "key": "CHANNEL_HIGHLIGHTS"
-    },
     "USER_EMAIL": {
         "route": "/users/@me/email",
         "args": [],
@@ -5730,15 +5721,6 @@
         "oldRoutes": [],
         "key": "ANNUAL_USER_OFFER"
     },
-    "GUILD_CLAN_INFO": {
-        "route": "/clan/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1712947868750,
-        "oldRoutes": [],
-        "key": "GUILD_CLAN_INFO"
-    },
     "USER_SET_CLAN_IDENTITY": {
         "route": "/users/@me/clan",
         "args": [],
@@ -5774,5 +5756,14 @@
         "firstSeen": 1713358886172,
         "oldRoutes": [],
         "key": "CLAN_SETTINGS"
+    },
+    "GUILD_CLAN_DISCOVERY_INFO": {
+        "route": "/discovery/:unknown/clan",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1713387685449,
+        "oldRoutes": [],
+        "key": "GUILD_CLAN_DISCOVERY_INFO"
     }
 }
