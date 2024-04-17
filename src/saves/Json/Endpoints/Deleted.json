@@ -1,11 +1,1 @@
-[
-    {
-        "route": "/guilds/:guildId/channel-highlights",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1682214264570,
-        "oldRoutes": [],
-        "key": "CHANNEL_HIGHLIGHTS"
-    }
-]
+[]
