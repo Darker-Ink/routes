@@ -5765,5 +5765,12 @@
         "firstSeen": 1713387685449,
         "oldRoutes": [],
         "key": "GUILD_CLAN_DISCOVERY_INFO"
+    },
+    "MY_SPOTIFY_CONTENT_INVENTORY": {
+        "route": "/content-inventory/users/@me/spotify",
+        "args": [],
+        "firstSeen": 1713513687070,
+        "oldRoutes": [],
+        "key": "MY_SPOTIFY_CONTENT_INVENTORY"
     }
 }
