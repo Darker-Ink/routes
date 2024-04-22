@@ -1,11 +1,1 @@
-[
-    {
-        "route": "/applications/:applicationId/disclosures",
-        "args": [
-            ":applicationId"
-        ],
-        "firstSeen": 1713806562420,
-        "oldRoutes": [],
-        "key": "APPLICATION_DISCLOSURES"
-    }
-]
+[]
