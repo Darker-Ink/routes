@@ -5772,5 +5772,14 @@
         "firstSeen": 1713513687070,
         "oldRoutes": [],
         "key": "MY_SPOTIFY_CONTENT_INVENTORY"
+    },
+    "APPLICATION_DISCLOSURES": {
+        "route": "/applications/:applicationId/disclosures",
+        "args": [
+            ":applicationId"
+        ],
+        "firstSeen": 1713806562420,
+        "oldRoutes": [],
+        "key": "APPLICATION_DISCLOSURES"
     }
 }
