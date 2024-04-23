@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "route": "/connections/:unknown/authorize-continue",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1713914901164,
+        "oldRoutes": [],
+        "key": "CONNECTIONS_AUTHORIZE_CONTINUE"
+    }
+]
