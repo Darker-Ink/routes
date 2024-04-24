@@ -5713,5 +5713,14 @@
         "firstSeen": 1713977363744,
         "oldRoutes": [],
         "key": "STORE_LAYOUT"
+    },
+    "MY_CONTENT_INVENTORY_APPLICATION": {
+        "route": "/content-inventory/users/@me/applications/:applicationId",
+        "args": [
+            ":applicationId"
+        ],
+        "firstSeen": 1713985761125,
+        "oldRoutes": [],
+        "key": "MY_CONTENT_INVENTORY_APPLICATION"
     }
 }
