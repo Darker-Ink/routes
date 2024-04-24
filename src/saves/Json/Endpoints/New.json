@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "route": "/applications/:applicationId/store-layout",
+        "args": [
+            ":applicationId"
+        ],
+        "firstSeen": 1713977363744,
+        "oldRoutes": [],
+        "key": "STORE_LAYOUT"
+    }
+]

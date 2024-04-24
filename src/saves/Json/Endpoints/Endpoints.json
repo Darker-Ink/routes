@@ -5704,5 +5704,14 @@
         "firstSeen": 1713806562420,
         "oldRoutes": [],
         "key": "APPLICATION_DISCLOSURES"
+    },
+    "STORE_LAYOUT": {
+        "route": "/applications/:applicationId/store-layout",
+        "args": [
+            ":applicationId"
+        ],
+        "firstSeen": 1713977363744,
+        "oldRoutes": [],
+        "key": "STORE_LAYOUT"
     }
 }
