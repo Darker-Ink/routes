@@ -5722,5 +5722,14 @@
         "firstSeen": 1713985761125,
         "oldRoutes": [],
         "key": "MY_CONTENT_INVENTORY_APPLICATION"
+    },
+    "DISABLE_CLAN": {
+        "route": "/clan/:unknown/disable",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1714140088352,
+        "oldRoutes": [],
+        "key": "DISABLE_CLAN"
     }
 }
