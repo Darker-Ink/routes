@@ -2689,13 +2689,6 @@
         "oldRoutes": [],
         "key": "FRIEND_FINDER"
     },
-    "FRIEND_FINDER_HIDE_INVITE_SUGGESTION": {
-        "route": "/friend-finder/hide-invite-suggestion",
-        "args": [],
-        "firstSeen": 1682214264537,
-        "oldRoutes": [],
-        "key": "FRIEND_FINDER_HIDE_INVITE_SUGGESTION"
-    },
     "FRIEND_SUGGESTIONS": {
         "route": "/friend-suggestions",
         "args": [],
@@ -5196,13 +5189,6 @@
         "firstSeen": 1703085409628,
         "oldRoutes": [],
         "key": "COLLECTIBLES_VALID_GIFT_RECIPIENT"
-    },
-    "FRIEND_FINDER_VIEWED_SUGGESTIONS": {
-        "route": "/friend-finder/viewed-suggestions",
-        "args": [],
-        "firstSeen": 1703085409630,
-        "oldRoutes": [],
-        "key": "FRIEND_FINDER_VIEWED_SUGGESTIONS"
     },
     "USER_GUILD_SETTINGS_BULK": {
         "route": "/users/@me/guilds/settings",
