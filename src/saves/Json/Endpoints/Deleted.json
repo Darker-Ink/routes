@@ -1,16 +1,1 @@
-[
-    {
-        "route": "/friend-finder/hide-invite-suggestion",
-        "args": [],
-        "firstSeen": 1682214264537,
-        "oldRoutes": [],
-        "key": "FRIEND_FINDER_HIDE_INVITE_SUGGESTION"
-    },
-    {
-        "route": "/friend-finder/viewed-suggestions",
-        "args": [],
-        "firstSeen": 1703085409630,
-        "oldRoutes": [],
-        "key": "FRIEND_FINDER_VIEWED_SUGGESTIONS"
-    }
-]
+[]
