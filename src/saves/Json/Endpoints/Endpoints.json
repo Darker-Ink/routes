@@ -5717,5 +5717,12 @@
         "firstSeen": 1714140088352,
         "oldRoutes": [],
         "key": "DISABLE_CLAN"
+    },
+    "APPLICATIONS_WITH_ASSETS": {
+        "route": "/applications-with-assets",
+        "args": [],
+        "firstSeen": 1714503502651,
+        "oldRoutes": [],
+        "key": "APPLICATIONS_WITH_ASSETS"
     }
 }
