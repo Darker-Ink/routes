@@ -5724,5 +5724,12 @@
         "firstSeen": 1714503502651,
         "oldRoutes": [],
         "key": "APPLICATIONS_WITH_ASSETS"
+    },
+    "APP_RECOMMENDATIONS": {
+        "route": "/app-recommendations",
+        "args": [],
+        "firstSeen": 1714590653332,
+        "oldRoutes": [],
+        "key": "APP_RECOMMENDATIONS"
     }
 }
