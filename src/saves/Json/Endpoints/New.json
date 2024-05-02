@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "route": "/changelogs/@me/messages",
+        "args": [],
+        "firstSeen": 1714686487133,
+        "oldRoutes": [],
+        "key": "CHANGELOG_MESSAGES"
+    }
+]

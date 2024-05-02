@@ -5731,5 +5731,12 @@
         "firstSeen": 1714590653332,
         "oldRoutes": [],
         "key": "APP_RECOMMENDATIONS"
+    },
+    "CHANGELOG_MESSAGES": {
+        "route": "/changelogs/@me/messages",
+        "args": [],
+        "firstSeen": 1714686487133,
+        "oldRoutes": [],
+        "key": "CHANGELOG_MESSAGES"
     }
 }
