@@ -5738,5 +5738,14 @@
         "firstSeen": 1714686487133,
         "oldRoutes": [],
         "key": "CHANGELOG_MESSAGES"
+    },
+    "JOIN_WUMPUS_FEEDBACK_SQUAD": {
+        "route": "/guilds/:guildId/join-wfs-server",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1715121548916,
+        "oldRoutes": [],
+        "key": "JOIN_WUMPUS_FEEDBACK_SQUAD"
     }
 }
