@@ -1,12 +1,1 @@
-[
-    {
-        "route": "/application-directory/:unknown/:unknown",
-        "args": [
-            ":unknown",
-            ":unknown"
-        ],
-        "firstSeen": 1715352670338,
-        "oldRoutes": [],
-        "key": "APPLICATION_DIRECTORY_PROFILE_SECTION"
-    }
-]
+[]
