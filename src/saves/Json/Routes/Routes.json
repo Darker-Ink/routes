@@ -762,13 +762,22 @@
         "key": "FAMILY_CENTER"
     },
     "APPLICATION_DIRECTORY_PROFILE": {
-        "route": "/application-directory/:unknown/:unknown",
+        "route": "/application-directory/:unknown",
         "args": [
             ":unknown",
             ":unknown"
         ],
         "firstSeen": 1686594790399,
-        "oldRoutes": [],
+        "oldRoutes": [
+            {
+                "route": "/application-directory/:unknown/:unknown",
+                "args": [
+                    ":unknown",
+                    ":unknown"
+                ],
+                "changedAt": 1715352670338
+            }
+        ],
         "key": "APPLICATION_DIRECTORY_PROFILE"
     },
     "APPLICATION_DIRECTORY_SEARCH": {
@@ -908,5 +917,15 @@
         "firstSeen": 1713914901164,
         "oldRoutes": [],
         "key": "CONNECTIONS_AUTHORIZE_CONTINUE"
+    },
+    "APPLICATION_DIRECTORY_PROFILE_SECTION": {
+        "route": "/application-directory/:unknown/:unknown",
+        "args": [
+            ":unknown",
+            ":unknown"
+        ],
+        "firstSeen": 1715352670338,
+        "oldRoutes": [],
+        "key": "APPLICATION_DIRECTORY_PROFILE_SECTION"
     }
 }
