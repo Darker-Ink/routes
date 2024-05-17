@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "route": "/channels/:channelId/voice-background",
+        "args": [
+            ":channelId"
+        ],
+        "firstSeen": 1707843172044,
+        "oldRoutes": [],
+        "key": "UPDATE_VOICE_CHANNEL_BACKGROUND"
+    },
+    {
+        "route": "/discovery/games/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1712263604942,
+        "oldRoutes": [],
+        "key": "DISCOVERY_GAME"
+    }
+]

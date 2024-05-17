@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "route": "/discovery/games/all",
+        "args": [],
+        "firstSeen": 1715980272963,
+        "oldRoutes": [],
+        "key": "DISCOVERY_ALL_GAMES"
+    }
+]
