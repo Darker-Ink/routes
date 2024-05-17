@@ -149,9 +149,7 @@ function newRoute(value, route) {
     }
   }
 
-  term.yellow(`\nArgs: ${newArgs.join(', ')}`)
   const uppped = value(...newArgs);
-  term.yellow(`\nRoute: ${uppped}`);
 
   return {
     route: uppped,
