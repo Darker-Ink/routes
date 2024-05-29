@@ -5736,5 +5736,23 @@
         "firstSeen": 1715980272963,
         "oldRoutes": [],
         "key": "DISCOVERY_ALL_GAMES"
+    },
+    "QUEST_ON_CONSOLE_START": {
+        "route": "/quests/:unknown/console/start",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1717020371423,
+        "oldRoutes": [],
+        "key": "QUEST_ON_CONSOLE_START"
+    },
+    "QUEST_ON_CONSOLE_STOP": {
+        "route": "/quests/:unknown/console/stop",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1717020371423,
+        "oldRoutes": [],
+        "key": "QUEST_ON_CONSOLE_STOP"
     }
 }
