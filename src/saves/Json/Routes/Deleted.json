@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "route": "/quests",
+        "args": [],
+        "firstSeen": 1715980273497,
+        "oldRoutes": [],
+        "key": "QUEST_HOME"
+    }
+]
