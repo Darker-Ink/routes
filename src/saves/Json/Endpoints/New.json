@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "route": "/users/@me/billing/checkout-recovery",
+        "args": [],
+        "firstSeen": 1717787053622,
+        "oldRoutes": [],
+        "key": "CHECKOUT_RECOVERY"
+    }
+]

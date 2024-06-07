@@ -5754,5 +5754,12 @@
         "firstSeen": 1717020371423,
         "oldRoutes": [],
         "key": "QUEST_ON_CONSOLE_STOP"
+    },
+    "CHECKOUT_RECOVERY": {
+        "route": "/users/@me/billing/checkout-recovery",
+        "args": [],
+        "firstSeen": 1717787053622,
+        "oldRoutes": [],
+        "key": "CHECKOUT_RECOVERY"
     }
 }
