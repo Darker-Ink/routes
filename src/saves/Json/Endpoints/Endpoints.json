@@ -5752,14 +5752,5 @@
         "firstSeen": 1717787053622,
         "oldRoutes": [],
         "key": "CHECKOUT_RECOVERY"
-    },
-    "USER_RECENT_GAMES": {
-        "route": "/users/:userId/profile/recent-games",
-        "args": [
-            ":userId"
-        ],
-        "firstSeen": 1718023452679,
-        "oldRoutes": [],
-        "key": "USER_RECENT_GAMES"
     }
 }
