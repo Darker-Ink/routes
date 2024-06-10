@@ -5752,5 +5752,14 @@
         "firstSeen": 1717787053622,
         "oldRoutes": [],
         "key": "CHECKOUT_RECOVERY"
+    },
+    "GUILD_BASIC": {
+        "route": "/guilds/:guildId/basic",
+        "args": [
+            ":guildId"
+        ],
+        "firstSeen": 1718059690970,
+        "oldRoutes": [],
+        "key": "GUILD_BASIC"
     }
 }
