@@ -1,11 +1,1 @@
-[
-    {
-        "route": "/guilds/:guildId/basic",
-        "args": [
-            ":guildId"
-        ],
-        "firstSeen": 1718059690970,
-        "oldRoutes": [],
-        "key": "GUILD_BASIC"
-    }
-]
+[]
