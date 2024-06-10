@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "route": "/users/:userId/profile/recent-games",
+        "args": [
+            ":userId"
+        ],
+        "firstSeen": 1718023452679,
+        "oldRoutes": [],
+        "key": "USER_RECENT_GAMES"
+    }
+]
