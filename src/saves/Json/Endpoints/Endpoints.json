@@ -5491,15 +5491,6 @@
         "oldRoutes": [],
         "key": "TENURE_REWARD_SYNC"
     },
-    "USER_RECENT_GAMES": {
-        "route": "/users/:userId/profile/recent-games",
-        "args": [
-            ":userId"
-        ],
-        "firstSeen": 1711155631755,
-        "oldRoutes": [],
-        "key": "USER_RECENT_GAMES"
-    },
     "EXPLICIT_MEDIA_GET_VALID_CONTENT_SCAN_VERSION": {
         "route": "/explicit-media/current-version",
         "args": [],
