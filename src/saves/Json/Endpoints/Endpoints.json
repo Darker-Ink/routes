@@ -5491,13 +5491,6 @@
         "oldRoutes": [],
         "key": "TENURE_REWARD_SYNC"
     },
-    "EXPLICIT_MEDIA_GET_VALID_CONTENT_SCAN_VERSION": {
-        "route": "/explicit-media/current-version",
-        "args": [],
-        "firstSeen": 1711404327383,
-        "oldRoutes": [],
-        "key": "EXPLICIT_MEDIA_GET_VALID_CONTENT_SCAN_VERSION"
-    },
     "WEBAUTHN_PASSWORDLESS_CHALLENGE": {
         "route": "/auth/passwordless/start",
         "args": [],

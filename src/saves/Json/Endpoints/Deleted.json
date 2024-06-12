@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "route": "/explicit-media/current-version",
+        "args": [],
+        "firstSeen": 1711404327383,
+        "oldRoutes": [],
+        "key": "EXPLICIT_MEDIA_GET_VALID_CONTENT_SCAN_VERSION"
+    }
+]
