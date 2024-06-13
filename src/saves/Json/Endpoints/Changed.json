@@ -1,15 +1,1 @@
-[
-    {
-        "route": "/content-inventory/users/@me?refresh_token=:userId",
-        "args": [],
-        "firstSeen": 1708103755360,
-        "oldRoutes": [
-            {
-                "route": "/content-inventory/users/@me",
-                "args": [],
-                "changedAt": 1718312533119
-            }
-        ],
-        "key": "MY_CONTENT_INVENTORY"
-    }
-]
+[]
