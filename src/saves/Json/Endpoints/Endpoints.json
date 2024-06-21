@@ -5760,5 +5760,33 @@
         "firstSeen": 1718059690970,
         "oldRoutes": [],
         "key": "GUILD_BASIC"
+    },
+    "GRAVITY_ITEMS_DEHYDRATED": {
+        "route": "/users/@me/gravity-icymi",
+        "args": [],
+        "firstSeen": 1718986873571,
+        "oldRoutes": [],
+        "key": "GRAVITY_ITEMS_DEHYDRATED"
+    },
+    "GRAVITY_ITEMS_HYDRATE": {
+        "route": "/gravity-content",
+        "args": [],
+        "firstSeen": 1718986873571,
+        "oldRoutes": [],
+        "key": "GRAVITY_ITEMS_HYDRATE"
+    },
+    "GRAVITY_CHANNEL_SCORE": {
+        "route": "/gravity-custom-channel-score",
+        "args": [],
+        "firstSeen": 1718986873571,
+        "oldRoutes": [],
+        "key": "GRAVITY_CHANNEL_SCORE"
+    },
+    "GRAVITY_CHANNEL_SCORES": {
+        "route": "/gravity-custom-channel-scores",
+        "args": [],
+        "firstSeen": 1718986873571,
+        "oldRoutes": [],
+        "key": "GRAVITY_CHANNEL_SCORES"
     }
 }
