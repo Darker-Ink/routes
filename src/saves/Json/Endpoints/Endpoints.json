@@ -5775,18 +5775,18 @@
         "oldRoutes": [],
         "key": "GRAVITY_ITEMS_HYDRATE"
     },
-    "GRAVITY_CHANNEL_SCORE": {
-        "route": "/gravity-custom-channel-score",
+    "GRAVITY_CUSTOM_GUILD_SCORES": {
+        "route": "/gravity-custom-guild-score",
         "args": [],
-        "firstSeen": 1718986873571,
+        "firstSeen": 1719349215633,
         "oldRoutes": [],
-        "key": "GRAVITY_CHANNEL_SCORE"
+        "key": "GRAVITY_CUSTOM_GUILD_SCORES"
     },
-    "GRAVITY_CHANNEL_SCORES": {
+    "GRAVITY_CUSTOM_SCORES": {
         "route": "/gravity-custom-channel-scores",
         "args": [],
-        "firstSeen": 1718986873571,
+        "firstSeen": 1719349215634,
         "oldRoutes": [],
-        "key": "GRAVITY_CHANNEL_SCORES"
+        "key": "GRAVITY_CUSTOM_SCORES"
     }
 }
