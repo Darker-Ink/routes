@@ -1,11 +1,1 @@
-[
-    {
-        "route": "/content-inventory/users/@me/similar-games/:unknown",
-        "args": [
-            ":unknown"
-        ],
-        "firstSeen": 1719434233581,
-        "oldRoutes": [],
-        "key": "SIMILAR_GAMES"
-    }
-]
+[]
