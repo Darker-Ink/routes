@@ -5788,5 +5788,14 @@
         "firstSeen": 1719349215634,
         "oldRoutes": [],
         "key": "GRAVITY_CUSTOM_SCORES"
+    },
+    "SIMILAR_GAMES": {
+        "route": "/content-inventory/users/@me/similar-games/:unknown",
+        "args": [
+            ":unknown"
+        ],
+        "firstSeen": 1719434233581,
+        "oldRoutes": [],
+        "key": "SIMILAR_GAMES"
     }
 }
