@@ -1,14 +1,16 @@
 {
   "dependencies": {
-    "@octokit/types": "^9.1.1",
-    "acorn": "^8.8.2",
+    "@babel/eslint-parser": "^7.24.7",
+    "@octokit/types": "^13.5.0",
+    "acorn": "^8.12.0",
     "cheerio": "^1.0.0-rc.12",
+    "chokidar": "^3.6.0",
     "comment-json": "^4.2.3",
     "dash-ast": "^2.0.1",
-    "js-beautify": "^1.14.9",
-    "octokit": "^2.0.14",
-    "terminal-kit": "^3.0.0",
-    "undici": "^5.22.0"
+    "js-beautify": "^1.15.1",
+    "octokit": "^4.0.2",
+    "terminal-kit": "^3.1.1",
+    "undici": "^6.19.2"
   },
   "scripts": {
     "download": "node src/utils/Downloader.js",
@@ -16,5 +18,13 @@
     "finder": "node src/utils/EndpointFinder.js && node src/utils/RouteFinder.js",
     "start": "npm run download && npm run cleaner && npm run finder"
   },
-  "main": "src/index.js"
+  "main": "src/index.ts",
+  "devDependencies": {
+    "@types/js-beautify": "^1.14.3",
+    "@types/bun": "latest"
+  },
+  "name": "routes",
+  "peerDependencies": {
+    "typescript": "^5.5.2"
+  }
 }
