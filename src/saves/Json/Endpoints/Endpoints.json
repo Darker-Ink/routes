@@ -5790,12 +5790,5 @@
         "firstSeen": 1719434233581,
         "oldRoutes": [],
         "key": "SIMILAR_GAMES"
-    },
-    "ANNUAL_USER_OFFER": {
-        "route": "/users/@me/billing/annual-user-offer",
-        "args": [],
-        "firstSeen": 1719948391272,
-        "oldRoutes": [],
-        "key": "ANNUAL_USER_OFFER"
     }
 }

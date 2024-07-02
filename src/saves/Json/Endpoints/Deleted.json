@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "route": "/users/@me/billing/annual-user-offer",
+        "args": [],
+        "firstSeen": 1719948391272,
+        "oldRoutes": [],
+        "key": "ANNUAL_USER_OFFER"
+    }
+]
