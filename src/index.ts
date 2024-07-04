@@ -30,8 +30,6 @@ const config = (await import(path.join(import.meta.dirname, "./config.ts"))).def
 
 const downloaded = await downloader(config.config.downloadPath);
 const cleaned = await cleaner(downloaded);
-// const walked = await walk(cleaned);
+const walked = await walk(cleaned);
 
-console.log(cleaned)
-
-// console.log(walked);
+Bun.write("endpoints.json", JSON.stringify(walked, null, 4));

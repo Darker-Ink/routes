@@ -1,4 +1,4 @@
-import { Expression, parse } from "acorn";
+import { type Expression, parse } from "acorn";
 import { inspect } from "bun";
 import handleProperty from "./handleProperty.ts";
 
@@ -56,7 +56,7 @@ const walk = async (code: string) => {
             continue;
         }
 
-        finishedEndpoints[parsed.key] = parsed.path + parsed.args.join("/");
+        finishedEndpoints[parsed.key] = (parsed.path + parsed.args.map((arg) => !arg.startsWith("/") ? `/${arg}` : arg).join("")).replaceAll(/\/{2,}/g, "/");
     }
 
     const finishedRoutes: {
@@ -78,7 +78,8 @@ const walk = async (code: string) => {
             continue;
         }
 
-        finishedRoutes[parsed.key] = parsed.path + parsed.args.join("/");
+        // ? replace any duplicate slashes with a single slash
+        finishedRoutes[parsed.key] = (parsed.path + parsed.args.map((arg) => !arg.startsWith("/") ? `/${arg}` : arg).join("")).replaceAll(/\/{2,}/g, "/");
     }
 
     return {

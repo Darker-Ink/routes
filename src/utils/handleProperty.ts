@@ -1,5 +1,105 @@
-import type { CallExpression, Property } from "acorn";
+import type { BlockStatement, CallExpression, Expression, Node, Property } from "acorn";
 import { inspect } from "bun";
+import { parseConditionalExpression } from "./handleUnknown.ts";
+
+interface Result {
+    endpoint: string;
+    raw: string;
+    params: string[];
+}
+
+const extractEndpoint = (node: Expression | BlockStatement): Result => {
+    let endpoint = "";
+    let raw = "";
+    let params: string[] = [];
+
+    const processNode = (node: Expression | BlockStatement): { endpointPart: string, rawPart: string; } => {
+        switch (node.type) {
+            case "CallExpression": {
+                if (node.callee && node.callee.type === "MemberExpression") {
+                    const objectStrings = processNode(node.callee.object as Expression);
+                    const argsStrings = node.arguments?.map(arg => processNode(arg as Expression));
+                    const argsEndpoint = argsStrings?.map(arg => arg.endpointPart).join('') || '';
+                    const argsRaw = argsStrings?.map(arg => arg.rawPart).join('') || '';
+                    return { endpointPart: objectStrings.endpointPart + argsEndpoint, rawPart: objectStrings.rawPart + argsRaw };
+                }
+                break;
+            }
+
+            case "Literal": {
+                return { endpointPart: node.value as string, rawPart: node.value as string };
+            }
+
+            case "Identifier": {
+                params.push(node.name as string);
+
+                return { endpointPart: `:arg`, rawPart: "" };
+            }
+
+            case "LogicalExpression": {
+                // @ts-expect-error -- it's fine
+                const paramName = node.left?.name || node.right?.name;
+
+                params.push(paramName as string);
+
+                return { endpointPart: `:arg`, rawPart: "" };
+            }
+
+            case "ConditionalExpression": {
+                const testStrings = processNode(node.test as Expression);
+                const consequentStrings = processNode(node.consequent as Expression);
+                const alternateStrings = processNode(node.alternate as Expression);
+                return testStrings.endpointPart ? consequentStrings : alternateStrings;
+            }
+
+            case "BinaryExpression": {
+                const leftStrings = processNode(node.left as Expression);
+                const rightStrings = processNode(node.right as Expression);
+                return { endpointPart: leftStrings.endpointPart + rightStrings.endpointPart, rawPart: leftStrings.rawPart + rightStrings.rawPart };
+            }
+
+            case "MemberExpression": {
+                const objectStrings = processNode(node.object as Expression);
+                const propertyStrings = processNode(node.property as Expression);
+                return { endpointPart: objectStrings.endpointPart + propertyStrings.endpointPart, rawPart: objectStrings.rawPart + propertyStrings.rawPart };
+            }
+
+            case "BlockStatement": {
+                if (Array.isArray(node.body)) {
+                    for (const bodyNode of node.body) {
+                        switch (bodyNode.type) {
+                            case "VariableDeclaration":
+                                for (const declaration of bodyNode.declarations) {
+                                    if (declaration.type === "VariableDeclarator" && declaration.init) {
+                                        return processNode(declaration.init);
+                                    }
+                                }
+                                break;
+
+                            case "ReturnStatement":
+                                if (bodyNode.argument) {
+                                    return processNode(bodyNode.argument);
+                                }
+                                break;
+                        }
+                    }
+                }
+                break;
+            }
+
+            default: {
+                return { endpointPart: "", rawPart: "" };
+            }
+        }
+        return { endpointPart: "", rawPart: "" };
+    };
+
+    const result = processNode(node);
+    endpoint = result.endpointPart;
+    raw = result.rawPart;
+
+    return { endpoint, raw, params };
+};
 
 const handleCallExpression = (data: CallExpression) => {
     if (data.type !== "CallExpression" || data.callee.type !== "MemberExpression") {
@@ -28,8 +128,8 @@ const handleCallExpression = (data: CallExpression) => {
     return {
         path,
         args
-    }
-}
+    };
+};
 
 const handleProperty = (data: Property) => {
     if (data.key.type !== "Identifier") {
@@ -56,7 +156,7 @@ const handleProperty = (data: Property) => {
                         key,
                         path,
                         args
-                    }
+                    };
                 }
 
                 if (data.value.body.type === "ConditionalExpression") {
@@ -76,38 +176,50 @@ const handleProperty = (data: Property) => {
                     };
 
                     if (!consequent?.path || !alternate?.path) {
-                        console.log(`[${key}] Failed to parse conditional expression, skipping...`);
+                        const parsed = parseConditionalExpression(data.value.body);
 
-                        return null;
+                        if (!parsed) {
+                            console.log(`[${key}] Failed to parse conditional expression, skipping...`);
+
+                            return null;
+                        }
+
+                        return {
+                            key,
+                            path: `${parsed.truthy} or ${parsed.falsey}`,
+                            args: []
+                        }
                     }
 
-                    console.log(`[${key}] Parsed conditional expression, got ${consequent.path} (${consequent.args.join("/")}) and ${alternate.path} (${alternate.args.join("/")})`);
-
-                    return null;
+                    return {
+                        key,
+                        path: `${consequent.path} (${consequent.args.join("/")}) or ${alternate.path} (${alternate.args.join("/")})`,
+                        args: []
+                    };
                 }
 
                 if (data.value.body.type !== "CallExpression" || data.value.body.callee.type !== "MemberExpression") {
-                    console.warn(`[${key}] Invalid data value body type, expected CallExpression and MemberExpression, got ${data.value.body.type}, ${"callee" in data.value.body ? data.value.body.callee.type : "undefined"} `);
+                    if (data.value.body.type === "BlockStatement" || data.value.body.type === "BinaryExpression") {
+                        const parsed = extractEndpoint(data.value.body);
 
-                    if (data.value.body.type === "BlockStatement") {
-                        console.log(inspect(data, {
-                            colors: true,
-                            depth: 50
-                        }))
+                        return {
+                            key,
+                            path: parsed.endpoint,
+                            args: []
+                        };
                     }
+
+                    console.warn(`[${key}] Invalid data value body type, expected CallExpression and MemberExpression, got ${data.value.body.type}, ${"callee" in data.value.body ? data.value.body.callee.type : "undefined"} `);
 
                     return null;
                 }
-
-                // path += endpoint.value.body.callee.object.value
-
-                // console.log(endpoint.value.body.arguments.length)
 
                 if (data.value.body.callee.object.type === "Literal") {
                     path += data.value.body.callee.object.value;
 
-                    for (const _ of data.value.body.arguments) {
-                        args.push(":arg");
+                    for (const arg of data.value.body.arguments) {
+                        if (arg.type === "Literal" && typeof arg?.value === "string") args.push(arg.value.length > 1 ? arg.value : ":arg");
+                        else args.push(":arg");
                     }
                 }
 
@@ -115,7 +227,7 @@ const handleProperty = (data: Property) => {
                     console.log(inspect(data, {
                         colors: true,
                         depth: 50
-                    }))
+                    }));
                 }
             }
 
@@ -123,7 +235,7 @@ const handleProperty = (data: Property) => {
                 key,
                 path,
                 args
-            }
+            };
         }
 
         case "Literal": {
@@ -131,16 +243,37 @@ const handleProperty = (data: Property) => {
                 key: data.key.name,
                 path: data.value.value?.toString() ?? "",
                 args: []
+            };
+        }
+
+        case "ConditionalExpression": {
+            if (data.type === "Property" && data.value && data.value.type === "ConditionalExpression") {
+                const conditionalNode = data.value;
+                if (conditionalNode.consequent && conditionalNode.alternate) {
+                    const truthy = conditionalNode.consequent.type === "Literal" ? conditionalNode.consequent.value : null;
+                    const falsy = conditionalNode.alternate.type === "Literal" ? conditionalNode.alternate.value : null;
+
+                    if (truthy && falsy) {
+                        return {
+                            key: data.key.name,
+                            path: `${truthy} or ${falsy}`,
+                            args: []
+                        };
+                    }
+                }
             }
+
+
+            break;
         }
 
         default: {
-            console.log(`Invalid data value type, expected Literal, got ${data.value.type}`);
+            console.log(`[${data.key.name}] Invalid data value type, expected Literal, got ${data.value.type}`);
 
             return null;
         }
     }
 
-}
+};
 
 export default handleProperty;
