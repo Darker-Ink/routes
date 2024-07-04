@@ -148,7 +148,6 @@ const handleProperty = (data: Property) => {
             const args: string[] = [];
 
             if (data.value.type === "ArrowFunctionExpression") {
-
                 if (data.value.body.type === "Literal") {
                     path += data.value.body.value;
 
@@ -229,6 +228,22 @@ const handleProperty = (data: Property) => {
                         depth: 50
                     }));
                 }
+            } else if (data.value.type === "FunctionExpression") {
+                const foundReturn = data.value.body.body.find((bodyNode) => bodyNode.type === "ReturnStatement");
+
+                if (foundReturn && foundReturn.type === "ReturnStatement" && foundReturn.argument?.type === "CallExpression") {
+                    const extracted = extractEndpoint(foundReturn.argument);
+
+                    return {
+                        key,
+                        path: extracted.endpoint,
+                        args: []
+                    }
+                }
+            }
+
+            if (path === "") {
+                console.log(`[${key}] Failed to parse path, :/`);
             }
 
             return {

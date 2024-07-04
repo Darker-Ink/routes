@@ -1,4 +1,4 @@
-import type { BlockStatement, ConditionalExpression, Expression, Node, Property } from "acorn";
+import type { BlockStatement, ConditionalExpression, Expression } from "acorn";
 
 interface ConditionalResult {
     truthy: string;
