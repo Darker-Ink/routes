@@ -27,7 +27,6 @@ export default defineConfig({
 
 
 const config = (await import(path.join(import.meta.dirname, "./config.ts"))).default as Config
-
 const downloaded = await downloader(config.config.downloadPath);
 const cleaned = await cleaner(downloaded);
 const walked = await walk(cleaned);

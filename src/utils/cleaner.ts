@@ -1,5 +1,5 @@
 import { js_beautify } from "js-beautify";
-import dashAst from "dash-ast";
+import { simple } from "acorn-walk";
 import { parse } from "acorn";
 
 const cleaner = async (code: string) => {
@@ -26,28 +26,42 @@ const cleaner = async (code: string) => {
     });
 
     const checkRoutes = [["BILLING_PREFIX", "/billing"], ["FRIENDS", "/channels/@me"], ["LOGIN", "/login"], ["ACTIVITIES", "/activities"], ["USERS", "/users"], ["ME", "/users/@me"]];
-    const freezeCalls = {};
+    const freezeCalls: {
+        start: number;
+        end: number
+    }[] = []
 
-    dashAst(parsed, function (node, parent) {
-        if (node.type === "CallExpression" && node.callee.type === "MemberExpression" && node.callee.property.name === "freeze") {
-            if (node.arguments[0]?.type === "ObjectExpression") {
-                const args = node.arguments[0];
+    simple(parsed, {
+        CallExpression: (node) => {
+            if (node.callee.type === "MemberExpression" && node.callee.property.type === "Identifier" && node.callee.property.name === "freeze") {
+                if (node.arguments[0]?.type === "ObjectExpression") {
+                    const args = node.arguments[0];
 
-                const isCorrectObject = args.properties.some(prop => checkRoutes.some(stuff => stuff[0] === prop.key.name && stuff[1] === prop.value.value));
+                    const isCorrectObject = args.properties.some((prop) => {
+                        if (prop.type !== "Property") return false;
+                        
+                        return checkRoutes.some((stuff) => {
+                            if (prop.key.type !== "Identifier" || prop.value.type !== "Literal") return false;
 
-                if (isCorrectObject) {
-                    freezeCalls[parent.id.name] = node;
+                            return stuff[0] === prop.key.name && stuff[1] === prop.value.value;
+                        })
+                    });
+
+                    if (isCorrectObject) {
+                        freezeCalls.push({
+                            start: node.start,
+                            end: node.end
+                        });
+                    }
                 }
             }
         }
-    });
+    })
 
     let start = -1;
     let end = -1;
 
-    for (const frozenn in freezeCalls) {
-        const frozen = freezeCalls[frozenn];
-
+    for (const frozen of freezeCalls) {
         if (start === -1) {
             start = frozen.start;
         }

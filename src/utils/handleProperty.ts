@@ -262,7 +262,7 @@ const handleProperty = (data: Property): {
             } else if (data.value.type === "FunctionExpression") {
                 const foundReturn = data.value.body.body.find((bodyNode) => bodyNode.type === "ReturnStatement");
 
-                if (foundReturn && foundReturn.type === "ReturnStatement" && foundReturn.argument?.type === "CallExpression") {
+                if (foundReturn && foundReturn.type === "ReturnStatement" && foundReturn.argument && ["CallExpression", "ConditionalExpression", "Literal", "BinaryExpression"].includes(foundReturn.argument.type)) {
                     const extracted = extractEndpoint(foundReturn.argument);
 
                     return {

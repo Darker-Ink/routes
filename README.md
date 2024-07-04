@@ -1,15 +1,10 @@
 # routes
 
-To install dependencies:
+Simply retrieves all the routes and endpoints from the Discord client.
 
-```bash
-bun install
-```
+# Routes VS Endpoints
 
-To run:
+Routes are stuff something the client only uses, i.e /register, /login etc. while endpoints are the actual API endpoints that the client uses to interact with the Discord API.
 
-```bash
-bun run src/index.js
-```
 
-This project was created using `bun init` in bun v1.1.10. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+This was for the [Discord Datamining](https://github.com/Discord-Datamining/Discord-Datamining) repo
