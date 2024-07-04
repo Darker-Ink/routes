@@ -127,17 +127,23 @@ const handleCallExpression = (data: CallExpression) => {
 
     return {
         path,
-        args
+        args,
     };
 };
 
-const handleProperty = (data: Property) => {
+const handleProperty = (data: Property): {
+    key: string;
+    path: string | {
+        path: string;
+        args: string[];
+    }[];
+    args?: string[];
+} | null => {
     if (data.key.type !== "Identifier") {
         console.log(`Invalid data key type, expected Identifier, got ${data.key.type}`);
 
         return null;
     }
-
 
     switch (data.value.type) {
         case "FunctionExpression":
@@ -185,14 +191,29 @@ const handleProperty = (data: Property) => {
 
                         return {
                             key,
-                            path: `${parsed.truthy} or ${parsed.falsey}`,
+                            path: [{
+                                path: parsed.truthy,
+                                args: []
+                            }, {
+                                path: parsed.falsey,
+                                args: []
+                            }],
                             args: []
                         }
                     }
 
                     return {
                         key,
-                        path: `${consequent.path} (${consequent.args.join("/")}) or ${alternate.path} (${alternate.args.join("/")})`,
+                        path: [
+                            {
+                                path: consequent.path as string,
+                                args: consequent.args
+                            },
+                            {
+                                path: alternate.path as string,
+                                args: alternate.args
+                            }
+                        ],
                         args: []
                     };
                 }
@@ -228,6 +249,16 @@ const handleProperty = (data: Property) => {
                         depth: 50
                     }));
                 }
+
+                const parsed = extractEndpoint(data.value.body)
+
+                if (parsed) {
+                    return {
+                        key,
+                        path: parsed.endpoint,
+                        args: []
+                    }
+                }
             } else if (data.value.type === "FunctionExpression") {
                 const foundReturn = data.value.body.body.find((bodyNode) => bodyNode.type === "ReturnStatement");
 
@@ -244,6 +275,11 @@ const handleProperty = (data: Property) => {
 
             if (path === "") {
                 console.log(`[${key}] Failed to parse path, :/`);
+
+                console.log(inspect(data, {
+                    colors: true,
+                    depth: 50
+                }))
             }
 
             return {
@@ -271,7 +307,16 @@ const handleProperty = (data: Property) => {
                     if (truthy && falsy) {
                         return {
                             key: data.key.name,
-                            path: `${truthy} or ${falsy}`,
+                            path: [
+                                {
+                                    path: truthy as string,
+                                    args: []
+                                },
+                                {
+                                    path: falsy as string,
+                                    args: []
+                                }
+                            ],
                             args: []
                         };
                     }
@@ -289,6 +334,7 @@ const handleProperty = (data: Property) => {
         }
     }
 
+    return null;
 };
 
 export default handleProperty;

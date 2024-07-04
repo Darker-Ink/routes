@@ -38,7 +38,16 @@ const walk = async (code: string) => {
     }
 
     const finishedEndpoints: {
-        [key: string]: string
+        [key: string]: {
+            firstSeen: number;
+            args: string[] | string[][];
+            paths: string[];
+            oldPaths: {
+                paths: string;
+                args: string;
+                changedAt: number;
+            }[]
+        }
     } = {}
 
     for (const endpoint of endpoints.arguments[0].properties) {
@@ -56,11 +65,27 @@ const walk = async (code: string) => {
             continue;
         }
 
-        finishedEndpoints[parsed.key] = (parsed.path + parsed.args.map((arg) => !arg.startsWith("/") ? `/${arg}` : arg).join("")).replaceAll(/\/{2,}/g, "/");
+        // finishedEndpoints[parsed.key] = (parsed.path + parsed.args.map((arg) => !arg.startsWith("/") ? `/${arg}` : arg).join("")).replaceAll(/\/{2,}/g, "/");
+
+        finishedEndpoints[parsed.key] = {
+            firstSeen: Date.now(),
+            args: Array.isArray(parsed.path) ? parsed.path.map((path) => path.args) : parsed.args ?? [],
+            paths: Array.isArray(parsed.path) ? parsed.path.map((path) => path.path.replaceAll(/\/{2,}/g, "/")) : [parsed.path.replaceAll(/\/{2,}/g, "/")],
+            oldPaths: []
+        }
     }
 
     const finishedRoutes: {
-        [key: string]: string
+        [key: string]: {
+            firstSeen: number;
+            args: string[] | string[][];
+            paths: string[];
+            oldPaths: {
+                paths: string;
+                args: string;
+                changedAt: number;
+            }[]
+        }
     } = {}
 
     for (const route of routes.arguments[0].properties) {
@@ -78,8 +103,13 @@ const walk = async (code: string) => {
             continue;
         }
 
-        // ? replace any duplicate slashes with a single slash
-        finishedRoutes[parsed.key] = (parsed.path + parsed.args.map((arg) => !arg.startsWith("/") ? `/${arg}` : arg).join("")).replaceAll(/\/{2,}/g, "/");
+        // finishedRoutes[parsed.key] = (parsed.path + parsed.args.map((arg) => !arg.startsWith("/") ? `/${arg}` : arg).join("")).replaceAll(/\/{2,}/g, "/");
+        finishedRoutes[parsed.key] = {
+            firstSeen: Date.now(),
+            args: Array.isArray(parsed.path) ? parsed.path.map((path) => path.args) : parsed.args ?? [],
+            paths: Array.isArray(parsed.path) ? parsed.path.map((path) => path.path.replaceAll(/\/{2,}/g, "/")) : [parsed.path.replaceAll(/\/{2,}/g, "/")],
+            oldPaths: []
+        }
     }
 
     return {

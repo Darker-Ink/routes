@@ -33,3 +33,5 @@ const cleaned = await cleaner(downloaded);
 const walked = await walk(cleaned);
 
 Bun.write("endpoints.json", JSON.stringify(walked, null, 4));
+
+console.log("Finished downloading and parsing endpoints!")
