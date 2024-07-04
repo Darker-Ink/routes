@@ -4,6 +4,7 @@
     "acorn": "^8.12.0",
     "acorn-walk": "^8.3.3",
     "chokidar": "^3.6.0",
+    "escodegen": "^2.1.0",
     "js-beautify": "^1.15.1",
     "octokit": "^4.0.2",
     "undici": "^6.19.2"
@@ -16,8 +17,9 @@
   },
   "main": "src/index.ts",
   "devDependencies": {
-    "@types/js-beautify": "^1.14.3",
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/escodegen": "^0.0.10",
+    "@types/js-beautify": "^1.14.3"
   },
   "name": "routes",
   "peerDependencies": {

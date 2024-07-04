@@ -1,6 +1,7 @@
-import type { BlockStatement, CallExpression, Expression, Node, Property } from "acorn";
+import type { BlockStatement, CallExpression, Expression, Node, Property, } from "acorn";
 import { inspect } from "bun";
 import { parseConditionalExpression } from "./handleUnknown.ts";
+import { generate } from "escodegen";
 
 interface Result {
     endpoint: string;
@@ -185,6 +186,7 @@ const handleProperty = (data: Property): {
 
                         if (!parsed) {
                             console.log(`[${key}] Failed to parse conditional expression, skipping...`);
+                            console.log(generate(data)); // ? generate the code so we can see what's wrong / what its doing
 
                             return null;
                         }
@@ -199,7 +201,7 @@ const handleProperty = (data: Property): {
                                 args: []
                             }],
                             args: []
-                        }
+                        };
                     }
 
                     return {
@@ -250,14 +252,14 @@ const handleProperty = (data: Property): {
                     }));
                 }
 
-                const parsed = extractEndpoint(data.value.body)
+                const parsed = extractEndpoint(data.value.body);
 
                 if (parsed) {
                     return {
                         key,
                         path: parsed.endpoint,
                         args: []
-                    }
+                    };
                 }
             } else if (data.value.type === "FunctionExpression") {
                 const foundReturn = data.value.body.body.find((bodyNode) => bodyNode.type === "ReturnStatement");
@@ -269,17 +271,14 @@ const handleProperty = (data: Property): {
                         key,
                         path: extracted.endpoint,
                         args: []
-                    }
+                    };
                 }
             }
 
             if (path === "") {
                 console.log(`[${key}] Failed to parse path, :/`);
 
-                console.log(inspect(data, {
-                    colors: true,
-                    depth: 50
-                }))
+                console.log(generate(data));
             }
 
             return {
@@ -329,6 +328,8 @@ const handleProperty = (data: Property): {
 
         default: {
             console.log(`[${data.key.name}] Invalid data value type, expected Literal, got ${data.value.type}`);
+
+            console.log(generate(data));
 
             return null;
         }
